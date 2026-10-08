@@ -36,9 +36,9 @@ export default function ContactPage() {
 
       <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.4fr]">
         <div className="flex flex-col gap-6">
-          <InfoBlock label="Email" value="hello@hopefelt.org" />
-          <InfoBlock label="Phone" value="+1 (555) 010-2024" />
-          <InfoBlock label="Office" value="128 Community Way, Suite 4, Lakeview" />
+          <InfoBlock label="Email" value="hopefeltfoundation@gmail.com" />
+          <InfoBlock label="Phone" value="+92 (371) 0137556" />
+          <InfoBlock label="Office" value="Green Town, Karachi Pakistan" />
           <InfoBlock label="Hours" value="Mon–Fri, 9:00 AM – 5:00 PM" />
 
           <div className="rounded-xl2 border border-line bg-surface p-5 shadow-card">
