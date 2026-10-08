@@ -46,8 +46,8 @@ export default function Footer() {
           <p className="mt-6 font-body text-xs font-semibold uppercase tracking-wider text-white/50">
             Contact Us
           </p>
-          <p className="mt-2 font-body text-sm text-white/80">hello@hopefelt.org</p>
-          <p className="font-body text-sm text-white/80">+1 (555) 010-2024</p>
+          <p className="mt-2 font-body text-sm text-white/80">hopefeltfoundation@gmail.com</p>
+          <p className="font-body text-sm text-white/80">+92 (371) 0137556</p>
         </div>
 
         {linkColumns.map((col) => (
