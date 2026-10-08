@@ -1,3 +1,4 @@
+
 import { Fraunces, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -20,19 +21,28 @@ const workSans = Work_Sans({
 
 export const metadata = {
   metadataBase: new URL("https://www.hopefeltfoundation.org"),
+
   title: {
     default: "Hopefelt Foundation | Creating Hope & Empowering Communities",
     template: "%s | Hopefelt Foundation",
   },
+
   description:
     "Hopefelt Foundation partners with communities to expand access to education, healthcare, and economic opportunity.",
+
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+
   openGraph: {
     title: "Hopefelt Foundation | Creating Hope & Empowering Communities",
     description:
       "Hopefelt Foundation partners with communities to expand access to education, healthcare, and economic opportunity.",
     siteName: "Hopefelt Foundation",
     type: "website",
-    images: ["https://picsum.photos/seed/hopefelt-og/1200/630"],
+    images: ["/images/logo.png"],
   },
 };
 
