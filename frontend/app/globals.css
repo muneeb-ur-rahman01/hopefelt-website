@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F2F4EE;
+  color: #152420;
+}
+
+/* Scroll-reveal: elements start hidden, ScrollReveal.jsx adds .is-visible
+   via IntersectionObserver when they enter the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Signature "thread of hope" motif — a warm, organic connecting line used
+   behind the hero, between the About cards, and as connectors in the team
+   hierarchy, tying the sections together instead of hard dividers. */
+.thread-divider {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #D9A441;
+  outline-offset: 2px;
+}
