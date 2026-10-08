@@ -1,5 +1,7 @@
+
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { mainNav, contactNav } from "@/data/navigation";
@@ -95,9 +97,7 @@ export default function Navbar() {
         )}
       </Link>
 
-      {/* =====================================================
-          MAIN DESKTOP DROPDOWN
-      ====================================================== */}
+      {/* MAIN DESKTOP DROPDOWN */}
 
       {item.dropdown && (
         <div
@@ -169,9 +169,7 @@ export default function Navbar() {
                   </svg>
                 </Link>
 
-                {/* =================================================
-                    CHILD DROPDOWN
-                ================================================== */}
+                {/* CHILD DROPDOWN */}
 
                 <div
                   className="
@@ -278,7 +276,7 @@ export default function Navbar() {
           "
         >
           {/* =================================================
-              LOGO
+              HOPEFELT LOGO + BRAND
           ================================================== */}
 
           <Link
@@ -292,51 +290,34 @@ export default function Navbar() {
             "
             onClick={closeMobileMenu}
           >
-            {/* LOGO MARK */}
+            {/* ACTUAL LOGO FROM /public/images/logo.png */}
 
-            <span
-              aria-hidden="true"
+            <div
               className="
                 relative
-                flex
-                h-11
-                w-11
+                h-14
+                w-14
                 shrink-0
-                items-center
-                justify-center
                 overflow-hidden
                 rounded-full
-                bg-blue-600
-                shadow-md
-                transition-transform
-                duration-300
-                group-hover:scale-105
+                bg-white
               "
             >
-              {/* OUTER RING */}
-
-              <span
+              <Image
+                src="/images/logo.png"
+                alt="Hopefelt Foundation logo"
+                fill
+                priority
+                sizes="56px"
                 className="
-                  absolute
-                  inset-1
-                  rounded-full
-                  border-2
-                  border-white/40
+                  object-contain
+                  p-1
+                  transition-transform
+                  duration-300
+                  group-hover:scale-105
                 "
               />
-
-              {/* INNER MARK */}
-
-              <span
-                className="
-                  relative
-                  h-4
-                  w-4
-                  rounded-full
-                  bg-white
-                "
-              />
-            </span>
+            </div>
 
             {/* BRAND NAME */}
 
@@ -516,69 +497,35 @@ export default function Navbar() {
               }
             }}
           >
-            <div
-              className="
-                relative
-                h-4
-                w-5
-              "
-            >
+            <div className="relative h-4 w-5">
               {/* TOP LINE */}
 
               <span
-                className={`
-                  absolute
-                  left-0
-                  h-0.5
-                  w-5
-                  bg-black
-                  transition-all
-                  duration-200
-                  ${
-                    mobileOpen
-                      ? "top-2 rotate-45"
-                      : "top-0"
-                  }
-                `}
+                className={`absolute left-0 h-0.5 w-5 bg-black transition-all duration-200 ${
+                  mobileOpen
+                    ? "top-2 rotate-45"
+                    : "top-0"
+                }`}
               />
 
               {/* MIDDLE LINE */}
 
               <span
-                className={`
-                  absolute
-                  left-0
-                  top-2
-                  h-0.5
-                  w-5
-                  bg-black
-                  transition-opacity
-                  duration-200
-                  ${
-                    mobileOpen
-                      ? "opacity-0"
-                      : "opacity-100"
-                  }
-                `}
+                className={`absolute left-0 top-2 h-0.5 w-5 bg-black transition-opacity duration-200 ${
+                  mobileOpen
+                    ? "opacity-0"
+                    : "opacity-100"
+                }`}
               />
 
               {/* BOTTOM LINE */}
 
               <span
-                className={`
-                  absolute
-                  left-0
-                  h-0.5
-                  w-5
-                  bg-black
-                  transition-all
-                  duration-200
-                  ${
-                    mobileOpen
-                      ? "top-2 -rotate-45"
-                      : "top-4"
-                  }
-                `}
+                className={`absolute left-0 h-0.5 w-5 bg-black transition-all duration-200 ${
+                  mobileOpen
+                    ? "top-2 -rotate-45"
+                    : "top-4"
+                }`}
               />
             </div>
           </button>
@@ -590,41 +537,18 @@ export default function Navbar() {
       ======================================================== */}
 
       <div
-        className={`
-          overflow-y-auto
-          border-t
-          border-black/10
-          bg-stone-50
-          transition-[max-height]
-          duration-300
-          lg:hidden
-          ${
-            mobileOpen
-              ? "max-h-[75vh]"
-              : "max-h-0"
-          }
-        `}
+        className={`overflow-y-auto border-t border-black/10 bg-stone-50 transition-[max-height] duration-300 lg:hidden ${
+          mobileOpen
+            ? "max-h-[75vh]"
+            : "max-h-0"
+        }`}
       >
-        <ul
-          className="
-            flex
-            flex-col
-            gap-1
-            px-5
-            py-4
-          "
-        >
+        <ul className="flex flex-col gap-1 px-5 py-4">
           {mainNav.map((item) => (
             <li key={item.label}>
               {/* MAIN MOBILE ITEM */}
 
-              <div
-                className="
-                  flex
-                  items-center
-                  justify-between
-                "
-              >
+              <div className="flex items-center justify-between">
                 <Link
                   href={item.href}
                   className="
@@ -661,21 +585,16 @@ export default function Navbar() {
                       hover:text-blue-600
                     "
                     onClick={() =>
-                      setMobileExpanded(
-                        (value) => {
-                          const next =
-                            value ===
-                            item.label
-                              ? null
-                              : item.label;
+                      setMobileExpanded((value) => {
+                        const next =
+                          value === item.label
+                            ? null
+                            : item.label;
 
-                          setMobileChildExpanded(
-                            null
-                          );
+                        setMobileChildExpanded(null);
 
-                          return next;
-                        }
-                      )
+                        return next;
+                      })
                     }
                   >
                     <svg
@@ -683,16 +602,12 @@ export default function Navbar() {
                       height="8"
                       viewBox="0 0 10 6"
                       fill="none"
-                      className={`
-                        transition-transform
-                        duration-200
-                        ${
-                          mobileExpanded ===
-                          item.label
-                            ? "rotate-180"
-                            : ""
-                        }
-                      `}
+                      className={`transition-transform duration-200 ${
+                        mobileExpanded ===
+                        item.label
+                          ? "rotate-180"
+                          : ""
+                      }`}
                       aria-hidden="true"
                     >
                       <path
@@ -711,33 +626,19 @@ export default function Navbar() {
 
               {item.dropdown && (
                 <div
-                  className={`
-                    overflow-hidden
-                    pl-4
-                    transition-[max-height]
-                    duration-200
-                    ${
-                      mobileExpanded ===
-                      item.label
-                        ? "max-h-[3000px]"
-                        : "max-h-0"
-                    }
-                  `}
+                  className={`overflow-hidden pl-4 transition-[max-height] duration-200 ${
+                    mobileExpanded ===
+                    item.label
+                      ? "max-h-[3000px]"
+                      : "max-h-0"
+                  }`}
                 >
                   {item.dropdown.map((sub) =>
                     sub.children ? (
-                      <div
-                        key={sub.href}
-                      >
+                      <div key={sub.href}>
                         {/* SUB ITEM */}
 
-                        <div
-                          className="
-                            flex
-                            items-center
-                            justify-between
-                          "
-                        >
+                        <div className="flex items-center justify-between">
                           <Link
                             href={sub.href}
                             className="
@@ -752,9 +653,7 @@ export default function Navbar() {
                               hover:bg-stone-100
                               hover:text-blue-600
                             "
-                            onClick={
-                              closeMobileMenu
-                            }
+                            onClick={closeMobileMenu}
                           >
                             {sub.label}
                           </Link>
@@ -789,16 +688,12 @@ export default function Navbar() {
                               height="7"
                               viewBox="0 0 10 6"
                               fill="none"
-                              className={`
-                                transition-transform
-                                duration-200
-                                ${
-                                  mobileChildExpanded ===
-                                  sub.label
-                                    ? "rotate-180"
-                                    : ""
-                                }
-                              `}
+                              className={`transition-transform duration-200 ${
+                                mobileChildExpanded ===
+                                sub.label
+                                  ? "rotate-180"
+                                  : ""
+                              }`}
                               aria-hidden="true"
                             >
                               <path
@@ -815,28 +710,18 @@ export default function Navbar() {
                         {/* CHILD SUBMENU */}
 
                         <div
-                          className={`
-                            overflow-hidden
-                            pl-4
-                            transition-[max-height]
-                            duration-200
-                            ${
-                              mobileChildExpanded ===
-                              sub.label
-                                ? "max-h-[1000px]"
-                                : "max-h-0"
-                            }
-                          `}
+                          className={`overflow-hidden pl-4 transition-[max-height] duration-200 ${
+                            mobileChildExpanded ===
+                            sub.label
+                              ? "max-h-[1000px]"
+                              : "max-h-0"
+                          }`}
                         >
                           {sub.children.map(
                             (child) => (
                               <Link
-                                key={
-                                  child.href
-                                }
-                                href={
-                                  child.href
-                                }
+                                key={child.href}
+                                href={child.href}
                                 className="
                                   block
                                   rounded-lg
@@ -873,9 +758,7 @@ export default function Navbar() {
                           hover:bg-stone-100
                           hover:text-blue-600
                         "
-                        onClick={
-                          closeMobileMenu
-                        }
+                        onClick={closeMobileMenu}
                       >
                         {sub.label}
                       </Link>
@@ -886,18 +769,9 @@ export default function Navbar() {
             </li>
           ))}
 
-          {/* =====================================================
-              MOBILE CONTACT
-          ====================================================== */}
+          {/* MOBILE CONTACT */}
 
-          <li
-            className="
-              mt-3
-              border-t
-              border-black/10
-              pt-4
-            "
-          >
+          <li className="mt-3 border-t border-black/10 pt-4">
             <Link
               href={contactNav.href}
               className="
@@ -924,3 +798,4 @@ export default function Navbar() {
     </header>
   );
 }
+
