@@ -351,127 +351,128 @@ export default function ImpactSection() {
 
         {/* INTEGRATED IMPACT FRAMEWORK */}
 
-        <div className="relative mt-12 overflow-hidden rounded-[28px] border border-[#e8e5d9] bg-[#f4f2e9] px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-20 top-16 h-64 w-64 rounded-full bg-[#d8e8db]/60 blur-3xl"
-          />
+     <div className="relative mt-12 overflow-hidden rounded-[28px] border border-[#e8e5d9] bg-[#f4f2e9] px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+         <div
+           aria-hidden="true"
+           className="pointer-events-none absolute -right-20 top-16 h-64 w-64 rounded-full bg-[#d8e8db]/60 blur-3xl"
+         />
 
-          <div className="relative mx-auto max-w-4xl text-center">
-            <div className="mb-3 flex items-center justify-center gap-3">
-              <span className="h-px w-10 bg-[#9dbbad]" />
+         <div className="relative mx-auto max-w-4xl text-center">
+           <div className="mb-3 flex items-center justify-center gap-3">
+             <span className="h-px w-10 bg-[#9dbbad]" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#286653]">
-                Our Impact Framework
-              </span>
+             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#286653]">
+               Our Impact Framework
+             </span>
 
-              <span className="h-px w-10 bg-[#9dbbad]" />
-            </div>
+             <span className="h-px w-10 bg-[#9dbbad]" />
+           </div>
 
-            <h2 className="font-display text-2xl font-semibold leading-tight text-[#123f34] sm:text-3xl lg:text-4xl">
-              An Integrated Ecosystem for a Healthier Tomorrow
-            </h2>
+           <h2 className="font-display text-2xl font-semibold leading-tight text-[#123f34] sm:text-3xl lg:text-4xl">
+             An Integrated Ecosystem for a Healthier Tomorrow
+           </h2>
 
-            <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-slate-600 sm:text-base">
-              Our programs, people, technology and partnerships work
-              together to create measurable and lasting community impact.
-            </p>
-          </div>
+           <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-slate-600 sm:text-base">
+             Our programs, people, technology and partnerships work
+             together to create measurable and lasting community impact.
+           </p>
+         </div>
 
-          {/* Framework cards */}
+         {/* Framework cards */}
 
-          <div className="relative mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-            {frameworkSteps.map((step) => {
-              const Icon = step.icon;
-              const isCommunity = step.number === "06";
+         <div className="relative mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+           {frameworkSteps.map((step) => {
+             const Icon = step.icon;
+             const isCommunity = step.number === "06";
 
-              return (
-                <article
-                  key={step.number}
-                  className={`group relative overflow-hidden rounded-[22px] border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                    isCommunity
-                      ? "border-[#075342] bg-[#075342] text-white"
-                      : "border-[#e5e2d9] bg-white/90 text-[#20352f]"
-                  }`}
-                >
-                  {/* Image */}
+             return (
+               <article
+                 key={step.number}
+                 className={`group relative overflow-hidden rounded-[22px] border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                   isCommunity
+                     ? "border-[#075342] bg-[#075342] text-white"
+                     : "border-[#e5e2d9] bg-white/90 text-[#20352f]"
+                 }`}
+               >
+                 {/* Image */}
 
-                  <div className="relative h-32 overflow-hidden sm:h-36">
-                    <img
-                      src={step.image}
-                      alt={step.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                 <div className="relative h-32 overflow-hidden sm:h-36">
+                   <img
+                     src={step.image}
+                     alt={step.title}
+                     loading="lazy"
+                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                   />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
 
-                    <div
-                      className={`absolute bottom-0 left-3 flex h-11 w-11 translate-y-1/3 items-center justify-center rounded-full border-2 border-white ${
-                        isCommunity
-                          ? "bg-[#075342] text-white"
-                          : "bg-[#176b53] text-white"
-                      }`}
-                    >
-                      <Icon size={22} strokeWidth={1.8} />
-                    </div>
+                   {/* FIX: Removed translate-y-1/3 and adjusted bottom/left positioning */}
+                   <div
+                     className={`absolute bottom-3 left-3 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white shadow-md ${
+                       isCommunity
+                         ? "bg-[#075342] text-white"
+                         : "bg-[#176b53] text-white"
+                     }`}
+                   >
+                     <Icon size={22} strokeWidth={1.8} />
+                   </div>
 
-                    <span className="absolute bottom-2 right-3 flex h-8 min-w-8 items-center justify-center rounded-full bg-white px-2 text-xs font-bold text-slate-800 shadow-sm">
-                      {step.number}
-                    </span>
-                  </div>
+                   <span className="absolute bottom-3 right-3 flex h-8 min-w-8 items-center justify-center rounded-full bg-white px-2 text-xs font-bold text-slate-800 shadow-sm">
+                     {step.number}
+                   </span>
+                 </div>
 
-                  {/* Card content */}
+                 {/* Card content */}
 
-                  <div className="px-4 pb-5 pt-5">
-                    <h3
-                      className={`font-display text-base font-semibold leading-5 ${
-                        isCommunity ? "text-white" : "text-[#164b3b]"
-                      }`}
-                    >
-                      {step.title}
-                    </h3>
+                 <div className="px-4 pb-5 pt-5">
+                   <h3
+                     className={`font-display text-base font-semibold leading-5 ${
+                       isCommunity ? "text-white" : "text-[#164b3b]"
+                     }`}
+                   >
+                     {step.title}
+                   </h3>
 
-                    {isCommunity ? (
-                      <ul className="mt-4 space-y-2">
-                        {communityOutcomes.map((outcome) => (
-                          <li
-                            key={outcome}
-                            className="flex items-start gap-2 text-xs leading-5 text-white/90"
-                          >
-                            <CheckCircle2
-                              size={15}
-                              className="mt-0.5 shrink-0"
-                            />
+                   {isCommunity ? (
+                     <ul className="mt-4 space-y-2">
+                       {communityOutcomes.map((outcome) => (
+                         <li
+                           key={outcome}
+                           className="flex items-start gap-2 text-xs leading-5 text-white/90"
+                         >
+                           <CheckCircle2
+                             size={15}
+                             className="mt-0.5 shrink-0"
+                           />
 
-                            <span>{outcome}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="mt-2 text-xs leading-[1.7] text-slate-600">
-                        {step.description}
-                      </p>
-                    )}
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+                           <span>{outcome}</span>
+                         </li>
+                       ))}
+                     </ul>
+                   ) : (
+                     <p className="mt-2 text-xs leading-[1.7] text-slate-600">
+                       {step.description}
+                     </p>
+                   )}
+                 </div>
+               </article>
+             );
+           })}
+         </div>
 
-          {/* Flow connector */}
+         {/* Flow connector */}
 
-          <div className="relative mt-7 flex justify-center">
-            <Link
-              href="/impact"
-              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#08745a] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#075642] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#08745a] focus-visible:ring-offset-2"
-            >
-              Explore Our Impact
+         <div className="relative mt-7 flex justify-center">
+           <Link
+             href="/impact"
+             className="inline-flex items-center justify-center gap-3 rounded-full bg-[#08745a] px-7 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#075642] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#08745a] focus-visible:ring-offset-2"
+           >
+             Explore Our Impact
 
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
+             <ArrowRight size={18} />
+           </Link>
+         </div>
+       </div>
 
         {/* BOTTOM IMPACT BANNER */}
 
