@@ -12,6 +12,7 @@ import MediaHighlights from "@/components/home/MediaHighlights";
 import TrainingSection from "@/components/home/TrainingSection";
 import ImpactSection from "@/components/home/ImpactSection";
 import PartnersSection from "@/components/home/PartnersSection";
+import Organization from "@/components/home/Organization"
 
 export default function HomePage() {
   return (
@@ -23,9 +24,11 @@ export default function HomePage() {
       {/* 2. Who We Are (short teaser — full content lives on /about) */}
       <AboutTeaser />
 
+      <TeamHierarchy/>
+
       {/* 3. Organization / Team */}
       <section className="border-t border-line bg-sand">
-        <TeamHierarchy />
+        < Organization/>
       </section>
 
       {/* 4. What We Do */}
@@ -47,13 +50,13 @@ export default function HomePage() {
       <BusinessHubSection />
 
       {/* 10. Campaigns */}
-      <CampaignsSection />
+      {/* <CampaignsSection /> */}
 
       {/* 11. Media & Mass Media */}
-      <MediaHighlights />
+      {/* <MediaHighlights /> */}
 
       {/* 12. Training */}
-      <TrainingSection />
+      {/* <TrainingSection /> */}
 
       {/* 13. Impact */}
       <ImpactSection />
