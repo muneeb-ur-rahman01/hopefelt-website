@@ -195,14 +195,16 @@ export default function ExploreSection() {
                   </div>
                 </div>
 
-                <div className="p-6 pt-0">
-                 <div className="pt-4 border-t border-line flex items-center justify-between bg-forest text-white px-4 py-3 rounded-lg">
-                  <span className="text-xs font-semibold text-white">Explore</span>
-                  <span className="text-white transition-transform group-hover:translate-x-1">
+              <div className="p-6 pt-0">
+              <div className="pt-4 border-t border-line">
+                <div className="inline-flex items-center gap-3 rounded-md border border-[#0d3749]/30 bg-[#0d3749] px-3 py-2 text-white transition-all duration-300 group-hover:border-[#4a6741] group-hover:bg-[#4a6741]">
+                  <span className="text-xs font-semibold">Explore</span>
+                  <span className="text-white transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
                 </div>
-                </div>
+              </div>
+            </div>
               </Link>
             );
           })}

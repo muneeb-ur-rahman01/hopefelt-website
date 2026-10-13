@@ -55,48 +55,48 @@ export default function Hero() {
             </p>
 
             {/* GLASSMORPHISM BUTTONS */}
-            <div className="mt-9 flex flex-wrap gap-3 rounded-[1.75rem] border border-[#3368A0]/15 bg-white/70 p-4 shadow-[0_12px_40px_rgba(51,104,160,0.08)] backdrop-blur-xl sm:p-5">
-              <Link
-                href="/our-work"
-                className="group inline-flex items-center gap-2 rounded-full border border-[#3368A0]/20 bg-[#3368A0]/[0.09] px-5 py-3 text-sm font-semibold text-[#3368A0] shadow-sm backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#3368A0]/40 hover:bg-[#3368A0] hover:text-white hover:shadow-lg hover:shadow-[#3368A0]/20"
-              >
-                Explore Our Work
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
+<div className="mt-9 flex flex-wrap gap-3 rounded-[1.75rem] border border-[#4a6741]/20 bg-[#4a6741]/[0.08] p-4 shadow-[0_12px_40px_rgba(74,103,65,0.12)] backdrop-blur-xl sm:p-5">
+  <Link
+    href="/our-work"
+    className="group inline-flex items-center gap-2 rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-lg hover:shadow-[#4a6741]/25"
+  >
+    Explore Our Work
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </Link>
 
-              <Link
-                href="/projects"
-                className="inline-flex items-center rounded-full border border-[#3368A0]/20 bg-white/60 px-5 py-3 text-sm font-semibold text-[#3368A0] shadow-sm backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#3368A0]/40 hover:bg-[#3368A0]/[0.08] hover:shadow-md"
-              >
-                Our Projects
-              </Link>
+  <Link
+    href="/projects"
+    className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
+  >
+    Our Projects
+  </Link>
 
-              <Link
-                href="/get-involved"
-                className="inline-flex items-center rounded-full border border-[#3368A0]/20 bg-white/60 px-5 py-3 text-sm font-semibold text-[#3368A0] shadow-sm backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#3368A0]/40 hover:bg-[#3368A0]/[0.08] hover:shadow-md"
-              >
-                Get Involved
-              </Link>
+  <Link
+    href="/get-involved"
+    className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
+  >
+    Get Involved
+  </Link>
 
-              <Link
-                href="/business-hub"
-                className="inline-flex items-center rounded-full border border-[#3368A0]/25 bg-[#3368A0]/[0.06] px-5 py-3 text-sm font-semibold text-[#3368A0] shadow-sm backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#3368A0]/[0.14] hover:shadow-md"
-              >
-                Business Hub
-              </Link>
+  <Link
+    href="/business-hub"
+    className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
+  >
+    Business Hub
+  </Link>
 
-              <Link
-                href="/donate"
-                className="group inline-flex items-center gap-2 rounded-full border border-[#3368A0]/30 bg-[#3368A0] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#3368A0]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#285583] hover:shadow-lg hover:shadow-[#3368A0]/30"
-              >
-                Donate
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-            </div>
+  <Link
+    href="/donate"
+    className="group inline-flex items-center gap-2 rounded-full border border-[#394F32] bg-[#4a6741] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#4a6741]/25 transition-all duration-300 hover:-translate-y-1 hover:bg-[#2F422A] hover:text-white hover:shadow-lg hover:shadow-[#4a6741]/30"
+  >
+    Donate
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </Link>
+</div>
           </div>
 
           {/* AUTO IMAGE CAROUSEL */}

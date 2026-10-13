@@ -154,162 +154,146 @@ const collectiveImpactSteps = [
   },
 ];
 
-export default function TeamHierarchy() {
+export default function organization() {
   return (
     <section className="bg-slate-50/50 py-20">
       <div className="mx-auto max-w-[100rem] px-5 sm:px-8 lg:px-12">
+
         {/* Header Block */}
-        <div className="grid gap-8 lg:grid-cols-12 items-center mb-12">
+        <div className="mb-12 grid items-center gap-8 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4a6741]">
               OUR ORGANIZATION —
             </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-4xl leading-tight">
+
+            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-4xl">
               PEOPLE AND DEPARTMENTS WORKING TOGETHER FOR IMPACT.
             </h2>
+
             <p className="mt-4 text-sm leading-relaxed text-ink/65">
-              Hopefelt brings together multidisciplinary teams across public health, research, technology, community programs and operations to create sustainable and measurable impact.
+              Hopefelt brings together multidisciplinary teams across public
+              health, research, technology, community programs and operations
+              to create sustainable and measurable impact.
             </p>
           </div>
 
-          {/* Logo & Governance Badge (Logo Added Here) */}
-          <div className="lg:col-span-4 flex flex-col items-center justify-center space-y-4">
-            <div className="rounded-2xl border border-line bg-white p-4 text-center shadow-2xs w-full max-w-sm">
+          {/* Logo & Governance */}
+          <div className="flex flex-col items-center justify-center space-y-4 lg:col-span-4">
+            <div className="w-full max-w-sm rounded-xl border-2 border-[#0d3749]/25 bg-gradient-to-br from-white to-[#4a6741]/[0.06] p-4 text-center shadow-[0_4px_14px_rgba(13,55,73,0.06)] transition-all duration-300 hover:border-[#4a6741] hover:shadow-lg">
               <div className="flex items-center justify-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-forest/10 overflow-hidden shrink-0">
-                  <Image 
-                    src={hopefeltLogo} 
-                    alt="Hopefelt Foundation Logo" 
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-[#4a6741]/20 bg-[#4a6741]/10">
+                  <Image
+                    src={hopefeltLogo}
+                    alt="Hopefelt Foundation Logo"
                     className="h-full w-full object-contain"
                   />
                 </div>
+
                 <div className="text-left">
-                  <h3 className="font-display font-semibold text-forest text-base">Hopefelt Foundation</h3>
-                  <p className="text-[11px] text-ink/60">A Public Health Society</p>
+                  <h3 className="font-display text-base font-semibold text-[#0d3749]">
+                    Hopefelt Foundation
+                  </h3>
+                  <p className="text-[11px] text-ink/60">
+                    A Public Health Society
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-2xl bg-forest text-white p-3 text-center shadow-sm w-full max-w-sm flex items-center justify-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 shrink-0">
+            <div className="flex w-full max-w-sm items-center justify-center gap-3 rounded-xl border-2 border-[#4a6741] bg-gradient-to-r from-[#0d3749] to-[#4a6741] p-3 text-center text-white shadow-[0_6px_18px_rgba(13,55,73,0.15)] transition-all duration-300 hover:shadow-lg">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/15">
                 <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
+
               <div className="text-left">
-                <h4 className="text-xs font-semibold">Governance & Strategic Direction</h4>
-                <p className="text-[10px] text-white/70">Board | Executive Leadership | Advisors</p>
+                <h4 className="text-xs font-semibold">
+                  Governance & Strategic Direction
+                </h4>
+                <p className="mt-1 text-[10px] text-white/75">
+                  Board | Executive Leadership | Advisors
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Our Impact Areas */}
-          <div className="lg:col-span-3 bg-emerald-50/40 rounded-2xl p-4 border border-emerald-100">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-forest mb-3 text-center">
+          {/* Impact Areas */}
+          <div className="rounded-xl border-2 border-[#4a6741]/25 bg-gradient-to-br from-[#4a6741]/[0.08] to-[#0d3749]/[0.04] p-4 lg:col-span-3">
+            <p className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0d3749]">
               OUR IMPACT AREAS
             </p>
+
             <div className="grid grid-cols-4 gap-2 text-center">
-              <div className="flex flex-col items-center">
-                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center shadow-2xs text-forest mb-1">
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+              {[
+                { title: "Healthier Communities", path: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
+                { title: "Stronger Systems", path: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" },
+                { title: "Innovation for Good", path: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" },
+                { title: "Sustainable Impact", path: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" },
+              ].map((area) => (
+                <div key={area.title} className="flex flex-col items-center">
+                  <div className="mb-1 flex h-9 w-9 items-center justify-center rounded-lg border border-[#4a6741]/20 bg-white text-[#0d3749] shadow-sm transition-all duration-300 hover:border-[#4a6741] hover:bg-[#4a6741] hover:text-white">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={area.path} />
+                    </svg>
+                  </div>
+                  <span className="text-[9px] font-semibold leading-tight text-[#0d3749]">
+                    {area.title}
+                  </span>
                 </div>
-                <span className="text-[9px] font-semibold text-ink/80 leading-tight">Healthier Communities</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center shadow-2xs text-forest mb-1">
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <span className="text-[9px] font-semibold text-ink/80 leading-tight">Stronger Systems</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center shadow-2xs text-forest mb-1">
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <span className="text-[9px] font-semibold text-ink/80 leading-tight">Innovation for Good</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center shadow-2xs text-forest mb-1">
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <span className="text-[9px] font-semibold text-ink/80 leading-tight">Sustainable Impact</span>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Tree Connectors & Top Level Nodes */}
+        {/* Governance Nodes */}
         <div className="relative pt-6">
-          <div className="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-px h-6 bg-forest/30" />
-          <div className="hidden lg:block absolute top-6 left-1/4 right-1/4 h-px bg-forest/30" />
+          <div className="absolute left-1/2 top-0 hidden h-6 w-px -translate-x-1/2 bg-[#4a6741]/40 lg:block" />
+          <div className="absolute left-1/4 right-1/4 top-6 hidden h-px bg-[#4a6741]/40 lg:block" />
 
-          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-            {/* Board / Governing Body */}
-            <div className="relative rounded-2xl border border-line bg-white p-4 shadow-2xs flex items-center gap-4">
-              <div className="hidden lg:block absolute -top-6 left-1/2 -translate-x-1/2 w-px h-6 bg-forest/30" />
-              <div className="h-16 w-24 rounded-lg overflow-hidden bg-slate-100 shrink-0">
-                <img
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80"
-                  alt="Board / Governing Body"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <div className="h-6 w-6 rounded-full bg-forest/10 flex items-center justify-center shrink-0">
-                    <svg className="h-3.5 w-3.5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-display text-base font-semibold text-ink">Board / Governing Body</h3>
+          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+            {[
+              {
+                title: "Board / Governing Body",
+                description: "Strategic oversight, policy guidance and accountability.",
+                image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80",
+              },
+              {
+                title: "Executive Leadership",
+                description: "Leadership, coordination and organizational management.",
+                image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="group relative flex items-center gap-4 overflow-hidden rounded-xl border-2 border-[#0d3749]/25 bg-gradient-to-br from-white to-[#4a6741]/[0.05] p-4 shadow-[0_4px_14px_rgba(13,55,73,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741] hover:shadow-[0_10px_24px_rgba(13,55,73,0.12)]"
+              >
+                <div className="h-16 w-24 shrink-0 overflow-hidden rounded-lg border border-[#0d3749]/10 bg-slate-100">
+                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <p className="mt-1 text-xs text-ink/65 leading-tight">
-                  Strategic oversight, policy guidance and accountability.
-                </p>
-              </div>
-            </div>
 
-            {/* Executive Leadership */}
-            <div className="relative rounded-2xl border border-line bg-white p-4 shadow-2xs flex items-center gap-4">
-              <div className="hidden lg:block absolute -top-6 left-1/2 -translate-x-1/2 w-px h-6 bg-forest/30" />
-              <div className="h-16 w-24 rounded-lg overflow-hidden bg-slate-100 shrink-0">
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80"
-                  alt="Executive Leadership"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <div className="h-6 w-6 rounded-full bg-forest/10 flex items-center justify-center shrink-0">
-                    <svg className="h-3.5 w-3.5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-display text-base font-semibold text-ink">Executive Leadership</h3>
+                <div>
+                  <h3 className="font-display text-base font-semibold text-[#0d3749] transition-colors group-hover:text-[#4a6741]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-xs leading-relaxed text-ink/65">
+                    {item.description}
+                  </p>
                 </div>
-                <p className="mt-1 text-xs text-ink/65 leading-tight">
-                  Leadership, coordination and organizational management.
-                </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Section 1: CORE DEPARTMENTS */}
-        <div className="mt-12 rounded-3xl border border-sky-100 bg-sky-50/30 p-6 lg:p-8">
+        {/* Core Departments */}
+        <div className="mt-12 rounded-2xl border-2 border-[#0d3749]/20 bg-gradient-to-br from-[#0d3749]/[0.03] to-[#4a6741]/[0.06] p-6 lg:p-8">
           <div className="mb-6">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#0d3749]">
               CORE DEPARTMENTS
             </h3>
-            <p className="text-xs text-ink/60 mt-1">Working across functions to deliver our mission.</p>
+            <p className="mt-1 text-xs text-ink/60">
+              Working across functions to deliver our mission.
+            </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
@@ -317,43 +301,47 @@ export default function TeamHierarchy() {
               <Link
                 key={dept.num}
                 href="/about/our-departments"
-                className="group rounded-2xl border border-line bg-white overflow-hidden flex flex-col justify-between shadow-2xs hover:shadow-sm transition"
+                className="group flex flex-col justify-between overflow-hidden rounded-xl border-2 border-[#0d3749]/25 bg-white shadow-[0_3px_12px_rgba(13,55,73,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741] hover:shadow-[0_10px_24px_rgba(13,55,73,0.12)]"
               >
                 <div>
-                  <div className="relative h-24 w-full">
-                    <img src={dept.image} alt={dept.title} className="h-full w-full object-cover" />
-                    <span className="absolute top-2 left-2 z-10 rounded-md bg-forest/90 px-2 py-0.5 text-[10px] font-semibold text-white">
+                  <div className="relative h-24 w-full overflow-hidden">
+                    <img src={dept.image} alt={dept.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <span className="absolute left-2 top-2 rounded-md border border-white/30 bg-[#0d3749]/95 px-2 py-1 text-[10px] font-bold text-white">
                       {dept.num}
                     </span>
                   </div>
 
                   <div className="p-3">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-50 shrink-0">
+                    <div className="mb-2 flex items-center gap-2">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-[#4a6741]/20 bg-[#4a6741]/10">
                         {dept.icon}
                       </div>
-                      <h4 className="font-display text-xs font-semibold text-ink group-hover:text-forest line-clamp-2 leading-tight">
+                      <h4 className="line-clamp-2 font-display text-xs font-bold leading-tight text-[#0d3749] transition-colors group-hover:text-[#4a6741]">
                         {dept.title}
                       </h4>
                     </div>
 
-                    <p className="text-[11px] leading-snug text-ink/65 line-clamp-3">
+                    <p className="line-clamp-3 text-[11px] leading-relaxed text-ink/65">
                       {dept.desc}
                     </p>
                   </div>
                 </div>
+
+                <div className="mx-3 mb-3 h-1 w-8 rounded-full bg-[#4a6741]/60 transition-all duration-300 group-hover:w-14 group-hover:bg-[#0d3749]" />
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Section 2: SPECIALIZED UNITS & INITIATIVES */}
-        <div className="mt-8 rounded-3xl border border-sky-100 bg-sky-50/30 p-6 lg:p-8">
+        {/* Specialized Units */}
+        <div className="mt-8 rounded-2xl border-2 border-[#4a6741]/25 bg-gradient-to-br from-[#4a6741]/[0.05] to-[#0d3749]/[0.03] p-6 lg:p-8">
           <div className="mb-6">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[#0d3749]">
               SPECIALIZED UNITS & INITIATIVES
             </h3>
-            <p className="text-xs text-ink/60 mt-1">Driving innovation and expanding impact through specialized teams and initiatives.</p>
+            <p className="mt-1 text-xs text-ink/60">
+              Driving innovation and expanding impact through specialized teams and initiatives.
+            </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -361,65 +349,74 @@ export default function TeamHierarchy() {
               <Link
                 key={dept.num}
                 href="/about/our-departments"
-                className="group rounded-2xl border border-line bg-white overflow-hidden flex flex-col justify-between shadow-2xs hover:shadow-sm transition"
+                className="group flex flex-col justify-between overflow-hidden rounded-xl border-2 border-[#0d3749]/25 bg-white shadow-[0_3px_12px_rgba(13,55,73,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741] hover:shadow-[0_10px_24px_rgba(13,55,73,0.12)]"
               >
                 <div>
-                  <div className="relative h-24 w-full">
-                    <img src={dept.image} alt={dept.title} className="h-full w-full object-cover" />
-                    <span className="absolute top-2 left-2 z-10 rounded-md bg-forest/90 px-2 py-0.5 text-[10px] font-semibold text-white">
+                  <div className="relative h-28 w-full overflow-hidden">
+                    <img src={dept.image} alt={dept.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <span className="absolute left-2 top-2 rounded-md border border-white/30 bg-[#0d3749]/95 px-2 py-1 text-[10px] font-bold text-white">
                       {dept.num}
                     </span>
                   </div>
 
-                  <div className="p-3">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-50 shrink-0">
+                  <div className="p-4">
+                    <div className="mb-2 flex items-center gap-2">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-[#4a6741]/20 bg-[#4a6741]/10">
                         {dept.icon}
                       </div>
-                      <h4 className="font-display text-xs font-semibold text-ink group-hover:text-forest line-clamp-2 leading-tight">
+                      <h4 className="line-clamp-2 font-display text-sm font-bold leading-tight text-[#0d3749] transition-colors group-hover:text-[#4a6741]">
                         {dept.title}
                       </h4>
                     </div>
 
-                    <p className="text-[11px] leading-snug text-ink/65 line-clamp-3">
+                    <p className="line-clamp-3 text-xs leading-relaxed text-ink/65">
                       {dept.desc}
                     </p>
                   </div>
                 </div>
+
+                <div className="mx-4 mb-4 h-1 w-10 rounded-full bg-[#4a6741]/60 transition-all duration-300 group-hover:w-16 group-hover:bg-[#0d3749]" />
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Bottom Banner: OUR COLLECTIVE IMPACT */}
-        <div className="mt-8 rounded-2xl border border-emerald-100 bg-emerald-50/30 p-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+        {/* Collective Impact */}
+        <div className="mt-8 rounded-2xl border-2 border-[#0d3749]/20 bg-gradient-to-r from-[#0d3749]/[0.04] via-white to-[#4a6741]/[0.08] p-6">
+          <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
             <div className="lg:w-1/4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#0d3749]">
                 OUR COLLECTIVE IMPACT
               </p>
-              <p className="text-xs text-ink/65 mt-1 leading-relaxed">
-                All departments and initiatives work together to create healthier, stronger and more resilient communities.
+              <p className="mt-2 text-xs leading-relaxed text-ink/65">
+                All departments and initiatives work together to create healthier,
+                stronger and more resilient communities.
               </p>
             </div>
 
-            <div className="lg:w-3/4 flex flex-wrap lg:flex-nowrap items-center justify-between gap-3 w-full">
+            <div className="flex w-full flex-wrap items-center justify-between gap-3 lg:w-3/4 lg:flex-nowrap">
               {collectiveImpactSteps.map((step, idx) => (
-                <div key={step.title} className="flex items-center gap-3 flex-1 min-w-[180px]">
-                  <div className="flex items-center gap-2 bg-white rounded-xl p-3 border border-emerald-100 shadow-2xs w-full">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 shrink-0">
+                <div key={step.title} className="flex min-w-[180px] flex-1 items-center gap-3">
+                  <div className="group flex w-full items-center gap-3 rounded-xl border-2 border-[#0d3749]/20 bg-white p-3 shadow-[0_3px_10px_rgba(13,55,73,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741] hover:shadow-md">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#4a6741]/20 bg-[#4a6741]/10 transition-colors group-hover:bg-[#4a6741] group-hover:[&_svg]:text-white">
                       {step.icon}
                     </div>
-                    <span className="text-xs font-semibold text-ink leading-tight">{step.title}</span>
+                    <span className="text-xs font-semibold leading-tight text-[#0d3749] transition-colors group-hover:text-[#4a6741]">
+                      {step.title}
+                    </span>
                   </div>
+
                   {idx < collectiveImpactSteps.length - 1 && (
-                    <span className="hidden lg:block text-forest/40 text-sm">→</span>
+                    <span className="hidden text-sm font-bold text-[#4a6741]/60 lg:block">
+                      →
+                    </span>
                   )}
                 </div>
               ))}
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

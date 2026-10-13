@@ -2,47 +2,31 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Health & Medical Support",
-    category: "HEALTH",
-    description: "Community-focused medical camps, screening and preventive health initiatives.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-    pills: ["Medical Camps", "Screening", "Health Awareness"],
+    title: "Research, Evidence & Innovation",
+    category: "RESEARCH & INNOVATION",
+    description:
+      "Hopefelt advances research and innovation through public health, applied and community-based research, data analysis, and evidence generation. We create opportunities for research presentations, publications, competitions, and collaborations that translate knowledge into practical solutions for real-world challenges.",
+    image:
+      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80",
+    pills: [
+      "Public Health Research",
+      "Evidence Generation",
+      "Research Collaboration",
+    ],
   },
   {
-    title: "Community Development",
-    category: "COMMUNITY",
-    description: "Community outreach, engagement, mobilization and support for vulnerable communities.",
-    image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80",
-    pills: ["Awareness Sessions", "Community Engagement", "Support Programs"],
-  },
-  {
-    title: "Digital Health Innovation",
-    category: "DIGITAL HEALTH",
-    description: "Digital solutions designed to improve access, information, screening and health-service coordination.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    pills: ["PHMIS", "Virtual Care", "Data Systems"],
-  },
-  {
-    title: "Blood Donation Drives",
-    category: "PARTNERSHIPS",
-    description: "Collaborative blood donation campaigns to support hospitals and save lives.",
-    image: "https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80",
-    pills: ["Donor Mobilization", "Hospital Support", "Community Participation"],
-  },
-  {
-    title: "Green Initiatives",
-    category: "ENVIRONMENT & WELLBEING",
-    description: "Tree plantation and environment-focused activities for healthier and safer communities.",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
-    pills: ["Tree Plantation", "Environmental Awareness", "Community Participation"],
-  },
-  {
-    title: "Capacity Building",
-    category: "EDUCATION & TRAINING",
-    description: "Training, workshops and skill development for communities, students and professionals.",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
-    pills: ["Training Sessions", "Workshops", "Skill Development"],
-  },
+    title: "Research to Market",
+    category: "TECHNOLOGY & ENTREPRENEURSHIP",
+    description:
+      "We connect research with innovation, technology, entrepreneurship, and marketing to transform promising ideas into practical products, services, and scalable ventures.",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    pills: [
+      "Product Development",
+      "Business Hub",
+      "Market Launch",
+    ],
+  },   
 ];
 
 export default function FeaturedProjects() {
@@ -50,18 +34,21 @@ export default function FeaturedProjects() {
     <section className="bg-sand">
       <div className="mx-auto max-w-[100rem] px-5 py-20 sm:px-8 lg:px-12">
         {/* Top Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+        <div className="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
-              FEATURED PROJECTS —
+              Featured Projects
             </p>
 
-            <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-              TURNING IDEAS AND COMMUNITY NEEDS INTO ACTION.
+            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-forest sm:text-5xl">
+              Ideas Into Action. Impact Into Reality.
             </h2>
 
             <p className="mt-4 leading-relaxed text-ink/65">
-              Explore selected Hopefelt projects and see how our programmes, research, technology and partnerships connect to meaningful and measurable impact[cite: 8].
+              Discover Hopefelt Foundation&apos;s initiatives across
+              community health, research, technology, and innovation creating
+              opportunities, addressing real-world challenges, and driving
+              meaningful change.
             </p>
           </div>
 
@@ -70,25 +57,28 @@ export default function FeaturedProjects() {
               href="/projects"
               className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white transition hover:bg-forest/90"
             >
-              View All Projects →
+              View All Projects
+              <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
 
-        {/* 6 Cards Grid (3x2) */}
+        {/* Projects Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-3xl border border-line bg-white flex flex-col justify-between shadow-sm transition hover:shadow-md"
+              className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-line bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               <div>
                 {/* Project Image */}
                 <div
-                  className="h-56 bg-cover bg-center"
+                  className="h-56 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.02]"
                   style={{
                     backgroundImage: `url('${project.image}')`,
                   }}
+                  role="img"
+                  aria-label={project.title}
                 />
 
                 <div className="p-6">
@@ -118,19 +108,88 @@ export default function FeaturedProjects() {
                 </div>
               </div>
 
+              {/* Compact Explore Link */}
               <div className="p-6 pt-0">
-                <div className="pt-4 border-t border-line">
+                <div className="border-t border-line pt-4">
                   <Link
                     href="/projects"
-                    className="inline-flex text-xs font-semibold text-forest hover:underline"
+                    className="group/explore inline-flex items-center gap-2 rounded-md border border-[#0d3749]/30 px-3 py-2 text-xs font-semibold text-[#0d3749] transition-all duration-300 hover:border-[#4a6741] hover:bg-[#4a6741] hover:text-white"
                   >
-                    Explore Project →
+                    <span>Explore</span>
+                    <span className="transition-transform duration-300 group-hover/explore:translate-x-1">
+                      →
+                    </span>
                   </Link>
                 </div>
               </div>
             </article>
           ))}
         </div>
+
+        {/* Research to Market Process */}
+        <div className="mt-16 overflow-hidden rounded-3xl border border-[#0d3749]/10 bg-white p-6 shadow-sm sm:p-10">
+  {/* Section Header */}
+  <div className="max-w-3xl">
+    <span className="inline-flex items-center rounded-full border border-[#4a6741]/20 bg-[#4a6741]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a6741]">
+      Research to Market
+    </span>
+
+    <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-4xl">
+      From Research to Real-World Solutions.
+    </h3>
+
+    <p className="mt-4 leading-relaxed text-ink/65">
+      We connect research with innovation, technology,
+      entrepreneurship, and marketing to transform promising ideas
+      into practical products, services, and scalable ventures.
+    </p>
+  </div>
+
+  {/* Modern Process Chain */}
+  <div className="mt-10">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      {[
+        "Research",
+        "Discovery",
+        "Innovation",
+        "Technology",
+        "Product Development",
+        "Business Hub",
+        "Marketing & Media",
+        "Market Launch",
+        "Scale",
+      ].map((step, index) => (
+        <div key={step} className="relative flex">
+          <div className="group relative flex min-h-[112px] w-full items-start gap-3 overflow-hidden rounded-2xl border border-[#0d3749]/10 bg-[#0d3749]/[0.025] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741]/40 hover:bg-[#4a6741]/[0.06] hover:shadow-md">
+            {/* Step Number */}
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0d3749] text-xs font-bold text-white transition-colors duration-300 group-hover:bg-[#4a6741]">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            {/* Step Content */}
+            <div className="min-w-0 pt-1">
+              <p className="text-sm font-semibold leading-snug text-[#0d3749]">
+                {step}
+              </p>
+
+              <div className="mt-3 h-1 w-8 rounded-full bg-[#4a6741]/40 transition-all duration-300 group-hover:w-14 group-hover:bg-[#4a6741]" />
+            </div>
+
+            {/* Desktop connector */}
+            {index < 8 && (
+              <span
+                className="absolute -right-[9px] top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center text-lg font-semibold text-[#4a6741] xl:flex"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );
