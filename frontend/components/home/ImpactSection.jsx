@@ -477,47 +477,47 @@ export default function ImpactSection() {
         {/* BOTTOM IMPACT BANNER */}
 
 
-<div className="relative mt-8 flex flex-col gap-5 overflow-hidden rounded-2xl border border-[#e2eae2] bg-[#f0f6f1] px-5 py-6 sm:rounded-3xl sm:px-8 sm:py-8 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:rounded-full lg:px-12 lg:py-7">
-  {/* Heading */}
-  <div className="flex min-w-0 items-center gap-4 sm:gap-5">
-    <div className="hidden shrink-0 text-[#176b53] sm:block">
-      <ChartNoAxesColumnIncreasing
-        size={44}
-        strokeWidth={1.8}
-        className="sm:h-[54px] sm:w-[54px]"
-      />
-    </div>
+        <div className="relative mt-8 flex flex-col gap-5 overflow-hidden rounded-2xl border border-[#e2eae2] bg-[#f0f6f1] px-5 py-6 sm:rounded-3xl sm:px-8 sm:py-8 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:rounded-full lg:px-12 lg:py-7">
+          {/* Heading */}
+          <div className="flex min-w-0 items-center gap-4 sm:gap-5">
+            <div className="hidden shrink-0 text-[#176b53] sm:block">
+              <ChartNoAxesColumnIncreasing
+                size={44}
+                strokeWidth={1.8}
+                className="sm:h-[54px] sm:w-[54px]"
+              />
+            </div>
 
-    <div className="min-w-0">
-      <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#34755d] sm:text-xs sm:tracking-[0.22em]">
-        Our Impact Is Guided By
-      </p>
+            <div className="min-w-0">
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#34755d] sm:text-xs sm:tracking-[0.22em]">
+                Our Impact Is Guided By
+              </p>
 
-      <h3 className="mt-1 font-display text-2xl font-semibold tracking-tight text-[#075344] sm:text-3xl">
-        Data. People. Progress.
-      </h3>
-    </div>
-  </div>
+              <h3 className="mt-1 font-display text-2xl font-semibold tracking-tight text-[#075344] sm:text-3xl">
+                Data. People. Progress.
+              </h3>
+            </div>
+          </div>
 
-  {/* Divider - desktop only */}
-  <div className="hidden h-12 w-px shrink-0 bg-[#c9d8ce] lg:block" />
+          {/* Divider - desktop only */}
+          <div className="hidden h-12 w-px shrink-0 bg-[#c9d8ce] lg:block" />
 
-  {/* Description */}
-  <p className="w-full text-sm leading-6 text-slate-600 sm:text-base sm:leading-7 lg:max-w-xl lg:flex-1">
-    We use data and real-world insights to design effective
-    programs, improve outcomes and build healthier, more
-    resilient communities.
-  </p>
+          {/* Description */}
+          <p className="w-full text-sm leading-6 text-slate-600 sm:text-base sm:leading-7 lg:max-w-xl lg:flex-1">
+            We use data and real-world insights to design effective
+            programs, improve outcomes and build healthier, more
+            resilient communities.
+          </p>
 
-  {/* Button */}
-  <Link
-    href="/impact"
-    className="inline-flex w-full shrink-0 items-center justify-center gap-3 rounded-full bg-[#08745a] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[#075642] hover:shadow-md sm:w-auto sm:px-7 sm:py-4"
-  >
-    Explore Our Impact
-    <ArrowRight size={18} />
-  </Link>
-</div>
+          {/* Button */}
+          <Link
+            href="/impact"
+            className="inline-flex w-full shrink-0 items-center justify-center gap-3 rounded-full bg-[#08745a] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[#075642] hover:shadow-md sm:w-auto sm:px-7 sm:py-4"
+          >
+            Explore Our Impact
+            <ArrowRight size={18} />
+          </Link>
+        </div>
 
       </div>
     </section>
