@@ -10,7 +10,7 @@ const techColumns = [
       </svg>
     ),
     items: [
-      { name: "Work Square", sub: "Productivity & Operations" },
+      { name: "Worksphere", sub: "Productivity & Operations" },
       { name: "PHMIS", sub: "Health Information System" },
       { name: "Digital Health Solutions", sub: "Virtual Care & Health Services" },
     ],
