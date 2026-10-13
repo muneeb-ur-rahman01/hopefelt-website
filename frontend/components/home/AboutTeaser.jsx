@@ -95,7 +95,7 @@ export default function AboutTeaser() {
               </p>
               
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-forest sm:text-5xl">
-                Who We Are
+                WHO WE ARE
               </h2>
 
               <p className="mt-5 font-body text-sm leading-relaxed text-ink/70">

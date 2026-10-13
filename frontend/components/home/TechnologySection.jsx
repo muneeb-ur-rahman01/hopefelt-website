@@ -102,7 +102,7 @@ export default function TechnologySection() {
               </span>
 
               <h2 className="mt-4 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-                Technology designed around real-world needs.
+                TECHNOLOGY DESIGNED AROUND REAL WORLD NEEDS.
               </h2>
 
               <p className="mt-5 leading-relaxed text-ink/65">

@@ -165,7 +165,7 @@ export default function TeamHierarchy() {
               OUR ORGANIZATION —
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-4xl leading-tight">
-              People and departments working together for impact.
+              PEOPLE AND DEPARTMENTS WORKING TOGETHER FOR IMPACT.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-ink/65">
               Hopefelt brings together multidisciplinary teams across public health, research, technology, community programs and operations to create sustainable and measurable impact.

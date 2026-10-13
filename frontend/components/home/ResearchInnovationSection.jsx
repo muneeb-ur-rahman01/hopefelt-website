@@ -111,7 +111,7 @@ export default function ResearchInnovationSection() {
               </p>
 
               <h2 className="mt-4 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-                Evidence that moves ideas forward.
+                EVIDENCE THAT MOVES IDEAS FORWARD.
               </h2>
 
               <p className="mt-5 leading-relaxed text-ink/65 max-w-xl">

@@ -19,21 +19,21 @@ const hierarchyData = {
   departments: [
     {
       name: "USAMA BIN ZAHID",
-      role: "Head of Research & Development",
+      role: "Head of Finance",
       image: "/images/usama.jpg",
       color: "bg-lime-500 text-slate-900",
       ringColor: "border-lime-500",
     },
     {
       name: "MUHAMMAD RIZWAN",
-      role: "Head of Field Operations",
+      role: "Operational Team",
       image: "/images/Rizwan.jpg",
       color: "bg-teal-500 text-white",
       ringColor: "border-teal-500",
     },
     {
       name: "SHARJEEL",
-      role: "Head of Technology (IT)",
+      role: "Social Media Manager",
       image: "/images/Sharjeel.jpg",
       color: "bg-emerald-500 text-white",
       ringColor: "border-emerald-500",
@@ -59,7 +59,7 @@ export default function TeamHierarchy() {
             ORGANIZATIONAL STRUCTURE
           </span>
           <h2 className="font-display text-3xl font-semibold text-forest sm:text-4xl">
-            Team Hierarchy
+            TEAM HIERARCHY
           </h2>
           <p className="mt-3 text-sm text-ink/65">
             Leadership and departmental command structure driving our mission forward.
@@ -72,10 +72,10 @@ export default function TeamHierarchy() {
           {/* --- TOP LEVEL: Founder & Co-Founder --- */}
           <div className="flex justify-center gap-20 mb-20 relative">
             {[hierarchyData.founder, hierarchyData.coFounder].map((leader, idx) => (
-              <div key={idx} className="relative flex items-center bg-white rounded-full shadow-lg p-3 pr-10 border border-line min-w-[320px]">
-                {/* Larger Circular Avatar */}
-                <div className={`relative h-20 w-20 rounded-full overflow-hidden border-4 ${leader.ringColor} shrink-0 shadow-md bg-white`}>
-                  <img src={leader.image} alt={leader.name} className="h-full w-full object-cover" />
+              <div key={idx} className="relative flex items-center bg-white rounded-full shadow-lg p-3 pr-10 border border-line min-w-[340px]">
+                {/* Circular Avatar with Face & Shoulder Zoom */}
+                <div className={`relative h-28 w-28 rounded-full overflow-hidden border-4 ${leader.ringColor} shrink-0 shadow-md bg-white`}>
+                  <img src={leader.image} alt={leader.name} className="h-full w-full object-cover object-top scale-130 origin-top" />
                 </div>
                 {/* Info Card Badge */}
                 <div className={`ml-5 px-6 py-3 rounded-2xl ${leader.color} shadow-md w-full`}>
@@ -103,10 +103,10 @@ export default function TeamHierarchy() {
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-0.5 h-16 bg-forest/30" />
 
                 {/* Node Box */}
-                <div className="relative bg-white rounded-3xl shadow-lg p-5 pt-14 border border-line text-center w-full flex flex-col items-center">
-                  {/* Larger Circular Avatar overlapping top */}
-                  <div className={`absolute -top-10 h-20 w-20 rounded-full overflow-hidden border-4 ${dept.ringColor} shadow-lg bg-white`}>
-                    <img src={dept.image} alt={dept.name} className="h-full w-full object-cover" />
+                <div className="relative bg-white rounded-3xl shadow-lg p-5 pt-16 border border-line text-center w-full flex flex-col items-center">
+                  {/* Circular Avatar with Face & Shoulder Zoom overlapping top */}
+                  <div className={`absolute -top-12 h-24 w-24 rounded-full overflow-hidden border-4 ${dept.ringColor} shadow-lg bg-white`}>
+                    <img src={dept.image} alt={dept.name} className="h-full w-full object-cover object-top scale-130 origin-top" />
                   </div>
 
                   {/* Details Badge */}

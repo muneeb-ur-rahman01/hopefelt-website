@@ -142,7 +142,7 @@ export default function BusinessHubSection() {
               </span>
 
               <h2 className="mt-6 font-display text-4xl font-semibold leading-tight sm:text-5xl">
-                Turning Ideas into Sustainable Opportunities.
+                TURNING IDEAS INTO SUSTAINABLE OPPORTUNITIES.
               </h2>
 
               <p className="mt-6 leading-relaxed text-white/70">
@@ -211,7 +211,7 @@ export default function BusinessHubSection() {
               </p>
 
               <h3 className="mt-3 font-display text-3xl font-semibold leading-tight text-white">
-                From Idea to Lasting Impact.
+                FROM IDEA TO LASTING IMPACT.
               </h3>
 
               <p className="mt-4 text-sm leading-relaxed text-white/70">

@@ -248,75 +248,24 @@ export default function Navbar() {
             gap-4
           "
         >
+
           <Link
             href="/"
-            className="
-              group
-              flex
-              min-w-0
-              items-center
-              gap-3
-            "
+            className="group flex shrink-0 items-center"
             onClick={closeMobileMenu}
           >
-            <div
-              className="
-                relative
-                h-14
-                w-14
-                shrink-0
-                overflow-hidden
-                rounded-full
-                bg-white
-              "
-            >
+            <div className="relative h-16 w-[180px] shrink-0 sm:h-20 sm:w-[220px]">
               <Image
-                src="/images/logo.png"
+                src="/images/updated.png"
                 alt="Hopefelt Foundation logo"
                 fill
                 priority
-                sizes="56px"
-                className="
-                  object-contain
-                  p-1
-                  transition-transform
-                  duration-300
-                  group-hover:scale-105
-                "
+                sizes="(max-width: 640px) 180px, 220px"
+                className="object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </div>
-
-            <span className="min-w-0">
-              <span
-                className="
-                  block
-                  truncate
-                  font-display
-                  text-lg
-                  font-semibold
-                  tracking-tight
-                  text-[#3368A0]
-                  sm:text-xl
-                "
-              >
-                Hopefelt Foundation
-              </span>
-
-              <span
-                className="
-                  hidden
-                  font-body
-                  text-[10px]
-                  uppercase
-                  tracking-[0.2em]
-                  text-black
-                  sm:block
-                "
-              >
-                A Public Health Society
-              </span>
-            </span>
           </Link>
+
 
           {/* Desktop Contact */}
           <Link

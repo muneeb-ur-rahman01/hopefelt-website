@@ -238,7 +238,7 @@ export default function ImpactSection() {
           </div>
 
           <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-[#123f34] sm:text-4xl lg:text-5xl">
-            Measuring the Change Our Work Creates
+            MEASURING THE CHANGE OUR WORK CREATES
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
@@ -307,7 +307,7 @@ export default function ImpactSection() {
             </div>
 
             <h2 className="font-display text-3xl font-semibold tracking-tight text-[#123f34] sm:text-4xl">
-              Impact Across Our Ecosystem
+              IMPACT ACROSS OUR ECOSYSTEM
             </h2>
 
             <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
@@ -369,7 +369,7 @@ export default function ImpactSection() {
            </div>
 
            <h2 className="font-display text-2xl font-semibold leading-tight text-[#123f34] sm:text-3xl lg:text-4xl">
-             An Integrated Ecosystem for a Healthier Tomorrow
+             AN INTEGRATED ECOSYSTEM FOR A HEALTHIER TOMORROW
            </h2>
 
            <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-slate-600 sm:text-base">

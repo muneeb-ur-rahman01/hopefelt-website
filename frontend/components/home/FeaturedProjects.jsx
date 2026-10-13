@@ -57,7 +57,7 @@ export default function FeaturedProjects() {
             </p>
 
             <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-              Turning Ideas and Community Needs into Action.
+              TURNING IDEAS AND COMMUNITY NEEDS INTO ACTION.
             </h2>
 
             <p className="mt-4 leading-relaxed text-ink/65">

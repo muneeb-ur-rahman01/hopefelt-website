@@ -81,7 +81,7 @@ export default function ProductsSection() {
             </p>
 
             <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-              Innovation That Drives.<br />
+             INNOVATION THAT DRIVE<br />
               Solutions That Matter.
             </h2>
 

@@ -146,7 +146,8 @@ export default function ExploreSection() {
           </p>
 
           <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-            From community needs to practical solutions.
+
+            FROM COMMUNITY NEEDS TO PRACTICAL SOLUTIONS.
           </h2>
 
           <p className="mt-4 leading-relaxed text-ink/65">
@@ -195,10 +196,12 @@ export default function ExploreSection() {
                 </div>
 
                 <div className="p-6 pt-0">
-                  <div className="pt-4 border-t border-line flex items-center justify-between">
-                    <span className="text-xs font-semibold text-forest">Explore</span>
-                    <span className="text-forest transition-transform group-hover:translate-x-1">→</span>
-                  </div>
+                 <div className="pt-4 border-t border-line flex items-center justify-between bg-forest text-white px-4 py-3 rounded-lg">
+                  <span className="text-xs font-semibold text-white">Explore</span>
+                  <span className="text-white transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </div>
                 </div>
               </Link>
             );
