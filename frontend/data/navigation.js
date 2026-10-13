@@ -15,44 +15,44 @@ export const mainNav = [
   {
     label: "About Us",
     href: "/about",
-    dropdown: [
-      {
-        label: "Our Story",
-        href: "/about/who-we-are",
-      },
-      {
-        label: "Vision",
-        href: "/about/our-vision",
-      },
-      {
-        label: "Mission",
-        href: "/about/our-mission",
-      },
-      {
-        label: "Our Values",
-        href: "/about/values",
-      },
-      {
-        label: "Our Approach",
-        href: "/about/our-approach",
-      },
-      {
-        label: "Impact Framework",
-        href: "/about/impact-framework",
-      },
-      {
-        label: "Inclusion & Equity",
-        href: "/about/inclusion-equity",
-      },
-      {
-        label: "Partners & Collaborators",
-        href: "/about/partners",
-      },
-      {
-        label: "Future Vision (2030–2050)",
-        href: "/about/future-vision",
-      },
-    ],
+    // dropdown: [
+    //   {
+    //     label: "Our Story",
+    //     href: "/about/who-we-are",
+    //   },
+    //   {
+    //     label: "Vision",
+    //     href: "/about/our-vision",
+    //   },
+    //   {
+    //     label: "Mission",
+    //     href: "/about/our-mission",
+    //   },
+    //   {
+    //     label: "Our Values",
+    //     href: "/about/values",
+    //   },
+    //   {
+    //     label: "Our Approach",
+    //     href: "/about/our-approach",
+    //   },
+    //   {
+    //     label: "Impact Framework",
+    //     href: "/about/impact-framework",
+    //   },
+    //   {
+    //     label: "Inclusion & Equity",
+    //     href: "/about/inclusion-equity",
+    //   },
+    //   {
+    //     label: "Partners & Collaborators",
+    //     href: "/about/partners",
+    //   },
+    //   {
+    //     label: "Future Vision (2030–2050)",
+    //     href: "/about/future-vision",
+    //   },
+    // ],
   },
 
 
