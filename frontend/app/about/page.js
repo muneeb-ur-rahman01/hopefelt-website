@@ -17,7 +17,7 @@ export default function AboutOverviewPage() {
       <AboutFull />
 
       {/* Browse by topic — quick links into each individual About subpage */}
-      <section className="mx-auto max-w-6xl px-5 py-20 md:px-8">
+      {/* <section className="mx-auto max-w-6xl px-5 py-20 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-forest">
             Explore Further
@@ -53,7 +53,7 @@ export default function AboutOverviewPage() {
           </Link>
         ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

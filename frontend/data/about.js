@@ -24,11 +24,19 @@ export const focusFormula = [
 ];
 
 export const founderVision = {
-  name: "Afrah Sadia",
+  name: "AFRAH SADIA",
   title: "Founder, Hopefelt Foundation",
   quote:
-    "My vision is to build an organization where health, knowledge, innovation and opportunity come together — creating pathways for people and communities to lead, learn, build and create lasting change.",
-  image: "https://picsum.photos/seed/hopefelt-founder/800/800",
+    "My vision is to build an organization where health, knowledge, innovation and opportunity come together creating pathways for people and communities to lead, learn, build and create lasting change.",
+  image: "/images/Afrah.jpg",
+};
+
+export const coFounderVision = {
+  name: "ALISHBA NOOR",
+  title: "Co-Founder, Hopefelt Foundation",
+  quote:
+    "My vision is to scale Hopefelt Foundation into a sustainable ecosystem where health, research, technology, and entrepreneurship come together to turn ideas into real-world solutions and create lasting impact. I want to build something that grows beyond me, empowers others, and creates opportunities that matter.",
+  image: "/images/Alishba.jpg",
 };
 
 export const whyFutureGenerations = {
