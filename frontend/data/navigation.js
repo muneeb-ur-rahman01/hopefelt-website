@@ -44,87 +44,6 @@ export const mainNav = [
         label: "Inclusion & Equity",
         href: "/about/inclusion-equity",
       },
-
-      // -------------------------
-      // OUR DEPARTMENTS
-      // -------------------------
-      {
-        label: "Our Departments",
-        href: "/about/our-departments",
-        children: [
-          {
-            label: "Public Health Research & Development",
-            href: "/about/our-departments/public-health-research-development",
-          },
-          {
-            label: "Community Outreach & Field Operations",
-            href: "/about/our-departments/community-outreach-field-operations",
-          },
-          {
-            label: "Monitoring, Evaluation, Accountability & Learning",
-            href: "/about/our-departments/monitoring-evaluation-accountability-learning",
-          },
-          {
-            label: "Partnerships, Advocacy & External Relations",
-            href: "/about/our-departments/partnerships-advocacy-external-relations",
-          },
-          {
-            label: "Resource Mobilization & Fundraising",
-            href: "/about/our-departments/resource-mobilization-fundraising",
-          },
-          {
-            label: "Administration, HR & Logistics",
-            href: "/about/our-departments/administration-hr-logistics",
-          },
-          {
-            label: "IT, Technology & Digital Innovation",
-            href: "/about/our-departments/it-technology-digital-innovation",
-          },
-          {
-            label: "Digital Health & Health Innovation",
-            href: "/about/our-departments/digital-health-health-innovation",
-          },
-          {
-            label: "Programs, Training & Capacity Development",
-            href: "/about/our-departments/programs-training-capacity-development",
-          },
-          {
-            label: "Communications, Media & Digital Marketing",
-            href: "/about/our-departments/communications-media-digital-marketing",
-          },
-        ],
-      },
-
-      // -------------------------
-      // OUR TEAM
-      // -------------------------
-      {
-        label: "Our Team",
-        href: "/about/our-team",
-        children: [
-          {
-            label: "Our Team",
-            href: "/about/our-team",
-          },
-          {
-            label: "Campaigners",
-            href: "/about/campaigners",
-          },
-          {
-            label: "Researchers & Experts",
-            href: "/about/researchers-experts",
-          },
-          {
-            label: "Technology & Innovation Team",
-            href: "/about/technology-innovation-team",
-          },
-          {
-            label: "Entrepreneurs & Social Innovators",
-            href: "/about/entrepreneurs-social-innovators",
-          },
-        ],
-      },
-
       {
         label: "Partners & Collaborators",
         href: "/about/partners",
@@ -136,10 +55,90 @@ export const mainNav = [
     ],
   },
 
+
+// =========================================================
+// OUR DEPARTMENTS
+// =========================================================
+{
+  label: "Our Departments",
+  href: "/about/our-departments",
+  dropdown: [
+    {
+      label: "Public Health Research & Development",
+      href: "/about/our-departments/public-health-research-development",
+    },
+    {
+      label: "Community Outreach & Field Operations",
+      href: "/about/our-departments/community-outreach-field-operations",
+    },
+    {
+      label: "Monitoring, Evaluation, Accountability & Learning",
+      href: "/about/our-departments/monitoring-evaluation-accountability-learning",
+    },
+    {
+      label: "Partnerships, Advocacy & External Relations",
+      href: "/about/our-departments/partnerships-advocacy-external-relations",
+    },
+    {
+      label: "Resource Mobilization & Fundraising",
+      href: "/about/our-departments/resource-mobilization-fundraising",
+    },
+    {
+      label: "Administration, HR & Logistics",
+      href: "/about/our-departments/administration-hr-logistics",
+    },
+    {
+      label: "IT, Technology & Digital Innovation",
+      href: "/about/our-departments/it-technology-digital-innovation",
+    },
+    {
+      label: "Digital Health & Health Innovation",
+      href: "/about/our-departments/digital-health-health-innovation",
+    },
+    {
+      label: "Programs, Training & Capacity Development",
+      href: "/about/our-departments/programs-training-capacity-development",
+    },
+    {
+      label: "Communications, Media & Digital Marketing",
+      href: "/about/our-departments/communications-media-digital-marketing",
+    },
+  ],
+},
+
+// =========================================================
+// OUR TEAM
+// =========================================================
+{
+  label: "Our Team",
+  href: "/about/our-team",
+  dropdown: [
+    {
+      label: "Our Team",
+      href: "/about/our-team",
+    },
+    {
+      label: "Campaigners",
+      href: "/about/campaigners",
+    },
+    {
+      label: "Researchers & Experts",
+      href: "/about/researchers-experts",
+    },
+    {
+      label: "Technology & Innovation Team",
+      href: "/about/technology-innovation-team",
+    },
+    {
+      label: "Entrepreneurs & Social Innovators",
+      href: "/about/entrepreneurs-social-innovators",
+    },
+  ],
+},
   // =========================================================
   // OUR WORK
   // =========================================================
- 
+
 {
   label: "Our Work",
   href: "/our-work",
