@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const heroImages = [
-  "/images/hero.jpeg",
-  "/images/community.jpeg",
-  "/images/research.jpeg",
-  "/images/action.jpeg",
+  "/images/hero/hero.jpeg",
+  "/images/hero/community.jpeg",
+  "/images/hero/research.jpeg",
+  "/images/hero/action.jpeg",
 ];
 
 export default function Hero() {

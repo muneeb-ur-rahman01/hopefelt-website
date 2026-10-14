@@ -251,7 +251,7 @@ export default function AboutTeaser() {
 
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-[#4a6741]/20 shadow-lg">
               <img
-                src="/images/pillars.png"
+                src="/images/hero/pillars.png"
                 alt="Hopefelt Foundation community architecture"
                 className="h-full w-full object-cover"
               />

@@ -5,44 +5,44 @@ const hierarchyData = {
   founder: {
     name: "AFRAH SADIA",
     role: "Founder & CEO",
-    image: "/images/Afrah.jpg",
+    image: "/images/Team/Afrah.jpg",
     color: "bg-emerald-600 text-white",
     ringColor: "border-emerald-600",
   },
   coFounder: {
     name: "ALISHBA NOOR",
     role: "Co-Founder & COO",
-    image: "/images/Alishba.jpg",
+    image: "/images/Team/Alishba.jpg",
     color: "bg-teal-600 text-white",
     ringColor: "border-teal-600",
   },
   departments: [
     {
       name: "USAMA BIN ZAHID",
-      role: "Head of Finance",
-      image: "/images/usama.jpg",
+      role: "Sales | Marketing",
+      image: "/images/Team/usama.jpg",
       color: "bg-lime-500 text-slate-900",
       ringColor: "border-lime-500",
     },
     {
       name: "MUHAMMAD RIZWAN",
       role: "Operational Team",
-      image: "/images/Rizwan.jpg",
+      image: "/images/Team/Rizwan.jpg",
       color: "bg-teal-500 text-white",
       ringColor: "border-teal-500",
     },
     {
       name: "SHARJEEL",
       role: "Social Media Manager",
-      image: "/images/Sharjeel.jpg",
+      image: "/images/Team/Sharjeel.jpg",
       color: "bg-emerald-500 text-white",
       ringColor: "border-emerald-500",
     },
     {
-      name: "Ayesha Noor",
-      role: "Head of Communications",
+      name: "Muhammad Muneeb Ur Rahman Shahzad",
+      role: "Head of Development Department (HOD)",
       image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+        "/images/Team/Muneeb.jpeg",
       color: "bg-cyan-600 text-white",
       ringColor: "border-cyan-600",
     },
@@ -180,10 +180,6 @@ export default function TeamHierarchy() {
                     </p>
                   </div>
 
-                  {/* TEAM MEMBER NUMBER */}
-                  <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/40">
-                    Team Member {String(idx + 1).padStart(2, "0")}
-                  </p>
                 </div>
               </div>
             ))}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import worksphereImage from "../../public/images/worksphere.jpeg";
+import worksphereImage from "../../public/images/products/worksphere.jpeg";
 
 const products = [
   {

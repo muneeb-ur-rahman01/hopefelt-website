@@ -31,9 +31,9 @@ export const metadata = {
     "Hopefelt Foundation partners with communities to expand access to education, healthcare, and economic opportunity.",
 
   icons: {
-    icon: "/images/logo.png",
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/logos/logo.png",
+    shortcut: "/images/logos/logo.png",
+    apple: "/images/logos/logo.png",
   },
 
   openGraph: {
@@ -42,7 +42,7 @@ export const metadata = {
       "Hopefelt Foundation partners with communities to expand access to education, healthcare, and economic opportunity.",
     siteName: "Hopefelt Foundation",
     type: "website",
-    images: ["/images/logo.png"],
+    images: ["/images/logos/logo.png"],
   },
 };
 

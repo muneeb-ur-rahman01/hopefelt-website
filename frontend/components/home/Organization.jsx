@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import hopefeltLogo from "../../public/images/logo.png"; // Yahan aap apne imported logo ka path ya variable adjust kar sakte hain
+import hopefeltLogo from "../../public/images/logos/logo.png"; // Yahan aap apne imported logo ka path ya variable adjust kar sakte hain
 
 const coreDepartments = [
   {
