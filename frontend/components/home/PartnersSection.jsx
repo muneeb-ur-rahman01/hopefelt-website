@@ -19,8 +19,8 @@ const partners = [
 ];
 
 const rehabilitationPartners = [
-  { name: "Sunshine Rehabilitation Center", logo: "/images/sunshine.jpeg" },
-  { name: "Right Track Rehabilitation Center", logo: "/images/righttrack.jpeg" },
+  { name: "Sunshine Rehabilitation Center", logo: "/images/partners/sunshine.jpeg" },
+  { name: "Right Track Rehabilitation Center", logo: "/images/partners/righttrack.jpeg" },
   { name: "Lifesaver Rehabilitation Center", logo: "/images/partners/lifesavior.jpg" },
 ];
 
