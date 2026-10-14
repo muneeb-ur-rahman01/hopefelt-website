@@ -47,10 +47,25 @@ function getInitials(name) {
     .toUpperCase();
 }
 
-function PartnerCard({ partner }) {
+function PartnerCard({ partner, logosOnly = false }) {
+  if (logosOnly) {
+    return (
+      <div className="relative flex h-[110px] w-[180px] shrink-0 items-center justify-center sm:h-[120px] sm:w-[200px]">
+        <div className="relative h-[100px] w-full sm:h-[110px]">
+          <Image
+            src={partner.logo}
+            alt={`${partner.name} logo`}
+            fill
+            sizes="200px"
+            className="object-contain"
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="group flex h-[112px] w-[270px] shrink-0 items-center gap-4 rounded-2xl border border-[#0d3749]/10 bg-white px-4 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741]/50 hover:shadow-lg sm:h-[120px] sm:w-[300px] sm:px-5">
-      {/* Increased logo size */}
       <div className="relative flex h-[84px] w-[84px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#0d3749]/10 bg-white shadow-sm sm:h-[92px] sm:w-[92px]">
         {partner.logo ? (
           <Image
@@ -85,8 +100,17 @@ function PartnerCard({ partner }) {
   );
 }
 
-function PartnerMarquee({ items, duration = 35 }) {
+function PartnerMarquee({
+  items,
+  duration = 35,
+  logosOnly = false,
+}) {
   const copies = [0, 1, 2, 3];
+  const displayItems = logosOnly
+    ? items.filter((partner) => partner.logo)
+    : items;
+
+  if (displayItems.length === 0) return null;
 
   return (
     <div className="group/marquee relative mt-7 w-full overflow-hidden py-4">
@@ -104,10 +128,11 @@ function PartnerMarquee({ items, duration = 35 }) {
             aria-hidden={copy !== 0 ? "true" : undefined}
             className="flex shrink-0 items-center gap-4 pr-4 sm:gap-5 sm:pr-5"
           >
-            {items.map((partner, index) => (
+            {displayItems.map((partner, index) => (
               <PartnerCard
                 key={`${partner.name}-${index}`}
                 partner={partner}
+                logosOnly={logosOnly}
               />
             ))}
           </div>
@@ -152,6 +177,7 @@ function PartnerGroup({
   description,
   items,
   duration = 35,
+  logosOnly = false,
 }) {
   return (
     <div className="mt-14">
@@ -169,7 +195,11 @@ function PartnerGroup({
         </p>
       </div>
 
-      <PartnerMarquee items={items} duration={duration} />
+      <PartnerMarquee
+        items={items}
+        duration={duration}
+        logosOnly={logosOnly}
+      />
     </div>
   );
 }
@@ -195,22 +225,27 @@ export default function PartnersSection() {
           </p>
         </header>
 
+        {/* Logos only: no card, name, or arrow */}
         <PartnerGroup
           label="Our Network"
           title="Our Partners & Collaborators"
           description="Organizations and institutions working across community development, education, health, research, and social impact."
           items={partners}
           duration={35}
+          logosOnly
         />
 
+        {/* Logos only: no card, name, or arrow */}
         <PartnerGroup
           label="Rehabilitation"
           title="Supporting Recovery, Restoring Hope."
           description="Building connections that support recovery, well-being, and access to rehabilitation services."
           items={rehabilitationPartners}
           duration={5}
+          logosOnly
         />
 
+        {/* Education remains unchanged */}
         <PartnerGroup
           label="Education & Learning"
           title="Connecting Education With Opportunity."
@@ -219,6 +254,7 @@ export default function PartnersSection() {
           duration={5}
         />
 
+        {/* Child Welfare remains unchanged */}
         <PartnerGroup
           label="Child Welfare"
           title="Creating Opportunities for Every Child."

@@ -256,7 +256,7 @@ export default function Navbar() {
           >
             <div className="relative h-16 w-[180px] shrink-0 sm:h-20 sm:w-[220px]">
               <Image
-                src="/images/updated.png"
+                src="/images/logos/updated.png"
                 alt="Hopefelt Foundation logo"
                 fill
                 priority
