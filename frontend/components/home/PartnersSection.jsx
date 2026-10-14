@@ -209,15 +209,15 @@ export default function PartnersSection() {
     <section className="overflow-hidden bg-[#f8f5ed] py-16 sm:py-20">
       <div className="mx-auto max-w-[100rem]">
         <header className="mx-auto max-w-3xl px-5 text-center sm:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#4a6741]">
-            Partnerships & Collaborations
-          </p>
+          <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white">
+          Partnerships & Collaborations
+        </p>
 
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-5xl">
-            Building a Network of Change.
+            BUILDING A NETWORK OF CHANGE
           </h2>
 
-          <p className="mt-5 leading-8 text-[#0d3749]/70">
+          <p className="mt-5 leading-8 text-[#0d3749]/70 italic">
             Hopefelt Foundation works to build meaningful partnerships
             across organizations, healthcare, rehabilitation, education,
             and community welfare. Together, we aim to strengthen
@@ -227,9 +227,6 @@ export default function PartnersSection() {
 
         {/* Logos only: no card, name, or arrow */}
         <PartnerGroup
-          label="Our Network"
-          title="Our Partners & Collaborators"
-          description="Organizations and institutions working across community development, education, health, research, and social impact."
           items={partners}
           duration={35}
           logosOnly
@@ -237,38 +234,36 @@ export default function PartnersSection() {
 
         {/* Logos only: no card, name, or arrow */}
         <PartnerGroup
-          label="Rehabilitation"
           title="Supporting Recovery, Restoring Hope."
-          description="Building connections that support recovery, well-being, and access to rehabilitation services."
           items={rehabilitationPartners}
           duration={5}
           logosOnly
         />
 
         {/* Education remains unchanged */}
-        <PartnerGroup
+        {/* <PartnerGroup
           label="Education & Learning"
           title="Connecting Education With Opportunity."
           description="Creating opportunities for learning, research, student engagement, awareness, and community development."
           items={educationalPartners}
           duration={5}
-        />
+        /> */}
 
         {/* Child Welfare remains unchanged */}
-        <PartnerGroup
+        {/* <PartnerGroup
           label="Child Welfare"
           title="Creating Opportunities for Every Child."
           description="Working towards children's well-being, learning, care, and meaningful opportunities."
           items={childWelfarePartners}
           duration={5}
-        />
+        /> */}
 
         <div className="mx-5 mt-16 rounded-3xl border border-[#0d3749]/10 bg-white p-7 text-center shadow-sm sm:mx-8 sm:p-10 lg:mx-12">
           <h3 className="font-display text-2xl font-semibold text-[#0d3749] sm:text-3xl">
             Let's Create Meaningful Change Together.
           </h3>
 
-          <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#0d3749]/65">
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#0d3749]/65 italic">
             Join Hopefelt Foundation in building partnerships that
             create opportunities, strengthen communities, and drive
             sustainable impact.

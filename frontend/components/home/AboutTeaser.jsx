@@ -180,10 +180,10 @@ export default function AboutTeaser() {
           {/* Left Content & Stats */}
           <div className="flex flex-col justify-between lg:col-span-4">
             <div>
-              <p className="font-body text-xs font-semibold uppercase tracking-[0.25em] text-[#4a6741]">
-                {aboutHeaderData?.tagline ||
-                  "BETTER COMMUNITIES. BRIGHTER FUTURES."}
-              </p>
+                  <p className="inline-block rounded bg-[#4a6741] px-3 py-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-white">
+        {aboutHeaderData?.tagline ||
+          "BETTER COMMUNITIES. BRIGHTER FUTURES."}
+      </p>
 
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0d3749] sm:text-5xl">
                 WHO WE ARE
@@ -296,39 +296,45 @@ export default function AboutTeaser() {
         </div>
 
         {/* Bottom 4-Column Feature Banner */}
-       <div className="mt-16 grid grid-cols-1 gap-6 border-t border-[#4a6741]/20 pt-12 sm:grid-cols-2 lg:grid-cols-4">
-  {bottomFeatures.map((feat) => (
-    <div
-      key={feat.title}
-      className="group relative overflow-hidden rounded-2xl border-2 border-[#0d3749]/50 bg-gradient-to-br from-white via-white to-[#0d3749]/[0.04] p-6 shadow-[0_4px_20px_rgba(13,55,73,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0d3749] hover:shadow-[0_12px_30px_rgba(13,55,73,0.14)]"
-    >
-      {/* Decorative accent */}
-      <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-full bg-[#4a6741]/[0.07] transition-all duration-300 group-hover:bg-[#4a6741]/[0.14]" />
-
-      <div className="relative z-10">
-        {/* Icon */}
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#0d3749]/20 bg-[#4a6741]/10 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-[#4a6741]">
-          <div className="transition-colors duration-300 group-hover:[&_svg]:text-white">
-            {feat.icon}
-          </div>
-        </div>
-
-        {/* Content */}
-        <h4 className="mt-5 font-display text-base font-bold text-[#0d3749] transition-colors duration-300 group-hover:text-[#4a6741]">
-          {feat.title}
-        </h4>
-
-        <p className="mt-2 text-sm leading-relaxed text-ink/65">
-          {feat.description}
-        </p>
-
-        {/* Bottom accent line */}
-        <div className="mt-5 h-1 w-10 rounded-full bg-[#4a6741]/60 transition-all duration-300 group-hover:w-16 group-hover:bg-[#0d3749]" />
-      </div>
-    </div>
-  ))}
-</div>
+          
       </div>
     </section>
   );
 }
+
+
+
+
+
+{/* <div className="mt-16 grid grid-cols-1 gap-6 border-t border-[#4a6741]/20 pt-12 sm:grid-cols-2 lg:grid-cols-4">
+          {bottomFeatures.map((feat) => (
+            <div
+              key={feat.title}
+              className="group relative overflow-hidden rounded-2xl border-2 border-[#0d3749]/50 bg-gradient-to-br from-white via-white to-[#0d3749]/[0.04] p-6 shadow-[0_4px_20px_rgba(13,55,73,0.06)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0d3749] hover:shadow-[0_12px_30px_rgba(13,55,73,0.14)]"
+            >
+              {/* Decorative accent */}
+            //   <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-full bg-[#4a6741]/[0.07] transition-all duration-300 group-hover:bg-[#4a6741]/[0.14]" />
+
+            //   <div className="relative z-10">
+            //     {/* Icon */}
+            //     <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#0d3749]/20 bg-[#4a6741]/10 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-[#4a6741]">
+            //       <div className="transition-colors duration-300 group-hover:[&_svg]:text-white">
+            //         {feat.icon}
+            //       </div>
+            //     </div>
+
+            //     {/* Content */}
+            //     <h4 className="mt-5 font-display text-base font-bold text-[#0d3749] transition-colors duration-300 group-hover:text-[#4a6741]">
+            //       {feat.title}
+            //     </h4>
+
+            //     <p className="mt-2 text-sm leading-relaxed text-ink/65">
+            //       {feat.description}
+            //     </p>
+
+            //     {/* Bottom accent line */}
+            //     <div className="mt-5 h-1 w-10 rounded-full bg-[#4a6741]/60 transition-all duration-300 group-hover:w-16 group-hover:bg-[#0d3749]" />
+            //   </div>
+            // </div>
+          // ))}
+        //  </div> */}

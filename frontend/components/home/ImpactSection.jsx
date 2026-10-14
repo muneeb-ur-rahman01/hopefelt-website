@@ -228,9 +228,9 @@ export default function ImpactSection() {
           <div className="mb-4 flex items-center justify-center gap-4">
             <span className="h-px w-12 bg-[#4a6741]/60" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#4a6741]">
-              Impact
-            </p>
+            <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-bold uppercase tracking-[0.24em] text-white">
+            Impact
+          </p>
 
             <span className="h-px w-12 bg-[#4a6741]/60" />
           </div>
@@ -239,7 +239,7 @@ export default function ImpactSection() {
             MEASURING THE CHANGE OUR WORK CREATES
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 italic ">
             Our impact is measured through verified data, meaningful
             outcomes and real stories from the communities and people
             we serve.
@@ -290,7 +290,7 @@ export default function ImpactSection() {
         </div>
 
         {/* IMPACT AREAS */}
-        <div className="relative mt-16 sm:mt-20">
+        {/* <div className="relative mt-16 sm:mt-20">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-3 flex items-center justify-center gap-3">
               <span className="h-px w-10 bg-[#4a6741]/50" />
@@ -350,7 +350,7 @@ export default function ImpactSection() {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* INTEGRATED IMPACT FRAMEWORK */}
         <div className="relative mt-16 overflow-hidden rounded-[28px] border border-[#0d3749]/15 bg-white px-4 py-8 shadow-[0_8px_30px_rgba(13,55,73,0.05)] sm:px-6 sm:py-10 lg:px-8">
@@ -462,20 +462,6 @@ export default function ImpactSection() {
                 </article>
               );
             })}
-          </div>
-
-          {/* Framework CTA */}
-          <div className="relative mt-8 flex justify-center">
-            <Link
-              href="/impact"
-              className="group inline-flex items-center justify-center gap-3 rounded-full border border-[#0d3749] bg-[#0d3749] px-7 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#0d3749]/15 transition-all duration-300 hover:border-[#4a6741] hover:bg-[#4a6741] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a6741] focus-visible:ring-offset-2"
-            >
-              Explore Our Impact
-              <ArrowRight
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
           </div>
         </div>
 

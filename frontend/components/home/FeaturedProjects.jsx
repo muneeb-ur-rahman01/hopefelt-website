@@ -14,19 +14,19 @@ const projects = [
       "Research Collaboration",
     ],
   },
-  {
-    title: "Research to Market",
-    category: "TECHNOLOGY & ENTREPRENEURSHIP",
-    description:
-      "We connect research with innovation, technology, entrepreneurship, and marketing to transform promising ideas into practical products, services, and scalable ventures.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
-    pills: [
-      "Product Development",
-      "Business Hub",
-      "Market Launch",
-    ],
-  },   
+  // {
+  //   title: "Research to Market",
+  //   category: "TECHNOLOGY & ENTREPRENEURSHIP",
+  //   description:
+  //     "We connect research with innovation, technology, entrepreneurship, and marketing to transform promising ideas into practical products, services, and scalable ventures.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+  //   pills: [
+  //     "Product Development",
+  //     "Business Hub",
+  //     "Market Launch",
+  //   ],
+  // },   
 ];
 
 export default function FeaturedProjects() {
@@ -36,19 +36,19 @@ export default function FeaturedProjects() {
         {/* Top Header Section */}
         <div className="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
-              Featured Projects
-            </p>
+            <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+        Featured Projects
+      </p>
 
-            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-forest sm:text-5xl">
+            <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-5xl">
               Ideas Into Action. Impact Into Reality.
             </h2>
 
-            <p className="mt-4 leading-relaxed text-ink/65">
-              Discover Hopefelt Foundation&apos;s initiatives across
+            <p className="mt-4 leading-relaxed text-ink/65 italic">
+              "Discover Hopefelt Foundation&apos;s initiatives across
               community health, research, technology, and innovation creating
               opportunities, addressing real-world challenges, and driving
-              meaningful change.
+              meaningful change"
             </p>
           </div>
 
@@ -127,70 +127,73 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Research to Market Process */}
-        <div className="mt-16 overflow-hidden rounded-3xl border border-[#0d3749]/10 bg-white p-6 shadow-sm sm:p-10">
-  {/* Section Header */}
-  <div className="max-w-3xl">
-    <span className="inline-flex items-center rounded-full border border-[#4a6741]/20 bg-[#4a6741]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a6741]">
-      Research to Market
-    </span>
-
-    <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-4xl">
-      From Research to Real-World Solutions.
-    </h3>
-
-    <p className="mt-4 leading-relaxed text-ink/65">
-      We connect research with innovation, technology,
-      entrepreneurship, and marketing to transform promising ideas
-      into practical products, services, and scalable ventures.
-    </p>
-  </div>
-
-  {/* Modern Process Chain */}
-  <div className="mt-10">
-    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-      {[
-        "Research",
-        "Discovery",
-        "Innovation",
-        "Technology",
-        "Product Development",
-        "Business Hub",
-        "Marketing & Media",
-        "Market Launch",
-        "Scale",
-      ].map((step, index) => (
-        <div key={step} className="relative flex">
-          <div className="group relative flex min-h-[112px] w-full items-start gap-3 overflow-hidden rounded-2xl border border-[#0d3749]/10 bg-[#0d3749]/[0.025] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741]/40 hover:bg-[#4a6741]/[0.06] hover:shadow-md">
-            {/* Step Number */}
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0d3749] text-xs font-bold text-white transition-colors duration-300 group-hover:bg-[#4a6741]">
-              {String(index + 1).padStart(2, "0")}
-            </div>
-
-            {/* Step Content */}
-            <div className="min-w-0 pt-1">
-              <p className="text-sm font-semibold leading-snug text-[#0d3749]">
-                {step}
-              </p>
-
-              <div className="mt-3 h-1 w-8 rounded-full bg-[#4a6741]/40 transition-all duration-300 group-hover:w-14 group-hover:bg-[#4a6741]" />
-            </div>
-
-            {/* Desktop connector */}
-            {index < 8 && (
-              <span
-                className="absolute -right-[9px] top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center text-lg font-semibold text-[#4a6741] xl:flex"
-                aria-hidden="true"
-              >
-                →
-              </span>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
+    
       </div>
     </section>
   );
 }
+
+
+//     <div className="mt-16 overflow-hidden rounded-3xl border border-[#0d3749]/10 bg-white p-6 shadow-sm sm:p-10">
+//   {/* Section Header */}
+//   <div className="max-w-3xl">
+//     <span className="inline-flex items-center rounded-full border border-[#4a6741]/20 bg-[#4a6741]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a6741]">
+//       Research to Market
+//     </span>
+
+//     <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-4xl">
+//       From Research to Real-World Solutions.
+//     </h3>
+
+//     <p className="mt-4 leading-relaxed text-ink/65">
+//       We connect research with innovation, technology,
+//       entrepreneurship, and marketing to transform promising ideas
+//       into practical products, services, and scalable ventures.
+//     </p>
+//   </div>
+
+//   {/* Modern Process Chain */}
+//   <div className="mt-10">
+//     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+//       {[
+//         "Research",
+//         "Discovery",
+//         "Innovation",
+//         "Technology",
+//         "Product Development",
+//         "Business Hub",
+//         "Marketing & Media",
+//         "Market Launch",
+//         "Scale",
+//       ].map((step, index) => (
+//         <div key={step} className="relative flex">
+//           <div className="group relative flex min-h-[112px] w-full items-start gap-3 overflow-hidden rounded-2xl border border-[#0d3749]/10 bg-[#0d3749]/[0.025] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#4a6741]/40 hover:bg-[#4a6741]/[0.06] hover:shadow-md">
+//             {/* Step Number */}
+//             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0d3749] text-xs font-bold text-white transition-colors duration-300 group-hover:bg-[#4a6741]">
+//               {String(index + 1).padStart(2, "0")}
+//             </div>
+
+//             {/* Step Content */}
+//             <div className="min-w-0 pt-1">
+//               <p className="text-sm font-semibold leading-snug text-[#0d3749]">
+//                 {step}
+//               </p>
+
+//               <div className="mt-3 h-1 w-8 rounded-full bg-[#4a6741]/40 transition-all duration-300 group-hover:w-14 group-hover:bg-[#4a6741]" />
+//             </div>
+
+//             {/* Desktop connector */}
+//             {index < 8 && (
+//               <span
+//                 className="absolute -right-[9px] top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center text-lg font-semibold text-[#4a6741] xl:flex"
+//                 aria-hidden="true"
+//               >
+//                 →
+//               </span>
+//             )}
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// // </div>

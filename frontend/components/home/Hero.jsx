@@ -32,22 +32,22 @@ export default function Hero() {
 
           {/* CONTENT */}
           <div>
-            <span className="inline-flex rounded-full border border-[#3368A0]/20 bg-[#3368A0]/[0.05] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#3368A0]">
+            {/* <span className="inline-flex rounded-full border border-[#3368A0]/20 bg-[#3368A0]/[0.05] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#3368A0]">
               Hopefelt Foundation
-            </span>
+            </span> */}
 
-            <h1 className="mt-6 max-w-4xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-[#3368A0] sm:text-5xl lg:text-7xl">
+            <h1 className="mt-6 max-w-4xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-[#4a6741] sm:text-5xl lg:text-7xl">
               Building Healthier Communities Through Knowledge, Action &
               Innovation
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#3368A0]/85 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 sm:text-lg">
               Hopefelt Foundation is a community-driven organization working
               across health, education, community development, research,
               digital health, technology, entrepreneurship and innovation.
             </p>
 
-            <p className="mt-4 max-w-2xl text-base leading-8 text-[#3368A0]/70">
+            <p className="mt-4 max-w-2xl text-base leading-8">
               We turn community needs, evidence and ideas into practical
               action through programs, projects, research, technology,
               partnerships, business opportunities, communication and public
@@ -55,48 +55,48 @@ export default function Hero() {
             </p>
 
             {/* GLASSMORPHISM BUTTONS */}
-<div className="mt-9 flex flex-wrap gap-3 rounded-[1.75rem] border border-[#4a6741]/20 bg-[#4a6741]/[0.08] p-4 shadow-[0_12px_40px_rgba(74,103,65,0.12)] backdrop-blur-xl sm:p-5">
-  <Link
-    href="/our-work"
-    className="group inline-flex items-center gap-2 rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-lg hover:shadow-[#4a6741]/25"
-  >
-    Explore Our Work
-    <span className="transition-transform duration-300 group-hover:translate-x-1">
-      →
-    </span>
-  </Link>
+          <div className="mt-9 flex flex-wrap gap-3 rounded-[1.75rem] p-4 shadow-[0_12px_40px_rgba(74,103,65,0.12)] backdrop-blur-xl sm:p-5">
+            <Link
+              href="/our-work"
+              className="group inline-flex items-center gap-2 rounded-full border border-[#4a6741]/40 bg-[#0d3749] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-lg hover:shadow-[#4a6741]/25"
+            >
+              Explore Our Work
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
 
-  <Link
-    href="/projects"
-    className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
-  >
-    Our Projects
-  </Link>
+            <Link
+              href="/projects"
+              className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#0d3749] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
+            >
+              Our Projects
+            </Link>
 
-  <Link
-    href="/get-involved"
-    className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
-  >
-    Get Involved
-  </Link>
+            <Link
+              href="/get-involved"
+              className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#0d3749] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
+            >
+              Get Involved
+            </Link>
 
-  <Link
-    href="/business-hub"
-    className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#4a6741] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
-  >
-    Business Hub
-  </Link>
+            <Link
+              href="/business-hub"
+              className="inline-flex items-center rounded-full border border-[#4a6741]/40 bg-[#0d3749] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#394F32] hover:bg-[#394F32] hover:text-white hover:shadow-md"
+            >
+              Business Hub
+            </Link>
 
-  <Link
-    href="/donate"
-    className="group inline-flex items-center gap-2 rounded-full border border-[#394F32] bg-[#4a6741] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#4a6741]/25 transition-all duration-300 hover:-translate-y-1 hover:bg-[#2F422A] hover:text-white hover:shadow-lg hover:shadow-[#4a6741]/30"
-  >
-    Donate
-    <span className="transition-transform duration-300 group-hover:translate-x-1">
-      →
-    </span>
-  </Link>
-</div>
+            <Link
+              href="/donate"
+              className="group inline-flex items-center gap-2 rounded-full border border-[#394F32] bg-[#0d3749] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#4a6741]/25 transition-all duration-300 hover:-translate-y-1 hover:bg-[#2F422A] hover:text-white hover:shadow-lg hover:shadow-[#4a6741]/30"
+            >
+              Donate
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          </div>
           </div>
 
           {/* AUTO IMAGE CAROUSEL */}
@@ -151,10 +151,9 @@ export default function Hero() {
 
             {/* FLOATING FOCUS CARD */}
             <div className="absolute -bottom-5 -left-5 z-20 hidden rounded-2xl border border-[#3368A0]/15 bg-white/85 p-5 shadow-[0_12px_35px_rgba(51,104,160,0.12)] backdrop-blur-xl sm:block">
-              <p className="text-xs uppercase tracking-[0.15em] text-[#3368A0]/60">
+              <p className="text-xs uppercase tracking-[0.15em] text-[#4a6741]">
                 Our Focus
               </p>
-
               <p className="mt-1 font-display text-lg font-semibold text-[#3368A0]">
                 Community → Research → Action
               </p>

@@ -164,41 +164,42 @@ export default function BusinessHubSection() {
           </div>
 
           {/* Right Cards Grid (Wide Rectangles) */}
-          <div className="lg:col-span-8 grid gap-4 sm:grid-cols-2">
-            {topCards.map((card, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition hover:bg-white/[0.07] min-h-[220px]"
-              >
-                <div>
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10">
-                      {card.icon}
-                    </div>
-                    <h3 className="font-display text-lg font-semibold text-white">
-                      {card.title}
-                    </h3>
-                  </div>
-
-                  <p className="mt-3 text-sm text-white/70 leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-2 pt-4 border-t border-white/10">
-                  {card.pills.map((pill) => (
-                    <Link
-                      key={pill}
-                      href="/business-hub"
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/90 transition hover:bg-white/15"
-                    >
-                      {pill}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
+         <div className="lg:col-span-8 grid gap-4 sm:grid-cols-2">
+  {topCards.map((card, idx) => (
+    <div
+      key={idx}
+      className="flex flex-col justify-between rounded-3xl border border-[#0d3749] bg-white p-6 transition hover:bg-gray-50 min-h-[220px]"
+    >
+      <div>
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0d3749]/10">
+            {card.icon}
           </div>
+
+          <h3 className="font-display text-lg font-semibold text-[#0d3749]">
+            {card.title}
+          </h3>
+        </div>
+
+        <p className="mt-3 text-sm leading-relaxed text-gray-600">
+          {card.description}
+        </p>
+      </div>
+
+      <div className="mt-6 flex flex-wrap gap-2 border-t border-[#0d3749]/20 pt-4">
+        {card.pills.map((pill) => (
+          <Link
+            key={pill}
+            href="/business-hub"
+            className="rounded-full border border-[#0d3749]/20 bg-[#0d3749]/5 px-3 py-1.5 text-xs font-medium text-[#0d3749] transition hover:bg-[#0d3749] hover:text-white"
+          >
+            {pill}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
         </div>
 
         {/* Bottom Framework Section */}

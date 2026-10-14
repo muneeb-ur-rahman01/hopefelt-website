@@ -140,18 +140,17 @@ export default function ExploreSection() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[100rem] px-5 py-20 sm:px-8 lg:px-12">
-        <div className="max-w-3xl mb-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
-            WHAT WE DO —
-          </p>
+        <div className="mb-12 max-w-3xl">
+         <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+        WHAT WE DO
+      </p>
 
-          <h2 className="mt-3 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
-
+          <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-5xl">
             FROM COMMUNITY NEEDS TO PRACTICAL SOLUTIONS.
           </h2>
 
-          <p className="mt-4 leading-relaxed text-ink/65">
-            Our work brings together programs, evidence, innovation, technology, entrepreneurship, communication and partnerships[cite: 9].
+          <p className="mt-4 leading-relaxed text-ink/65 italic">
+            "Our work brings together programs, evidence, innovation, technology, entrepreneurship, communication and partnerships"
           </p>
         </div>
 
@@ -162,49 +161,49 @@ export default function ExploreSection() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group rounded-3xl border border-line bg-surface overflow-hidden flex flex-col justify-between shadow-sm transition hover:shadow-md"
+                className="group flex flex-col rounded-2xl border border-line bg-white transition duration-300 hover:-translate-y-1 hover:border-forest/30 hover:shadow-xl hover:shadow-forest/10"
               >
-                <div>
-                  {/* Top Image Banner with Number Badge */}
-                  <div className="relative h-44 w-full overflow-hidden">
-                    <div
-                      className="absolute inset-0 bg-cover bg-center transition duration-300 group-hover:scale-105"
-                      style={{ backgroundImage: `url('${item.image}')` }}
+                {/* Image */}
+                <div className="relative">
+                  <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/10" />
-                    
-                    <span className="absolute top-3 left-3 z-10 rounded-lg bg-forest px-2.5 py-1 text-[11px] font-semibold text-white shadow-sm">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+
+                    <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-forest backdrop-blur">
                       {numStr}
                     </span>
                   </div>
 
-                  {/* Card Content */}
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-forest/10 shrink-0">
-                        {item.icon}
-                      </div>
-                      <h3 className="font-display text-lg font-semibold text-ink group-hover:text-forest leading-snug">
-                        {item.title}
-                      </h3>
-                    </div>
-
-                    <p className="text-xs leading-relaxed text-ink/65">
-                      {item.desc}
-                    </p>
+                  {/* Floating icon */}
+                  <div className="absolute -bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-md ring-1 ring-line transition duration-300 group-hover:bg-forest group-hover:[&_svg]:text-white">
+                    {item.icon}
                   </div>
                 </div>
 
-              <div className="p-6 pt-0">
-              <div className="pt-4 border-t border-line">
-                <div className="inline-flex items-center gap-3 rounded-md border border-[#0d3749]/30 bg-[#0d3749] px-3 py-2 text-white transition-all duration-300 group-hover:border-[#4a6741] group-hover:bg-[#4a6741]">
-                  <span className="text-xs font-semibold">Explore</span>
-                  <span className="text-white transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-6 pt-8">
+                  <h3 className="font-display text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-forest">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                    {item.desc}
+                  </p>
+
+                  <div className="mt-auto pt-5">
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-forest">
+                      Explore
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </div>
               </Link>
             );
           })}

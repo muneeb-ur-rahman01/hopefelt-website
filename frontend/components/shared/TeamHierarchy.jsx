@@ -6,7 +6,7 @@ const hierarchyData = {
     name: "AFRAH SADIA",
     role: "Founder & CEO",
     image: "/images/Team/Afrah.jpg",
-    color: "bg-emerald-600 text-white",
+    color: "bg-teal-600 text-white",
     ringColor: "border-emerald-600",
   },
   coFounder: {
@@ -21,21 +21,21 @@ const hierarchyData = {
       name: "USAMA BIN ZAHID",
       role: "Sales | Marketing",
       image: "/images/Team/usama.jpg",
-      color: "bg-lime-500 text-slate-900",
+     color: "bg-cyan-600 text-white",
       ringColor: "border-lime-500",
     },
     {
       name: "MUHAMMAD RIZWAN",
       role: "Operational Team",
       image: "/images/Team/Rizwan.jpg",
-      color: "bg-teal-500 text-white",
+      color: "bg-cyan-600 text-white",
       ringColor: "border-teal-500",
     },
     {
       name: "SHARJEEL",
       role: "Social Media Manager",
       image: "/images/Team/Sharjeel.jpg",
-      color: "bg-emerald-500 text-white",
+    color: "bg-cyan-600 text-white",
       ringColor: "border-emerald-500",
     },
     {
@@ -61,17 +61,17 @@ export default function TeamHierarchy() {
 
         {/* HEADER */}
         <div className="mx-auto mb-14 max-w-2xl text-center sm:mb-20">
-          <span className="mb-3 inline-block rounded-full bg-forest/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-forest sm:text-xs sm:tracking-[0.2em]">
+          <span className="mb-3 inline-block rounded-full bg-[#4a6741] px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white sm:text-xs sm:tracking-[0.2em]">
             Organizational Structure
           </span>
 
           <h2 className="font-display text-2xl font-semibold text-forest sm:text-3xl md:text-4xl">
-            Team Hierarchy
+            TEAM HIERARCHY
           </h2>
 
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-ink/65 sm:text-base sm:leading-7">
-            Leadership and departmental command structure driving our
-            mission forward.
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-ink/65 sm:text-base sm:leading-7 italic">
+            "Leadership and departmental command structure driving our
+            mission forward".
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export default function TeamHierarchy() {
 
           {/* MOBILE SECTION LABEL */}
           <div className="mb-8 mt-10 text-center md:mt-0">
-            <span className="inline-flex rounded-full border border-forest/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wider text-forest shadow-sm">
+            <span className="inline-flex rounded-full border border-forest/15 bg-[#0d3749] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
               Departmental Team
             </span>
           </div>

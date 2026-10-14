@@ -106,11 +106,10 @@ export default function ResearchInnovationSection() {
           {/* Left Main Intro & Bottom Framework */}
           <div className="lg:col-span-6 flex flex-col justify-between h-full">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
-                RESEARCH, EVIDENCE & INNOVATION —
-              </p>
-
-              <h2 className="mt-4 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
+             <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              RESEARCH, EVIDENCE & INNOVATION 
+            </p>
+              <h2 className="mt-4 font-display text-3xl font-semibold text-[#0d3749] sm:text-5xl leading-tight">
                 EVIDENCE THAT MOVES IDEAS FORWARD.
               </h2>
 

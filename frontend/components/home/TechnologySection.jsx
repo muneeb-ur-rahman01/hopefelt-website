@@ -97,15 +97,15 @@ export default function TechnologySection() {
           {/* Left Intro */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
-                TECHNOLOGY & DIGITAL INNOVATION
-              </span>
+              <span className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              TECHNOLOGY & DIGITAL INNOVATION
+            </span>
 
-              <h2 className="mt-4 font-display text-3xl font-semibold text-forest sm:text-5xl leading-tight">
+              <h2 className="mt-4 font-display text-3xl font-semibold text-[#0d3749] sm:text-5xl leading-tight">
                 TECHNOLOGY DESIGNED AROUND REAL WORLD NEEDS.
               </h2>
 
-              <p className="mt-5 leading-relaxed text-ink/65">
+              <p className="mt-5 leading-relaxed text-ink/65 italic">
                 Hopefelt develops and supports digital products, data systems and technology services to strengthen public health systems and help communities access better services.
               </p>
             </div>
@@ -158,9 +158,9 @@ export default function TechnologySection() {
         <div className="mt-12 rounded-3xl border border-line bg-white p-8 lg:p-10 shadow-sm">
           <div className="grid gap-8 lg:grid-cols-12 items-center">
             <div className="lg:col-span-3 lg:pr-8 lg:border-r lg:border-line">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-forest">
-                OUR APPROACH
-              </p>
+             <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              OUR APPROACH
+            </p>
               <h3 className="mt-3 font-display text-2xl font-semibold text-ink leading-tight">
                 From needs to lasting impact.
               </h3>
