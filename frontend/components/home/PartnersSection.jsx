@@ -4,24 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 const partners = [
-  { name: "Echo for Equity Foundation", logo: "/images/partners/echoforequity.jpeg" },
+  { name: "Echo for Equity Foundation", logo: "/images/partners/echoforequity_transparent.png" },
   { name: "Foundation Fighting Poverty (FFP)", logo: "/images/partners/ffp.png" },
   { name: "Hammad Foundation", logo: "/images/partners/hammad.jpg" },
-  { name: "Fatima Farhat Foundation", logo: "/images/partners/fatimafoundation.png" },
+  { name: "Fatima Farhat Foundation", logo: "/images/partners/fatimafoundation_transparent.png" },
   { name: "Blessing Foundation", logo: "/images/partners/blessingfoundation.png" },
-  { name: "Badlo Apna Karachi", logo: "/images/partners/badloapnakarachi.jpg" },
-  { name: "Bahria University", logo: "/images/partners/BU logo.png" },
+  { name: "Badlo Apna Karachi", logo: "/images/partners/badloapnakarachi_transparent.png" },
+  { name: "Bahria University", logo: "/images/partners/BU_logo_transparent.png" },
   { name: "University of Karachi", logo: "/images/partners/KU logo.png" },
-  { name: "Suno Sunao Zindagi", logo: "/images/partners/sunosunaozindagi.png" },
-  { name: "STEM Connect", logo: "/images/partners/stemconnect.png" },
+  { name: "Suno Sunao Zindagi", logo: "/images/partners/sunosunaozindagi_transparent.png" },
+  { name: "STEM Connect", logo: "/images/partners/stemconnect_transparent.png" },
   { name: "Juvenile Evolution Pakistan", logo: "/images/partners/juvenile.png" },
-  { name: "Ocean Busters", logo: "/images/partners/ocean.jpeg" },
+  { name: "Ocean Busters", logo: "/images/partners/ocean_transparent.png" },
 ];
 
 const rehabilitationPartners = [
   { name: "Sunshine Rehabilitation Center", logo: "/images/partners/sunshine.jpeg" },
-  { name: "Right Track Rehabilitation Center", logo: "/images/partners/righttrack.jpeg" },
-  { name: "Lifesaver Rehabilitation Center", logo: "/images/partners/lifesavior.jpg" },
+  { name: "Right Track Rehabilitation Center", logo: "/images/partners/righttrack_transparent.png" },
+  { name: "Lifesaver Rehabilitation Center", logo: "/images/partners/lifesaviours_transparent.png" },
 ];
 
 const educationalPartners = [
