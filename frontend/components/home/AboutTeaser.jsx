@@ -180,9 +180,9 @@ export default function AboutTeaser() {
           {/* Left Content & Stats */}
           <div className="flex flex-col justify-between lg:col-span-4">
             <div>
-                <p className="inline-block rounded-full bg-forest px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-white">
-          WHO WE ARE
-        </p>
+                <p className="inline-block rounded-full bg-[#1F5C4E] px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-white">
+                  WHO WE ARE
+                </p>
 
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0d3749] sm:text-5xl">
                 BETTER COMMUNITIES. BETTER FUTURE

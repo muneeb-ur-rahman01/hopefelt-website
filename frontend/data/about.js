@@ -6,7 +6,7 @@ export const aboutHeaderData = {
   title: "About Us",
   tagline: "Better Communities. Brighter Futures.",
   description:
-    "Hopefelt Foundation is a youth-led, community-focused organization working at the intersection of health, knowledge, opportunity and innovation — using research, technology, marketing and mass media to create sustainable impact.",
+    "Hopefelt Foundation is a youth led, community focused organization working at the intersection of health, knowledge, opportunity and innovation  using research, technology, marketing and mass media to create sustainable impact.",
 };
 
 // Top Formula Bar Elements shown in the design
@@ -14,7 +14,7 @@ export const focusFormula = [
   { label: "Health", icon: "🏥" },
   { label: "Research", icon: "🔍" },
   { label: "Education", icon: "🎓" },
-  { label: "Technology", icon: "💻" },
+  { label: "Technology", icon: "💻" },  
   { label: "Digital Health", icon: "🩺" },
   { label: "Entrepreneurship", icon: "💡" },
   { label: "Business Hub", icon: "📈" },
@@ -27,16 +27,16 @@ export const founderVision = {
   name: "AFRAH SADIA",
   title: "Founder, Hopefelt Foundation",
   quote:
-    "My vision is to build an organization where health, knowledge, innovation and opportunity come together creating pathways for people and communities to lead, learn, build and create lasting change.",
-  image: "/images/Afrah.jpg",
+    "To build an organization where health, knowledge, innovation and opportunity come together creating pathways for people and communities to lead, learn, build and create lasting change.",
+  image: "/images/Team/Afrah.jpg",
 };
 
 export const coFounderVision = {
   name: "ALISHBA NOOR",
   title: "Co-Founder, Hopefelt Foundation",
   quote:
-    "My vision is to scale Hopefelt Foundation into a sustainable ecosystem where health, research, technology, and entrepreneurship come together to turn ideas into real-world solutions and create lasting impact. I want to build something that grows beyond me, empowers others, and creates opportunities that matter.",
-  image: "/images/Alishba.jpg",
+    "To scale Hopefelt Foundation into a sustainable ecosystem where health, research, technology, and entrepreneurship come together to turn ideas into real-world solutions and create lasting impact. I want to build something that grows beyond me, empowers others, and creates opportunities that matter.",
+  image: "/images/Team/Alishba.jpg",
 };
 
 export const whyFutureGenerations = {
