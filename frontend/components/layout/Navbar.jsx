@@ -277,7 +277,7 @@ export default function Navbar() {
               items-center
               gap-2
               rounded-full
-              bg-[#3368A0]
+              bg-[#0d3749]
               px-6 py-3
               font-body
               text-sm
@@ -287,7 +287,7 @@ export default function Navbar() {
               transition-all
               duration-200
               hover:-translate-y-0.5
-              hover:bg-[#66A3BF]
+              hover:bg-[#0d3749]
               hover:shadow-lg
               lg:flex
             "
