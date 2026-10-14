@@ -180,13 +180,12 @@ export default function AboutTeaser() {
           {/* Left Content & Stats */}
           <div className="flex flex-col justify-between lg:col-span-4">
             <div>
-                  <p className="inline-block rounded bg-[#4a6741] px-3 py-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-white">
-        {aboutHeaderData?.tagline ||
-          "BETTER COMMUNITIES. BRIGHTER FUTURES."}
-      </p>
+                <p className="inline-block rounded-full bg-forest px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-white">
+          WHO WE ARE
+        </p>
 
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0d3749] sm:text-5xl">
-                WHO WE ARE
+                BETTER COMMUNITIES. BETTER FUTURE
               </h2>
 
               <p className="mt-5 font-body text-sm leading-relaxed text-ink/70">
@@ -199,7 +198,7 @@ export default function AboutTeaser() {
 
               <Link
                 href="/about"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#4a6741] px-7 py-3 font-body text-sm font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-[#394F32] hover:shadow-lg"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-forest px-7 py-3 font-body text-sm font-semibold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-[#394F32] hover:shadow-lg"
               >
                 Learn More →
               </Link>

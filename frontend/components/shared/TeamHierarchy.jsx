@@ -61,11 +61,11 @@ export default function TeamHierarchy() {
 
         {/* HEADER */}
         <div className="mx-auto mb-14 max-w-2xl text-center sm:mb-20">
-          <span className="mb-3 inline-block rounded-full bg-[#4a6741] px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white sm:text-xs sm:tracking-[0.2em]">
+          <span className="mb-3 inline-block rounded-full bg-forest px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white sm:text-xs sm:tracking-[0.2em]">
             Organizational Structure
           </span>
 
-          <h2 className="font-display text-2xl font-semibold text-forest sm:text-3xl md:text-4xl">
+          <h2 className="font-display text-2xl font-semibold text-[#0d3749] sm:text-3xl md:text-4xl">
             TEAM HIERARCHY
           </h2>
 

@@ -209,7 +209,7 @@ export default function PartnersSection() {
     <section className="overflow-hidden bg-[#f8f5ed] py-16 sm:py-20">
       <div className="mx-auto max-w-[100rem]">
         <header className="mx-auto max-w-3xl px-5 text-center sm:px-8">
-          <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white">
+         <p className="inline-block rounded-full bg-forest px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white">
           Partnerships & Collaborations
         </p>
 

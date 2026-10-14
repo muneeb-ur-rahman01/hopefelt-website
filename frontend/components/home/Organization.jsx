@@ -265,7 +265,7 @@ export default function Organization() {
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_24rem_1fr]">
           {/* Left Intro Text */}
           <div>
-           <span className="inline-flex rounded-md bg-[#4a6741] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
+           <span className="inline-flex rounded-full bg-forest px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
             OUR ORGANIZATION
           </span>
 

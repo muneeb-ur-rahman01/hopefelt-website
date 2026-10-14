@@ -141,9 +141,9 @@ export default function ExploreSection() {
     <section className="bg-white">
       <div className="mx-auto max-w-[100rem] px-5 py-20 sm:px-8 lg:px-12">
         <div className="mb-12 max-w-3xl">
-         <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-        WHAT WE DO
-      </p>
+        <p className="inline-block rounded-full bg-forest px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+          WHAT WE DO
+        </p>
 
           <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-5xl">
             FROM COMMUNITY NEEDS TO PRACTICAL SOLUTIONS.
@@ -196,7 +196,7 @@ export default function ExploreSection() {
                   </p>
 
                   <div className="mt-auto pt-5">
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-forest">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-white">
                       Explore
                       <span className="transition-transform duration-300 group-hover:translate-x-1">
                         →

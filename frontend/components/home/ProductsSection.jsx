@@ -76,10 +76,9 @@ export default function ProductsSection() {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
-          <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-              OUR PRODUCTS
-            </p>
-
+          <p className="inline-block rounded-full bg-forest px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+            OUR PRODUCTS
+          </p>
             <h2 className="mt-3 font-display text-3xl font-semibold text-[#0d3749] sm:text-5xl leading-tight">
              INNOVATION THAT DRIVE<br />
               Solutions That Matter.
@@ -188,12 +187,12 @@ export default function ProductsSection() {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-line">
-                  <Link
-                    href="https://work-sphere-self.vercel.app"
-                    className="inline-flex text-xs font-semibold text-forest hover:underline"
-                  >
-                    Explore {product.name} →
-                  </Link>
+                 <Link
+                  href="https://work-sphere-self.vercel.app"
+                  className="inline-flex items-center rounded-full bg-forest px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#3d5636]"
+                >
+                  Explore {product.name} →
+                </Link>
                 </div>
               </div>
             </article>

@@ -100,66 +100,67 @@ export default function Hero() {
           </div>
 
           {/* AUTO IMAGE CAROUSEL */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-[2rem] border border-[#3368A0]/15 bg-white p-3 shadow-[0_20px_60px_rgba(51,104,160,0.15)]">
-              <div className="relative min-h-[440px] overflow-hidden rounded-[1.5rem] sm:min-h-[520px]">
+         <div className="relative w-full">
+  <div className="w-full overflow-hidden rounded-[2rem] border border-[#3368A0]/15 bg-white p-3 shadow-[0_20px_60px_rgba(51,104,160,0.15)]">
+    <div className="relative h-[300px] overflow-hidden rounded-[1.5rem] sm:h-[360px] lg:h-[420px]">
 
-                {/* SLIDES */}
-                {heroImages.map((image, index) => (
-                  <div
-                    key={image}
-                    className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${
-                      currentImage === index
-                        ? "z-10 opacity-100"
-                        : "z-0 opacity-0"
-                    }`}
-                    style={{
-                      backgroundImage: `
-                        linear-gradient(
-                          to top,
-                          rgba(15, 35, 60, 0.55) 0%,
-                          rgba(15, 35, 60, 0.12) 55%,
-                          rgba(15, 35, 60, 0.02) 100%
-                        ),
-                        url('${image}')
-                      `,
-                    }}
-                  />
-                ))}
+      {/* SLIDES */}
+      {heroImages.map((image, index) => (
+        <div
+          key={image}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${
+            currentImage === index
+              ? "z-10 opacity-100"
+              : "z-0 opacity-0"
+          }`}
+          style={{
+            backgroundImage: `
+              linear-gradient(
+                to top,
+                rgba(15, 35, 60, 0.55) 0%,
+                rgba(15, 35, 60, 0.12) 55%,
+                rgba(15, 35, 60, 0.02) 100%
+              ),
+              url('${image}')
+            `,
+          }}
+        />
+      ))}
 
-                {/* CAROUSEL INDICATORS */}
-                <div className="absolute bottom-5 right-5 z-20 flex items-center gap-2">
-                  {heroImages.map((_, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      aria-label={`Show image ${index + 1}`}
-                      aria-current={
-                        currentImage === index ? "true" : undefined
-                      }
-                      onClick={() => setCurrentImage(index)}
-                      className={`h-2.5 rounded-full border border-white/70 transition-all duration-300 ${
-                        currentImage === index
-                          ? "w-7 bg-white"
-                          : "w-2.5 bg-white/40 hover:bg-white/80"
-                      }`}
-                    />
-                  ))}
-                </div>                
-              </div>
-            </div>
+      {/* CAROUSEL INDICATORS */}
+      <div className="absolute bottom-5 right-5 z-20 flex items-center gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            aria-label={`Show image ${index + 1}`}
+            aria-current={
+              currentImage === index ? "true" : undefined
+            }
+            onClick={() => setCurrentImage(index)}
+            className={`h-2.5 rounded-full border border-white/70 transition-all duration-300 ${
+              currentImage === index
+                ? "w-7 bg-white"
+                : "w-2.5 bg-white/40 hover:bg-white/80"
+            }`}
+          />
+        ))}
+      </div>
 
-            {/* FLOATING FOCUS CARD */}
-            <div className="absolute -bottom-5 -left-5 z-20 hidden rounded-2xl border border-[#3368A0]/15 bg-white/85 p-5 shadow-[0_12px_35px_rgba(51,104,160,0.12)] backdrop-blur-xl sm:block">
-              <p className="text-xs uppercase tracking-[0.15em] text-[#4a6741]">
-                Our Focus
-              </p>
-              <p className="mt-1 font-display text-lg font-semibold text-[#3368A0]">
-                Community → Research → Action
-              </p>
-            </div>
-          </div>
+    </div>
+  </div>
 
+  {/* FLOATING FOCUS CARD */}
+  <div className="absolute -bottom-5 -left-5 z-20 hidden rounded-2xl border border-[#3368A0]/15 bg-white/85 p-5 shadow-[0_12px_35px_rgba(51,104,160,0.12)] backdrop-blur-xl sm:block">
+    <p className="text-xs uppercase tracking-[0.15em] text-[#4a6741]">
+      Our Focus
+    </p>
+
+    <p className="mt-1 font-display text-lg font-semibold text-[#3368A0]">
+      Community → Research → Action
+    </p>
+  </div>
+</div>
         </div>
       </div>
     </section>

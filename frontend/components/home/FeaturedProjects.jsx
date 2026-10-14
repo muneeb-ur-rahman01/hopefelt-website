@@ -36,9 +36,9 @@ export default function FeaturedProjects() {
         {/* Top Header Section */}
         <div className="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div className="max-w-3xl">
-            <p className="inline-block rounded bg-[#4a6741] px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-        Featured Projects
-      </p>
+           <p className="inline-block rounded-full bg-forest px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+            Featured Projects
+          </p>
 
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-[#0d3749] sm:text-5xl">
               Ideas Into Action. Impact Into Reality.
@@ -113,7 +113,7 @@ export default function FeaturedProjects() {
                 <div className="border-t border-line pt-4">
                   <Link
                     href="/projects"
-                    className="group/explore inline-flex items-center gap-2 rounded-md border border-[#0d3749]/30 px-3 py-2 text-xs font-semibold text-[#0d3749] transition-all duration-300 hover:border-[#4a6741] hover:bg-[#4a6741] hover:text-white"
+                    className="group/explore inline-flex items-center gap-2 rounded-md border border-[#0d3749]/30 px-3 py-2 text-xs font-semibold text-[#0d3749] transition-all duration-300 hover:border-[#4a6741] hover:bg-forest hover:text-white"
                   >
                     <span>Explore</span>
                     <span className="transition-transform duration-300 group-hover/explore:translate-x-1">
