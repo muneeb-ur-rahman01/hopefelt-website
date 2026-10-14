@@ -7,7 +7,7 @@ const partners = [
   { name: "Echo for Equity Foundation", logo: "/images/partners/echoforequity.jpeg" },
   { name: "Foundation Fighting Poverty (FFP)", logo: "/images/partners/ffp.png" },
   { name: "Hammad Foundation", logo: "/images/partners/hammad.jpg" },
-  // { name: "Fatima Farhat Foundation", logo: "/images/partners/fatima-farhat.png" },
+  { name: "Fatima Farhat Foundation", logo: "/images/partners/fatimafoundation.png" },
   { name: "Blessing Foundation", logo: "/images/partners/blessingfoundation.png" },
   { name: "Badlo Apna Karachi", logo: "/images/partners/badloapnakarachi.jpg" },
   { name: "Bahria University", logo: "/images/partners/BU logo.png" },
