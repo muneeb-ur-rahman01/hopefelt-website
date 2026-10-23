@@ -44,7 +44,7 @@ export default function HomePage() {
       <TechnologySection />
 
       {/* 8. Products */}
-      <ProductsSection />
+      {/* <ProductsSection /> */}
 
       {/* 9. Business Hub */}
       <BusinessHubSection />

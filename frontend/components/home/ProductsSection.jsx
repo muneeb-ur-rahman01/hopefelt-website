@@ -188,7 +188,7 @@ export default function ProductsSection() {
 
                 <div className="mt-4 pt-3 border-t border-line">
                  <Link
-                  href="https://work-sphere-self.vercel.app"
+                  href="https://www.worksphere.tech"
                   className="inline-flex items-center rounded-full bg-forest px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#3d5636]"
                 >
                   Explore {product.name} →

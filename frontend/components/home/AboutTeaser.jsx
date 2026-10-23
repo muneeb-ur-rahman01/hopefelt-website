@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { aboutHeaderData } from "@/data/about";
+
 
 const rightCards = [
   {
