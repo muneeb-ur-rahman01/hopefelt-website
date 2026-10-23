@@ -141,444 +141,444 @@ export const mainNav = [
 
 {
   label: "Our Work",
-  href: "/our-work",
+  href: "/ourwork",
   dropdown: [
     {
       label: "Health & Medical Support",
-      href: "/our-work/health-medical-support",
-      children: [
-        {
-          label: "Medical Outreach",
-          href: "/our-work/health-medical-support/medical-outreach",
-        },
-        {
-          label: "Medical Camps",
-          href: "/our-work/health-medical-support/medical-camps",
-        },
-        {
-          label: "Health Screening",
-          href: "/our-work/health-medical-support/health-screening",
-        },
-        {
-          label: "Preventive Health",
-          href: "/our-work/health-medical-support/preventive-health",
-        },
-        {
-          label: "Community Health Services",
-          href: "/our-work/health-medical-support/community-health-services",
-        },
-      ],
+      href: "/ourwork/healthmedicalsupport",
+      // children: [
+      //   {
+      //     label: "Medical Outreach",
+      //     href: "/our-work/health-medical-support/medical-outreach",
+      //   },
+      //   {
+      //     label: "Medical Camps",
+      //     href: "/our-work/health-medical-support/medical-camps",
+      //   },
+      //   {
+      //     label: "Health Screening",
+      //     href: "/our-work/health-medical-support/health-screening",
+      //   },
+      //   {
+      //     label: "Preventive Health",
+      //     href: "/our-work/health-medical-support/preventive-health",
+      //   },
+      //   {
+      //     label: "Community Health Services",
+      //     href: "/our-work/health-medical-support/community-health-services",
+      //   },
+      // ],
     },
 
     {
       label: "Health Education & Awareness",
-      href: "/our-work/health-education-awareness",
-      children: [
-        {
-          label: "Health Education",
-          href: "/our-work/health-education-awareness/health-education",
-        },
-        {
-          label: "Health Promotion",
-          href: "/our-work/health-education-awareness/health-promotion",
-        },
-        {
-          label: "Disease Prevention",
-          href: "/our-work/health-education-awareness/disease-prevention",
-        },
-        {
-          label: "Community Awareness",
-          href: "/our-work/health-education-awareness/community-awareness",
-        },
-        {
-          label: "Public Awareness",
-          href: "/our-work/health-education-awareness/public-awareness",
-        },
-      ],
+      href: "/ourwork/healtheducationawareness",
+      // children: [
+      //   {
+      //     label: "Health Education",
+      //     href: "/our-work/health-education-awareness/health-education",
+      //   },
+      //   {
+      //     label: "Health Promotion",
+      //     href: "/our-work/health-education-awareness/health-promotion",
+      //   },
+      //   {
+      //     label: "Disease Prevention",
+      //     href: "/our-work/health-education-awareness/disease-prevention",
+      //   },
+      //   {
+      //     label: "Community Awareness",
+      //     href: "/our-work/health-education-awareness/community-awareness",
+      //   },
+      //   {
+      //     label: "Public Awareness",
+      //     href: "/our-work/health-education-awareness/public-awareness",
+      //   },
+      // ],
     },
 
     {
       label: "Community Development & Outreach",
-      href: "/our-work/community-development-outreach",
-      children: [
-        {
-          label: "Community Outreach",
-          href: "/our-work/community-development-outreach/community-outreach",
-        },
-        {
-          label: "Community Engagement",
-          href: "/our-work/community-development-outreach/community-engagement",
-        },
-        {
-          label: "Community Mobilization",
-          href: "/our-work/community-development-outreach/community-mobilization",
-        },
-        {
-          label: "Community Development",
-          href: "/our-work/community-development-outreach/community-development",
-        },
-        {
-          label: "Vulnerable Community Support",
-          href: "/our-work/community-development-outreach/vulnerable-community-support",
-        },
-        {
-          label: "Community-Based Initiatives",
-          href: "/our-work/community-development-outreach/community-based-initiatives",
-        },
-      ],
+      href: "/ourwork/communitydevelopment",
+      // children: [
+      //   {
+      //     label: "Community Outreach",
+      //     href: "/our-work/community-development-outreach/community-outreach",
+      //   },
+      //   {
+      //     label: "Community Engagement",
+      //     href: "/our-work/community-development-outreach/community-engagement",
+      //   },
+      //   {
+      //     label: "Community Mobilization",
+      //     href: "/our-work/community-development-outreach/community-mobilization",
+      //   },
+      //   {
+      //     label: "Community Development",
+      //     href: "/our-work/community-development-outreach/community-development",
+      //   },
+      //   {
+      //     label: "Vulnerable Community Support",
+      //     href: "/our-work/community-development-outreach/vulnerable-community-support",
+      //   },
+      //   {
+      //     label: "Community-Based Initiatives",
+      //     href: "/our-work/community-development-outreach/community-based-initiatives",
+      //   },
+      // ],
     },
 
     {
       label: "Climate, Environment & Community Resilience",
-      href: "/our-work/climate-environment-resilience",
-      children: [
-        {
-          label: "Climate & Health",
-          href: "/our-work/climate-environment-resilience/climate-health",
-        },
-        {
-          label: "Environmental Health",
-          href: "/our-work/climate-environment-resilience/environmental-health",
-        },
-        {
-          label: "Environmental Awareness",
-          href: "/our-work/climate-environment-resilience/environmental-awareness",
-        },
-        {
-          label: "Plantation Initiatives",
-          href: "/our-work/climate-environment-resilience/plantation-initiatives",
-        },
-        {
-          label: "Community Resilience",
-          href: "/our-work/climate-environment-resilience/community-resilience",
-        },
-      ],
+      href: "/ourwork/climateresilience",
+      // children: [
+      //   {
+      //     label: "Climate & Health",
+      //     href: "/our-work/climate-environment-resilience/climate-health",
+      //   },
+      //   {
+      //     label: "Environmental Health",
+      //     href: "/our-work/climate-environment-resilience/environmental-health",
+      //   },
+      //   {
+      //     label: "Environmental Awareness",
+      //     href: "/our-work/climate-environment-resilience/environmental-awareness",
+      //   },
+      //   {
+      //     label: "Plantation Initiatives",
+      //     href: "/our-work/climate-environment-resilience/plantation-initiatives",
+      //   },
+      //   {
+      //     label: "Community Resilience",
+      //     href: "/our-work/climate-environment-resilience/community-resilience",
+      //   },
+      // ],
     },
 
     {
       label: "Social Support & Learning",
-      href: "/our-work/social-support-learning",
-      children: [
-        {
-          label: "Social Support",
-          href: "/our-work/social-support-learning/social-support",
-        },
-        {
-          label: "Educational Support",
-          href: "/our-work/social-support-learning/educational-support",
-        },
-        {
-          label: "Youth Development",
-          href: "/our-work/social-support-learning/youth-development",
-        },
-        {
-          label: "Learning Initiatives",
-          href: "/our-work/social-support-learning/learning-initiatives",
-        },
-        {
-          label: "Skills Development",
-          href: "/our-work/social-support-learning/skills-development",
-        },
-      ],
+      href: "/ourwork/socialsupport",
+      // children: [
+      //   {
+      //     label: "Social Support",
+      //     href: "/our-work/social-support-learning/social-support",
+      //   },
+      //   {
+      //     label: "Educational Support",
+      //     href: "/our-work/social-support-learning/educational-support",
+      //   },
+      //   {
+      //     label: "Youth Development",
+      //     href: "/our-work/social-support-learning/youth-development",
+      //   },
+      //   {
+      //     label: "Learning Initiatives",
+      //     href: "/our-work/social-support-learning/learning-initiatives",
+      //   },
+      //   {
+      //     label: "Skills Development",
+      //     href: "/our-work/social-support-learning/skills-development",
+      //   },
+      // ],
     },
 
-    {
-      label: "Research, Evidence & Innovation",
-      href: "/our-work/research-evidence-innovation",
-      children: [
-        {
-          label: "Public Health Research",
-          href: "/our-work/research-evidence-innovation/public-health-research",
-        },
-        {
-          label: "Applied Research",
-          href: "/our-work/research-evidence-innovation/applied-research",
-        },
-        {
-          label: "Intervention Research",
-          href: "/our-work/research-evidence-innovation/intervention-research",
-        },
-        {
-          label: "Community-Based Research",
-          href: "/our-work/research-evidence-innovation/community-based-research",
-        },
-        {
-          label: "Evidence Generation",
-          href: "/our-work/research-evidence-innovation/evidence-generation",
-        },
-        {
-          label: "Research Data & Analysis",
-          href: "/our-work/research-evidence-innovation/research-data-analysis",
-        },
-        {
-          label: "Research Presentations",
-          href: "/our-work/research-evidence-innovation/research-presentations",
-        },
-        {
-          label: "Research Publications",
-          href: "/our-work/research-evidence-innovation/research-publications",
-        },
-        {
-          label: "Research Competitions",
-          href: "/our-work/research-evidence-innovation/research-competitions",
-        },
-        {
-          label: "Research Awards & Recognition",
-          href: "/our-work/research-evidence-innovation/research-awards-recognition",
-        },
-        {
-          label: "Research Collaborations",
-          href: "/our-work/research-evidence-innovation/research-collaborations",
-        },
-        {
-          label: "Research Funding",
-          href: "/our-work/research-evidence-innovation/research-funding",
-        },
-        {
-          label: "Research Sponsorship",
-          href: "/our-work/research-evidence-innovation/research-sponsorship",
-        },
-        {
-          label: "Research Innovation",
-          href: "/our-work/research-evidence-innovation/research-innovation",
-        },
-      ],
-    },
+    // {
+    //   label: "Research, Evidence & Innovation",
+    //   href: "/ourwork/research-evidence-innovation",
+    //   // children: [
+    //   //   {
+    //   //     label: "Public Health Research",
+    //   //     href: "/our-work/research-evidence-innovation/public-health-research",
+    //   //   },
+    //   //   {
+    //   //     label: "Applied Research",
+    //   //     href: "/our-work/research-evidence-innovation/applied-research",
+    //   //   },
+    //   //   {
+    //   //     label: "Intervention Research",
+    //   //     href: "/our-work/research-evidence-innovation/intervention-research",
+    //   //   },
+    //   //   {
+    //   //     label: "Community-Based Research",
+    //   //     href: "/our-work/research-evidence-innovation/community-based-research",
+    //   //   },
+    //   //   {
+    //   //     label: "Evidence Generation",
+    //   //     href: "/our-work/research-evidence-innovation/evidence-generation",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Data & Analysis",
+    //   //     href: "/our-work/research-evidence-innovation/research-data-analysis",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Presentations",
+    //   //     href: "/our-work/research-evidence-innovation/research-presentations",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Publications",
+    //   //     href: "/our-work/research-evidence-innovation/research-publications",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Competitions",
+    //   //     href: "/our-work/research-evidence-innovation/research-competitions",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Awards & Recognition",
+    //   //     href: "/our-work/research-evidence-innovation/research-awards-recognition",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Collaborations",
+    //   //     href: "/our-work/research-evidence-innovation/research-collaborations",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Funding",
+    //   //     href: "/our-work/research-evidence-innovation/research-funding",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Sponsorship",
+    //   //     href: "/our-work/research-evidence-innovation/research-sponsorship",
+    //   //   },
+    //   //   {
+    //   //     label: "Research Innovation",
+    //   //     href: "/our-work/research-evidence-innovation/research-innovation",
+    //   //   },
+    //   // ],
+    // },
 
-    {
-      label: "Digital Health & Health Innovation",
-      href: "/our-work/digital-health-health-innovation",
-      children: [
-        {
-          label: "Digital Health Solutions",
-          href: "/our-work/digital-health-health-innovation/digital-health-solutions",
-        },
-        {
-          label: "Virtual Care",
-          href: "/our-work/digital-health-health-innovation/virtual-care",
-        },
-        {
-          label: "Telehealth",
-          href: "/our-work/digital-health-health-innovation/telehealth",
-        },
-        {
-          label: "Remote Care",
-          href: "/our-work/digital-health-health-innovation/remote-care",
-        },
-        {
-          label: "Digital Screening",
-          href: "/our-work/digital-health-health-innovation/digital-screening",
-        },
-        {
-          label: "Clinical Technology",
-          href: "/our-work/digital-health-health-innovation/clinical-technology",
-        },
-        {
-          label: "Health Information Systems",
-          href: "/our-work/digital-health-health-innovation/health-information-systems",
-        },
-        {
-          label: "Health Data & Analytics",
-          href: "/our-work/digital-health-health-innovation/health-data-analytics",
-        },
-        {
-          label: "Digital Health Research",
-          href: "/our-work/digital-health-health-innovation/digital-health-research",
-        },
-        {
-          label: "Digital Health Innovation",
-          href: "/our-work/digital-health-health-innovation/digital-health-innovation",
-        },
-      ],
-    },
+    // {
+    //   label: "Digital Health & Health Innovation",
+    //   href: "/ourwork/digital-health-health-innovation",
+    //   // children: [
+    //   //   {
+    //   //     label: "Digital Health Solutions",
+    //   //     href: "/our-work/digital-health-health-innovation/digital-health-solutions",
+    //   //   },
+    //   //   {
+    //   //     label: "Virtual Care",
+    //   //     href: "/our-work/digital-health-health-innovation/virtual-care",
+    //   //   },
+    //   //   {
+    //   //     label: "Telehealth",
+    //   //     href: "/our-work/digital-health-health-innovation/telehealth",
+    //   //   },
+    //   //   {
+    //   //     label: "Remote Care",
+    //   //     href: "/our-work/digital-health-health-innovation/remote-care",
+    //   //   },
+    //   //   {
+    //   //     label: "Digital Screening",
+    //   //     href: "/our-work/digital-health-health-innovation/digital-screening",
+    //   //   },
+    //   //   {
+    //   //     label: "Clinical Technology",
+    //   //     href: "/our-work/digital-health-health-innovation/clinical-technology",
+    //   //   },
+    //   //   {
+    //   //     label: "Health Information Systems",
+    //   //     href: "/our-work/digital-health-health-innovation/health-information-systems",
+    //   //   },
+    //   //   {
+    //   //     label: "Health Data & Analytics",
+    //   //     href: "/our-work/digital-health-health-innovation/health-data-analytics",
+    //   //   },
+    //   //   {
+    //   //     label: "Digital Health Research",
+    //   //     href: "/our-work/digital-health-health-innovation/digital-health-research",
+    //   //   },
+    //   //   {
+    //   //     label: "Digital Health Innovation",
+    //   //     href: "/our-work/digital-health-health-innovation/digital-health-innovation",
+    //   //   },
+    //   // ],
+    // },
 
-    {
-      label: "Technology & Digital Innovation",
-      href: "/our-work/technology-digital-innovation",
-      children: [
-        {
-          label: "Software Products",
-          href: "/our-work/technology-digital-innovation/software-products",
-        },
-        {
-          label: "Digital Platforms",
-          href: "/our-work/technology-digital-innovation/digital-platforms",
-        },
-        {
-          label: "SaaS Platforms",
-          href: "/our-work/technology-digital-innovation/saas-platforms",
-        },
-        {
-          label: "IT Solutions",
-          href: "/our-work/technology-digital-innovation/it-solutions",
-        },
-        {
-          label: "Software Development",
-          href: "/our-work/technology-digital-innovation/software-development",
-        },
-        {
-          label: "Technical Support",
-          href: "/our-work/technology-digital-innovation/technical-support",
-        },
-        {
-          label: "Data & Technology Systems",
-          href: "/our-work/technology-digital-innovation/data-technology-systems",
-        },
-        {
-          label: "Automation",
-          href: "/our-work/technology-digital-innovation/automation",
-        },
-        {
-          label: "AI-Enabled Solutions",
-          href: "/our-work/technology-digital-innovation/ai-enabled-solutions",
-        },
-        {
-          label: "Digital Transformation",
-          href: "/our-work/technology-digital-innovation/digital-transformation",
-        },
-        {
-          label: "Cybersecurity & Data Protection",
-          href: "/our-work/technology-digital-innovation/cybersecurity-data-protection",
-        },
-        {
-          label: "Technology for Communities",
-          href: "/our-work/technology-digital-innovation/technology-for-communities",
-        },
-      ],
-    },
+    // {
+    //   label: "Technology & Digital Innovation",
+    //   href: "/ourwork/technology-digital-innovation",
+    //   // children: [
+    //   //   {
+    //   //     label: "Software Products",
+    //   //     href: "/our-work/technology-digital-innovation/software-products",
+    //   //   },
+    //   //   {
+    //   //     label: "Digital Platforms",
+    //   //     href: "/our-work/technology-digital-innovation/digital-platforms",
+    //   //   },
+    //   //   {
+    //   //     label: "SaaS Platforms",
+    //   //     href: "/our-work/technology-digital-innovation/saas-platforms",
+    //   //   },
+    //   //   {
+    //   //     label: "IT Solutions",
+    //   //     href: "/our-work/technology-digital-innovation/it-solutions",
+    //   //   },
+    //   //   {
+    //   //     label: "Software Development",
+    //   //     href: "/our-work/technology-digital-innovation/software-development",
+    //   //   },
+    //   //   {
+    //   //     label: "Technical Support",
+    //   //     href: "/our-work/technology-digital-innovation/technical-support",
+    //   //   },
+    //   //   {
+    //   //     label: "Data & Technology Systems",
+    //   //     href: "/our-work/technology-digital-innovation/data-technology-systems",
+    //   //   },
+    //   //   {
+    //   //     label: "Automation",
+    //   //     href: "/our-work/technology-digital-innovation/automation",
+    //   //   },
+    //   //   {
+    //   //     label: "AI-Enabled Solutions",
+    //   //     href: "/our-work/technology-digital-innovation/ai-enabled-solutions",
+    //   //   },
+    //   //   {
+    //   //     label: "Digital Transformation",
+    //   //     href: "/our-work/technology-digital-innovation/digital-transformation",
+    //   //   },
+    //   //   {
+    //   //     label: "Cybersecurity & Data Protection",
+    //   //     href: "/our-work/technology-digital-innovation/cybersecurity-data-protection",
+    //   //   },
+    //   //   {
+    //   //     label: "Technology for Communities",
+    //   //     href: "/our-work/technology-digital-innovation/technology-for-communities",
+    //   //   },
+    //   // ],
+    // },
 
-    {
-      label: "Entrepreneurship & Social Enterprise",
-      href: "/our-work/entrepreneurship-social-enterprise",
-      children: [
-        {
-          label: "Entrepreneurship Development",
-          href: "/our-work/entrepreneurship-social-enterprise/entrepreneurship-development",
-        },
-        {
-          label: "Youth Entrepreneurship",
-          href: "/our-work/entrepreneurship-social-enterprise/youth-entrepreneurship",
-        },
-        {
-          label: "Social Entrepreneurship",
-          href: "/our-work/entrepreneurship-social-enterprise/social-entrepreneurship",
-        },
-        {
-          label: "Health Entrepreneurship",
-          href: "/our-work/entrepreneurship-social-enterprise/health-entrepreneurship",
-        },
-        {
-          label: "Technology Entrepreneurship",
-          href: "/our-work/entrepreneurship-social-enterprise/technology-entrepreneurship",
-        },
-        {
-          label: "Innovation & Startup Ideas",
-          href: "/our-work/entrepreneurship-social-enterprise/innovation-startup-ideas",
-        },
-        {
-          label: "Entrepreneurial Skills",
-          href: "/our-work/entrepreneurship-social-enterprise/entrepreneurial-skills",
-        },
-        {
-          label: "Business & Enterprise Development",
-          href: "/our-work/entrepreneurship-social-enterprise/business-enterprise-development",
-        },
-        {
-          label: "Social Enterprise Models",
-          href: "/our-work/entrepreneurship-social-enterprise/social-enterprise-models",
-        },
-        {
-          label: "Innovation Challenges",
-          href: "/our-work/entrepreneurship-social-enterprise/innovation-challenges",
-        },
-        {
-          label: "Entrepreneurship Competitions",
-          href: "/our-work/entrepreneurship-social-enterprise/entrepreneurship-competitions",
-        },
-        {
-          label: "Startup & Business Mentorship",
-          href: "/our-work/entrepreneurship-social-enterprise/startup-business-mentorship",
-        },
-        {
-          label: "Entrepreneurship Partnerships",
-          href: "/our-work/entrepreneurship-social-enterprise/entrepreneurship-partnerships",
-        },
-      ],
-    },
+    // {
+    //   label: "Entrepreneurship & Social Enterprise",
+    //   href: "/ourwork/entrepreneurship-social-enterprise",
+    //   // children: [
+    //   //   {
+    //   //     label: "Entrepreneurship Development",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/entrepreneurship-development",
+    //   //   },
+    //   //   {
+    //   //     label: "Youth Entrepreneurship",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/youth-entrepreneurship",
+    //   //   },
+    //   //   {
+    //   //     label: "Social Entrepreneurship",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/social-entrepreneurship",
+    //   //   },
+    //   //   {
+    //   //     label: "Health Entrepreneurship",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/health-entrepreneurship",
+    //   //   },
+    //   //   {
+    //   //     label: "Technology Entrepreneurship",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/technology-entrepreneurship",
+    //   //   },
+    //   //   {
+    //   //     label: "Innovation & Startup Ideas",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/innovation-startup-ideas",
+    //   //   },
+    //   //   {
+    //   //     label: "Entrepreneurial Skills",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/entrepreneurial-skills",
+    //   //   },
+    //   //   {
+    //   //     label: "Business & Enterprise Development",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/business-enterprise-development",
+    //   //   },
+    //   //   {
+    //   //     label: "Social Enterprise Models",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/social-enterprise-models",
+    //   //   },
+    //   //   {
+    //   //     label: "Innovation Challenges",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/innovation-challenges",
+    //   //   },
+    //   //   {
+    //   //     label: "Entrepreneurship Competitions",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/entrepreneurship-competitions",
+    //   //   },
+    //   //   {
+    //   //     label: "Startup & Business Mentorship",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/startup-business-mentorship",
+    //   //   },
+    //   //   {
+    //   //     label: "Entrepreneurship Partnerships",
+    //   //     href: "/our-work/entrepreneurship-social-enterprise/entrepreneurship-partnerships",
+    //   //   },
+    //   // ],
+    // },
 
-    {
-      label: "Communications, Media & Digital Marketing",
-      href: "/our-work/communications-media-digital-marketing",
-      children: [
-        {
-          label: "Digital Marketing",
-          href: "/our-work/communications-media-digital-marketing/digital-marketing",
-        },
-        {
-          label: "Social Media Management",
-          href: "/our-work/communications-media-digital-marketing/social-media-management",
-        },
-        {
-          label: "Mass Media",
-          href: "/our-work/communications-media-digital-marketing/mass-media",
-        },
-        {
-          label: "Community Awareness Through Media",
-          href: "/our-work/communications-media-digital-marketing/community-awareness-through-media",
-        },
-        {
-          label: "Health Awareness Through Mass Media",
-          href: "/our-work/communications-media-digital-marketing/health-awareness-through-mass-media",
-        },
-        {
-          label: "Public Awareness Campaigns",
-          href: "/our-work/communications-media-digital-marketing/public-awareness-campaigns",
-        },
-        {
-          label: "Project Communication",
-          href: "/our-work/communications-media-digital-marketing/project-communication",
-        },
-        {
-          label: "Campaign Communication",
-          href: "/our-work/communications-media-digital-marketing/campaign-communication",
-        },
-        {
-          label: "Product Communication",
-          href: "/our-work/communications-media-digital-marketing/product-communication",
-        },
-        {
-          label: "Content & Creative",
-          href: "/our-work/communications-media-digital-marketing/content-creative",
-        },
-        {
-          label: "Public Relations",
-          href: "/our-work/communications-media-digital-marketing/public-relations",
-        },
-        {
-          label: "Media Relations",
-          href: "/our-work/communications-media-digital-marketing/media-relations",
-        },
-      ],
-    },
+    // {
+    //   label: "Communications, Media & Digital Marketing",
+    //   href: "/ourwork/communications-media-digital-marketing",
+    //   // children: [
+    //   //   {
+    //   //     label: "Digital Marketing",
+    //   //     href: "/our-work/communications-media-digital-marketing/digital-marketing",
+    //   //   },
+    //   //   {
+    //   //     label: "Social Media Management",
+    //   //     href: "/our-work/communications-media-digital-marketing/social-media-management",
+    //   //   },
+    //   //   {
+    //   //     label: "Mass Media",
+    //   //     href: "/our-work/communications-media-digital-marketing/mass-media",
+    //   //   },
+    //   //   {
+    //   //     label: "Community Awareness Through Media",
+    //   //     href: "/our-work/communications-media-digital-marketing/community-awareness-through-media",
+    //   //   },
+    //   //   {
+    //   //     label: "Health Awareness Through Mass Media",
+    //   //     href: "/our-work/communications-media-digital-marketing/health-awareness-through-mass-media",
+    //   //   },
+    //   //   {
+    //   //     label: "Public Awareness Campaigns",
+    //   //     href: "/our-work/communications-media-digital-marketing/public-awareness-campaigns",
+    //   //   },
+    //   //   {
+    //   //     label: "Project Communication",
+    //   //     href: "/our-work/communications-media-digital-marketing/project-communication",
+    //   //   },
+    //   //   {
+    //   //     label: "Campaign Communication",
+    //   //     href: "/our-work/communications-media-digital-marketing/campaign-communication",
+    //   //   },
+    //   //   {
+    //   //     label: "Product Communication",
+    //   //     href: "/our-work/communications-media-digital-marketing/product-communication",
+    //   //   },
+    //   //   {
+    //   //     label: "Content & Creative",
+    //   //     href: "/our-work/communications-media-digital-marketing/content-creative",
+    //   //   },
+    //   //   {
+    //   //     label: "Public Relations",
+    //   //     href: "/our-work/communications-media-digital-marketing/public-relations",
+    //   //   },
+    //   //   {
+    //   //     label: "Media Relations",
+    //   //     href: "/our-work/communications-media-digital-marketing/media-relations",
+    //   //   },
+    //   // ],
+    // },
 
-    {
-      label: "Future Goals & Long-Term Vision",
-      href: "/our-work/future-goals",
-      children: [
-        {
-          label: "2030 Goals",
-          href: "/our-work/future-goals/2030-goals",
-        },
-        {
-          label: "2040 Goals",
-          href: "/our-work/future-goals/2040-goals",
-        },
-        {
-          label: "2050 Goals",
-          href: "/our-work/future-goals/2050-goals",
-        },
-      ],
-    },
+    // {
+    //   label: "Future Goals & Long-Term Vision",
+    //   href: "/ourwork/future-goals",
+    //   // children: [
+    //   //   {
+    //   //     label: "2030 Goals",
+    //   //     href: "/our-work/future-goals/2030-goals",
+    //   //   },
+    //   //   {
+    //   //     label: "2040 Goals",
+    //   //     href: "/our-work/future-goals/2040-goals",
+    //   //   },
+    //   //   {
+    //   //     label: "2050 Goals",
+    //   //     href: "/our-work/future-goals/2050-goals",
+    //   //   },
+    //   // ],
+    // },
   ],
 },
 
@@ -591,50 +591,54 @@ export const mainNav = [
   label: "Projects",
   href: "/projects",
   dropdown: [
-    {
-      label: "Health & Medical Projects",
-      href: "/projects/health-medical",
+     {
+      label: "our projects",
+      href: "/projects/ourprojects",
     },
-    {
-      label: "Health Education Projects",
-      href: "/projects/health-education",
-    },
-    {
-      label: "Community Development Projects",
-      href: "/projects/community-development",
-    },
-    {
-      label: "Climate & Environment Projects",
-      href: "/projects/climate-environment",
-    },
-    {
-      label: "Social Support & Learning Projects",
-      href: "/projects/social-support-learning",
-    },
-    {
-      label: "Research & Evidence Projects",
-      href: "/projects/research-evidence",
-    },
-    {
-      label: "Digital Health Projects",
-      href: "/projects/digital-health",
-    },
-    {
-      label: "Technology Projects",
-      href: "/projects/technology",
-    },
-    {
-      label: "Entrepreneurship & Social Enterprise Projects",
-      href: "/projects/entrepreneurship-social-enterprise",
-    },
-    {
-      label: "Communications & Media Projects",
-      href: "/projects/communications-media",
-    },
-    {
-      label: "Special / Cross-Program Projects",
-      href: "/projects/special-cross-program",
-    },
+    // {
+    //   label: "Health & Medical Projects",
+    //   href: "/projects/health-medical",
+    // },
+    // {
+    //   label: "Health Education Projects",
+    //   href: "/projects/health-education",
+    // },
+    // {
+    //   label: "Community Development Projects",
+    //   href: "/projects/community-development",
+    // },
+    // {
+    //   label: "Climate & Environment Projects",
+    //   href: "/projects/climate-environment",
+    // },
+    // {
+    //   label: "Social Support & Learning Projects",
+    //   href: "/projects/social-support-learning",
+    // },
+    // {
+    //   label: "Research & Evidence Projects",
+    //   href: "/projects/research-evidence",
+    // },
+    // {
+    //   label: "Digital Health Projects",
+    //   href: "/projects/digital-health",
+    // },
+    // {
+    //   label: "Technology Projects",
+    //   href: "/projects/technology",
+    // },
+    // {
+    //   label: "Entrepreneurship & Social Enterprise Projects",
+    //   href: "/projects/entrepreneurship-social-enterprise",
+    // },
+    // {
+    //   label: "Communications & Media Projects",
+    //   href: "/projects/communications-media",
+    // },
+    // {
+    //   label: "Special / Cross-Program Projects",
+    //   href: "/projects/special-cross-program",
+    // },
   ],
 },
 
@@ -645,52 +649,52 @@ export const mainNav = [
 {
   label: "Campaigns & Initiatives",
   href: "/campaigns-initiatives",
-  dropdown: [
-    {
-      label: "Health Campaigns",
-      href: "/campaigns-initiatives/health-campaigns",
-    },
-    {
-      label: "Community Campaigns",
-      href: "/campaigns-initiatives/community-campaigns",
-    },
-    {
-      label: "Climate & Environmental Campaigns",
-      href: "/campaigns-initiatives/climate-environmental-campaigns",
-    },
-    {
-      label: "Digital Campaigns",
-      href: "/campaigns-initiatives/digital-campaigns",
-    },
-    {
-      label: "Mass Media Campaigns",
-      href: "/campaigns-initiatives/mass-media-campaigns",
-    },
-    {
-      label: "Fundraising Campaigns",
-      href: "/campaigns-initiatives/fundraising-campaigns",
-    },
-    {
-      label: "Technology & Product Campaigns",
-      href: "/campaigns-initiatives/technology-product-campaigns",
-    },
-    {
-      label: "Entrepreneurship & Innovation Initiatives",
-      href: "/campaigns-initiatives/entrepreneurship-innovation-initiatives",
-    },
-    {
-      label: "Youth Initiatives",
-      href: "/campaigns-initiatives/youth-initiatives",
-    },
-    {
-      label: "Volunteer Initiatives",
-      href: "/campaigns-initiatives/volunteer-initiatives",
-    },
-    {
-      label: "Special Initiatives",
-      href: "/campaigns-initiatives/special-initiatives",
-    },
-  ],
+  // dropdown: [
+  //   {
+  //     label: "Health Campaigns",
+  //     href: "/campaigns-initiatives/health-campaigns",
+  //   },
+  //   {
+  //     label: "Community Campaigns",
+  //     href: "/campaigns-initiatives/community-campaigns",
+  //   },
+  //   {
+  //     label: "Climate & Environmental Campaigns",
+  //     href: "/campaigns-initiatives/climate-environmental-campaigns",
+  //   },
+  //   {
+  //     label: "Digital Campaigns",
+  //     href: "/campaigns-initiatives/digital-campaigns",
+  //   },
+  //   {
+  //     label: "Mass Media Campaigns",
+  //     href: "/campaigns-initiatives/mass-media-campaigns",
+  //   },
+  //   {
+  //     label: "Fundraising Campaigns",
+  //     href: "/campaigns-initiatives/fundraising-campaigns",
+  //   },
+  //   {
+  //     label: "Technology & Product Campaigns",
+  //     href: "/campaigns-initiatives/technology-product-campaigns",
+  //   },
+  //   {
+  //     label: "Entrepreneurship & Innovation Initiatives",
+  //     href: "/campaigns-initiatives/entrepreneurship-innovation-initiatives",
+  //   },
+  //   {
+  //     label: "Youth Initiatives",
+  //     href: "/campaigns-initiatives/youth-initiatives",
+  //   },
+  //   {
+  //     label: "Volunteer Initiatives",
+  //     href: "/campaigns-initiatives/volunteer-initiatives",
+  //   },
+  //   {
+  //     label: "Special Initiatives",
+  //     href: "/campaigns-initiatives/special-initiatives",
+  //   },
+  // ],
 },
 
 
@@ -783,68 +787,68 @@ export const mainNav = [
 {
   label: "Events",
   href: "/events",
-  dropdown: [
-    {
-      label: "Conferences",
-      href: "/events/conferences",
-    },
-    {
-      label: "Webinars",
-      href: "/events/webinars",
-    },
-    {
-      label: "Community Events",
-      href: "/events/community-events",
-    },
-    {
-      label: "Awareness Events",
-      href: "/events/awareness-events",
-    },
-    {
-      label: "Fundraising Events",
-      href: "/events/fundraising-events",
-    },
-    {
-      label: "Organizational Events",
-      href: "/events/organizational-events",
-    },
-    {
-      label: "Workshops",
-      href: "/events/workshops",
-    },
-    {
-      label: "Campaign Events",
-      href: "/events/campaign-events",
-    },
-    {
-      label: "Media Events",
-      href: "/events/media-events",
-    },
-    {
-      label: "Research Events",
-      href: "/events/research-events",
-    },
-    {
-      label: "Research Competitions",
-      href: "/events/research-competitions",
-    },
-    {
-      label: "Technology & Innovation Events",
-      href: "/events/technology-innovation-events",
-    },
-    {
-      label: "Entrepreneurship Events",
-      href: "/events/entrepreneurship-events",
-    },
-    {
-      label: "Startup & Business Events",
-      href: "/events/startup-business-events",
-    },
-    {
-      label: "Product / Technology Launch Events",
-      href: "/events/product-technology-launch-events",
-    },
-  ],
+  // dropdown: [
+  //   {
+  //     label: "Conferences",
+  //     href: "/events/conferences",
+  //   },
+  //   {
+  //     label: "Webinars",
+  //     href: "/events/webinars",
+  //   },
+  //   {
+  //     label: "Community Events",
+  //     href: "/events/community-events",
+  //   },
+  //   {
+  //     label: "Awareness Events",
+  //     href: "/events/awareness-events",
+  //   },
+  //   {
+  //     label: "Fundraising Events",
+  //     href: "/events/fundraising-events",
+  //   },
+  //   {
+  //     label: "Organizational Events",
+  //     href: "/events/organizational-events",
+  //   },
+  //   {
+  //     label: "Workshops",
+  //     href: "/events/workshops",
+  //   },
+  //   {
+  //     label: "Campaign Events",
+  //     href: "/events/campaign-events",
+  //   },
+  //   {
+  //     label: "Media Events",
+  //     href: "/events/media-events",
+  //   },
+  //   {
+  //     label: "Research Events",
+  //     href: "/events/research-events",
+  //   },
+  //   {
+  //     label: "Research Competitions",
+  //     href: "/events/research-competitions",
+  //   },
+  //   {
+  //     label: "Technology & Innovation Events",
+  //     href: "/events/technology-innovation-events",
+  //   },
+  //   {
+  //     label: "Entrepreneurship Events",
+  //     href: "/events/entrepreneurship-events",
+  //   },
+  //   {
+  //     label: "Startup & Business Events",
+  //     href: "/events/startup-business-events",
+  //   },
+  //   {
+  //     label: "Product / Technology Launch Events",
+  //     href: "/events/product-technology-launch-events",
+  //   },
+  // ],
 },
 
 // ============================================================
@@ -1215,60 +1219,60 @@ export const mainNav = [
 // },
 
 
-// {
-//   label: "Business Hub",
-//   href: "/business-hub",
-//   dropdown: [
-//     {
-//       label: "Entrepreneurship",
-//       href: "/business-hub/entrepreneurship",
-//     },
-//     {
-//       label: "Startups",
-//       href: "/business-hub/startups",
-//     },
-//     {
-//       label: "Products & Services",
-//       href: "/business-hub/products-services",
-//     },
-//     {
-//       label: "Business Development",
-//       href: "/business-hub/business-development",
-//     },
-//     {
-//       label: "Technology Business",
-//       href: "/business-hub/technology-business",
-//     },
-//     {
-//       label: "Health Business",
-//       href: "/business-hub/health-business",
-//     },
-//     {
-//       label: "Social Enterprise",
-//       href: "/business-hub/social-enterprise",
-//     },
-//     {
-//       label: "Mentorship",
-//       href: "/business-hub/mentorship",
-//     },
-//     {
-//       label: "Competitions",
-//       href: "/business-hub/competitions",
-//     },
-//     {
-//       label: "Partnerships",
-//       href: "/business-hub/partnerships",
-//     },
-//     {
-//       label: "Sponsorship",
-//       href: "/business-hub/sponsorship",
-//     },
-//     {
-//       label: "Business Stories",
-//       href: "/business-hub/business-stories",
-//     },
-//   ],
-// },
+{
+  label: "Business Hub",
+  href: "/business-hub",
+  // dropdown: [
+  //   {
+  //     label: "Entrepreneurship",
+  //     href: "/business-hub/entrepreneurship",
+  //   },
+  //   {
+  //     label: "Startups",
+  //     href: "/business-hub/startups",
+  //   },
+  //   {
+  //     label: "Products & Services",
+  //     href: "/business-hub/products-services",
+  //   },
+  //   {
+  //     label: "Business Development",
+  //     href: "/business-hub/business-development",
+  //   },
+  //   {
+  //     label: "Technology Business",
+  //     href: "/business-hub/technology-business",
+  //   },
+  //   {
+  //     label: "Health Business",
+  //     href: "/business-hub/health-business",
+  //   },
+  //   {
+  //     label: "Social Enterprise",
+  //     href: "/business-hub/social-enterprise",
+  //   },
+  //   {
+  //     label: "Mentorship",
+  //     href: "/business-hub/mentorship",
+  //   },
+  //   {
+  //     label: "Competitions",
+  //     href: "/business-hub/competitions",
+  //   },
+  //   {
+  //     label: "Partnerships",
+  //     href: "/business-hub/partnerships",
+  //   },
+  //   {
+  //     label: "Sponsorship",
+  //     href: "/business-hub/sponsorship",
+  //   },
+  //   {
+  //     label: "Business Stories",
+  //     href: "/business-hub/business-stories",
+  //   },
+  // ],
+},
 
 // ============================================================
 // 11. COMMUNICATIONS, MEDIA & DIGITAL MARKETING
@@ -2008,96 +2012,96 @@ export const mainNav = [
 // 18. GET INVOLVED
 // ============================================================
 
-// {
-//   label: "Get Involved",
-//   href: "/get-involved",
-//   dropdown: [
-//     {
-//       label: "Become a Volunteer",
-//       href: "/get-involved/be-a-volunteer",
-//     },
-//     {
-//       label: "Become a Member",
-//       href: "/get-involved/be-a-member",
-//     },
-//     {
-//       label: "Become a Campaigner",
-//       href: "/get-involved/be-a-campaigner",
-//     },
-//     {
-//       label: "Join as a Physician",
-//       href: "/get-involved/join-as-a-physician",
-//     },
-//     {
-//       label: "Join as a Researcher",
-//       href: "/get-involved/join-as-a-researcher",
-//     },
-//     {
-//       label: "Join a Training Program",
-//       href: "/get-involved/join-training-program",
-//     },
-//     {
-//       label: "Get Hands-on Experience",
-//       href: "/get-involved/hands-on-experience",
-//     },
-//     {
-//       label: "Internship Opportunities",
-//       href: "/get-involved/internship-opportunities",
-//     },
-//     {
-//       label: "Join the Technology Team",
-//       href: "/get-involved/join-technology-team",
-//     },
-//     {
-//       label: "Join the Communications & Media Team",
-//       href: "/get-involved/join-communications-media-team",
-//     },
-//     {
-//       label: "Join the Digital Marketing Team",
-//       href: "/get-involved/join-digital-marketing-team",
-//     },
-//     {
-//       label: "Join the Entrepreneurship & Innovation Team",
-//       href: "/get-involved/join-entrepreneurship-innovation-team",
-//     },
-//     {
-//       label: "Become an Entrepreneur / Innovator",
-//       href: "/get-involved/become-entrepreneur-innovator",
-//     },
-//     {
-//       label: "Partner With Us",
-//       href: "/get-involved/partner-with-us",
-//     },
-//     {
-//       label: "Collaborate With Us",
-//       href: "/get-involved/collaborate-with-us",
-//     },
-//     {
-//       label: "Become a Sponsor",
-//       href: "/get-involved/become-a-sponsor",
-//     },
-//     {
-//       label: "Fund Research",
-//       href: "/get-involved/fund-research",
-//     },
-//     {
-//       label: "Technology & Innovation Collaboration",
-//       href: "/get-involved/technology-innovation-collaboration",
-//     },
-//     {
-//       label: "Entrepreneurship & Business Collaboration",
-//       href: "/get-involved/entrepreneurship-business-collaboration",
-//     },
-//     {
-//       label: "Media Collaboration",
-//       href: "/get-involved/media-collaboration",
-//     },
-//     {
-//       label: "Become a Donor",
-//       href: "/get-involved/become-a-donor",
-//     },
-//   ],
-// },
+{
+  label: "Get Involved",
+  href: "/get-involved",
+  // dropdown: [
+  //   {
+  //     label: "Become a Volunteer",
+  //     href: "/get-involved/be-a-volunteer",
+  //   },
+  //   {
+  //     label: "Become a Member",
+  //     href: "/get-involved/be-a-member",
+  //   },
+  //   {
+  //     label: "Become a Campaigner",
+  //     href: "/get-involved/be-a-campaigner",
+  //   },
+  //   {
+  //     label: "Join as a Physician",
+  //     href: "/get-involved/join-as-a-physician",
+  //   },
+  //   {
+  //     label: "Join as a Researcher",
+  //     href: "/get-involved/join-as-a-researcher",
+  //   },
+  //   {
+  //     label: "Join a Training Program",
+  //     href: "/get-involved/join-training-program",
+  //   },
+  //   {
+  //     label: "Get Hands-on Experience",
+  //     href: "/get-involved/hands-on-experience",
+  //   },
+  //   {
+  //     label: "Internship Opportunities",
+  //     href: "/get-involved/internship-opportunities",
+  //   },
+  //   {
+  //     label: "Join the Technology Team",
+  //     href: "/get-involved/join-technology-team",
+  //   },
+  //   {
+  //     label: "Join the Communications & Media Team",
+  //     href: "/get-involved/join-communications-media-team",
+  //   },
+  //   {
+  //     label: "Join the Digital Marketing Team",
+  //     href: "/get-involved/join-digital-marketing-team",
+  //   },
+  //   {
+  //     label: "Join the Entrepreneurship & Innovation Team",
+  //     href: "/get-involved/join-entrepreneurship-innovation-team",
+  //   },
+  //   {
+  //     label: "Become an Entrepreneur / Innovator",
+  //     href: "/get-involved/become-entrepreneur-innovator",
+  //   },
+  //   {
+  //     label: "Partner With Us",
+  //     href: "/get-involved/partner-with-us",
+  //   },
+  //   {
+  //     label: "Collaborate With Us",
+  //     href: "/get-involved/collaborate-with-us",
+  //   },
+  //   {
+  //     label: "Become a Sponsor",
+  //     href: "/get-involved/become-a-sponsor",
+  //   },
+  //   {
+  //     label: "Fund Research",
+  //     href: "/get-involved/fund-research",
+  //   },
+  //   {
+  //     label: "Technology & Innovation Collaboration",
+  //     href: "/get-involved/technology-innovation-collaboration",
+  //   },
+  //   {
+  //     label: "Entrepreneurship & Business Collaboration",
+  //     href: "/get-involved/entrepreneurship-business-collaboration",
+  //   },
+  //   {
+  //     label: "Media Collaboration",
+  //     href: "/get-involved/media-collaboration",
+  //   },
+  //   {
+  //     label: "Become a Donor",
+  //     href: "/get-involved/become-a-donor",
+  //   },
+  // ],
+},
 
 // ============================================================
 // 19. DONATE
@@ -2180,68 +2184,68 @@ export const mainNav = [
 {
   label: "Contact",
   href: "/contact",
-  dropdown: [
-    {
-      label: "Contact Us",
-      href: "/contact",
-    },
-    {
-      label: "General Enquiries",
-      href: "/contact/general-enquiries",
-    },
-    {
-      label: "Partnership Enquiries",
-      href: "/contact/partnership-enquiries",
-    },
-    {
-      label: "Research Enquiries",
-      href: "/contact/research-enquiries",
-    },
-    {
-      label: "Volunteer Enquiries",
-      href: "/contact/volunteer-enquiries",
-    },
-    {
-      label: "Media Enquiries",
-      href: "/contact/media-enquiries",
-    },
-    {
-      label: "Digital Marketing Enquiries",
-      href: "/contact/digital-marketing-enquiries",
-    },
-    {
-      label: "Technology Enquiries",
-      href: "/contact/technology-enquiries",
-    },
-    {
-      label: "Digital Health Enquiries",
-      href: "/contact/digital-health-enquiries",
-    },
-    {
-      label: "Entrepreneurship & Business Enquiries",
-      href: "/contact/entrepreneurship-business-enquiries",
-    },
-    {
-      label: "Training Enquiries",
-      href: "/contact/training-enquiries",
-    },
-    {
-      label: "Sponsorship Enquiries",
-      href: "/contact/sponsorship-enquiries",
-    },
-    {
-      label: "Donation Enquiries",
-      href: "/contact/donation-enquiries",
-    },
-    {
-      label: "Office Information",
-      href: "/contact/office-information",
-    },
-    {
-      label: "Social Media",
-      href: "/contact/social-media",
-    },
-  ],
+  // dropdown: [
+  //   {
+  //     label: "Contact Us",
+  //     href: "/contact",
+  //   },
+  //   {
+  //     label: "General Enquiries",
+  //     href: "/contact/general-enquiries",
+  //   },
+  //   {
+  //     label: "Partnership Enquiries",
+  //     href: "/contact/partnership-enquiries",
+  //   },
+  //   {
+  //     label: "Research Enquiries",
+  //     href: "/contact/research-enquiries",
+  //   },
+  //   {
+  //     label: "Volunteer Enquiries",
+  //     href: "/contact/volunteer-enquiries",
+  //   },
+  //   {
+  //     label: "Media Enquiries",
+  //     href: "/contact/media-enquiries",
+  //   },
+  //   {
+  //     label: "Digital Marketing Enquiries",
+  //     href: "/contact/digital-marketing-enquiries",
+  //   },
+  //   {
+  //     label: "Technology Enquiries",
+  //     href: "/contact/technology-enquiries",
+  //   },
+  //   {
+  //     label: "Digital Health Enquiries",
+  //     href: "/contact/digital-health-enquiries",
+  //   },
+  //   {
+  //     label: "Entrepreneurship & Business Enquiries",
+  //     href: "/contact/entrepreneurship-business-enquiries",
+  //   },
+  //   {
+  //     label: "Training Enquiries",
+  //     href: "/contact/training-enquiries",
+  //   },
+  //   {
+  //     label: "Sponsorship Enquiries",
+  //     href: "/contact/sponsorship-enquiries",
+  //   },
+  //   {
+  //     label: "Donation Enquiries",
+  //     href: "/contact/donation-enquiries",
+  //   },
+  //   {
+  //     label: "Office Information",
+  //     href: "/contact/office-information",
+  //   },
+  //   {
+  //     label: "Social Media",
+  //     href: "/contact/social-media",
+  //   },
+  // ],
 },
 
 ]; // <-- mainNav ko close karna zaroori hai

@@ -9,20 +9,6 @@ export const aboutHeaderData = {
     "Hopefelt Foundation is a youth led, community focused organization working at the intersection of health, knowledge, opportunity and innovation  using research, technology, marketing and mass media to create sustainable impact.",
 };
 
-// Top Formula Bar Elements shown in the design
-export const focusFormula = [
-  { label: "Health", icon: "🏥" },
-  { label: "Research", icon: "🔍" },
-  { label: "Education", icon: "🎓" },
-  { label: "Technology", icon: "💻" },  
-  { label: "Digital Health", icon: "🩺" },
-  { label: "Entrepreneurship", icon: "💡" },
-  { label: "Business Hub", icon: "📈" },
-  { label: "Marketing", icon: "📢" },
-  { label: "Mass Media", icon: "📡" },
-  { label: "Stronger Communities", icon: "👥", isResult: true },
-];
-
 export const founderVision = {
   name: "AFRAH SADIA",
   title: "Founder, Hopefelt Foundation",
@@ -39,88 +25,77 @@ export const coFounderVision = {
   image: "/images/Team/Alishba.jpg",
 };
 
-export const whyFutureGenerations = {
-  eyebrow: "Why Future Generations?",
-  description:
-    "We work today for a healthier, more educated, inclusive and sustainable tomorrow — because the choices we make now shape the opportunities, health and well-being of future generations.",
-  pillars: [
-    { title: "Healthy Children", icon: "👶" },
-    { title: "Quality Education", icon: "📚" },
-    { title: "Green Environment", icon: "🌱" },
-    { title: "Sustainable Opportunities", icon: "🤝" },
-  ],
-};
 
-export const digitalMarketingFocus = {
-  eyebrow: "Digital Marketing: Why It Matters?",
-  description:
-    "Digital marketing helps us reach more people, share the right messages and create real engagement. It connects our research, programs, innovations and opportunities with the communities that need them most.",
-  linkages: [
-    "Research & Data",
-    "Projects & Programs",
-    "Campaigns & Awareness",
-    "Technology & Innovation",
-    "Digital Health",
-    "Business Hub",
-    "Social Media",
-    "Mass Media & Community Engagement",
-    "Impact & Growth",
-  ],
-};
+// export const digitalMarketingFocus = {
+//   eyebrow: "Digital Marketing: Why It Matters?",
+//   description:
+//     "Digital marketing helps us reach more people, share the right messages and create real engagement. It connects our research, programs, innovations and opportunities with the communities that need them most.",
+//   linkages: [
+//     "Research & Data",
+//     "Projects & Programs",
+//     "Campaigns & Awareness",
+//     "Technology & Innovation",
+//     "Digital Health",
+//     "Business Hub",
+//     "Social Media",
+//     "Mass Media & Community Engagement",
+//     "Impact & Growth",
+//   ],
+// };
 
-export const completeImpactFramework = {
-  title: "Our Complete Impact Framework",
-  subtitle: "From community needs to lasting change — a clear, connected and measurable journey.",
-  steps: [
-    { step: "1", title: "Need", desc: "Identify challenges and community needs." },
-    { step: "2", title: "Understand", desc: "Research, data, community input and evidence." },
-    { step: "3", title: "Design", desc: "Programs, projects, campaigns, training, technology & solutions." },
-    { step: "4", title: "Implement", desc: "Plan, resources, activities & community participation." },
-    { step: "5", title: "Innovate", desc: "Ideas → technology → practical solutions." },
-    { step: "7", title: "Business Hub", desc: "Entrepreneurship, social enterprise & sustainable models." },
-    { step: "8", title: "Social Media", desc: "Branding, digital and build & community." },
-    { step: "9", title: "Mass Media", desc: "TV, radio, newspapers, online media & wider reach." },
-    { step: "10", title: "Engage", desc: "Awareness → participation → action." },
-    { step: "11", title: "Measure", desc: "Outputs, outcomes, impact & learning." },
-    { step: "12", title: "Scale", desc: "Partnerships, funding, technology & replication." },
-  ],
-  footerBanner: "A Healthier + Smarter + More Inclusive + Sustainable Future",
-};
+// export const completeImpactFramework = {
+//   title: "Our Complete Impact Framework",
+//   subtitle: "From community needs to lasting change — a clear, connected and measurable journey.",
+//   steps: [
+//     { step: "1", title: "Need", desc: "Identify challenges and community needs." },
+//     { step: "2", title: "Understand", desc: "Research, data, community input and evidence." },
+//     { step: "3", title: "Design", desc: "Programs, projects, campaigns, training, technology & solutions." },
+//     { step: "4", title: "Implement", desc: "Plan, resources, activities & community participation." },
+//     { step: "5", title: "Innovate", desc: "Ideas → technology → practical solutions." },
+//     { step: "7", title: "Business Hub", desc: "Entrepreneurship, social enterprise & sustainable models." },
+//     { step: "8", title: "Social Media", desc: "Branding, digital and build & community." },
+//     { step: "9", title: "Mass Media", desc: "TV, radio, newspapers, online media & wider reach." },
+//     { step: "10", title: "Engage", desc: "Awareness → participation → action." },
+//     { step: "11", title: "Measure", desc: "Outputs, outcomes, impact & learning." },
+//     { step: "12", title: "Scale", desc: "Partnerships, funding, technology & replication." },
+//   ],
+//   footerBanner: "A Healthier + Smarter + More Inclusive + Sustainable Future",
+// };
 
-export const inclusionAndEquityData = {
-  title: "Inclusion & Equity",
-  subtitle: "We believe that real impact happens when everyone has an equal opportunity to participate, contribute and thrive.",
-  commitments: [
-    "Equitable access",
-    "Inclusive participation",
-    "Community voice",
-    "Accessible communication",
-    "Digital inclusion",
-    "Inclusive technology",
-    "Gender & social considerations",
-    "Support for underserved communities",
-    "Equal learning & leadership opportunities",
-    "Inclusive entrepreneurship",
-    "Equity in impact measurement",
-  ],
-  quote: "\"We don't just ask how many we reach, we ask who was reached, who may have been left behind, and what barriers existed.\"",
-};
+// export const inclusionAndEquityData = {
+//   title: "Inclusion & Equity",
+//   subtitle: "We believe that real impact happens when everyone has an equal opportunity to participate, contribute and thrive.",
+//   commitments: [
+//     "Equitable access",
+//     "Inclusive participation",
+//     "Community voice",
+//     "Accessible communication",
+//     "Digital inclusion",
+//     "Inclusive technology",
+//     "Gender & social considerations",
+//     "Support for underserved communities",
+//     "Equal learning & leadership opportunities",
+//     "Inclusive entrepreneurship",
+//     "Equity in impact measurement",
+//   ],
+//   quote: "\"We don't just ask how many we reach, we ask who was reached, who may have been left behind, and what barriers existed.\"",
+// };
 
-export const partnersAndCollaboratorsData = {
-  title: "Partners & Collaborators",
-  subtitle: "Stronger together for greater impact.",
-  categories: [
-    { title: "Health Partners", desc: "Hospitals, healthcare orgs, medical professionals", icon: "🏥" },
-    { title: "Academic & Research", desc: "Universities, researchers, research institutions", icon: "🎓" },
-    { title: "Community Partners", desc: "NGOs, local groups, community leaders", icon: "🤝" },
-    { title: "Technology Partners", desc: "IT, software, AI, digital health solution providers", icon: "💻" },
-    { title: "Business & Entrepreneurship", desc: "Businesses, startups, social enterprises", icon: "📈" },
-    { title: "Media Partners", desc: "TV, radio, newspapers, online media", icon: "📡" },
-    { title: "Donors & Sponsors", desc: "Individuals, organizations, institutions", icon: "⭐" },
-    { title: "Professional Partners", desc: "Experts, educators, designers, developers", icon: "👩‍💻" },
-    { title: "Strategic Collaborators", desc: "Joint programs, research, innovation & advocacy", icon: "🌐" },
-  ],
-};
+// export const partnersAndCollaboratorsData = {
+//   title: "Partners & Collaborators",
+//   subtitle: "Stronger together for greater impact.",
+//   categories: [
+//     { title: "Health Partners", desc: "Hospitals, healthcare orgs, medical professionals", icon: "🏥" },
+//     { title: "Academic & Research", desc: "Universities, researchers, research institutions", icon: "🎓" },
+//     { title: "Community Partners", desc: "NGOs, local groups, community leaders", icon: "🤝" },
+//     { title: "Technology Partners", desc: "IT, software, AI, digital health solution providers", icon: "💻" },
+//     { title: "Business & Entrepreneurship", desc: "Businesses, startups, social enterprises", icon: "📈" },
+//     { title: "Media Partners", desc: "TV, radio, newspapers, online media", icon: "📡" },
+//     { title: "Donors & Sponsors", desc: "Individuals, organizations, institutions", icon: "⭐" },
+//     { title: "Professional Partners", desc: "Experts, educators, designers, developers", icon: "👩‍💻" },
+//     { title: "Strategic Collaborators", desc: "Joint programs, research, innovation & advocacy", icon: "🌐" },
+//   ],
+// };
 
 export const roadmapTimeline = {
   title: "Future Vision | 2025 – 2030",
