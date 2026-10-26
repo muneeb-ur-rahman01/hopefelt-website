@@ -38,14 +38,14 @@ const hierarchyData = {
     color: "bg-cyan-600 text-white",
       ringColor: "border-emerald-500",
     },
-    {
-      name: "Muhammad Muneeb Ur Rahman Shahzad",
-      role: "Head of Development Department (HOD)",
-      image:
-        "/images/Team/Muneeb.jpeg",
-      color: "bg-cyan-600 text-white",
-      ringColor: "border-cyan-600",
-    },
+    // {
+    //   name: "Muhammad Muneeb Ur Rahman Shahzad",
+    //   role: "Head of Development Department (HOD)",
+    //   image:
+    //     "/images/Team/Muneeb.jpeg",
+    //   color: "bg-cyan-600 text-white",
+    //   ringColor: "border-cyan-600",
+    // },
   ],
 };
 
