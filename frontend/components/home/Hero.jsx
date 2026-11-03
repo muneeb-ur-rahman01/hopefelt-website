@@ -75,7 +75,7 @@ export default function Hero() {
               Innovation
             </h1>
 
-            <span className="hero-rise hero-d2 mt-7 block h-1 w-16 rounded-full bg-gradient-to-r from-[#4a6741] via-[#3368A0] to-[#3368A0]/40" />
+            
 
             <p className="hero-rise hero-d3 mt-7 max-w-2xl text-base leading-8 text-slate-700 sm:text-lg">
               Hopefelt Foundation is a community-driven organization working
