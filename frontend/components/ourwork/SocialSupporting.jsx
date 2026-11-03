@@ -125,11 +125,68 @@ const team = [
   { role: "Community Volunteers", sub: "Local volunteers and youth mentors", wrap: "bg-amber-100 text-amber-700", icon: USERS },
 ];
 
-const impactStats = [
-  { label: "Learners Supported", wrap: "bg-emerald-100 text-emerald-800", icon: USERS },
-  { label: "Sessions Delivered", wrap: "bg-sky-100 text-sky-600", icon: DOC },
-  { label: "Youth Engaged", wrap: "bg-rose-100 text-rose-500", icon: USERS },
-  { label: "Skills Pathways Created", wrap: "bg-amber-100 text-amber-700", icon: CHART },
+/* Community Impact — new design & content */
+const impactCards = [
+  {
+    value: "11–12",
+    title: "Educational Webinars",
+    desc: "Disease prevention and health education",
+    reported: true,
+    card: "bg-[#e6f7ec]",
+    valueText: "text-[#0f5c3a]",
+    titleText: "text-[#0f5c3a]",
+    descText: "text-[#35524a]",
+  },
+  {
+    value: "5+",
+    title: "Schools Reached",
+    desc: "Career guidance and counselling",
+    reported: true,
+    card: "bg-[#e8eeff]",
+    valueText: "text-[#1e3a8a]",
+    titleText: "text-[#1e3a8a]",
+    descText: "text-[#3b4a6b]",
+  },
+  {
+    value: "TBD",
+    title: "Wellness Sessions",
+    desc: "Wellness and wellbeing awareness",
+    reported: false,
+    card: "bg-[#fde9ec]",
+    valueText: "text-[#8a2a4a]",
+    titleText: "text-[#8a2a4a]",
+    descText: "text-[#6b3a4a]",
+  },
+  {
+    value: "TBD",
+    title: "Educational Seminars",
+    desc: "Educational learning and discussions",
+    reported: false,
+    card: "bg-[#f1e8ff]",
+    valueText: "text-[#5b2d91]",
+    titleText: "text-[#5b2d91]",
+    descText: "text-[#4a3a6b]",
+  },
+  {
+    value: "TBD",
+    title: "Discussion Workshops",
+    desc: "Interactive knowledge-sharing activities",
+    reported: false,
+    card: "bg-[#fff0d9]",
+    valueText: "text-[#8a4a0a]",
+    titleText: "text-[#8a4a0a]",
+    descText: "text-[#6b4a2a]",
+  },
+  {
+    value: "TBD",
+    title: "Career Counselling",
+    desc: "Career guidance sessions for students",
+    reported: false,
+    card: "bg-[#e2f3f3]",
+    valueText: "text-[#0e5a6b]",
+    titleText: "text-[#0e5a6b]",
+    descText: "text-[#2f4f58]",
+  },
 ];
 
 /* ---------- Small helpers ---------- */
@@ -157,7 +214,6 @@ function SectionTitle({ children, note, className = "" }) {
         {children}
       </h2>
       {note && <span className="text-sm text-slate-500">{note}</span>}
-      <span className="hidden h-0.5 w-10 rounded-full bg-[#1f4a2a] sm:block" />
     </div>
   );
 }
@@ -198,7 +254,7 @@ export default function SocialSupportLearning() {
       <header className="relative">
         <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[62%]">
           <img
-            src="/images/social-support/hero.jpg"
+            src="/images/Our Work/social.png"
             alt="Facilitator leading a community learning session beside a Learning, People, Stronger Communities board"
             className="h-full w-full object-cover"
           />
@@ -227,7 +283,6 @@ export default function SocialSupportLearning() {
             <p className="mt-4 text-xl text-slate-700">
               Supporting People. Unlocking Potential.
             </p>
-            <div className="mt-3 h-0.5 w-14 rounded-full bg-emerald-700" />
 
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
               At <span className="font-semibold">Hopefelt Foundation</span>, we
@@ -369,7 +424,7 @@ export default function SocialSupportLearning() {
         {/* ============ STRATEGIC ALIGNMENT ============ */}
         <section className="mt-10">
           <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle note="(Proposed)">Strategic Alignment</SectionTitle>
+            <SectionTitle>Strategic Alignment</SectionTitle>
             <p className="text-xs text-slate-600">
               Our work contributes to the following Sustainable Development
               Goals (SDGs).
@@ -450,72 +505,80 @@ export default function SocialSupportLearning() {
           </div>
         </section>
 
-        {/* ============ TEAM + IMPACT ============ */}
-        <section className="mt-10 grid gap-8 lg:grid-cols-2">
-          {/* Program Team & Coordination */}
-          <div>
-            <SectionTitle>Program Team &amp; Coordination</SectionTitle>
-            <p className="mt-2 text-xs text-slate-600">
-              Our Social Support &amp; Learning program is led and supported by
-              a dedicated team.
-            </p>
+        {/* ============ PROGRAM TEAM ============ */}
+        <section className="mt-10">
+          <SectionTitle>Program Team &amp; Coordination</SectionTitle>
+          <p className="mt-2 text-xs text-slate-600">
+            Our Social Support &amp; Learning program is led and supported by a
+            dedicated team.
+          </p>
 
-            <div className="mt-5 overflow-hidden rounded-2xl border border-emerald-900/5 bg-white shadow-sm">
-              <div className="grid divide-y divide-emerald-900/5 sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
-                {team.map((p) => (
-                  <div key={p.role} className="flex items-start gap-3 p-4">
-                    <span
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${p.wrap}`}
-                    >
-                      <Icon d={p.icon} className="h-5 w-5" />
-                    </span>
-                    <div className="min-w-0">
-                      <p className="text-xs font-extrabold leading-4 text-emerald-950">
-                        {p.role}
-                      </p>
-                      <p className="mt-0.5 text-[11px] leading-4 text-slate-500">
-                        {p.sub}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="flex items-center gap-2 border-t border-emerald-900/5 bg-slate-50 px-4 py-2.5 text-[11px] text-slate-600">
-                <Icon
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  className="h-4 w-4"
-                />
-                Names and contacts are published after internal confirmation.
-              </p>
-            </div>
-          </div>
-
-          {/* Community Impact */}
-          <div>
-            <SectionTitle note="(To be updated)">Community Impact</SectionTitle>
-            <p className="mt-2 text-xs text-slate-600">
-              Creating stronger, more inclusive communities through learning and
-              support.
-            </p>
-
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {impactStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-emerald-900/5 bg-emerald-50/40 p-4 text-center"
-                >
+          <div className="mt-5 overflow-hidden rounded-2xl border border-emerald-900/5 bg-white shadow-sm">
+            <div className="grid divide-y divide-emerald-900/5 sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
+              {team.map((p) => (
+                <div key={p.role} className="flex items-start gap-3 p-4">
                   <span
-                    className={`mx-auto flex h-11 w-11 items-center justify-center rounded-full ${stat.wrap}`}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${p.wrap}`}
                   >
-                    <Icon d={stat.icon} className="h-5 w-5" />
+                    <Icon d={p.icon} className="h-5 w-5" />
                   </span>
-                  <p className="mt-3 text-xs font-extrabold leading-4 text-emerald-950">
-                    {stat.label}
-                  </p>
-                  <p className="mt-1 text-[11px] text-slate-400">To be updated</p>
+                  <div className="min-w-0">
+                    <p className="text-xs font-extrabold leading-4 text-emerald-950">
+                      {p.role}
+                    </p>
+                    <p className="mt-0.5 text-[11px] leading-4 text-slate-500">
+                      {p.sub}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
+            <p className="flex items-center gap-2 border-t border-emerald-900/5 bg-slate-50 px-4 py-2.5 text-[11px] text-slate-600">
+              <Icon
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                className="h-4 w-4"
+              />
+              Names and contacts are published after internal confirmation.
+            </p>
+          </div>
+        </section>
+
+        {/* ============ COMMUNITY IMPACT (new design) ============ */}
+        <section className="mt-10">
+          <div className="rounded-2xl bg-[#1a4230] px-6 py-5 shadow-sm sm:px-8">
+            <h2 className="font-serif text-2xl font-extrabold text-white sm:text-3xl">
+              Community Impact
+            </h2>
+            <p className="mt-1 text-sm text-emerald-50/90 sm:text-base">
+              Creating healthier, more informed and empowered communities
+              through learning and support.
+            </p>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {impactCards.map((c) => (
+              <article
+                key={c.title}
+                className={`rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:shadow-lg ${c.card}`}
+              >
+                <p className={`text-2xl font-semibold leading-8 ${c.valueText}`}>
+                  {c.value}
+                </p>
+                <h3 className={`mt-3 text-xl font-semibold leading-7 ${c.titleText}`}>
+                  {c.title}
+                </h3>
+                <p className={`mt-3 text-sm leading-5 ${c.descText}`}>{c.desc}</p>
+                <span
+                  className={`mt-2 inline-block rounded-full px-3 py-1 text-sm font-bold ${
+                    c.reported
+                      ? "bg-emerald-200/70 text-emerald-600"
+                      : "bg-orange-200/70 text-orange-600"
+                  }`}
+                >
+                  {c.reported ? "Reported achievement" : "Count needed"}
+                </span>
+              </article>
+            ))}
           </div>
         </section>
 

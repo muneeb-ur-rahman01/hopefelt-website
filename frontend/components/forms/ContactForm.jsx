@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { submitContactForm } from "@/lib/api";
+import { useApp } from "@/context/AppContext";
 
 /* ---------- Icon paths ---------- */
 
@@ -240,7 +240,6 @@ function SectionTitle({ children, className = "" }) {
       <h2 className="font-serif text-2xl font-extrabold text-[#1f4a2a] sm:text-3xl">
         {children}
       </h2>
-      <span className="hidden h-0.5 w-10 rounded-full bg-[#1f4a2a] sm:block" />
     </div>
   );
 }
@@ -275,9 +274,11 @@ const initialForm = {
   message: "",
   responseMethod: "email",
   consent: true,
+  website: "", // honeypot: real users never see or fill this
 };
 
 export default function Contact() {
+  const { submitContact } = useApp();
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errorMessage, setErrorMessage] = useState("");
@@ -295,26 +296,18 @@ export default function Contact() {
     setErrorMessage("");
 
     try {
-      // Your existing API expects: fullName, email, phone, enquiryType,
-      // subject, message. The two extra design fields (organisation and
-      // preferred response method) are appended to the message so they
-      // reach your team without changing the backend.
-      const methodLabel =
-        responseMethods.find((m) => m.value === form.responseMethod)?.label ||
-        "Email";
-      const extras = [];
-      if (form.organisation.trim()) {
-        extras.push(`Organisation: ${form.organisation.trim()}`);
-      }
-      extras.push(`Preferred response method: ${methodLabel}`);
-
-      await submitContactForm({
+      // The backend now stores organisation and responseMethod as proper fields.
+      await submitContact({
         fullName: form.fullName.trim(),
         email: form.email.trim(),
         phone: form.phone.trim(),
+        organisation: form.organisation.trim(),
         enquiryType: form.enquiryType,
         subject: form.subject.trim(),
-        message: `${form.message.trim()}\n\n---\n${extras.join("\n")}`,
+        message: form.message.trim(),
+        responseMethod: form.responseMethod,
+        consent: form.consent,
+        website: form.website,
       });
 
       setStatus("success");
@@ -322,7 +315,9 @@ export default function Contact() {
     } catch (err) {
       setStatus("error");
       setErrorMessage(
-        err?.message || "Something went wrong. Please try again."
+        err?.status === 429
+          ? "You have sent several enquiries recently. Please try again later."
+          : err?.message || "Something went wrong. Please try again."
       );
     }
   }
@@ -339,7 +334,7 @@ export default function Contact() {
       <header className="relative">
         <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[60%]">
           <img
-            src="/images/contact/hero.jpg"
+            src="/images/Involved/contact.png"
             alt="Hopefelt Foundation office building surrounded by greenery"
             className="h-full w-full object-cover"
           />
@@ -439,6 +434,20 @@ export default function Contact() {
             </p>
 
             <form onSubmit={handleSubmit} className="mt-5">
+              {/* honeypot — hidden from people, bots fill it in */}
+              <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+                <label>
+                  Website
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.website}
+                    onChange={update("website")}
+                  />
+                </label>
+              </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Full Name" required>
                   <input

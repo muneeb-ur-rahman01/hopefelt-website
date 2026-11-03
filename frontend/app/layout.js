@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { AppProvider } from "@/context/AppContext";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -50,9 +51,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${workSans.variable}`}>
       <body className="flex min-h-screen flex-col font-body">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <AppProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AppProvider>
         <Analytics />
       </body>
     </html>

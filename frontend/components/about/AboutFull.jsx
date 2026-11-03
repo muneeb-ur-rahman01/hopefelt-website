@@ -47,42 +47,88 @@ const sdgs = [
     title: "Good Health and Well-being",
     desc: "Community health initiatives, awareness and preventive care.",
     color: "bg-[#4c9f38]",
-    glyph: "♥",
+    // heart + pulse
+    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0zM7 12h2.5l1.5-2.5 2 5 1.5-2.5H17",
   },
   {
     num: 4,
     title: "Quality Education",
     desc: "Knowledge sharing, training and youth development programs.",
     color: "bg-[#c5192d]",
-    glyph: "📖",
+    // open book
+    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+  },
+  {
+    num: 5,
+    title: "Gender Equality",
+    desc: "Empowering women and girls through inclusive opportunities and participation.",
+    color: "bg-[#ff3a21]",
+    // gender symbol (venus + mars)
+    icon: "M6 11a4 4 0 108 0 4 4 0 10-8 0zM13 8l6-6m0 0h-4m4 0v4M10 15v6m-3-3h6",
+  },
+  {
+    num: 8,
+    title: "Decent Work and Economic Growth",
+    desc: "Entrepreneurship, skills and pathways to sustainable livelihoods.",
+    color: "bg-[#a21942]",
+    // trending up
+    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
   },
   {
     num: 9,
     title: "Industry, Innovation and Infrastructure",
     desc: "Technology-based solutions and innovative approaches for social impact.",
     color: "bg-[#f36d25]",
-    glyph: "⬡",
+    // factory
+    icon: "M2 21h20M4 21V11l6 4v-4l6 4V4h4v17M8 18h.01M12 18h.01M16 18h.01",
   },
   {
     num: 10,
     title: "Reduced Inequalities",
     desc: "Inclusive programs for underserved communities.",
     color: "bg-[#e5176f]",
-    glyph: "⇅",
+    // opposing arrows
+    icon: "M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4",
+  },
+  {
+    num: 11,
+    title: "Sustainable Cities and Communities",
+    desc: "Building cleaner, safer and more resilient communities.",
+    color: "bg-[#fd9d24]",
+    // buildings
+    icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+  },
+  {
+    num: 13,
+    title: "Climate Action",
+    desc: "Climate awareness, adaptation and local community action.",
+    color: "bg-[#3f7e44]",
+    // globe
+    icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
     num: 15,
     title: "Life on Land",
     desc: "Environmental awareness and community-led plantation initiatives.",
     color: "bg-[#56a02f]",
-    glyph: "🌳",
+    // tree
+    icon: "M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z",
+  },
+  {
+    num: 16,
+    title: "Peace, Justice and Strong Institutions",
+    desc: "Promoting inclusive, accountable and transparent institutions.",
+    color: "bg-[#00689d]",
+    // scales of justice
+    icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3",
   },
   {
     num: 17,
     title: "Partnerships for the Goals",
     desc: "Building strong collaborations with institutions, NGOs and communities.",
     color: "bg-[#19486a]",
-    glyph: "❂",
+    // link
+    icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
   },
 ];
 
@@ -210,7 +256,6 @@ export default function AboutFull() {
             <h1 className="mt-6 text-5xl font-black tracking-tight text-[#0d3749] sm:text-6xl lg:text-7xl">
               ABOUT US
             </h1>
-            <div className="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-emerald-700 to-lime-400" />
 
             <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
               {aboutHeaderData.description}
@@ -287,7 +332,6 @@ export default function AboutFull() {
               <h2 className="text-3xl font-extrabold text-[#4a6741]">
                 OUR <span className="text-[#4a6741]">VISION</span>
               </h2>
-              <Underline />
               <p className="mt-4 text-sm leading-7 text-slate-600 italic">
                 A healthier, more informed and empowered society where every
                 individual has the opportunity to thrive.
@@ -311,7 +355,6 @@ export default function AboutFull() {
               <h2 className="text-3xl font-extrabold text-[#4a6741]">
                 OUR <span className="text-[#4a6741]">MISSION</span>
               </h2>
-              <Underline />
               <p className="mt-4 text-sm leading-7 text-slate-600 italic">
                 To drive positive change through research, innovation,
                 collaboration and community-led initiatives that improve health,
@@ -329,8 +372,6 @@ export default function AboutFull() {
                 key={leader.name}
                 className={`${card} group relative overflow-hidden p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9`}
               >
-                <div className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-[#4a6741] blur-3xl" />
-
                 <div className="relative">
                   <div className="flex items-center justify-between gap-3">
                     <span className="rounded-full border border-emerald-900/10 bg-forest  px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-white">
@@ -359,7 +400,6 @@ export default function AboutFull() {
                       <p className="mt-1 text-sm font-medium text-slate-500 italic">
                         {leader.title}
                       </p>
-                      <div className="mt-3 h-1 w-10 rounded-full bg-gradient-to-r from-emerald-700 to-lime-400" />
                     </div>
                   </div>
 
@@ -385,7 +425,6 @@ export default function AboutFull() {
             <h2 className="text-3xl font-extrabold text-[#4a6741] sm:text-4xl">
               OUR <span className="text-[#4a6741]">AMBITION</span>
             </h2>
-            <Underline />
 
             <h3 className="mt-6 text-base font-extrabold text-emerald-950 italic">
               Building a Healthier, Smarter and More Inclusive Future
@@ -497,11 +536,11 @@ export default function AboutFull() {
             </a>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             {sdgs.map((g) => (
               <article
                 key={g.num}
-                className={`${card} group overflow-hidden p-3 transition duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                className={`${card} group w-full overflow-hidden p-3 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%_-_0.5rem)] lg:w-[calc(33.333%_-_0.667rem)] xl:w-[calc(16.666%_-_0.834rem)]`}
               >
                 <div
                   className={`${g.color} relative flex aspect-[4/3] items-center justify-center rounded-xl text-white`}
@@ -509,9 +548,11 @@ export default function AboutFull() {
                   <span className="absolute left-3 top-2 text-2xl font-black">
                     {g.num}
                   </span>
-                  <span className="text-4xl transition-transform duration-300 group-hover:scale-110">
-                    {g.glyph}
-                  </span>
+                  <Icon
+                    d={g.icon}
+                    className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
+                    stroke={1.7}
+                  />
                 </div>
                 <h3 className="mt-3 text-xs font-extrabold leading-5 text-slate-900">
                   {g.title}
@@ -700,7 +741,7 @@ export default function AboutFull() {
               Support Our Initiatives <span>→</span>
             </Link>
           </div>
-        </section>      
+        </section>
       </div>
     </section>
   );

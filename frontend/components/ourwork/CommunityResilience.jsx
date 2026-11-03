@@ -19,15 +19,23 @@ const SHIELD =
 const SEARCH = "M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z";
 const HAND =
   "M7 11.5V14m0-2.5v-6a1.5 1.5 0 013 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3.75";
+const TREE = "M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z";
+const ARROW = "M5 12h14m-6-6l6 6-6 6";
+const CHECK = "M5 13l4 4L19 7";
+const INFO = "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z";
+const EYE =
+  "M15 12a3 3 0 11-6 0 3 3 0 016 0zm-3-8C7 4 2.7 7.1 1 12c1.7 4.9 6 8 11 8s9.3-3.1 11-8c-1.7-4.9-6-8-11-8z";
+const TARGET =
+  "M12 21a9 9 0 100-18 9 9 0 000 18zm0-5a4 4 0 100-8 4 4 0 000 8zm0-3a1 1 0 100-2 1 1 0 000 2zM12 12l7-7m0 0v3m0-3h-3";
 
-/* ---------- Static content (matches the design) ---------- */
+/* ---------- Static content ---------- */
 
 const focusAreas = [
   {
     title: "Climate & Health",
     desc: "Addressing the health impacts of climate change and promoting climate-resilient communities.",
     href: "/our-work/climate-environment-resilience/climate-health",
-    bg: "from-emerald-50",
+    bg: "from-emerald-50/80",
     wrap: "bg-emerald-100 text-emerald-800",
     text: "text-emerald-800",
     btn: "bg-emerald-700",
@@ -37,9 +45,9 @@ const focusAreas = [
     title: "Environmental Health",
     desc: "Promoting clean air, safe water, proper waste management and healthier surroundings.",
     href: "/our-work/climate-environment-resilience/environmental-health",
-    bg: "from-sky-50",
-    wrap: "bg-sky-100 text-sky-600",
-    text: "text-sky-600",
+    bg: "from-sky-50/80",
+    wrap: "bg-sky-100 text-sky-700",
+    text: "text-sky-700",
     btn: "bg-sky-500",
     icon: LEAF,
   },
@@ -47,9 +55,9 @@ const focusAreas = [
     title: "Environmental Awareness",
     desc: "Educating communities on sustainable practices and responsible environmental behaviour.",
     href: "/our-work/climate-environment-resilience/environmental-awareness",
-    bg: "from-amber-50",
+    bg: "from-amber-50/80",
     wrap: "bg-amber-100 text-amber-700",
-    text: "text-amber-600",
+    text: "text-amber-700",
     btn: "bg-amber-500",
     icon: MEGAPHONE,
   },
@@ -57,19 +65,19 @@ const focusAreas = [
     title: "Plantation Initiatives",
     desc: "Tree plantation drives to build greener, cooler and healthier communities.",
     href: "/our-work/climate-environment-resilience/plantation-initiatives",
-    bg: "from-green-50",
+    bg: "from-green-50/80",
     wrap: "bg-green-100 text-green-700",
     text: "text-green-700",
     btn: "bg-green-600",
-    icon: "M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z",
+    icon: TREE,
   },
   {
     title: "Community Resilience",
     desc: "Strengthening community preparedness and adaptive capacity against environmental challenges.",
     href: "/our-work/climate-environment-resilience/community-resilience",
-    bg: "from-rose-50",
-    wrap: "bg-rose-100 text-rose-500",
-    text: "text-rose-500",
+    bg: "from-rose-50/80",
+    wrap: "bg-rose-100 text-rose-600",
+    text: "text-rose-600",
     btn: "bg-rose-500",
     icon: USERS,
   },
@@ -82,53 +90,123 @@ const strategicGoals = [
   "Strengthen community preparedness and resilience against environmental challenges.",
 ];
 
+const sdgs = [
+  {
+    num: "3",
+    title: "Good Health and Well-being",
+    desc: "Addressing the health impacts of climate change and environmental risks.",
+    shadow: "shadow-[0_12px_28px_-8px_rgba(76,159,56,0.6)]",
+    accent: "text-emerald-700",
+  },
+  {
+    num: "11",
+    title: "Sustainable Cities and Communities",
+    desc: "Promoting cleaner, safer and more resilient communities.",
+    shadow: "shadow-[0_12px_28px_-8px_rgba(253,157,36,0.6)]",
+    accent: "text-orange-600",
+  },
+  {
+    num: "13",
+    title: "Climate Action",
+    desc: "Supporting climate awareness, adaptation and local action.",
+    shadow: "shadow-[0_12px_28px_-8px_rgba(63,126,68,0.6)]",
+    accent: "text-green-800",
+  },
+  {
+    num: "15",
+    title: "Life on Land",
+    desc: "Protecting ecosystems through plantation and green initiatives.",
+    shadow: "shadow-[0_12px_28px_-8px_rgba(86,192,43,0.6)]",
+    accent: "text-lime-700",
+  },
+];
+
 const workSteps = [
   {
     num: "01",
     title: "Assess Local Risks",
     desc: "Understand community environmental challenges and vulnerabilities.",
-    numBg: "bg-amber-100 text-amber-700",
-    wrap: "bg-amber-50 text-amber-600",
+    numBg: "bg-amber-500 text-white",
+    wrap: "bg-amber-50 text-amber-600 ring-amber-200",
     icon: SEARCH,
   },
   {
     num: "02",
     title: "Educate & Engage",
     desc: "Raise awareness and build community participation through sessions and campaigns.",
-    numBg: "bg-emerald-100 text-emerald-800",
-    wrap: "bg-emerald-50 text-emerald-700",
+    numBg: "bg-emerald-700 text-white",
+    wrap: "bg-emerald-50 text-emerald-700 ring-emerald-200",
     icon: USERS,
   },
   {
     num: "03",
     title: "Implement Community Actions",
     desc: "Carry out plantation drives, clean-up activities and sustainable initiatives.",
-    numBg: "bg-green-100 text-green-700",
-    wrap: "bg-green-50 text-green-700",
+    numBg: "bg-green-600 text-white",
+    wrap: "bg-green-50 text-green-700 ring-green-200",
     icon: LEAF,
   },
   {
     num: "04",
     title: "Monitor & Learn",
     desc: "Track feedback and improve future efforts.",
-    numBg: "bg-emerald-100 text-emerald-800",
-    wrap: "bg-emerald-50 text-emerald-700",
+    numBg: "bg-[#1f4a2a] text-white",
+    wrap: "bg-emerald-50 text-emerald-700 ring-emerald-200",
     icon: CHART,
   },
 ];
 
 const team = [
   { role: "Program Director", sub: "[Assigned Lead]", wrap: "bg-emerald-100 text-emerald-800", icon: USER },
-  { role: "Environment & Resilience Coordinator", sub: "[Assigned Coordinator]", wrap: "bg-sky-100 text-sky-600", icon: USERS },
-  { role: "Field & Volunteer Team", sub: "Community facilitators and trained volunteers", wrap: "bg-rose-100 text-rose-500", icon: USERS },
+  { role: "Environment & Resilience Coordinator", sub: "[Assigned Coordinator]", wrap: "bg-sky-100 text-sky-700", icon: USERS },
+  { role: "Field & Volunteer Team", sub: "Community facilitators and trained volunteers", wrap: "bg-rose-100 text-rose-600", icon: USERS },
   { role: "Community Partners", sub: "Local organizations, institutions and stakeholders", wrap: "bg-amber-100 text-amber-700", icon: USERS },
 ];
 
 const impactStats = [
-  { label: "Community Activities", wrap: "bg-emerald-100 text-emerald-800", icon: LEAF },
-  { label: "People Reached", wrap: "bg-sky-100 text-sky-600", icon: USERS },
-  { label: "Trees Planted", wrap: "bg-green-100 text-green-700", icon: "M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z" },
-  { label: "Preparedness Initiatives", wrap: "bg-emerald-100 text-emerald-800", icon: SHIELD },
+  { value: "5", label: "Community Activities", wrap: "bg-emerald-300/15 text-emerald-200", icon: LEAF },
+  { value: "1", label: "People Reached", wrap: "bg-sky-300/15 text-sky-200", icon: USERS },
+  { value: "500", label: "Trees Planted", wrap: "bg-lime-300/15 text-lime-200", icon: TREE },
+  { value: "1", label: "Preparedness Initiatives", wrap: "bg-amber-300/15 text-amber-200", icon: SHIELD },
+];
+
+const involve = [
+  {
+    title: "Become a Volunteer",
+    desc: "Join our plantation drives, awareness sessions and community activities.",
+    cta: "Apply as a Volunteer",
+    href: "/get-involved/volunteer",
+    icon: USERS,
+    glow: "bg-emerald-200/50",
+    tint: "from-emerald-50 via-emerald-50/50 to-white",
+    ring: "ring-emerald-900/[0.08]",
+    tile: "bg-emerald-100 text-emerald-800",
+    btn: "bg-[#1f4a2a] shadow-[0_12px_28px_-10px_rgba(31,74,42,0.8)] hover:bg-emerald-900 focus-visible:ring-emerald-300",
+  },
+  {
+    title: "Become a Partner",
+    desc: "Collaborate with us to implement environmental initiatives and create lasting impact.",
+    cta: "Explore Partnerships",
+    href: "/get-involved/partner",
+    icon: HAND,
+    glow: "bg-sky-200/60",
+    tint: "from-sky-50 via-sky-50/50 to-white",
+    ring: "ring-sky-900/[0.08]",
+    tile: "bg-sky-100 text-sky-800",
+    btn: "bg-[#0d3749] shadow-[0_12px_28px_-10px_rgba(13,55,73,0.8)] hover:bg-[#0a2b39] focus-visible:ring-sky-300",
+  },
+  {
+    title: "Support Our Work",
+    desc: "Contribute resources or sponsor plantation drives, awareness campaigns and community programs.",
+    cta: "Discuss Support",
+    href: "/get-involved/support",
+    icon: HEART,
+    glow: "bg-rose-200/60",
+    tint: "from-rose-50 via-rose-50/50 to-white",
+    ring: "ring-rose-900/[0.08]",
+    tile: "bg-rose-100 text-rose-600",
+    btn: "bg-rose-500 shadow-[0_12px_28px_-10px_rgba(244,63,94,0.8)] hover:bg-rose-600 focus-visible:ring-rose-300",
+  },
 ];
 
 /* ---------- Small helpers ---------- */
@@ -143,222 +221,269 @@ function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
       strokeWidth={stroke}
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d={d} />
     </svg>
   );
 }
 
-function SectionTitle({ children, note, className = "" }) {
+/* Title + description on a hairline, with a short deep-green marker on the line */
+function SectionHeader({ title, desc }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <h2 className="font-serif text-2xl font-extrabold text-[#1f4a2a] sm:text-3xl">
-        {children}
+    <div className="relative flex flex-col justify-between gap-3 border-b border-emerald-950/10 pb-6 sm:flex-row sm:items-end sm:gap-10">
+      <h2 className="font-serif text-3xl font-black tracking-[-0.02em] text-[#1f4a2a] sm:text-4xl">
+        {title}
       </h2>
-      {note && <span className="text-sm text-slate-500">{note}</span>}
-      <span className="hidden h-0.5 w-10 rounded-full bg-[#1f4a2a] sm:block" />
+      {desc && (
+        <p className="max-w-md text-sm leading-6 text-slate-600 sm:text-right">
+          {desc}
+        </p>
+      )}
     </div>
   );
 }
 
-function SdgTile({ num, label, color, children, title, desc }) {
+function SubTitle({ children }) {
   return (
-    <article className="flex items-center gap-4 rounded-2xl border border-emerald-900/5 bg-white p-3 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div
-        className={`flex h-28 w-28 shrink-0 flex-col justify-between p-2 text-white ${color}`}
-      >
-        <div className="flex items-start gap-1">
-          <span className="text-3xl font-black leading-none">{num}</span>
-          <span className="text-[7px] font-bold uppercase leading-[10px]">
-            {label}
-          </span>
-        </div>
-        <div className="flex justify-center">{children}</div>
-      </div>
-      <div className="min-w-0">
-        <h3 className="text-xs font-bold text-slate-900">SDG {num}</h3>
-        <p className="text-sm font-bold leading-5 text-slate-900">{title}</p>
-        <p className="mt-1 text-xs leading-5 text-slate-600">{desc}</p>
-      </div>
-    </article>
+    <div className="relative border-b border-emerald-950/10 pb-5">
+      <h2 className="font-serif text-3xl font-black tracking-[-0.02em] text-[#1f4a2a] sm:text-4xl">
+        {children}
+      </h2>
+      <span className="absolute -bottom-px left-0 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#1f4a2a] via-emerald-600 to-lime-400" />
+    </div>
   );
 }
+
+const card =
+  "rounded-3xl bg-white ring-1 ring-emerald-950/[0.07] shadow-[0_1px_1px_rgba(15,60,40,0.04),0_14px_36px_-16px_rgba(15,60,40,0.16)]";
+
+const focusRing =
+  "focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300";
 
 /* ---------- Page ---------- */
 
 export default function ClimateEnvironmentResilience() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#f4faf6] via-white to-[#f4faf6] text-slate-800">
-      {/* soft background glows */}
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#f4faf6] via-white to-[#f4faf6] text-slate-800 antialiased">
+      <style>{`
+        /* one orchestrated moment: hero entrance */
+        @keyframes hero-rise {
+          from { opacity: 0; transform: translateY(18px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes hero-settle {
+          from { transform: scale(1.06); }
+          to   { transform: scale(1); }
+        }
+        .hero-rise { opacity: 0; animation: hero-rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+        .hero-d1 { animation-delay: .05s; }
+        .hero-d2 { animation-delay: .18s; }
+        .hero-d3 { animation-delay: .3s; }
+        .hero-d4 { animation-delay: .42s; }
+        .hero-settle { animation: hero-settle 2s cubic-bezier(.2,.7,.2,1) forwards; }
+
+        .dot-grid {
+          background-image: radial-gradient(rgba(31,74,42,.13) 1px, transparent 1px);
+          background-size: 22px 22px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .hero-rise { animation: none; opacity: 1; }
+          .hero-settle { animation: none; }
+        }
+      `}</style>
+
+      {/* soft background glows + texture */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -right-40 -top-32 h-[480px] w-[480px] rounded-full bg-emerald-200/30 blur-[120px]" />
-        <div className="absolute -left-40 top-[55%] h-[420px] w-[420px] rounded-full bg-lime-200/20 blur-[110px]" />
+        <div className="dot-grid absolute inset-0 opacity-40 [mask-image:linear-gradient(to_bottom,black,transparent_30%,transparent_75%,black)]" />
+        <div className="absolute -right-40 -top-32 h-[520px] w-[520px] rounded-full bg-emerald-200/40 blur-[130px]" />
+        <div className="absolute -left-40 top-[55%] h-[460px] w-[460px] rounded-full bg-lime-200/30 blur-[120px]" />
+        <div className="absolute right-0 top-[85%] h-[380px] w-[380px] rounded-full bg-sky-200/25 blur-[120px]" />
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%]">
+      <header className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden lg:w-[58%]">
           <img
-            src="/images/climate-resilience/hero.jpg"
+            src="/images/Our Work/climate.png"
             alt="Volunteers planting a tree together at a community plantation drive"
-            className="h-full w-full object-cover"
+            className="hero-settle h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#f4faf6]/40 via-transparent to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f4faf6] to-transparent" />
         </div>
 
-        <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
+        <div className="relative mx-auto max-w-[100rem] px-5 py-14 sm:px-8 lg:px-12 lg:py-24">
           <nav
             aria-label="Breadcrumb"
-            className="flex flex-wrap items-center gap-2 text-xs text-slate-600"
+            className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/75 px-4 py-1.5 text-xs text-slate-600 shadow-[0_1px_2px_rgba(15,60,40,0.06)] ring-1 ring-emerald-950/10 backdrop-blur-md"
           >
-            <Link href="/" className="hover:text-emerald-800">Home</Link>
-            <span>/</span>
-            <Link href="/our-work" className="hover:text-emerald-800">Our Work</Link>
-            <span>/</span>
+            <Link href="/" className="transition hover:text-emerald-800">
+              Home
+            </Link>
+            <span className="text-slate-300">/</span>
+            <Link href="/our-work" className="transition hover:text-emerald-800">
+              Our Work
+            </Link>
+            <span className="text-slate-300">/</span>
             <span className="font-semibold text-slate-800">
               Climate, Environment &amp; Community Resilience
             </span>
           </nav>
 
-          <div className="mt-6 max-w-2xl">
-            <h1 className="font-serif text-5xl font-black leading-[1.05] tracking-tight text-[#0d3749] sm:text-6xl">
+          <div className="mt-10 max-w-2xl">
+            <h1 className="hero-rise hero-d2 font-serif text-5xl font-black leading-[1.02] tracking-[-0.03em] text-[#0d3749] sm:text-6xl lg:text-[4.75rem]">
               Climate,{" "}
-              <span className="text-[#1f4a2a]">Environment &amp;</span>{" "}
+              <span className="bg-gradient-to-r from-[#1f4a2a] via-emerald-700 to-emerald-500 bg-clip-text text-transparent">
+                Environment &amp;
+              </span>{" "}
               Community Resilience
             </h1>
 
-            <p className="mt-4 text-xl text-slate-700">
+            <p className="hero-rise hero-d3 mt-7 font-serif text-xl tracking-tight text-slate-800 sm:text-2xl">
               Healthier Environments. Stronger Communities.
             </p>
-            <div className="mt-3 h-0.5 w-14 rounded-full bg-emerald-700" />
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
+            <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-slate-700">
               At Hopefelt Foundation, we work towards cleaner, greener and more
               resilient communities by promoting environmental awareness,
-              sustainable practices and climate-conscious actions for a healthier
-              tomorrow.
+              sustainable practices and climate-conscious actions for a
+              healthier tomorrow.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="hero-rise hero-d4 mt-10 flex flex-wrap gap-3">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center gap-2 rounded-full bg-[#1f4a2a] px-7 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-900"
+                className={`group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-b from-[#26592f] to-[#1a3f24] px-7 py-3.5 text-sm font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_14px_30px_-10px_rgba(31,74,42,0.75)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_20px_40px_-10px_rgba(31,74,42,0.85)] ${focusRing}`}
               >
-                Get Involved <span>→</span>
+                Get Involved
+                <Icon
+                  d={ARROW}
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  stroke={2.2}
+                />
               </Link>
               <a
                 href="#focus-areas"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/40 bg-white/80 px-7 py-3 text-sm font-bold text-emerald-950 transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
+                className={`group inline-flex items-center gap-2.5 rounded-full border border-emerald-900/25 bg-white/75 px-7 py-3.5 text-sm font-bold text-emerald-950 backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-emerald-900/40 hover:bg-white hover:shadow-lg ${focusRing}`}
               >
-                Explore Initiatives <span>→</span>
+                Explore Initiatives
+                <Icon
+                  d={ARROW}
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  stroke={2.2}
+                />
               </a>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="mx-auto max-w-[100rem] px-5 pb-12 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[100rem] px-5 pb-20 sm:px-8 lg:px-12">
         {/* ============ OUR FOCUS AREAS ============ */}
-        <section id="focus-areas" className="pt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle>Our Focus Areas</SectionTitle>
-            <p className="text-xs text-slate-600">
-              Key areas through which we work to create cleaner environments and
-              more resilient communities.
-            </p>
-          </div>
+        <section id="focus-areas" className="scroll-mt-6 pt-10">
+          <SectionHeader
+            title="Our Focus Areas"
+            desc="Key areas through which we work to create cleaner environments and more resilient communities."
+          />
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {focusAreas.map((f) => (
               <article
                 key={f.title}
-                className={`group flex flex-col rounded-3xl border border-emerald-900/5 bg-gradient-to-b ${f.bg} to-white p-5 transition duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                className={`${card} group relative flex flex-col overflow-hidden transition duration-500 hover:-translate-y-1 hover:shadow-[0_30px_60px_-20px_rgba(15,60,40,0.32)]`}
               >
-                <span
-                  className={`flex h-14 w-14 items-center justify-center rounded-full ${f.wrap}`}
+                <span className={`absolute inset-x-0 top-0 h-1 ${f.btn}`} />
+                <div
+                  className={`flex flex-1 flex-col bg-gradient-to-b ${f.bg} to-white p-6 pt-7`}
                 >
-                  <Icon d={f.icon} className="h-7 w-7" />
-                </span>
-                <h3 className="mt-4 font-serif text-lg font-extrabold leading-6 text-emerald-950">
-                  {f.title}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{f.desc}</p>
-
-                <Link
-                  href={f.href}
-                  className={`mt-auto flex items-center justify-between pt-5 text-sm font-bold ${f.text}`}
-                >
-                  <span className="inline-flex items-center gap-1.5">
-                    Learn More <span>→</span>
-                  </span>
                   <span
-                    className={`flex h-9 w-9 items-center justify-center rounded-full text-white transition duration-300 group-hover:translate-x-1 ${f.btn}`}
+                    className={`flex h-14 w-14 items-center justify-center rounded-2xl shadow-sm ring-4 ring-white ${f.wrap}`}
                   >
-                    <Icon d="M5 12h14m-6-6l6 6-6 6" className="h-4 w-4" stroke={2.4} />
+                    <Icon d={f.icon} className="h-7 w-7" />
                   </span>
-                </Link>
+                  <h3 className="mt-6 font-serif text-lg font-extrabold leading-6 tracking-tight text-emerald-950">
+                    {f.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm leading-6 text-slate-600">
+                    {f.desc}
+                  </p>
+
+                  <Link
+                    href={f.href}
+                    className={`mt-auto flex items-center justify-between border-t border-emerald-950/10 pt-5 text-sm font-bold focus:outline-none focus-visible:underline ${f.text}`}
+                  >
+                    Learn More
+                    <span
+                      className={`flex h-9 w-9 items-center justify-center rounded-full text-white shadow-md transition duration-300 group-hover:translate-x-1 ${f.btn}`}
+                    >
+                      <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+                    </span>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
         </section>
 
         {/* ============ OUR PURPOSE ============ */}
-        <section className="mt-10">
-          <SectionTitle>Our Purpose</SectionTitle>
+        <section className="mt-24">
+          <SectionHeader title="Our Purpose" />
 
-          <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            <article className="flex items-center gap-5 rounded-2xl bg-emerald-50/80 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-900">
-                <Icon
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-3-8C7 4 2.7 7.1 1 12c1.7 4.9 6 8 11 8s9.3-3.1 11-8c-1.7-4.9-6-8-11-8z"
-                  className="h-9 w-9"
-                />
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {/* Vision */}
+            <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-50 to-white p-8 ring-1 ring-emerald-950/[0.07] shadow-[0_14px_36px_-18px_rgba(15,60,40,0.2)]">
+              <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-600 to-emerald-300" />
+              <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-900 shadow-sm ring-4 ring-white">
+                <Icon d={EYE} className="h-8 w-8" />
               </span>
-              <div>
-                <h3 className="font-serif text-lg font-extrabold text-emerald-950">
-                  Our Vision
-                </h3>
-                <p className="mt-1 text-sm leading-6 text-slate-600">
-                  Cleaner, healthier and more resilient communities living in
-                  harmony with a sustainable environment.
-                </p>
-              </div>
+              <h3 className="mt-6 font-serif text-xl font-extrabold tracking-tight text-emerald-950">
+                Our Vision
+              </h3>
+              <p className="mt-3 font-serif text-base italic leading-7 text-slate-600">
+                Cleaner, healthier and more resilient communities living in
+                harmony with a sustainable environment.
+              </p>
             </article>
 
-            <article className="flex items-center gap-5 rounded-2xl bg-sky-50/80 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-900">
-                <Icon
-                  d="M12 21a9 9 0 100-18 9 9 0 000 18zm0-5a4 4 0 100-8 4 4 0 000 8zm0-3a1 1 0 100-2 1 1 0 000 2zM12 12l7-7m0 0v3m0-3h-3"
-                  className="h-9 w-9"
-                />
+            {/* Mission */}
+            <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-50 to-white p-8 ring-1 ring-emerald-950/[0.07] shadow-[0_14px_36px_-18px_rgba(15,60,40,0.2)]">
+              <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-600 to-sky-300" />
+              <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-900 shadow-sm ring-4 ring-white">
+                <Icon d={TARGET} className="h-8 w-8" />
               </span>
-              <div>
-                <h3 className="font-serif text-lg font-extrabold text-emerald-950">
-                  Our Mission
-                </h3>
-                <p className="mt-1 text-sm leading-6 text-slate-600">
-                  To promote environmental health, climate awareness and
-                  community resilience through education, engagement and
-                  sustainable action.
-                </p>
-              </div>
+              <h3 className="mt-6 font-serif text-xl font-extrabold tracking-tight text-emerald-950">
+                Our Mission
+              </h3>
+              <p className="mt-3 font-serif text-base italic leading-7 text-slate-600">
+                To promote environmental health, climate awareness and
+                community resilience through education, engagement and
+                sustainable action.
+              </p>
             </article>
 
-            <article className="flex items-center gap-5 rounded-2xl bg-rose-50/80 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-600">
-                <Icon d={CHART} className="h-9 w-9" />
-              </span>
-              <div>
-                <h3 className="font-serif text-lg font-extrabold text-emerald-950">
+            {/* Strategic goals: the one deep-green card in this section */}
+            <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#14503f] via-[#1c5a3a] to-[#2f4a2b] p-8 shadow-[0_24px_60px_-24px_rgba(20,80,63,0.7)]">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-lime-300/20 blur-3xl" />
+              <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
+              <div className="relative">
+                <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-lime-200 ring-1 ring-white/20">
+                  <Icon d={CHART} className="h-8 w-8" />
+                </span>
+                <h3 className="mt-6 font-serif text-xl font-extrabold tracking-tight text-white">
                   Our Strategic Goals
                 </h3>
-                <ul className="mt-1 space-y-0.5">
+                <ul className="mt-4 space-y-3">
                   {strategicGoals.map((g) => (
                     <li
                       key={g}
-                      className="flex items-start gap-2 text-xs leading-5 text-slate-600"
+                      className="flex items-start gap-3 text-sm leading-6 text-emerald-50/90"
                     >
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-700" />
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime-300/20 text-lime-200">
+                        <Icon d={CHECK} className="h-3 w-3" stroke={2.8} />
+                      </span>
                       {g}
                     </li>
                   ))}
@@ -369,119 +494,94 @@ export default function ClimateEnvironmentResilience() {
         </section>
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
-        <section className="mt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle note="(Suggested)">Strategic Alignment</SectionTitle>
-            <p className="text-xs text-slate-600">
-              Our work contributes to the following Sustainable Development
-              Goals (SDGs).
-            </p>
-          </div>
+        <section className="mt-24">
+          <SectionHeader
+            title="Strategic Alignment"
+            desc="Our work contributes to the following Sustainable Development Goals (SDGs)."
+          />
 
-          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <SdgTile
-              num="3"
-              label={<>Good Health<br />and Well-being</>}
-              color="bg-[#4c9f38]"
-              title="Good Health and Well-being"
-              desc="Addressing the health impacts of climate change and environmental risks."
-            >
-              <Icon d="M3 12h4l2-5 4 10 2-5h6" className="h-10 w-10" stroke={2} />
-            </SdgTile>
-
-            <SdgTile
-              num="11"
-              label={<>Sustainable Cities<br />and Communities</>}
-              color="bg-[#fd9d24]"
-              title="Sustainable Cities and Communities"
-              desc="Promoting cleaner, safer and more resilient communities."
-            >
-              <Icon
-                d="M3 21h18M5 21V7l7-4v18M12 21V10l7 3v8M8 9h.01M8 13h.01M8 17h.01"
-                className="h-10 w-10"
-                stroke={2}
-              />
-            </SdgTile>
-
-            <SdgTile
-              num="13"
-              label={<>Climate<br />Action</>}
-              color="bg-[#3f7e44]"
-              title="Climate Action"
-              desc="Supporting climate awareness, adaptation and local action."
-            >
-              <Icon d={GLOBE} className="h-10 w-10" stroke={2} />
-            </SdgTile>
-
-            <SdgTile
-              num="15"
-              label={<>Life<br />on Land</>}
-              color="bg-[#56c02b]"
-              title="Life on Land"
-              desc="Protecting ecosystems through plantation and green initiatives."
-            >
-              <Icon d="M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z" className="h-10 w-10" stroke={2} />
-            </SdgTile>
-          </div>
-        </section>
-
-        {/* ============ HOW WE WORK ============ */}
-        <section className="mt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle>How We Work</SectionTitle>
-            <p className="text-xs text-slate-600">
-              A community-driven approach from awareness to long-term impact.
-            </p>
-          </div>
-
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {workSteps.map((step, idx) => (
-              <div key={step.num} className="flex items-start gap-3">
-                <div className="flex items-start gap-3">
-                  <span
-                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-black ${step.numBg}`}
-                  >
-                    {step.num}
-                  </span>
-                  <span
-                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${step.wrap}`}
-                  >
-                    <Icon d={step.icon} className="h-6 w-6" />
-                  </span>
-                  <div>
-                    <h3 className="text-sm font-extrabold leading-5 text-emerald-950">
-                      {step.title}
-                    </h3>
-                    <p className="mt-1 text-xs leading-5 text-slate-500">
-                      {step.desc}
-                    </p>
-                  </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {sdgs.map((g) => (
+              <article
+                key={g.num}
+                className={`${card} flex items-center gap-4 p-4 transition duration-300 hover:-translate-y-0.5`}
+              >
+                <img
+                  src={`/images/sdg/sdg-${g.num}.png`}
+                  alt={`SDG ${g.num}: ${g.title}`}
+                  loading="lazy"
+                  className={`h-28 w-28 shrink-0 rounded-2xl object-cover ring-2 ring-white ${g.shadow}`}
+                />
+                <div className="min-w-0">
+                  <h3 className={`text-sm font-bold ${g.accent}`}>
+                    SDG {g.num}
+                  </h3>
+                  <p className="text-base font-bold leading-5 tracking-tight text-slate-900">
+                    {g.title}
+                  </p>
+                  <p className="mt-1.5 text-xs leading-5 text-slate-600">
+                    {g.desc}
+                  </p>
                 </div>
-
-                {idx < workSteps.length - 1 && (
-                  <span className="mt-3 hidden text-slate-500 lg:block">→</span>
-                )}
-              </div>
+              </article>
             ))}
           </div>
         </section>
 
+        {/* ============ HOW WE WORK ============ */}
+        <section className="mt-24">
+          <SectionHeader
+            title="How We Work"
+            desc="A community-driven approach from awareness to long-term impact."
+          />
+
+          <div className="mt-10 rounded-[2rem] bg-white/80 p-6 shadow-[0_1px_1px_rgba(15,60,40,0.04),0_24px_60px_-28px_rgba(15,60,40,0.25)] ring-1 ring-emerald-950/[0.07] backdrop-blur-xl sm:p-10">
+            <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+              {/* connecting line */}
+              <div className="pointer-events-none absolute left-[12%] right-[12%] top-8 hidden border-t-2 border-dashed border-emerald-900/20 lg:block" />
+
+              {workSteps.map((step) => (
+                <div key={step.num} className="relative">
+                  <div className="relative inline-block">
+                    <span
+                      className={`flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-sm ring-4 ${step.wrap}`}
+                    >
+                      <Icon d={step.icon} className="h-7 w-7" />
+                    </span>
+                    <span
+                      className={`absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full text-[11px] font-black shadow-md ring-2 ring-white ${step.numBg}`}
+                    >
+                      {step.num}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-base font-extrabold leading-5 tracking-tight text-emerald-950">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 max-w-[17rem] text-sm leading-6 text-slate-600">
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ============ TEAM + IMPACT ============ */}
-        <section className="mt-10 grid gap-8 lg:grid-cols-2">
-          {/* Program Team & Coordination */}
-          <div>
-            <SectionTitle>Program Team &amp; Coordination</SectionTitle>
-            <p className="mt-2 text-xs text-slate-600">
+        <section className="mt-24 grid gap-12 lg:grid-cols-2">
+          {/* Team */}
+          <div className="flex flex-col">
+            <SubTitle>Program Team &amp; Coordination</SubTitle>
+            <p className="mt-5 max-w-xl text-sm leading-6 text-slate-600">
               Our Climate, Environment &amp; Community Resilience program is led
               and supported by a dedicated team.
             </p>
 
-            <div className="mt-5 overflow-hidden rounded-2xl border border-emerald-900/5 bg-white shadow-sm">
-              <div className="grid divide-y divide-emerald-900/5 sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
+            <div className={`${card} mt-6 flex-1 overflow-hidden`}>
+              <div className="grid divide-y divide-emerald-950/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
                 {team.map((p) => (
-                  <div key={p.role} className="flex items-start gap-3 p-4">
+                  <div key={p.role} className="flex items-start gap-3 p-5">
                     <span
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${p.wrap}`}
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-4 ring-white ${p.wrap}`}
                     >
                       <Icon d={p.icon} className="h-5 w-5" />
                     </span>
@@ -489,133 +589,103 @@ export default function ClimateEnvironmentResilience() {
                       <p className="text-xs font-extrabold leading-4 text-emerald-950">
                         {p.role}
                       </p>
-                      <p className="mt-0.5 text-[11px] leading-4 text-slate-500">
+                      <p className="mt-1 text-xs leading-4 text-slate-500">
                         {p.sub}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
-              <p className="flex items-center gap-2 border-t border-emerald-900/5 bg-slate-50 px-4 py-2.5 text-[11px] text-slate-600">
-                <Icon
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  className="h-4 w-4"
-                />
+              <p className="flex items-center gap-2 border-t border-emerald-950/10 bg-slate-50/80 px-5 py-3 text-xs text-slate-600">
+                <Icon d={INFO} className="h-4 w-4 shrink-0" />
                 Names and reporting lines will be published after internal
                 confirmation.
               </p>
             </div>
           </div>
 
-          {/* Community Impact */}
-          <div>
-            <SectionTitle note="(To be updated)">Community Impact</SectionTitle>
-            <p className="mt-2 text-xs text-slate-600">
+          {/* Impact */}
+          <div className="flex flex-col">
+            <SubTitle>Community Impact</SubTitle>
+            <p className="mt-5 max-w-xl text-sm leading-6 text-slate-600">
               Creating greener, healthier and more resilient communities.
             </p>
 
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {impactStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-emerald-900/5 bg-emerald-50/40 p-4 text-center"
-                >
-                  <span
-                    className={`mx-auto flex h-11 w-11 items-center justify-center rounded-full ${stat.wrap}`}
+            <div className="relative mt-6 flex-1 overflow-hidden rounded-3xl bg-gradient-to-br from-[#14503f] via-[#1c5a3a] to-[#2f4a2b] shadow-[0_24px_60px_-24px_rgba(20,80,63,0.7)]">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-lime-300/20 blur-3xl" />
+              <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
+
+              <div className="relative grid h-full grid-cols-2 gap-px bg-white/10">
+                {impactStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex flex-col justify-center gap-3 bg-[#173f35]/75 p-7"
                   >
-                    <Icon d={stat.icon} className="h-5 w-5" />
-                  </span>
-                  <p className="mt-3 text-xs font-extrabold leading-4 text-emerald-950">
-                    {stat.label}
-                  </p>
-                  <p className="mt-1 text-[11px] text-slate-400">To be updated</p>
-                </div>
-              ))}
+                    <span
+                      className={`flex h-10 w-10 items-center justify-center rounded-2xl ring-1 ring-white/10 ${stat.wrap}`}
+                    >
+                      <Icon d={stat.icon} className="h-5 w-5" />
+                    </span>
+                    <p className="font-serif text-5xl font-black leading-none tracking-tight text-white">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs font-semibold text-emerald-100/85">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* ============ BE PART OF THE CHANGE ============ */}
-        <section className="mt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle>Be Part of the Change</SectionTitle>
-            <p className="text-xs text-slate-600">
-              There are many ways to support and contribute to our Climate,
-              Environment &amp; Community Resilience program.
-            </p>
-          </div>
+        <section className="mt-24">
+          <SectionHeader
+            title="Be Part of the Change"
+            desc="There are many ways to support and contribute to our Climate, Environment & Community Resilience program."
+          />
 
-          <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            {/* Volunteer */}
-            <article className="flex items-start gap-5 rounded-2xl bg-gradient-to-br from-emerald-50 to-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
-                <Icon d={USERS} className="h-8 w-8" />
-              </span>
-              <div>
-                <h3 className="text-lg font-bold text-emerald-950">
-                  Become a Volunteer
-                </h3>
-                <p className="mt-1 text-sm leading-5 text-slate-600">
-                  Join our plantation drives, awareness sessions and community
-                  activities.
-                </p>
-                <Link
-                  href="/get-involved/volunteer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#1f4a2a] px-5 py-2.5 text-xs font-bold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-900"
-                >
-                  Apply as a Volunteer <span>→</span>
-                </Link>
-              </div>
-            </article>
-
-            {/* Partner */}
-            <article className="flex items-start gap-5 rounded-2xl bg-gradient-to-br from-sky-50 to-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-800">
-                <Icon d={HAND} className="h-8 w-8" />
-              </span>
-              <div>
-                <h3 className="text-lg font-bold text-emerald-950">
-                  Become a Partner
-                </h3>
-                <p className="mt-1 text-sm leading-5 text-slate-600">
-                  Collaborate with us to implement environmental initiatives and
-                  create lasting impact.
-                </p>
-                <Link
-                  href="/get-involved/partner"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#0d3749] px-5 py-2.5 text-xs font-bold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-[#0a2b39]"
-                >
-                  Explore Partnerships <span>→</span>
-                </Link>
-              </div>
-            </article>
-
-            {/* Support */}
-            <article className="flex items-start gap-5 rounded-2xl bg-gradient-to-br from-rose-50 to-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-rose-100 text-rose-500">
-                <Icon d={HEART} className="h-8 w-8" />
-              </span>
-              <div>
-                <h3 className="text-lg font-bold text-emerald-950">
-                  Support Our Work
-                </h3>
-                <p className="mt-1 text-sm leading-5 text-slate-600">
-                  Contribute resources or sponsor plantation drives, awareness
-                  campaigns and community programs.
-                </p>
-                <Link
-                  href="/get-involved/support"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-rose-500 px-5 py-2.5 text-xs font-bold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-rose-600"
-                >
-                  Discuss Support <span>→</span>
-                </Link>
-              </div>
-            </article>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {involve.map((item) => (
+              <article
+                key={item.title}
+                className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${item.tint} p-8 ring-1 ${item.ring} shadow-[0_1px_1px_rgba(15,60,40,0.04),0_20px_50px_-28px_rgba(15,60,40,0.35)] transition duration-300 hover:-translate-y-1`}
+              >
+                <div
+                  className={`pointer-events-none absolute -bottom-12 -right-12 h-44 w-44 rounded-full blur-3xl ${item.glow}`}
+                />
+                <div className="relative">
+                  <span
+                    className={`flex h-16 w-16 items-center justify-center rounded-2xl shadow-sm ring-4 ring-white ${item.tile}`}
+                  >
+                    <Icon d={item.icon} className="h-8 w-8" />
+                  </span>
+                  <h3 className="mt-6 font-serif text-xl font-extrabold tracking-tight text-emerald-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm leading-6 text-slate-600">
+                    {item.desc}
+                  </p>
+                  <Link
+                    href={item.href}
+                    className={`group mt-7 inline-flex items-center gap-2.5 rounded-full px-6 py-3 text-xs font-bold text-white transition duration-300 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-4 ${item.btn}`}
+                  >
+                    {item.cta}
+                    <Icon
+                      d={ARROW}
+                      className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                      stroke={2.4}
+                    />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
         {/* ============ GET IN TOUCH ============ */}
-        <section className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40]">
+        <section className="relative mt-24 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40] shadow-[0_30px_80px_-30px_rgba(18,56,42,0.8)]">
           <img
             src="/images/climate-resilience/cta-sapling.jpg"
             alt=""
@@ -623,16 +693,18 @@ export default function ClimateEnvironmentResilience() {
             className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover lg:block"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#12382a] via-[#12382a]/85 to-transparent" />
+          <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
 
-          <div className="relative grid items-center gap-6 px-6 py-10 sm:px-10 lg:grid-cols-2">
+          <div className="relative grid items-center gap-8 px-6 py-14 sm:px-12 lg:grid-cols-2 lg:py-16">
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-100/90">
+              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-emerald-50 backdrop-blur-md">
                 Get in touch
               </span>
-              <h3 className="mt-3 font-serif text-2xl font-extrabold leading-9 text-white sm:text-3xl sm:leading-10">
+              <h3 className="mt-5 font-serif text-3xl font-black leading-tight tracking-[-0.02em] text-white sm:text-4xl">
                 Let&apos;s Build Resilient Communities Together
               </h3>
-              <p className="mt-3 max-w-md text-sm leading-6 text-emerald-50/90">
+              <p className="mt-4 max-w-md text-sm leading-6 text-emerald-50/90">
                 Have questions or want to collaborate on our Climate,
                 Environment &amp; Community Resilience program? We&apos;d love
                 to hear from you.
@@ -642,9 +714,14 @@ export default function ClimateEnvironmentResilience() {
             <div className="flex lg:justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-xs font-extrabold text-emerald-950 shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-50"
+                className="group inline-flex items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
               >
-                Contact the Program Team <span>→</span>
+                Contact the Program Team
+                <Icon
+                  d={ARROW}
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  stroke={2.4}
+                />
               </Link>
             </div>
           </div>

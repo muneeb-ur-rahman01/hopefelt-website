@@ -37,8 +37,7 @@ const TROPHY =
   "M8 21h8m-4-4v4m-5-18h10v6a5 5 0 01-10 0V3zm10 2h3a1 1 0 011 1v1a3 3 0 01-3 3M7 5H4a1 1 0 00-1 1v1a3 3 0 003 3";
 const TARGET =
   "M12 21a9 9 0 100-18 9 9 0 000 18zm0-5a4 4 0 100-8 4 4 0 000 8zm0-2.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z";
-const CALENDAR =
-  "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z";
+const ARROW = "M5 12h14m-6-6l6 6-6 6";
 
 /* ---------- Static content ---------- */
 
@@ -47,6 +46,7 @@ const objectives = [
     title: "Raise Awareness",
     desc: "Promote public awareness on key health, social and environmental issues.",
     bg: "from-rose-50",
+    bar: "from-rose-500 to-rose-300",
     wrap: "bg-rose-100 text-rose-500",
     icon: MEGAPHONE,
   },
@@ -54,6 +54,7 @@ const objectives = [
     title: "Build Knowledge",
     desc: "Share learning and practical skills through expert-led sessions.",
     bg: "from-sky-50",
+    bar: "from-sky-500 to-sky-300",
     wrap: "bg-sky-100 text-sky-600",
     icon: BOOK,
   },
@@ -61,6 +62,7 @@ const objectives = [
     title: "Strengthen Collaboration",
     desc: "Bring together communities, partners, professionals and stakeholders.",
     bg: "from-emerald-50",
+    bar: "from-emerald-500 to-emerald-300",
     wrap: "bg-emerald-100 text-emerald-800",
     icon: USERS,
   },
@@ -68,6 +70,7 @@ const objectives = [
     title: "Showcase Innovation",
     desc: "Highlight new research, solutions, technologies and community initiatives.",
     bg: "from-amber-50",
+    bar: "from-amber-500 to-amber-300",
     wrap: "bg-amber-100 text-amber-600",
     icon: BULB,
   },
@@ -75,6 +78,7 @@ const objectives = [
     title: "Mobilize Support",
     desc: "Create opportunities for resource mobilization, partnerships and volunteer engagement.",
     bg: "from-purple-50",
+    bar: "from-purple-500 to-purple-300",
     wrap: "bg-purple-100 text-purple-700",
     icon: CHART,
   },
@@ -82,6 +86,7 @@ const objectives = [
     title: "Create Opportunities",
     desc: "Provide platforms for youth, professionals and communities to connect, learn and contribute.",
     bg: "from-green-50",
+    bar: "from-green-500 to-green-300",
     wrap: "bg-green-100 text-green-700",
     icon: STAR,
   },
@@ -272,9 +277,20 @@ const cta = [
   },
 ];
 
+// Quick numbers for the hero, derived from the data above.
+const stats = [
+  { value: eventTypes.length, label: "Event types", icon: TAG },
+  { value: objectives.length, label: "Core objectives", icon: TARGET },
+  { value: cta.length, label: "Ways to join", icon: USERS },
+];
+
+// Subtle dotted texture for the dark CTA.
+const DOTS =
+  "bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.09)_1px,transparent_0)] [background-size:26px_26px]";
+
 /* ---------- Small helpers ---------- */
 
-function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
+function Icon({ d, className = "h-6 w-6", stroke = 1.7 }) {
   return (
     <svg
       className={className}
@@ -284,19 +300,24 @@ function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
       strokeWidth={stroke}
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d={d} />
     </svg>
   );
 }
 
-function SectionTitle({ children, className = "" }) {
+function SectionTitle({ eyebrow, children, className = "" }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <h2 className="font-serif text-2xl font-extrabold text-[#1f4a2a] sm:text-3xl">
+    <div className={className}>
+      {eyebrow && (
+        <p className="mb-2 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-emerald-700">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="font-serif text-3xl font-extrabold tracking-tight text-[#1f4a2a] sm:text-4xl">
         {children}
       </h2>
-      <span className="hidden h-0.5 w-10 rounded-full bg-[#1f4a2a] sm:block" />
     </div>
   );
 }
@@ -309,235 +330,298 @@ export default function Events() {
       {/* soft background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -right-40 -top-32 h-[480px] w-[480px] rounded-full bg-emerald-200/30 blur-[120px]" />
-        <div className="absolute -left-40 top-[55%] h-[420px] w-[420px] rounded-full bg-lime-200/20 blur-[110px]" />
+        <div className="absolute -left-40 top-[40%] h-[420px] w-[420px] rounded-full bg-lime-200/25 blur-[110px]" />
+        <div className="absolute -right-32 bottom-24 h-[380px] w-[380px] rounded-full bg-sky-200/20 blur-[110px]" />
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65%]">
+      <header className="relative min-h-[460px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+        {/* Full-width photo, green base shows if the image is slow or missing */}
+        <div className="pointer-events-none absolute inset-0">
           <img
-            src="/images/events/hero.jpg"
+            src="/images/Event/hero.png"
             alt="Speaker presenting to an engaged audience at a community event"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center text-transparent"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/30" />
+          {/* Mobile overlay */}
+          <div className="absolute inset-0 bg-[#f4faf6]/85 lg:hidden" />
+          {/* Desktop: soft fade on the left so text is readable, photo visible edge to edge */}
+          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(244,250,246,0.96)_0%,rgba(244,250,246,0.88)_30%,rgba(244,250,246,0.5)_50%,rgba(244,250,246,0)_72%)] lg:block" />
+          <div className="absolute inset-0 hidden bg-gradient-to-l from-[#0f3d2a]/55 via-transparent to-transparent lg:block" />
         </div>
 
-        <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
+        <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
           <nav
             aria-label="Breadcrumb"
-            className="flex flex-wrap items-center gap-2 text-xs text-slate-600"
+            className="inline-flex flex-wrap items-center gap-2 rounded-full border border-emerald-900/10 bg-white/70 px-4 py-1.5 text-xs text-slate-600 shadow-sm backdrop-blur"
           >
-            <Link href="/" className="hover:text-emerald-800">Home</Link>
-            <span>/</span>
-            <span className="text-slate-800">Events</span>
+            <Link href="/" className="transition hover:text-emerald-800">
+              Home
+            </Link>
+            <span aria-hidden="true">/</span>
+            <span className="font-semibold text-slate-800">Events</span>
           </nav>
 
-          <div className="mt-6 max-w-2xl">
-            <h1 className="font-serif text-6xl font-black leading-[1.05] tracking-tight text-[#1f3a8a] sm:text-7xl">
+          <div className="mt-8 max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-800 shadow-sm backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-lime-500" />
+              Hopefelt Foundation
+            </p>
+
+            <h1 className="mt-5 bg-gradient-to-r from-[#1f3a8a] via-[#0d3749] to-[#1f4a2a] bg-clip-text font-serif text-6xl font-black leading-[1.05] tracking-tight text-transparent sm:text-7xl lg:text-8xl">
               Events
             </h1>
 
-            <p className="mt-4 font-serif text-xl text-[#0d3749] sm:text-2xl">
+            <p className="mt-5 font-serif text-xl leading-snug text-[#0d3749] sm:text-2xl">
               Connecting people, ideas and action
               <br />
               for healthier, stronger communities.
             </p>
-            <div className="mt-3 h-0.5 w-14 rounded-full bg-emerald-700" />
 
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
               From conferences and workshops to webinars and community
               outreach, our events bring together diverse voices to create
               awareness, share knowledge and drive meaningful change.
             </p>
-          </div>
 
-          {/* tagline */}
-          <div className="pointer-events-none absolute right-12 top-10 hidden font-serif text-2xl font-semibold leading-8 text-white drop-shadow-md xl:block">
-            <p>People</p>
-            <p>Knowledge</p>
-            <p>Collaboration</p>
-            <p>Action</p>
-            <p>Healthier</p>
-            <p>Communities</p>
-            <div className="mt-2 h-0.5 w-12 rounded-full bg-lime-300" />
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/events/upcoming"
+                className="inline-flex items-center gap-2 rounded-full bg-[#1f4a2a] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-900 hover:shadow-xl"
+              >
+                See Upcoming Events
+                <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+              </Link>
+              <a
+                href="#explore"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/30 bg-white/80 px-7 py-3 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
+              >
+                Explore Event Types
+                <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+              </a>
+            </div>
+
+            <dl className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+              {stats.map((s) => (
+                <div
+                  key={s.label}
+                  className="rounded-2xl border border-emerald-900/10 bg-white/85 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
+                    <Icon d={s.icon} className="h-4 w-4" />
+                  </span>
+                  <dd className="mt-3 font-serif text-3xl font-black leading-none text-[#1f4a2a]">
+                    {s.value}
+                  </dd>
+                  <dt className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                    {s.label}
+                  </dt>
+                </div>
+              ))}
+            </dl>
           </div>
+        </div>
+
+        {/* tagline: glass panel so the white text is always readable */}
+        <div className="pointer-events-none absolute right-12 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/20 bg-[#0f3d2a]/55 px-8 py-7 font-serif text-2xl font-semibold leading-9 text-white shadow-xl backdrop-blur-md xl:block">
+          <p>People</p>
+          <p>Knowledge</p>
+          <p>Collaboration</p>
+          <p>Action</p>
+          <p>Healthier</p>
+          <p>Communities</p>
+          <div className="mt-3 h-1 w-14 rounded-full bg-lime-300" />
         </div>
       </header>
 
-      <div className="mx-auto max-w-[100rem] px-5 pb-12 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR EVENT OBJECTIVES ============ */}
-        <section className="pt-8">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle>Our Event Objectives</SectionTitle>
-            <p className="max-w-xl text-xs text-slate-600">
+        <section className="pt-16">
+          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <SectionTitle eyebrow="Why we gather">Our Event Objectives</SectionTitle>
+            <p className="max-w-xl text-base leading-7 text-slate-600">
               Our events are designed to inform, engage and create meaningful
               opportunities for action.
             </p>
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
-            {objectives.map((o) => (
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            {objectives.map((o, i) => (
               <article
                 key={o.title}
-                className={`group flex flex-col items-center rounded-2xl border border-emerald-900/5 bg-gradient-to-b ${o.bg} to-white p-5 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                className={`group relative flex h-full flex-col items-center overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b ${o.bg} to-white px-5 pb-7 pt-8 text-center shadow-[0_8px_30px_rgba(15,70,45,0.06)] transition duration-500 hover:-translate-y-1.5 hover:border-lime-400/60 hover:shadow-2xl`}
               >
-                <span
-                  className={`flex h-14 w-14 items-center justify-center rounded-full ${o.wrap}`}
-                >
-                  <Icon d={o.icon} className="h-7 w-7" />
+                <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${o.bar}`} />
+                <span className="absolute right-4 top-4 font-serif text-3xl font-black text-emerald-900/10 transition duration-500 group-hover:text-emerald-900/20">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-3 font-serif text-base font-extrabold leading-5 text-emerald-950">
+                <span
+                  className={`flex h-16 w-16 items-center justify-center rounded-2xl shadow-sm ring-4 ring-white transition duration-500 group-hover:-rotate-6 group-hover:scale-110 ${o.wrap}`}
+                >
+                  <Icon d={o.icon} className="h-8 w-8" />
+                </span>
+                <h3 className="mt-5 min-h-[2.5rem] font-serif text-base font-extrabold leading-5 text-emerald-950">
                   {o.title}
                 </h3>
-                <p className="mt-2 text-xs leading-5 text-slate-600">
-                  {o.desc}
-                </p>
+                <p className="mt-2 text-[13px] leading-5 text-slate-600">{o.desc}</p>
+                <span className="mt-auto h-1 w-8 rounded-full bg-lime-400 transition-all duration-500 group-hover:w-16" />
               </article>
             ))}
           </div>
         </section>
 
-        {/* ============ UPCOMING EVENTS ============ */}
-        <section className="mt-12">
-          <div className="flex items-center justify-between gap-3">
-            <SectionTitle>Upcoming Events</SectionTitle>
+        {/* ============ UPCOMING EVENTS (hidden for now, re-enable when dates are current) ============ */}
+        {/* <section id="upcoming" className="mt-20 scroll-mt-24">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <SectionTitle eyebrow="Mark your calendar">Upcoming Events</SectionTitle>
             <Link
               href="/events/upcoming"
-              className="inline-flex items-center gap-2 text-xs font-bold text-sky-600 hover:text-sky-800"
+              className="group inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-xs font-bold text-sky-600 shadow-sm transition duration-300 hover:border-sky-400 hover:text-sky-800 hover:shadow-md"
             >
-              View All Upcoming Events <span>→</span>
+              View All Upcoming Events
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </div>
 
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {upcoming.map((e) => (
               <article
                 key={e.title}
-                className="group overflow-hidden rounded-2xl border border-emerald-900/5 bg-white shadow-[0_10px_40px_rgba(15,70,45,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_10px_40px_rgba(15,70,45,0.07)] transition duration-500 hover:-translate-y-1.5 hover:border-lime-400/60 hover:shadow-2xl"
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-52 overflow-hidden bg-emerald-100">
                   <img
                     src={e.image}
                     alt={e.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f3d2a]/70 via-transparent to-transparent" />
                   <span
-                    className={`absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold ${e.badgeColor}`}
+                    className={`absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur ${e.badgeColor}`}
                   >
                     <Icon d={e.badgeIcon} className="h-4 w-4" />
                     {e.badge}
                   </span>
-                </div>
-
-                <div className="flex">
-                  <div className="flex w-20 shrink-0 flex-col items-center border-r border-emerald-900/10 px-2 py-4 text-center">
-                    <span className="text-2xl font-black leading-none text-[#1f4a2a]">
-                      {e.day}
-                    </span>
-                    <span className="mt-1 text-xs font-bold text-slate-700">
+                  <div className="absolute bottom-4 left-4 flex items-center gap-3 rounded-2xl border border-white/25 bg-white/15 px-4 py-2 text-white backdrop-blur-md">
+                    <span className="font-serif text-2xl font-black leading-none">{e.day}</span>
+                    <span className="h-8 w-px bg-white/30" />
+                    <span className="text-xs font-semibold leading-4">
                       {e.month}
+                      <br />
+                      <span className="font-normal text-white/80">{e.year}</span>
                     </span>
-                    <span className="text-xs text-slate-600">{e.year}</span>
                   </div>
-
-                  <div className="min-w-0 flex-1 p-4">
-                    <h3 className="text-sm font-extrabold text-emerald-950">
-                      {e.title}
-                    </h3>
-                    <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600">
-                      <span className="inline-flex items-center gap-1.5">
-                        <Icon d={e.metaIcon} className="h-3.5 w-3.5" />
-                        {e.place}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <Icon d={e.typeIcon} className="h-3.5 w-3.5" />
-                        {e.type}
-                      </span>
-                    </div>
-                    <p className="mt-2 text-xs leading-5 text-slate-600">
-                      {e.desc}
-                    </p>
-                    <Link
-                      href={e.href}
-                      className={`mt-3 inline-flex items-center rounded-full px-5 py-2 text-xs font-bold text-white transition duration-300 ${e.btn}`}
-                    >
-                      View Details
-                    </Link>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-serif text-lg font-extrabold leading-6 text-emerald-950">{e.title}</h3>
+                  <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-600">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f4faf6] px-3 py-1 ring-1 ring-emerald-900/10">
+                      <Icon d={e.metaIcon} className="h-3.5 w-3.5 text-emerald-700" />
+                      {e.place}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f4faf6] px-3 py-1 ring-1 ring-emerald-900/10">
+                      <Icon d={e.typeIcon} className="h-3.5 w-3.5 text-emerald-700" />
+                      {e.type}
+                    </span>
                   </div>
+                  <p className="mt-4 flex-1 text-sm leading-6 text-slate-600">{e.desc}</p>
+                  <Link
+                    href={e.href}
+                    className={`mt-5 inline-flex w-fit items-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:shadow-lg ${e.btn}`}
+                  >
+                    View Details
+                    <Icon d={ARROW} className="h-3.5 w-3.5" stroke={2.4} />
+                  </Link>
                 </div>
               </article>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* ============ EXPLORE EVENTS ============ */}
-        <section className="mt-12">
-          <SectionTitle>Explore Events</SectionTitle>
-          <p className="mt-2 text-sm text-slate-600">
+        <section id="explore" className="mt-20 scroll-mt-24">
+          <SectionTitle eyebrow="Find your fit">Explore Events</SectionTitle>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
             Browse all event types to find the right opportunity for you.
           </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {eventTypes.map((t) => (
               <Link
                 key={t.title}
                 href={t.href}
-                className={`group flex items-center gap-4 rounded-2xl border border-emerald-900/5 bg-gradient-to-r ${t.bg} to-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                className={`group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-r ${t.bg} to-white p-5 shadow-[0_8px_30px_rgba(15,70,45,0.05)] transition duration-300 hover:-translate-y-1.5 hover:border-lime-400/60 hover:shadow-xl`}
               >
                 <span
-                  className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${t.wrap}`}
+                  className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl shadow-sm ring-4 ring-white transition duration-500 group-hover:-rotate-6 group-hover:scale-110 ${t.wrap}`}
                 >
                   <Icon d={t.icon} className="h-7 w-7" />
                 </span>
-                <div className="min-w-0">
-                  <h3 className="font-serif text-sm font-extrabold leading-5 text-emerald-950">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-serif text-[15px] font-extrabold leading-5 text-emerald-950">
                     {t.title}
                   </h3>
-                  <p className="mt-1 text-xs leading-4 text-slate-600">
-                    {t.desc}
-                  </p>
+                  <p className="mt-1 text-[13px] leading-5 text-slate-600">{t.desc}</p>
                 </div>
+                <span
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-emerald-800 opacity-0 shadow-sm transition duration-300 group-hover:translate-x-0.5 group-hover:bg-lime-300 group-hover:opacity-100"
+                  aria-hidden="true"
+                >
+                  <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+                </span>
               </Link>
             ))}
           </div>
         </section>
 
         {/* ============ BE A PART OF OUR EVENTS ============ */}
-        <section className="relative mt-12 overflow-hidden rounded-2xl bg-[#0f4a33] px-6 py-8 text-white shadow-lg sm:px-10">
-          <div className="pointer-events-none absolute -left-10 -top-10 h-48 w-48 rounded-full bg-lime-400/10 blur-3xl" />
+        <section className="relative isolate mt-20 overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f4a33] via-[#0f3d2a] to-[#0d3749] px-6 py-12 text-white shadow-2xl ring-1 ring-white/10 sm:px-12 lg:py-14">
+          <div className={`pointer-events-none absolute inset-0 -z-10 ${DOTS}`} />
+          <div className="pointer-events-none absolute -left-16 -top-16 -z-10 h-64 w-64 rounded-full bg-lime-300/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 right-0 -z-10 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl" />
 
-          <div className="relative grid items-center gap-6 lg:grid-cols-[1fr_1.4fr]">
+          <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_1.6fr]">
             <div>
-              <h2 className="font-serif text-2xl font-extrabold sm:text-3xl">
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-lime-300 backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
+                Get Involved
+              </p>
+              <h2 className="mt-5 font-serif text-3xl font-extrabold leading-tight sm:text-4xl">
                 Be a Part of Our Events
               </h2>
-              <p className="mt-3 max-w-md text-sm leading-6 text-emerald-50/90">
+              <div className="mt-4 h-1 w-14 rounded-full bg-lime-300" />
+              <p className="mt-5 max-w-md text-base leading-7 text-emerald-50/90">
                 Join us, partner with us, or support our events to build
                 healthier, stronger and more resilient communities.
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-3">
               {cta.map((c) => (
                 <Link
                   key={c.title}
                   href={c.href}
-                  className="group flex items-center gap-3 rounded-xl bg-white p-3 text-slate-800 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  className="group flex h-full flex-col gap-4 rounded-2xl bg-white p-5 text-slate-800 shadow-lg transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
                 >
-                  <span
-                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${c.wrap}`}
-                  >
-                    <Icon d={c.icon} className="h-6 w-6" />
-                  </span>
+                  <div className="flex items-center justify-between">
+                    <span
+                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl transition duration-500 group-hover:-rotate-6 group-hover:scale-110 ${c.wrap}`}
+                    >
+                      <Icon d={c.icon} className="h-6 w-6" />
+                    </span>
+                    <span
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f4faf6] text-emerald-800 transition duration-300 group-hover:translate-x-0.5 group-hover:bg-lime-300"
+                      aria-hidden="true"
+                    >
+                      <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+                    </span>
+                  </div>
                   <div className="min-w-0">
-                    <h3 className="text-xs font-extrabold leading-4 text-emerald-950">
+                    <h3 className="font-serif text-[15px] font-extrabold leading-5 text-emerald-950">
                       {c.title}
                     </h3>
-                    <p className="mt-0.5 text-[11px] leading-4 text-slate-500">
-                      {c.desc}
-                    </p>
+                    <p className="mt-1 text-[13px] leading-5 text-slate-500">{c.desc}</p>
                   </div>
                 </Link>
               ))}

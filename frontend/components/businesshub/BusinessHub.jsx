@@ -36,12 +36,42 @@ const EXTERNAL =
 /* ---------- Color tones (full class strings so Tailwind can detect them) ---------- */
 
 const tones = {
-  emerald: { bg: "from-emerald-50", wrap: "bg-emerald-100 text-emerald-700" },
-  sky: { bg: "from-sky-50", wrap: "bg-sky-100 text-sky-600" },
-  rose: { bg: "from-rose-50", wrap: "bg-rose-100 text-rose-500" },
-  purple: { bg: "from-purple-50", wrap: "bg-purple-100 text-purple-700" },
-  amber: { bg: "from-amber-50", wrap: "bg-amber-100 text-amber-600" },
-  blue: { bg: "from-blue-50", wrap: "bg-blue-100 text-blue-700" },
+  emerald: {
+    bg: "from-emerald-50",
+    wrap: "bg-emerald-100 text-emerald-700",
+    hover: "hover:border-emerald-300 hover:shadow-emerald-900/10",
+    ring: "group-hover:bg-emerald-600 group-hover:text-white",
+  },
+  sky: {
+    bg: "from-sky-50",
+    wrap: "bg-sky-100 text-sky-600",
+    hover: "hover:border-sky-300 hover:shadow-sky-900/10",
+    ring: "group-hover:bg-sky-600 group-hover:text-white",
+  },
+  rose: {
+    bg: "from-rose-50",
+    wrap: "bg-rose-100 text-rose-500",
+    hover: "hover:border-rose-300 hover:shadow-rose-900/10",
+    ring: "group-hover:bg-rose-600 group-hover:text-white",
+  },
+  purple: {
+    bg: "from-purple-50",
+    wrap: "bg-purple-100 text-purple-700",
+    hover: "hover:border-purple-300 hover:shadow-purple-900/10",
+    ring: "group-hover:bg-purple-600 group-hover:text-white",
+  },
+  amber: {
+    bg: "from-amber-50",
+    wrap: "bg-amber-100 text-amber-600",
+    hover: "hover:border-amber-300 hover:shadow-amber-900/10",
+    ring: "group-hover:bg-amber-500 group-hover:text-white",
+  },
+  blue: {
+    bg: "from-blue-50",
+    wrap: "bg-blue-100 text-blue-700",
+    hover: "hover:border-blue-300 hover:shadow-blue-900/10",
+    ring: "group-hover:bg-blue-600 group-hover:text-white",
+  },
 };
 
 /* ---------- Static content ---------- */
@@ -75,37 +105,37 @@ const programRowOne = [
     title: "Entrepreneurship",
     desc: "Supporting aspiring and existing entrepreneurs.",
     href: "/business-hub/entrepreneurship",
-    image: "/images/business-hub/entrepreneurship.jpg",
+    image: "/images/BusinessHub/entrepreneur.png",
   },
   {
     title: "Startups",
     desc: "Mentorship, branding and launch support for early-stage startups.",
     href: "/business-hub/startups",
-    image: "/images/business-hub/startups.jpg",
+    image: "/images/BusinessHub/startup.png",
   },
   {
     title: "Products & Services",
     desc: "Development and commercialisation of innovative solutions.",
     href: "/business-hub/products-services",
-    image: "/images/business-hub/products-services.jpg",
+    image: "/images/BusinessHub/products.png",
   },
   {
     title: "Technology Business",
     desc: "Software, digital tools and technology-driven ventures.",
     href: "/business-hub/technology-business",
-    image: "/images/business-hub/technology-business.jpg",
+    image: "/images/BusinessHub/technology.png",
   },
   {
     title: "Health & Social Ventures",
     desc: "Enterprises focused on social good and community needs.",
     href: "/business-hub/health-social-ventures",
-    image: "/images/business-hub/health-social-ventures.jpg",
+    image: "/images/BusinessHub/socialventures.png",
   },
   {
     title: "Business Development",
     desc: "Resources, training and support to scale and sustain businesses.",
     href: "/business-hub/business-development",
-    image: "/images/business-hub/business-development.jpg",
+    image: "/images/BusinessHub/Businessdevelopment.png",
   },
 ];
 
@@ -114,31 +144,31 @@ const programRowTwo = [
     title: "Mentorship",
     desc: "Guidance from industry experts and professionals.",
     href: "/business-hub/mentorship",
-    image: "/images/business-hub/mentorship.jpg",
+    image: "/images/BusinessHub/Mentorship.png",
   },
   {
     title: "Competitions",
     desc: "Startup and innovation challenges and recognition and support.",
     href: "/business-hub/competitions",
-    image: "/images/business-hub/competitions.jpg",
+    image: "/images/BusinessHub/rewards.png",
   },
   {
     title: "Partnerships",
     desc: "Collaborate with us through institutional, corporate or strategic partnerships.",
     href: "/business-hub/partnerships",
-    image: "/images/business-hub/partnerships.jpg",
+    image: "/images/BusinessHub/partnership.png",
   },
   {
     title: "Investment Opportunities",
     desc: "Connect with investors and explore funding opportunities.",
     href: "/business-hub/investment-opportunities",
-    image: "/images/business-hub/investment.jpg",
+    image: "/images/BusinessHub/opportunity.png",
   },
   {
     title: "Business Stories",
     desc: "Inspiring journeys of founders, startups and social enterprises from our network.",
     href: "/business-hub/business-stories",
-    image: "/images/business-hub/business-stories.jpg",
+    image: "/images/BusinessHub/stories.png",
   },
 ];
 
@@ -231,7 +261,7 @@ const involvement = [
 
 /* ---------- Small helpers ---------- */
 
-function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
+function Icon({ d, className = "h-6 w-6", stroke = 1.7 }) {
   return (
     <svg
       className={className}
@@ -241,19 +271,24 @@ function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
       strokeWidth={stroke}
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <path d={d} />
     </svg>
   );
 }
 
-function SectionTitle({ children, className = "" }) {
+function SectionTitle({ eyebrow, children, className = "" }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <h2 className="font-serif text-2xl font-extrabold text-[#1f4a2a] sm:text-3xl">
+    <div className={className}>
+      {eyebrow && (
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="mt-1 font-serif text-3xl font-extrabold text-[#1f4a2a] sm:text-4xl">
         {children}
       </h2>
-      <span className="hidden h-0.5 w-10 rounded-full bg-[#1f4a2a] sm:block" />
     </div>
   );
 }
@@ -262,24 +297,25 @@ function ProgramCard({ p }) {
   return (
     <Link
       href={p.href}
-      className="group flex flex-col overflow-hidden rounded-xl border border-emerald-900/5 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_8px_30px_rgba(15,70,45,0.06)] transition duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-2xl hover:shadow-emerald-900/10"
     >
-      <div className="h-24 overflow-hidden sm:h-28">
+      <div className="relative h-36 overflow-hidden bg-emerald-100">
         <img
           src={p.image}
           alt={p.title}
           loading="lazy"
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+        <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-emerald-800 shadow-md transition duration-300 group-hover:bg-emerald-600 group-hover:text-white">
+          <Icon d={EXTERNAL} className="h-4 w-4" stroke={2} />
+        </span>
       </div>
-      <div className="flex-1 p-3">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="text-sm font-extrabold leading-5 text-emerald-950">
-            {p.title}
-          </h3>
-          <Icon d={EXTERNAL} className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" />
-        </div>
-        <p className="mt-1 text-xs leading-4 text-slate-600">{p.desc}</p>
+      <div className="flex flex-1 flex-col p-4">
+        <h3 className="font-serif text-base font-extrabold leading-snug text-emerald-950">
+          {p.title}
+        </h3>
+        <p className="mt-1.5 text-[13px] leading-5 text-slate-600">{p.desc}</p>
       </div>
     </Link>
   );
@@ -297,61 +333,96 @@ export default function BusinessHub() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[65%]">
+      <header className="relative min-h-[380px] border-b border-emerald-900/5">
+        <div className="pointer-events-none absolute inset-0">
           <img
-            src="/images/business-hub/hero.jpg"
+            src="/images/BusinessHub/hero.png"
             alt="Laptop on a desk showing business growth charts and ideas"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:via-white/30" />
+          {/* Mobile overlay */}
+          <div className="absolute inset-0 bg-white/80 lg:hidden" />
+          {/* Desktop: soft fade on the left for readable text, image visible edge to edge */}
+          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.86)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
+          <div className="absolute inset-0 hidden bg-gradient-to-l from-emerald-950/45 via-transparent to-transparent lg:block" />
         </div>
 
-        <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
-          <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#1f4a2a]">
-              Business Hub
-            </p>
-            <h1 className="mt-3 font-serif text-6xl font-black leading-[1.05] tracking-tight text-[#0d3749] sm:text-7xl">
+        <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+          <nav
+            aria-label="Breadcrumb"
+            className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600"
+          >
+            <Link href="/" className="transition hover:text-emerald-800">
+              Home
+            </Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-slate-900">Business Hub</span>
+          </nav>
+
+          <div className="mt-8 max-w-2xl">
+            <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">
+              Hopefelt Foundation
+            </span>
+
+            <h1 className="mt-4 font-serif text-5xl font-black leading-[1.05] tracking-tight text-[#0d3749] sm:text-6xl lg:text-7xl">
               Business Hub
             </h1>
 
-            <p className="mt-3 font-serif text-xl font-semibold text-[#1f3a8a] sm:text-2xl">
+            <p className="mt-5 font-serif text-xl font-semibold text-[#1f3a8a] sm:text-2xl">
               Ideas. People. Opportunities. Real-World Impact.
             </p>
 
-            <p className="mt-4 max-w-xl text-base leading-7 text-slate-700">
+            <p className="mt-3 max-w-xl text-base leading-7 text-slate-700">
               The Business Hub is a platform for entrepreneurs, startups,
               business owners, investors and partners to collaborate, innovate
               and create solutions for stronger, more resilient communities.
             </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href="#programs"
+                className="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-800"
+              >
+                Explore Programs
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                href="#get-involved"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/30 bg-white/80 px-6 py-3 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white"
+              >
+                Get Involved
+              </a>
+            </div>
           </div>
         </div>
 
         {/* right side highlights */}
-        <aside className="absolute inset-y-0 right-0 hidden w-56 flex-col justify-center gap-4 bg-[#0f3d2a]/95 px-6 text-white xl:flex">
+        <aside className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 flex-col gap-4 rounded-2xl border border-white/20 bg-emerald-950/55 px-7 py-6 text-white shadow-xl backdrop-blur-md xl:flex">
           {heroPoints.map((h) => (
             <div key={h.label} className="flex items-center gap-3">
-              <Icon d={h.icon} className="h-7 w-7 shrink-0 text-lime-300" />
-              <span className="text-xs font-semibold leading-4">{h.label}</span>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                <Icon d={h.icon} className="h-5 w-5 text-lime-300" />
+              </span>
+              <span className="text-sm font-semibold leading-4">{h.label}</span>
             </div>
           ))}
-          <div className="h-0.5 w-10 rounded-full bg-lime-300" />
+          <div className="h-0.5 w-12 rounded-full bg-lime-300" />
         </aside>
       </header>
 
-      <div className="mx-auto max-w-[100rem] px-5 pb-12 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ VISION / MISSION / OBJECTIVES ============ */}
-        <section className="grid gap-4 pt-6 lg:grid-cols-3">
-          <article className="flex items-center gap-4 rounded-2xl border border-emerald-900/5 bg-white p-5 shadow-sm">
-            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+        <section className="relative z-10 -mt-10 grid gap-5 lg:grid-cols-3">
+          <article className="relative flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,70,45,0.10)]">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-300" />
+            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-emerald-600 text-white shadow-lg shadow-emerald-900/20">
               <Icon d={EYE} className="h-10 w-10" />
             </span>
             <div>
               <h2 className="font-serif text-2xl font-extrabold text-[#1f3a8a]">
                 Our Vision
               </h2>
-              <p className="mt-1.5 text-xs leading-5 text-slate-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600">
                 A thriving ecosystem of innovative entrepreneurs and
                 enterprises creating meaningful and lasting impact for
                 communities across Pakistan and beyond.
@@ -359,15 +430,16 @@ export default function BusinessHub() {
             </div>
           </article>
 
-          <article className="flex items-center gap-4 rounded-2xl border border-emerald-900/5 bg-white p-5 shadow-sm">
-            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">
+          <article className="relative flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,70,45,0.10)]">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500 to-sky-300" />
+            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-sky-600 text-white shadow-lg shadow-sky-900/20">
               <Icon d={TARGET} className="h-10 w-10" />
             </span>
             <div>
               <h2 className="font-serif text-2xl font-extrabold text-[#1f3a8a]">
                 Our Mission
               </h2>
-              <p className="mt-1.5 text-xs leading-5 text-slate-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600">
                 To support and empower individuals, startups and businesses
                 with resources, mentorship, partnerships and market
                 opportunities to turn ideas into sustainable ventures.
@@ -375,21 +447,22 @@ export default function BusinessHub() {
             </div>
           </article>
 
-          <article className="flex items-center gap-4 rounded-2xl border border-emerald-900/5 bg-white p-5 shadow-sm">
-            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600">
+          <article className="relative flex items-center gap-5 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,70,45,0.10)]">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 to-amber-300" />
+            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-amber-500 text-white shadow-lg shadow-amber-900/20">
               <Icon d={CHART} className="h-10 w-10" />
             </span>
             <div>
               <h2 className="font-serif text-2xl font-extrabold text-[#1f3a8a]">
                 Our Objectives
               </h2>
-              <ul className="mt-1.5 space-y-1">
+              <ul className="mt-2 space-y-1.5">
                 {objectives.map((o) => (
                   <li
                     key={o}
-                    className="flex items-start gap-2 text-xs leading-4 text-slate-600"
+                    className="flex items-start gap-2 text-[13px] leading-5 text-slate-600"
                   >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-600" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" />
                     {o}
                   </li>
                 ))}
@@ -399,27 +472,27 @@ export default function BusinessHub() {
         </section>
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
-        <section className="mt-8 grid items-center gap-5 lg:grid-cols-[1fr_1.6fr]">
+        <section className="mt-16 grid items-center gap-8 lg:grid-cols-[1fr_1.8fr]">
           <div>
-            <SectionTitle>Strategic Alignment</SectionTitle>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
+            <SectionTitle eyebrow="Impact">Strategic Alignment</SectionTitle>
+            <p className="mt-4 text-base leading-7 text-slate-600">
               The Business Hub contributes to national and global goals,
               including:
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {sdgs.map((g) => (
               <article
                 key={g.num}
-                className={`${g.color} group flex aspect-[4/3] flex-col justify-between rounded-md p-3 text-white transition duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                className={`${g.color} group flex aspect-[4/3] flex-col justify-between rounded-xl p-4 text-white shadow-md transition duration-300 hover:-translate-y-1.5 hover:shadow-xl`}
               >
-                <span className="text-2xl font-black leading-none">{g.num}</span>
-                <div className="flex items-end justify-between gap-1">
-                  <span className="text-[10px] font-semibold leading-3">
+                <span className="text-3xl font-black leading-none">{g.num}</span>
+                <div className="flex items-end justify-between gap-2">
+                  <span className="text-[11px] font-semibold leading-3.5">
                     {g.label}
                   </span>
-                  <Icon d={g.icon} className="h-7 w-7 shrink-0" />
+                  <Icon d={g.icon} className="h-7 w-7 shrink-0 opacity-90" />
                 </div>
               </article>
             ))}
@@ -427,20 +500,20 @@ export default function BusinessHub() {
         </section>
 
         {/* ============ OUR PROGRAM AREAS ============ */}
-        <section className="mt-10">
-          <SectionTitle>Our Program Areas</SectionTitle>
-          <p className="mt-2 text-sm text-slate-600">
+        <section className="mt-20 scroll-mt-8" id="programs">
+          <SectionTitle eyebrow="Programs">Our Program Areas</SectionTitle>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
             Explore the key focus areas of the Business Hub. Click on each area
             to learn more or get involved.
           </p>
 
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {programRowOne.map((p) => (
               <ProgramCard key={p.title} p={p} />
             ))}
           </div>
 
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {programRowTwo.map((p) => (
               <ProgramCard key={p.title} p={p} />
             ))}
@@ -448,38 +521,38 @@ export default function BusinessHub() {
         </section>
 
         {/* ============ GET INVOLVED ============ */}
-        <section className="mt-10">
-          <SectionTitle>Get Involved</SectionTitle>
-          <p className="mt-2 text-sm text-slate-600">
+        <section className="mt-20 scroll-mt-8" id="get-involved">
+          <SectionTitle eyebrow="Join Us">Get Involved</SectionTitle>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
             There are many ways you can be part of the Business Hub. Choose the
             option that best fits you.
           </p>
 
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {involvement.map((i) => {
-              const t = tones[i.tone];
+              const t = tones[i.tone] || tones.emerald;
               return (
                 <Link
                   key={i.title}
                   href={i.href}
-                  className={`group flex items-center gap-4 rounded-2xl border border-emerald-900/5 bg-gradient-to-r ${t.bg} to-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                  className={`group flex h-full items-center gap-4 rounded-2xl border border-slate-200/80 bg-gradient-to-r ${t.bg} to-white p-5 shadow-[0_8px_30px_rgba(15,70,45,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-xl ${t.hover}`}
                 >
                   <span
-                    className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${t.wrap}`}
+                    className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl transition duration-300 ${t.wrap} ${t.ring}`}
                   >
                     <Icon d={i.icon} className="h-7 w-7" />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-sm font-extrabold leading-5 text-emerald-950">
+                    <h3 className="font-serif text-[15px] font-extrabold leading-5 text-emerald-950">
                       {i.title}
                     </h3>
-                    <p className="mt-1 text-xs leading-4 text-slate-600">
+                    <p className="mt-1 text-[13px] leading-5 text-slate-600">
                       {i.desc}
                     </p>
                   </div>
                   <Icon
                     d={EXTERNAL}
-                    className="h-4 w-4 shrink-0 text-sky-600 transition-transform duration-300 group-hover:translate-x-0.5"
+                    className="h-4 w-4 shrink-0 text-slate-400 transition duration-300 group-hover:translate-x-0.5 group-hover:text-emerald-700"
                   />
                 </Link>
               );
@@ -488,35 +561,38 @@ export default function BusinessHub() {
         </section>
 
         {/* ============ OUR FUTURE VISION ============ */}
-        <section className="relative mt-10 overflow-hidden rounded-2xl border border-emerald-900/5 bg-gradient-to-r from-emerald-50 via-white to-white shadow-sm">
+        <section className="relative mt-20 overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-r from-emerald-50 via-white to-white shadow-[0_14px_40px_rgba(15,70,45,0.08)]">
           <img
-            src="/images/business-hub/future-vision.jpg"
+            src="/images/BusinessHub/future.png"
             alt="Young green seedling growing from soil"
             loading="lazy"
             className="pointer-events-none absolute inset-y-0 left-0 hidden h-full w-[30%] object-cover md:block"
           />
           <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[38%] bg-gradient-to-r from-transparent via-transparent to-white md:block" />
 
-          <div className="relative grid items-center gap-6 md:grid-cols-[30%_1fr_auto]">
+          <div className="relative grid items-stretch gap-6 md:grid-cols-[30%_1fr_auto]">
             <div className="hidden md:block" />
 
-            <div className="px-6 py-8 md:px-2">
-              <SectionTitle>Our Future Vision</SectionTitle>
-              <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600">
+            <div className="flex flex-col justify-center px-6 py-10 md:px-2">
+              <SectionTitle eyebrow="Looking Ahead">Our Future Vision</SectionTitle>
+              <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
                 To become a leading platform for entrepreneurial innovation and
                 sustainable businesses that drive long-term social and economic
                 impact in communities across Pakistan and beyond.
               </p>
             </div>
 
-            <div className="m-4 rounded-xl bg-[#0f4a33] px-8 py-8 text-white md:m-0 md:h-full md:rounded-none md:px-10 md:py-10">
-              <p className="font-serif text-lg font-bold leading-8">
-                Innovative Ideas
-                <br />
-                Stronger Communities
-                <br />
-                Brighter Futures
-              </p>
+            <div className="m-4 flex items-center rounded-2xl bg-gradient-to-br from-[#0f4a33] to-[#0b3324] px-8 py-8 text-white md:m-0 md:rounded-none md:px-12 md:py-10">
+              <div>
+                <p className="font-serif text-xl font-bold leading-9">
+                  Innovative Ideas
+                  <br />
+                  Stronger Communities
+                  <br />
+                  Brighter Futures
+                </p>
+                <div className="mt-4 h-0.5 w-12 rounded-full bg-lime-300" />
+              </div>
             </div>
           </div>
         </section>
