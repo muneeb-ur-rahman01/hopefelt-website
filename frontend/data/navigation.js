@@ -589,57 +589,57 @@ export const mainNav = [
 
 {
   label: "Projects",
-  href: "/projects",
-  dropdown: [
-     {
-      label: "our projects",
-      href: "/projects/ourprojects",
-    },
-    // {
-    //   label: "Health & Medical Projects",
-    //   href: "/projects/health-medical",
-    // },
-    // {
-    //   label: "Health Education Projects",
-    //   href: "/projects/health-education",
-    // },
-    // {
-    //   label: "Community Development Projects",
-    //   href: "/projects/community-development",
-    // },
-    // {
-    //   label: "Climate & Environment Projects",
-    //   href: "/projects/climate-environment",
-    // },
-    // {
-    //   label: "Social Support & Learning Projects",
-    //   href: "/projects/social-support-learning",
-    // },
-    // {
-    //   label: "Research & Evidence Projects",
-    //   href: "/projects/research-evidence",
-    // },
-    // {
-    //   label: "Digital Health Projects",
-    //   href: "/projects/digital-health",
-    // },
-    // {
-    //   label: "Technology Projects",
-    //   href: "/projects/technology",
-    // },
-    // {
-    //   label: "Entrepreneurship & Social Enterprise Projects",
-    //   href: "/projects/entrepreneurship-social-enterprise",
-    // },
-    // {
-    //   label: "Communications & Media Projects",
-    //   href: "/projects/communications-media",
-    // },
-    // {
-    //   label: "Special / Cross-Program Projects",
-    //   href: "/projects/special-cross-program",
-    // },
-  ],
+  href: "/projects/ourprojects",
+  // dropdown: [
+  //    {
+  //     label: "our projects",
+  //     href: "/projects/ourprojects",
+  //   },
+  //   // {
+  //   //   label: "Health & Medical Projects",
+  //   //   href: "/projects/health-medical",
+  //   // },
+  //   // {
+  //   //   label: "Health Education Projects",
+  //   //   href: "/projects/health-education",
+  //   // },
+  //   // {
+  //   //   label: "Community Development Projects",
+  //   //   href: "/projects/community-development",
+  //   // },
+  //   // {
+  //   //   label: "Climate & Environment Projects",
+  //   //   href: "/projects/climate-environment",
+  //   // },
+  //   // {
+  //   //   label: "Social Support & Learning Projects",
+  //   //   href: "/projects/social-support-learning",
+  //   // },
+  //   // {
+  //   //   label: "Research & Evidence Projects",
+  //   //   href: "/projects/research-evidence",
+  //   // },
+  //   // {
+  //   //   label: "Digital Health Projects",
+  //   //   href: "/projects/digital-health",
+  //   // },
+  //   // {
+  //   //   label: "Technology Projects",
+  //   //   href: "/projects/technology",
+  //   // },
+  //   // {
+  //   //   label: "Entrepreneurship & Social Enterprise Projects",
+  //   //   href: "/projects/entrepreneurship-social-enterprise",
+  //   // },
+  //   // {
+  //   //   label: "Communications & Media Projects",
+  //   //   href: "/projects/communications-media",
+  //   // },
+  //   // {
+  //   //   label: "Special / Cross-Program Projects",
+  //   //   href: "/projects/special-cross-program",
+  //   // },
+  // ],
 },
 
 

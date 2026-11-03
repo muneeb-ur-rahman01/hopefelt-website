@@ -350,7 +350,6 @@ function SectionTitle({ eyebrow, children, light = false }) {
       >
         {children}
       </h2>
-      
     </div>
   );
 }
@@ -428,8 +427,6 @@ export default function Projects() {
           </nav>
 
           <div className="mt-8 max-w-2xl">
-            
-
             <h1 className="hero-rise hero-d2 mt-5 font-serif text-6xl font-black leading-[1.02] tracking-tight text-[#0d3749] sm:text-7xl lg:text-[5.5rem]">
               Our{" "}
               <span className="bg-gradient-to-r from-[#1f4a2a] via-emerald-700 to-emerald-500 bg-clip-text text-transparent">
@@ -508,9 +505,10 @@ export default function Projects() {
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR PROJECTS ============ */}
         <section id="projects" className="scroll-mt-6 pt-14">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          {/* centered: heading, then text below it */}
+          <div className="flex flex-col items-center gap-4 text-center">
             <SectionTitle eyebrow="What we do">Our Projects</SectionTitle>
-            <p className="max-w-xl text-base leading-7 text-slate-600">
+            <p className="mx-auto max-w-2xl text-base leading-7 text-slate-600 italic">
               Explore all our projects across different focus areas. Each
               project is designed to create meaningful and sustainable impact.
             </p>
@@ -591,9 +589,10 @@ export default function Projects() {
 
         {/* ============ OUR PROJECT APPROACH ============ */}
         <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          {/* left aligned: heading, then text below it */}
+          <div className="flex flex-col gap-4">
             <SectionTitle eyebrow="How we work">Our Project Approach</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
+            <p className="max-w-xl text-base leading-7 text-slate-600 italic">
               A structured approach to ensure impactful and sustainable
               projects.
             </p>
@@ -632,11 +631,11 @@ export default function Projects() {
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
         <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          {/* left aligned: heading, then text below it */}
+          <div className="flex flex-col gap-4">
             <SectionTitle eyebrow="Global goals">Strategic Alignment</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
-              Our projects contribute to the following Sustainable Development
-              Goals (SDGs).
+            <p className="max-w-xl text-base leading-7 text-slate-600 italic">
+              Our projects contribute to the following Sustainable Development Goals (SDGs).
             </p>
           </div>
 
@@ -679,7 +678,6 @@ export default function Projects() {
         </section>
 
         {/* ============ BE PART OF THE CHANGE ============ */}
-        {/* Team & Coordination block removed (it was commented out). */}
         <section className="relative mt-24 overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0d3749] via-[#14503f] to-[#1f4a2a] p-8 shadow-[0_30px_80px_-30px_rgba(13,55,73,0.7)] sm:p-12">
           {/* decorative glows */}
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-lime-300/20 blur-3xl" />
@@ -691,28 +689,30 @@ export default function Projects() {
               <SectionTitle light eyebrow="Get Involved">
                 Be Part of the Change
               </SectionTitle>
-              <p className="mt-5 max-w-sm text-base leading-7 text-emerald-50/85">
+              <p className="mt-5 max-w-sm text-base leading-7 text-emerald-50/85 italic">
                 Support our projects and help us create meaningful impact.
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               {/* Volunteer */}
               <article className="group flex h-full flex-col rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/15">
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-lime-300 text-emerald-950 shadow-lg">
                   <Icon d={USERS} className="h-6 w-6" />
                 </span>
+
                 <h3 className="mt-4 font-serif text-lg font-bold leading-6 text-white">
                   Become a Volunteer
                 </h3>
+
                 <Link
                   href="/get-involved/volunteer"
-                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-lime-300 px-4 py-2.5 text-xs font-bold text-emerald-950 transition duration-300 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+                  className="mt-auto inline-flex w-full min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-lime-300 px-3 py-2.5 text-xs font-bold text-emerald-950 transition duration-300 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
                 >
                   Apply Now
                   <Icon
                     d={ARROW}
-                    className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                    className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
                     stroke={2.4}
                   />
                 </Link>
@@ -723,17 +723,19 @@ export default function Projects() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-200 text-[#0d3749] shadow-lg">
                   <Icon d={HEART} className="h-6 w-6" />
                 </span>
+
                 <h3 className="mt-4 font-serif text-lg font-bold leading-6 text-white">
                   Partner With Us
                 </h3>
+
                 <Link
                   href="/get-involved/partner"
-                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2.5 text-xs font-bold text-[#0d3749] transition duration-300 hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200/60"
+                  className="mt-auto inline-flex w-full min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-white px-3 py-2.5 text-xs font-bold text-[#0d3749] transition duration-300 hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200/60"
                 >
                   Explore Opportunities
                   <Icon
                     d={ARROW}
-                    className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                    className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
                     stroke={2.4}
                   />
                 </Link>
@@ -744,17 +746,19 @@ export default function Projects() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-300 text-rose-900 shadow-lg">
                   <Icon d={HEART} className="h-6 w-6" />
                 </span>
+
                 <h3 className="mt-4 font-serif text-lg font-bold leading-6 text-white">
                   Support Our Projects
                 </h3>
+
                 <Link
                   href="/get-involved/support"
-                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-rose-500 px-4 py-2.5 text-xs font-bold text-white transition duration-300 hover:bg-rose-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-rose-300/60"
+                  className="mt-auto inline-flex w-full min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-rose-500 px-3 py-2.5 text-xs font-bold text-white transition duration-300 hover:bg-rose-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-rose-300/60"
                 >
                   Donate Now
                   <Icon
                     d={ARROW}
-                    className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                    className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
                     stroke={2.4}
                   />
                 </Link>

@@ -7,8 +7,6 @@ const USERS =
 const USER = "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z";
 const CHART =
   "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z";
-const BOOK =
-  "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253";
 const DOC =
   "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z";
 const MEGAPHONE =
@@ -26,10 +24,7 @@ const TARGET =
 const EYE =
   "M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z";
 const BOLT = "M13 10V3L4 14h7v7l9-11h-7z";
-const TREND = "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6";
 const LEAF = "M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l8-8";
-const CUBE = "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4";
-const ARROWS = "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4";
 const EXTERNAL =
   "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14";
 
@@ -92,12 +87,18 @@ const objectives = [
   "Create opportunities for youth and professionals.",
 ];
 
-const sdgs = [
-  { num: "4", label: "Quality Education", color: "bg-[#c5192d]", icon: BOOK },
-  { num: "8", label: "Decent Work & Economic Growth", color: "bg-[#a21942]", icon: TREND },
-  { num: "9", label: "Industry, Innovation and Infrastructure", color: "bg-[#fd6925]", icon: CUBE },
-  { num: "10", label: "Reduced Inequalities", color: "bg-[#dd1367]", icon: ARROWS },
-  { num: "17", label: "Partnerships for the Goals", color: "bg-[#19486a]", icon: USERS },
+/* SDG images: put your files in /public/images/BusinessHub/sdg/ (or change the paths below).
+   `pos` = position inside the card (percent), `w` = tile width (percent of card width). */
+const sdgWheel = "/images/sdg/sdg-wheel.png";
+
+const sdgTiles = [
+  { num: "3", label: "Good Health and Well-Being", image: "/images/sdg/sdg-3.png", left: "5.7%", top: "17%", w: "8.6%" },
+  { num: "4", label: "Quality Education", image: "/images/sdg/sdg-4.png", left: "18.5%", top: "40%", w: "8.6%" },
+  { num: "10", label: "Reduced Inequalities", image: "/images/sdg/sdg-10.png", left: "6.5%", top: "70%", w: "7.9%" },
+  { num: "11", label: "Sustainable Cities and Communities", image: "/images/sdg/sdg-11.png", left: "62.5%", top: "8%", w: "8.3%" },
+  { num: "13", label: "Climate Action", image: "/images/sdg/sdg-13.png", left: "83%", top: "20.7%", w: "8.8%" },
+  { num: "15", label: "Life on Land", image: "/images/sdg/sdg-15.png", left: "70.8%", top: "51.6%", w: "8%" },
+  { num: "17", label: "Partnerships for the Goals", image: "/images/sdg/sdg-17.png", left: "82%", top: "78%", w: "6.6%" },
 ];
 
 const programRowOne = [
@@ -333,8 +334,10 @@ export default function BusinessHub() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative min-h-[380px] border-b border-emerald-900/5">
-        <div className="pointer-events-none absolute inset-0">
+      <header className="relative min-h-[380px] border-b border-emerald-900/5 bg-[#f4faf6]">
+        {/* Image is pushed to the right on desktop so the text inside the
+            photo never sits behind the real heading/paragraph. */}
+        <div className="pointer-events-none absolute inset-0 lg:left-[38%]">
           <img
             src="/images/BusinessHub/hero.png"
             alt="Laptop on a desk showing business growth charts and ideas"
@@ -342,8 +345,9 @@ export default function BusinessHub() {
           />
           {/* Mobile overlay */}
           <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          {/* Desktop: soft fade on the left for readable text, image visible edge to edge */}
-          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.86)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
+          {/* Desktop: soft fade where the image meets the left content area */}
+          <div className="absolute inset-y-0 left-0 hidden w-[30%] bg-gradient-to-r from-[#f4faf6] via-[#f4faf6]/70 to-transparent lg:block" />
+          {/* Desktop: slight dark tint on the far right for the highlights card */}
           <div className="absolute inset-0 hidden bg-gradient-to-l from-emerald-950/45 via-transparent to-transparent lg:block" />
         </div>
 
@@ -472,30 +476,53 @@ export default function BusinessHub() {
         </section>
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
-        <section className="mt-16 grid items-center gap-8 lg:grid-cols-[1fr_1.8fr]">
-          <div>
-            <SectionTitle eyebrow="Impact">Strategic Alignment</SectionTitle>
-            <p className="mt-4 text-base leading-7 text-slate-600">
-              The Business Hub contributes to national and global goals,
-              including:
-            </p>
+        <section className="mt-16">
+          <SectionTitle eyebrow="Impact">Strategic Alignment</SectionTitle>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+            The Business Hub contributes to national and global goals,
+            including:
+          </p>
+
+          {/* Desktop / tablet: wheel in the centre, SDG tiles placed around it */}
+          <div className="relative mt-8 hidden aspect-[1168/668] w-full overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_14px_40px_rgba(15,70,45,0.08)] md:block">
+            <img
+              src={sdgWheel}
+              alt="Sustainable Development Goals wheel"
+              loading="lazy"
+              className="absolute left-[46.3%] top-[45%] w-[22%] -translate-x-1/2 -translate-y-1/2 object-contain"
+            />
+
+            {sdgTiles.map((g) => (
+              <img
+                key={g.num}
+                src={g.image}
+                alt={`SDG ${g.num}: ${g.label}`}
+                loading="lazy"
+                style={{ left: g.left, top: g.top, width: g.w }}
+                className="absolute object-contain shadow-md transition duration-300 hover:z-10 hover:-translate-y-1.5 hover:scale-105 hover:shadow-xl"
+              />
+            ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {sdgs.map((g) => (
-              <article
-                key={g.num}
-                className={`${g.color} group flex aspect-[4/3] flex-col justify-between rounded-xl p-4 text-white shadow-md transition duration-300 hover:-translate-y-1.5 hover:shadow-xl`}
-              >
-                <span className="text-3xl font-black leading-none">{g.num}</span>
-                <div className="flex items-end justify-between gap-2">
-                  <span className="text-[11px] font-semibold leading-3.5">
-                    {g.label}
-                  </span>
-                  <Icon d={g.icon} className="h-7 w-7 shrink-0 opacity-90" />
-                </div>
-              </article>
-            ))}
+          {/* Mobile: wheel on top, tiles in a simple grid */}
+          <div className="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,70,45,0.08)] md:hidden">
+            <img
+              src={sdgWheel}
+              alt="Sustainable Development Goals wheel"
+              loading="lazy"
+              className="mx-auto w-48 object-contain"
+            />
+            <div className="mt-6 grid grid-cols-3 gap-4">
+              {sdgTiles.map((g) => (
+                <img
+                  key={g.num}
+                  src={g.image}
+                  alt={`SDG ${g.num}: ${g.label}`}
+                  loading="lazy"
+                  className="w-full object-contain shadow-md"
+                />
+              ))}
+            </div>
           </div>
         </section>
 

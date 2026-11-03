@@ -437,9 +437,10 @@ export default function Events() {
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR EVENT OBJECTIVES ============ */}
         <section className="pt-16">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          {/* Heading + description, centred below the hero image */}
+          <div className="flex flex-col items-center text-center">
             <SectionTitle eyebrow="Why we gather">Our Event Objectives</SectionTitle>
-            <p className="max-w-xl text-base leading-7 text-slate-600">
+            <p className="mt-4 max-w-2xl text-base italic leading-7 text-slate-600">
               Our events are designed to inform, engage and create meaningful
               opportunities for action.
             </p>
@@ -452,7 +453,8 @@ export default function Events() {
                 className={`group relative flex h-full flex-col items-center overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b ${o.bg} to-white px-5 pb-7 pt-8 text-center shadow-[0_8px_30px_rgba(15,70,45,0.06)] transition duration-500 hover:-translate-y-1.5 hover:border-lime-400/60 hover:shadow-2xl`}
               >
                 <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${o.bar}`} />
-                <span className="absolute right-4 top-4 font-serif text-3xl font-black text-emerald-900/10 transition duration-500 group-hover:text-emerald-900/20">
+                {/* number: darker so it is clearly visible */}
+                <span className="absolute right-4 top-4 font-serif text-3xl font-black text-emerald-900/70 transition duration-500 group-hover:text-emerald-950">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span

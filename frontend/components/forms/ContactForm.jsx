@@ -42,6 +42,7 @@ const CHECK_CIRCLE = "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z";
 
 /* ---------- Static content ---------- */
 
+// All contact items share the same colour, and show only the icon (no circle).
 const contactInfo = [
   {
     title: "Email",
@@ -49,7 +50,7 @@ const contactInfo = [
     note: "We usually respond within 1–2 working days.",
     href: "mailto:hopefeltfoundation@gmail.com",
     bg: "from-emerald-50",
-    wrap: "bg-emerald-100 text-emerald-700",
+    wrap: "text-emerald-700",
     icon: MAIL,
   },
   {
@@ -57,23 +58,23 @@ const contactInfo = [
     lines: ["+92 (371) 0137556"],
     note: "Mon – Fri, 9:00 AM – 5:00 PM",
     href: "tel:+923710137556",
-    bg: "from-sky-50",
-    wrap: "bg-sky-100 text-sky-700",
+    bg: "from-emerald-50",
+    wrap: "text-emerald-700",
     icon: CALL,
   },
   {
     title: "Office",
     lines: ["Green Town, Karachi, Pakistan"],
     note: "Visit by appointment.",
-    bg: "from-amber-50",
-    wrap: "bg-amber-100 text-amber-700",
+    bg: "from-emerald-50",
+    wrap: "text-emerald-700",
     icon: PIN,
   },
   {
     title: "Office Hours",
     lines: ["Mon – Fri, 9:00 AM – 5:00 PM", "Saturday & Sunday: Closed"],
-    bg: "from-purple-50",
-    wrap: "bg-purple-100 text-purple-700",
+    bg: "from-emerald-50",
+    wrap: "text-emerald-700",
     icon: CLOCK,
   },
 ];
@@ -338,7 +339,10 @@ export default function Contact() {
             alt="Hopefelt Foundation office building surrounded by greenery"
             className="h-full w-full object-cover"
           />
+          {/* left white fade (keeps the title readable) */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/20" />
+          {/* right dark overlay (darkens the blue sky, makes the tagline readable) */}
+          <div className="absolute inset-y-0 right-0 w-full bg-gradient-to-l from-slate-900/80 via-slate-900/50 to-transparent lg:w-[55%]" />
         </div>
 
         <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
@@ -362,7 +366,7 @@ export default function Contact() {
           </div>
 
           {/* tagline */}
-          <div className="pointer-events-none absolute right-12 top-10 hidden font-serif text-xl font-semibold leading-7 text-white drop-shadow-md xl:block">
+          <div className="pointer-events-none absolute right-12 top-10 hidden font-serif text-xl font-bold leading-7 text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.7)] xl:block">
             <p>People</p>
             <p>Knowledge</p>
             <p>Collaboration</p>
@@ -389,7 +393,7 @@ export default function Contact() {
                 const Body = (
                   <>
                     <span
-                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${c.wrap}`}
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center ${c.wrap}`}
                     >
                       <Icon d={c.icon} className="h-7 w-7" />
                     </span>
