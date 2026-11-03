@@ -87,18 +87,20 @@ const objectives = [
   "Create opportunities for youth and professionals.",
 ];
 
-/* SDG images: put your files in /public/images/BusinessHub/sdg/ (or change the paths below).
-   `pos` = position inside the card (percent), `w` = tile width (percent of card width). */
+/* SDG images: put your files in /public/images/sdg/ (or change the paths below).
+   Only 5 tiles: 3 on the LEFT (8, 4, 10) and 2 on the RIGHT (9, 17).
+   left / top = position inside the card (percent), w = tile width (percent of card width),
+   dur = float duration (s), delay = float delay (s), amp = Y-axis float distance (px). */
 const sdgWheel = "/images/sdg/sdg-wheel.png";
 
 const sdgTiles = [
-  { num: "3", label: "Good Health and Well-Being", image: "/images/sdg/sdg-3.png", left: "5.7%", top: "17%", w: "8.6%" },
-  { num: "4", label: "Quality Education", image: "/images/sdg/sdg-4.png", left: "18.5%", top: "40%", w: "8.6%" },
-  { num: "10", label: "Reduced Inequalities", image: "/images/sdg/sdg-10.png", left: "6.5%", top: "70%", w: "7.9%" },
-  { num: "11", label: "Sustainable Cities and Communities", image: "/images/sdg/sdg-11.png", left: "62.5%", top: "8%", w: "8.3%" },
-  { num: "13", label: "Climate Action", image: "/images/sdg/sdg-13.png", left: "83%", top: "20.7%", w: "8.8%" },
-  { num: "15", label: "Life on Land", image: "/images/sdg/sdg-15.png", left: "70.8%", top: "51.6%", w: "8%" },
-  { num: "17", label: "Partnerships for the Goals", image: "/images/sdg/sdg-17.png", left: "82%", top: "78%", w: "6.6%" },
+  /* LEFT side (3) */
+  { num: "8", label: "Decent Work and Economic Growth", image: "/images/sdg/sdg-8.png", left: "24%", top: "9%", w: "8.2%", dur: 6.1, delay: -1.4, amp: 14 },
+  { num: "4", label: "Quality Education", image: "/images/sdg/sdg-4.png", left: "13%", top: "40%", w: "8.6%", dur: 6.8, delay: -2, amp: 14 },
+  { num: "10", label: "Reduced Inequalities", image: "/images/sdg/sdg-10.png", left: "22%", top: "70%", w: "8.2%", dur: 6.2, delay: -3.6, amp: 13 },
+  /* RIGHT side (2) */
+  { num: "9", label: "Industry, Innovation and Infrastructure", image: "/images/sdg/sdg-9.png", left: "70%", top: "8%", w: "8.4%", dur: 5.6, delay: -2.6, amp: 12 },
+  { num: "17", label: "Partnerships for the Goals", image: "/images/sdg/sdg-17.png", left: "76%", top: "66%", w: "7.4%", dur: 5.5, delay: -1.8, amp: 11 },
 ];
 
 const programRowOne = [
@@ -322,11 +324,51 @@ function ProgramCard({ p }) {
   );
 }
 
+/* One floating SDG tile.
+   Outer element = position + hover effect, inner img = Y-axis floating animation
+   (kept separate so the hover transform and the float transform never clash). */
+function FloatingTile({ g, className = "", style = {} }) {
+  return (
+    <div className={className} style={style}>
+      <div className="transition duration-300 hover:z-10 hover:scale-110">
+        <img
+          src={g.image}
+          alt={`SDG ${g.num}: ${g.label}`}
+          loading="lazy"
+          className="sdg-float block w-full rounded-xl object-contain shadow-lg shadow-slate-900/15 ring-2 ring-white"
+          style={{
+            "--amp": `${g.amp}px`,
+            animationDuration: `${g.dur}s`,
+            animationDelay: `${g.delay}s`,
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
 /* ---------- Page ---------- */
 
 export default function BusinessHub() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#f4faf6] via-white to-[#f4faf6] text-slate-800">
+      {/* Floating animation (Y axis only) */}
+      <style>{`
+        @keyframes sdg-float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(calc(var(--amp, 12px) * -1)); }
+        }
+        .sdg-float {
+          animation-name: sdg-float;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          will-change: transform;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .sdg-float { animation: none; }
+        }
+      `}</style>
+
       {/* soft background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -right-40 -top-32 h-[480px] w-[480px] rounded-full bg-emerald-200/30 blur-[120px]" />
@@ -483,43 +525,52 @@ export default function BusinessHub() {
             including:
           </p>
 
-          {/* Desktop / tablet: wheel in the centre, SDG tiles placed around it */}
-          <div className="relative mt-8 hidden aspect-[1168/668] w-full overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_14px_40px_rgba(15,70,45,0.08)] md:block">
+          {/* Desktop / tablet: fixed wheel in the centre, 3 tiles left + 2 tiles right, floating */}
+          <div className="relative mt-8 hidden aspect-[1120/664] w-full overflow-hidden rounded-[2rem] border border-emerald-100 bg-gradient-to-br from-white via-[#f1faf5] to-emerald-50 shadow-[0_14px_40px_rgba(15,70,45,0.08)] md:block">
+            {/* soft glow behind the wheel */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[40%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-200/30 blur-3xl" />
+
+            {/* outer thin ring */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[47%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-slate-300/50" />
+            {/* inner dashed ring */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[32%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-emerald-300/70 bg-emerald-100/30" />
+
+            {/* centre wheel — FIXED (no animation) */}
             <img
               src={sdgWheel}
               alt="Sustainable Development Goals wheel"
               loading="lazy"
-              className="absolute left-[46.3%] top-[45%] w-[22%] -translate-x-1/2 -translate-y-1/2 object-contain"
+              className="absolute left-1/2 top-1/2 w-[22%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-xl"
             />
 
+            {/* floating tiles (Y axis) */}
             {sdgTiles.map((g) => (
-              <img
+              <FloatingTile
                 key={g.num}
-                src={g.image}
-                alt={`SDG ${g.num}: ${g.label}`}
-                loading="lazy"
+                g={g}
+                className="absolute"
                 style={{ left: g.left, top: g.top, width: g.w }}
-                className="absolute object-contain shadow-md transition duration-300 hover:z-10 hover:-translate-y-1.5 hover:scale-105 hover:shadow-xl"
               />
             ))}
           </div>
 
-          {/* Mobile: wheel on top, tiles in a simple grid */}
-          <div className="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-[0_14px_40px_rgba(15,70,45,0.08)] md:hidden">
-            <img
-              src={sdgWheel}
-              alt="Sustainable Development Goals wheel"
-              loading="lazy"
-              className="mx-auto w-48 object-contain"
-            />
-            <div className="mt-6 grid grid-cols-3 gap-4">
+          {/* Mobile: fixed wheel on top, floating tiles below */}
+          <div className="mt-8 rounded-3xl border border-emerald-100 bg-gradient-to-br from-white via-[#f1faf5] to-emerald-50 p-6 shadow-[0_14px_40px_rgba(15,70,45,0.08)] md:hidden">
+            <div className="relative mx-auto w-56">
+              <div className="pointer-events-none absolute inset-0 rounded-full border border-dashed border-emerald-300/70 bg-emerald-100/40" />
+              <img
+                src={sdgWheel}
+                alt="Sustainable Development Goals wheel"
+                loading="lazy"
+                className="relative mx-auto w-48 object-contain py-4 drop-shadow-lg"
+              />
+            </div>
+            <div className="mt-6 flex flex-wrap justify-center gap-4 pb-3">
               {sdgTiles.map((g) => (
-                <img
+                <FloatingTile
                   key={g.num}
-                  src={g.image}
-                  alt={`SDG ${g.num}: ${g.label}`}
-                  loading="lazy"
-                  className="w-full object-contain shadow-md"
+                  g={{ ...g, amp: 6 }}
+                  className="w-[28%]"
                 />
               ))}
             </div>
