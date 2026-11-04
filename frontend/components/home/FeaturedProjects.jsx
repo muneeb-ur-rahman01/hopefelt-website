@@ -54,7 +54,7 @@ export default function FeaturedProjects() {
 
           <div>
             <Link
-              href="/projects"
+              href="/projects/ourprojects"
               className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white transition hover:bg-forest/90"
             >
               View All Projects
