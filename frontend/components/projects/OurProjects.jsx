@@ -398,109 +398,104 @@ export default function Projects() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative min-h-[480px] bg-[#0f3d2a]">
-        {/* Full-width photo; green base shows if the image is slow or missing */}
-        <div className="pointer-events-none absolute inset-0">
-          <img
-            src="/images/projects/projects.png"
-            alt="Two pairs of hands holding a young seedling growing from soil"
-            className="h-full w-full object-cover object-center text-transparent"
+     <header className="relative min-h-[480px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo; green base shows if the image is slow or missing */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/projects/projects.png"
+      alt="Two pairs of hands holding a young seedling growing from soil"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: dark overlay over the whole photo */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: dark on the left for text, photo clear on the right */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
+
+  <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+    <nav
+      aria-label="Breadcrumb"
+      className="hero-rise hero-d1 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span className="text-white/50">/</span>
+      <span className="font-semibold text-white">Projects</span>
+    </nav>
+
+    <div className="mt-8 max-w-2xl">
+      <h1 className="hero-rise hero-d2 mt-5 font-serif text-6xl font-black leading-[1.02] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-7xl lg:text-[5.5rem]">
+        Our <span className="text-lime-300">Projects</span>
+      </h1>
+
+      <p className="hero-rise hero-d3 mt-5 font-serif text-xl text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl">
+        Ideas into Impact. Communities into Brighter Futures.
+      </p>
+
+      <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        Our projects turn community needs into practical solutions across
+        health, education, environment, technology and social development.
+        By bringing together people, knowledge and resources, we create
+        sustainable change for healthier, more resilient communities.
+      </p>
+
+      <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
+        <a
+          href="#projects"
+          className="group inline-flex items-center gap-2.5 rounded-full bg-lime-300 px-7 py-3.5 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+        >
+          Explore Our Projects
+          <Icon
+            d={ARROW}
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            stroke={2.2}
           />
-          {/* Mobile overlay */}
-          <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          {/* Desktop: soft fade on the left so text is readable, photo visible edge to edge */}
-          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
-          <div className="absolute inset-0 hidden bg-gradient-to-l from-[#0f3d2a]/50 via-transparent to-transparent lg:block" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent" />
-        </div>
+        </a>
+        <Link
+          href="/projects/propose"
+          className="group inline-flex items-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+        >
+          Propose a Project
+          <Icon
+            d={ARROW}
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            stroke={2.2}
+          />
+        </Link>
+      </div>
 
-        <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
-          <nav
-            aria-label="Breadcrumb"
-            className="hero-rise hero-d1 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs text-slate-600 shadow-sm ring-1 ring-emerald-900/10 backdrop-blur"
+      <dl className="hero-rise hero-d4 mt-10 grid max-w-xl grid-cols-3 gap-3">
+        {stats.map((s) => (
+          <div
+            key={s.label}
+            className="rounded-2xl border border-white/20 bg-white/10 p-4 shadow-sm backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:shadow-md"
           >
-            <Link href="/" className="transition hover:text-emerald-800">
-              Home
-            </Link>
-            <span className="text-slate-400">/</span>
-            <span className="font-semibold text-slate-800">Projects</span>
-          </nav>
-
-          <div className="mt-8 max-w-2xl">
-            <h1 className="hero-rise hero-d2 mt-5 font-serif text-6xl font-black leading-[1.02] tracking-tight text-[#0d3749] sm:text-7xl lg:text-[5.5rem]">
-              Our{" "}
-              <span className="bg-gradient-to-r from-[#1f4a2a] via-emerald-700 to-emerald-500 bg-clip-text text-transparent">
-                Projects
-              </span>
-            </h1>
-
-            <p className="hero-rise hero-d3 mt-5 font-serif text-xl text-[#0d3749] sm:text-2xl">
-              Ideas into Impact. Communities into Brighter Futures.
-            </p>
-
-            <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-slate-700">
-              Our projects turn community needs into practical solutions across
-              health, education, environment, technology and social development.
-              By bringing together people, knowledge and resources, we create
-              sustainable change for healthier, more resilient communities.
-            </p>
-
-            <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
-              <a
-                href="#projects"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#1f4a2a] to-emerald-800 px-7 py-3.5 text-sm font-bold text-white shadow-[0_12px_30px_-10px_rgba(31,74,42,0.7)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(31,74,42,0.8)] focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300"
-              >
-                Explore Our Projects
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.2}
-                />
-              </a>
-              <Link
-                href="/projects/propose"
-                className="group inline-flex items-center gap-2.5 rounded-full border border-emerald-900/30 bg-white/80 px-7 py-3.5 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300"
-              >
-                Propose a Project
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.2}
-                />
-              </Link>
-            </div>
-
-            <dl className="hero-rise hero-d4 mt-10 grid max-w-xl grid-cols-3 gap-3">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="rounded-2xl border border-emerald-900/10 bg-white/85 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
-                    <Icon d={s.icon} className="h-4 w-4" />
-                  </span>
-                  <dd className="mt-3 font-serif text-3xl font-black leading-none text-[#1f4a2a]">
-                    {s.value}
-                  </dd>
-                  <dt className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
-                    {s.label}
-                  </dt>
-                </div>
-              ))}
-            </dl>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-lime-300/90 text-[#0f3d2a]">
+              <Icon d={s.icon} className="h-4 w-4" />
+            </span>
+            <dd className="mt-3 font-serif text-3xl font-black leading-none text-white">
+              {s.value}
+            </dd>
+            <dt className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white/75">
+              {s.label}
+            </dt>
           </div>
+        ))}
+      </dl>
+    </div>
 
-          {/* tagline glass card (dark glass so the white text is always readable) */}
-          <div className="hero-rise hero-d4 pointer-events-none absolute bottom-16 right-12 hidden rounded-3xl border border-white/25 bg-[#0f3d2a]/55 px-9 py-7 font-serif text-3xl italic leading-10 text-white shadow-2xl backdrop-blur-md xl:block">
-            <p>People</p>
-            <p>Projects</p>
-            <p>Partnerships</p>
-            <p>A Healthier</p>
-            <p>Tomorrow</p>
-            <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-lime-300 to-emerald-300" />
-          </div>
-        </div>
-      </header>
+    {/* tagline glass card (dark glass so the white text is always readable) */}
+    <div className="hero-rise hero-d4 pointer-events-none absolute bottom-16 right-12 hidden rounded-3xl border border-white/25 bg-[#0f3d2a]/55 px-9 py-7 font-serif text-3xl italic leading-10 text-white shadow-2xl backdrop-blur-md xl:block">
+      <p>People</p>
+      <p>Projects</p>
+      <p>Partnerships</p>
+      <p>A Healthier</p>
+      <p>Tomorrow</p>
+      <div className="mt-3 h-1 w-14 rounded-full bg-gradient-to-r from-lime-300 to-emerald-300" />
+    </div>
+  </div>
+</header>
 
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR PROJECTS ============ */}

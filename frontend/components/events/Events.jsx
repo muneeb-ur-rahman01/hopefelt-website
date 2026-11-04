@@ -334,105 +334,100 @@ export default function Events() {
         <div className="absolute -right-32 bottom-24 h-[380px] w-[380px] rounded-full bg-sky-200/20 blur-[110px]" />
       </div>
 
-      {/* ============ HERO ============ */}
-      <header className="relative min-h-[460px] border-b border-emerald-900/5 bg-[#0f3d2a]">
-        {/* Full-width photo, green base shows if the image is slow or missing */}
-        <div className="pointer-events-none absolute inset-0">
-          <img
-            src="/images/Event/hero.png"
-            alt="Speaker presenting to an engaged audience at a community event"
-            className="h-full w-full object-cover object-center text-transparent"
-          />
-          {/* Mobile overlay */}
-          <div className="absolute inset-0 bg-[#f4faf6]/85 lg:hidden" />
-          {/* Desktop: soft fade on the left so text is readable, photo visible edge to edge */}
-          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(244,250,246,0.96)_0%,rgba(244,250,246,0.88)_30%,rgba(244,250,246,0.5)_50%,rgba(244,250,246,0)_72%)] lg:block" />
-          <div className="absolute inset-0 hidden bg-gradient-to-l from-[#0f3d2a]/55 via-transparent to-transparent lg:block" />
-        </div>
+     {/* ============ HERO ============ */}
+<header className="relative min-h-[460px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/Event/hero.png"
+      alt="Speaker presenting to an engaged audience at a community event"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: poori photo par halka dark overlay */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: left par dark (text ke liye), right par photo clear */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
 
-        <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
-          <nav
-            aria-label="Breadcrumb"
-            className="inline-flex flex-wrap items-center gap-2 rounded-full border border-emerald-900/10 bg-white/70 px-4 py-1.5 text-xs text-slate-600 shadow-sm backdrop-blur"
+  <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+    <nav
+      aria-label="Breadcrumb"
+      className="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span aria-hidden="true">/</span>
+      <span className="font-semibold text-white">Events</span>
+    </nav>
+
+    <div className="mt-8 max-w-2xl">
+      <h1 className="mt-5 font-serif text-6xl font-black leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-7xl lg:text-8xl">
+        Events
+      </h1>
+
+      <p className="mt-5 font-serif text-xl leading-snug text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl">
+        Connecting people, ideas and action
+        <br />
+        for healthier, stronger communities.
+      </p>
+
+      <p className="mt-5 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        From conferences and workshops to webinars and community
+        outreach, our events bring together diverse voices to create
+        awareness, share knowledge and drive meaningful change.
+      </p>
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Link
+          href="/events/upcoming"
+          className="inline-flex items-center gap-2 rounded-full bg-lime-300 px-7 py-3 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl"
+        >
+          See Upcoming Events
+          <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+        </Link>
+        <a
+          href="#explore"
+          className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3 text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-md"
+        >
+          Explore Event Types
+          <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
+        </a>
+      </div>
+
+      <dl className="mt-10 grid max-w-xl grid-cols-3 gap-3">
+        {stats.map((s) => (
+          <div
+            key={s.label}
+            className="rounded-2xl border border-white/20 bg-white/10 p-4 shadow-sm backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/15 hover:shadow-md"
           >
-            <Link href="/" className="transition hover:text-emerald-800">
-              Home
-            </Link>
-            <span aria-hidden="true">/</span>
-            <span className="font-semibold text-slate-800">Events</span>
-          </nav>
-
-          <div className="mt-8 max-w-2xl">
-            <p className="inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-800 shadow-sm backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-lime-500" />
-              Hopefelt Foundation
-            </p>
-
-            <h1 className="mt-5 bg-gradient-to-r from-[#1f3a8a] via-[#0d3749] to-[#1f4a2a] bg-clip-text font-serif text-6xl font-black leading-[1.05] tracking-tight text-transparent sm:text-7xl lg:text-8xl">
-              Events
-            </h1>
-
-            <p className="mt-5 font-serif text-xl leading-snug text-[#0d3749] sm:text-2xl">
-              Connecting people, ideas and action
-              <br />
-              for healthier, stronger communities.
-            </p>
-
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
-              From conferences and workshops to webinars and community
-              outreach, our events bring together diverse voices to create
-              awareness, share knowledge and drive meaningful change.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/events/upcoming"
-                className="inline-flex items-center gap-2 rounded-full bg-[#1f4a2a] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-900 hover:shadow-xl"
-              >
-                See Upcoming Events
-                <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
-              </Link>
-              <a
-                href="#explore"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/30 bg-white/80 px-7 py-3 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
-              >
-                Explore Event Types
-                <Icon d={ARROW} className="h-4 w-4" stroke={2.4} />
-              </a>
-            </div>
-
-            <dl className="mt-10 grid max-w-xl grid-cols-3 gap-3">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="rounded-2xl border border-emerald-900/10 bg-white/85 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
-                    <Icon d={s.icon} className="h-4 w-4" />
-                  </span>
-                  <dd className="mt-3 font-serif text-3xl font-black leading-none text-[#1f4a2a]">
-                    {s.value}
-                  </dd>
-                  <dt className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
-                    {s.label}
-                  </dt>
-                </div>
-              ))}
-            </dl>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-lime-300/90 text-[#0f3d2a]">
+              <Icon d={s.icon} className="h-4 w-4" />
+            </span>
+            <dd className="mt-3 font-serif text-3xl font-black leading-none text-white">
+              {s.value}
+            </dd>
+            <dt className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white/75">
+              {s.label}
+            </dt>
           </div>
-        </div>
+        ))}
+      </dl>
+    </div>
+  </div>
 
-        {/* tagline: glass panel so the white text is always readable */}
-        <div className="pointer-events-none absolute right-12 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/20 bg-[#0f3d2a]/55 px-8 py-7 font-serif text-2xl font-semibold leading-9 text-white shadow-xl backdrop-blur-md xl:block">
-          <p>People</p>
-          <p>Knowledge</p>
-          <p>Collaboration</p>
-          <p>Action</p>
-          <p>Healthier</p>
-          <p>Communities</p>
-          <div className="mt-3 h-1 w-14 rounded-full bg-lime-300" />
-        </div>
-      </header>
+  {/* tagline: glass panel */}
+  <div className="pointer-events-none absolute right-12 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/20 bg-[#0f3d2a]/55 px-8 py-7 font-serif text-2xl font-semibold leading-9 text-white shadow-xl backdrop-blur-md xl:block">
+    <p>People</p>
+    <p>Knowledge</p>
+    <p>Collaboration</p>
+    <p>Action</p>
+    <p>Healthier</p>
+    <p>Communities</p>
+    <div className="mt-3 h-1 w-14 rounded-full bg-lime-300" />
+  </div>
+</header>
+   
 
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR EVENT OBJECTIVES ============ */}

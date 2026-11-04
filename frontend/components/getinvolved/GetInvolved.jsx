@@ -353,80 +353,74 @@ export default function GetInvolved() {
       </div>
 
       {/* Hero */}
-      <header className="relative min-h-[360px] border-b border-emerald-900/5">
-        <div className="pointer-events-none absolute inset-0">
-          <img
-            src="/images/projects/crossprogram.png"
-            alt="Diverse group of people stacking their hands together in unity"
-            className="h-full w-full object-cover object-center"
-          />
-          {/* Mobile: even light overlay for text readability */}
-          <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          {/* Desktop: soft white fade on the left so the text stays readable, image visible edge to edge */}
-          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.85)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
-          <div className="absolute inset-0 hidden bg-gradient-to-l from-emerald-950/45 via-transparent to-transparent lg:block" />
-        </div>
+     <header className="relative min-h-[360px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/projects/crossprogram.png"
+      alt="Diverse group of people stacking their hands together in unity"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: dark overlay over the whole photo */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: dark on the left for text, photo clear on the right */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
 
-        <div className="relative mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
-          <nav
-            aria-label="Breadcrumb"
-            className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600"
-          >
-            <Link href="/" className="transition hover:text-emerald-800">
-              Home
-            </Link>
-            <span aria-hidden="true">/</span>
-            <span className="text-slate-900">Get Involved</span>
-          </nav>
+  <div className="relative mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
+    <nav
+      aria-label="Breadcrumb"
+      className="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80 shadow-sm backdrop-blur"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span aria-hidden="true" className="text-white/50">/</span>
+      <span className="font-semibold text-white">Get Involved</span>
+    </nav>
 
-          <div className="mt-8 max-w-2xl">
-            <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">
-              Hopefelt Foundation
-            </span>
+    <div className="mt-8 max-w-2xl">
+        <h1 className="mt-4 font-serif text-5xl font-black leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-7xl">
+        Get Involved
+      </h1>
 
-            <h1 className="mt-4 font-serif text-5xl font-black leading-[1.05] tracking-tight text-[#0d3749] sm:text-6xl lg:text-7xl">
-              Get Involved
-            </h1>
+      <p className="mt-5 font-serif text-xl font-semibold text-lime-300 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl">
+        There are many ways you can support Hopefelt Foundation.
+      </p>
 
-            <p className="mt-5 font-serif text-xl font-semibold text-[#1f4a2a] sm:text-2xl">
-              There are many ways you can support Hopefelt Foundation.
-            </p>
+      <p className="mt-3 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        Share your time, skills, ideas or resources and be part of our
+        mission to build healthier, stronger and more resilient
+        communities.
+      </p>
 
-            <p className="mt-3 max-w-xl text-base leading-7 text-slate-700">
-              Share your time, skills, ideas or resources and be part of our
-              mission to build healthier, stronger and more resilient
-              communities.
-            </p>
+      <div className="mt-7 flex flex-wrap gap-3">
+        <a
+          href="#opportunities"
+          className="inline-flex items-center gap-2 rounded-full bg-lime-300 px-6 py-3 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl"
+        >
+          Explore Opportunities
+          <span aria-hidden="true">↓</span>
+        </a>
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+        >
+          Contact Us
+        </Link>
+      </div>
+    </div>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href="#opportunities"
-                className="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/20 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-800"
-              >
-                Explore Opportunities
-                <span aria-hidden="true">↓</span>
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/30 bg-white/80 px-6 py-3 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          {/* Tagline */}
-          <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/20 bg-emerald-950/40 px-7 py-6 font-serif text-xl font-semibold leading-8 text-white shadow-xl backdrop-blur-sm xl:block">
-            <p>People</p>
-            <p>Knowledge</p>
-            <p>Collaboration</p>
-            <p>Action</p>
-            <p>Healthier</p>
-            <p>Communities</p>
-            <div className="mt-3 h-0.5 w-12 rounded-full bg-lime-300" />
-          </div>
-        </div>
-      </header>
+    {/* Tagline */}
+    <div className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/20 bg-[#0f3d2a]/55 px-7 py-6 font-serif text-xl font-semibold leading-8 text-white shadow-xl backdrop-blur-md xl:block">
+      <p>People</p>
+      <p>Knowledge</p>
+      <p>Collaboration</p>
+      <p>Action</p>
+      <p>Healthier</p>
+      <p>Communities</p>
+    </div>
+  </div>
+</header>
 
       <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 lg:px-10">
         {/* Opportunities */}

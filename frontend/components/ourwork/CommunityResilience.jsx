@@ -303,84 +303,82 @@ export default function ClimateEnvironmentResilience() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative overflow-hidden">
-        {/* Image sits on the right; no white shade on desktop */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-2xl lg:w-[52%] lg:rounded-3xl">
-          <img
-            src="/images/Our Work/climate.png"
-            alt="Volunteers planting a tree together at a community plantation drive"
-            className="hero-settle h-full w-full object-cover"
+      <header className="relative min-h-[360px] overflow-hidden border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/Our Work/climate.png"
+      alt="Volunteers planting a tree together at a community plantation drive"
+      className="hero-settle h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: dark overlay over the whole photo */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: dark on the left for text, photo clear on the right */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
+
+  <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
+    <nav
+      aria-label="Breadcrumb"
+      className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur-md"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span className="text-white/50">/</span>
+      <Link href="/our-work" className="transition hover:text-lime-300">
+        Our Work
+      </Link>
+      <span className="text-white/50">/</span>
+      <span className="font-semibold text-white">
+        Climate, Environment &amp; Community Resilience
+      </span>
+    </nav>
+
+    <div className="mt-8 max-w-2xl">
+      <h1 className="hero-rise hero-d2 font-serif text-5xl font-black leading-[1.02] tracking-[-0.03em] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-[4.25rem]">
+        Climate, <span className="text-lime-300">Environment &amp;</span>{" "}
+        Community Resilience
+      </h1>
+
+      <p className="hero-rise hero-d3 mt-6 font-serif text-xl tracking-tight text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl">
+        Healthier Environments. Stronger Communities.
+      </p>
+
+      <p className="hero-rise hero-d3 mt-4 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        At Hopefelt Foundation, we work towards cleaner, greener and more
+        resilient communities by promoting environmental awareness,
+        sustainable practices and climate-conscious actions for a
+        healthier tomorrow.
+      </p>
+
+      <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
+        <Link
+          href="/get-involved"
+          className={`group inline-flex items-center gap-2.5 rounded-full bg-lime-300 px-7 py-3.5 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl ${focusRing}`}
+        >
+          Get Involved
+          <Icon
+            d={ARROW}
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            stroke={2.2}
           />
-          {/* Mobile only: keeps text readable when the photo is behind it */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:hidden" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f4faf6] to-transparent lg:hidden" />
-        </div>
-
-        <div className="relative mx-auto max-w-[100rem] px-5 py-14 sm:px-8 lg:px-12 lg:py-24">
-          <nav
-            aria-label="Breadcrumb"
-            className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/75 px-4 py-1.5 text-xs text-slate-600 shadow-[0_1px_2px_rgba(15,60,40,0.06)] ring-1 ring-emerald-950/10 backdrop-blur-md"
-          >
-            <Link href="/" className="transition hover:text-emerald-800">
-              Home
-            </Link>
-            <span className="text-slate-300">/</span>
-            <Link href="/our-work" className="transition hover:text-emerald-800">
-              Our Work
-            </Link>
-            <span className="text-slate-300">/</span>
-            <span className="font-semibold text-slate-800">
-              Climate, Environment &amp; Community Resilience
-            </span>
-          </nav>
-
-          <div className="mt-10 max-w-2xl">
-            <h1 className="hero-rise hero-d2 font-serif text-5xl font-black leading-[1.02] tracking-[-0.03em] text-[#0d3749] sm:text-6xl lg:text-[4.75rem]">
-              Climate,{" "}
-              <span className="bg-gradient-to-r from-[#1f4a2a] via-emerald-700 to-emerald-500 bg-clip-text text-transparent">
-                Environment &amp;
-              </span>{" "}
-              Community Resilience
-            </h1>
-
-            <p className="hero-rise hero-d3 mt-7 font-serif text-xl tracking-tight text-slate-800 sm:text-2xl">
-              Healthier Environments. Stronger Communities.
-            </p>
-
-            <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-slate-700">
-              At Hopefelt Foundation, we work towards cleaner, greener and more
-              resilient communities by promoting environmental awareness,
-              sustainable practices and climate-conscious actions for a
-              healthier tomorrow.
-            </p>
-
-            <div className="hero-rise hero-d4 mt-10 flex flex-wrap gap-3">
-              <Link
-                href="/get-involved"
-                className={`group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-b from-[#26592f] to-[#1a3f24] px-7 py-3.5 text-sm font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_14px_30px_-10px_rgba(31,74,42,0.75)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_20px_40px_-10px_rgba(31,74,42,0.85)] ${focusRing}`}
-              >
-                Get Involved
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.2}
-                />
-              </Link>
-              <a
-                href="#focus-areas"
-                className={`group inline-flex items-center gap-2.5 rounded-full border border-emerald-900/25 bg-white/75 px-7 py-3.5 text-sm font-bold text-emerald-950 backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-emerald-900/40 hover:bg-white hover:shadow-lg ${focusRing}`}
-              >
-                Explore Initiatives
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.2}
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+        </Link>
+        <a
+          href="#focus-areas"
+          className={`group inline-flex items-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-lg ${focusRing}`}
+        >
+          Explore Initiatives
+          <Icon
+            d={ARROW}
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            stroke={2.2}
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
 
       <div className="mx-auto max-w-[100rem] px-5 pb-20 sm:px-8 lg:px-12">
         {/* ============ OUR FOCUS AREAS ============ */}

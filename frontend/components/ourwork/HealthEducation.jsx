@@ -274,99 +274,95 @@ export default function HealthEducationAwareness() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative min-h-[480px] bg-[#f4faf6]">
-        {/* Image sits on the right side; no white shade on desktop */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-3xl lg:w-[48%]">
-          <img
-            src="/images/Our Work/healtheducation.png"
-            alt="Health educator presenting to a community group beside a whiteboard reading A Healthier Community Starts with Awareness"
-            className="h-full w-full object-cover object-center"
+      <header className="relative min-h-[480px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/Our Work/healtheducation.png"
+      alt="Health educator presenting to a community group beside a whiteboard reading A Healthier Community Starts with Awareness"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: poori photo par dark overlay */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: left par dark (text ke liye), right par photo clear */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
+
+  <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+    <nav
+      aria-label="Breadcrumb"
+      className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span className="text-white/50">/</span>
+      <Link href="/our-work" className="transition hover:text-lime-300">
+        Our Work
+      </Link>
+      <span className="text-white/50">/</span>
+      <span className="font-semibold text-white">
+        Health Education &amp; Awareness
+      </span>
+    </nav>
+
+    <div className="mt-8 max-w-2xl">
+      <h1 className="hero-rise hero-d2 mt-5 font-serif text-5xl font-black leading-[1.04] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-[4.5rem]">
+        Health Education &amp;{" "}
+        <span className="text-lime-300">Awareness</span>
+      </h1>
+
+      <p className="hero-rise hero-d3 mt-6 font-serif text-xl font-semibold text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl">
+        Informed Communities. Healthier Lives.
+      </p>
+
+      <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        At Hopefelt Foundation, we empower individuals and communities
+        with the knowledge, skills and awareness needed to make
+        healthier choices and build a more resilient society.
+      </p>
+
+      <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
+        <Link
+          href="/get-involved"
+          className="group inline-flex items-center gap-2.5 rounded-full bg-lime-300 px-7 py-3.5 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+        >
+          Get Involved
+          <Icon
+            d={ARROW}
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            stroke={2.2}
           />
-          {/* Mobile only: keeps text readable when the photo is behind it */}
-          <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent lg:hidden" />
+        </Link>
+        <a
+          href="#focus-areas"
+          className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+        >
+          Explore Our Initiatives
+        </a>
+      </div>
+    </div>
 
-          {/* Horizontal highlights bar at the bottom of the image */}
-          <div className="hero-rise hero-d4 absolute inset-x-5 bottom-5 hidden grid-cols-4 divide-x divide-slate-200 rounded-2xl border border-white/60 bg-white/85 px-2 py-3 shadow-[0_18px_40px_-16px_rgba(15,70,45,0.5)] backdrop-blur-xl lg:grid">
-            {heroChips.map((chip) => (
-              <div
-                key={chip.label}
-                className="flex flex-col items-center gap-2 px-2 text-center xl:flex-row xl:gap-3 xl:text-left"
-              >
-                <span
-                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ring-4 ring-white ${chip.wrap}`}
-                >
-                  <Icon d={chip.icon} className="h-5 w-5" />
-                </span>
-                <span className="text-xs font-semibold leading-4 text-slate-800 xl:text-sm">
-                  {chip.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
-          <nav
-            aria-label="Breadcrumb"
-            className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs text-slate-600 shadow-sm ring-1 ring-emerald-900/10 backdrop-blur"
+    {/* Highlights bar: ab hero ke bottom par, text ke neeche */}
+    <div className="hero-rise hero-d4 mt-10 hidden max-w-4xl grid-cols-4 divide-x divide-white/15 rounded-2xl border border-white/20 bg-white/10 px-2 py-3 shadow-xl backdrop-blur-md lg:grid">
+      {heroChips.map((chip) => (
+        <div
+          key={chip.label}
+          className="flex flex-col items-center gap-2 px-2 text-center xl:flex-row xl:gap-3 xl:text-left"
+        >
+          <span
+            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ring-4 ring-white/20 ${chip.wrap}`}
           >
-            <Link href="/" className="transition hover:text-emerald-800">
-              Home
-            </Link>
-            <span className="text-slate-400">/</span>
-            <Link href="/our-work" className="transition hover:text-emerald-800">
-              Our Work
-            </Link>
-            <span className="text-slate-400">/</span>
-            <span className="font-semibold text-slate-800">
-              Health Education &amp; Awareness
-            </span>
-          </nav>
-
-          <div className="mt-8 max-w-2xl">
-            <div>
-              <h1 className="hero-rise hero-d2 mt-5 font-serif text-5xl font-black leading-[1.04] tracking-tight text-[#1f4a2a] sm:text-6xl lg:text-[4.5rem]">
-                Health Education &amp;{" "}
-                <span className="bg-gradient-to-r from-rose-600 via-rose-500 to-orange-400 bg-clip-text text-transparent">
-                  Awareness
-                </span>
-              </h1>
-
-              <p className="hero-rise hero-d3 mt-6 font-serif text-xl font-semibold text-slate-900 sm:text-2xl">
-                Informed Communities. Healthier Lives.
-              </p>
-
-              <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-slate-700">
-                At Hopefelt Foundation, we empower individuals and communities
-                with the knowledge, skills and awareness needed to make
-                healthier choices and build a more resilient society.
-              </p>
-
-              <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/get-involved"
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#1f4a2a] to-emerald-800 px-7 py-3.5 text-sm font-bold text-white shadow-[0_12px_30px_-10px_rgba(31,74,42,0.7)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(31,74,42,0.8)] focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300"
-                >
-                  Get Involved
-                  <Icon
-                    d={ARROW}
-                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                    stroke={2.2}
-                  />
-                </Link>
-                <a
-                  href="#focus-areas"
-                  className="inline-flex items-center gap-2 rounded-full border border-emerald-900/30 bg-white/80 px-7 py-3.5 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300"
-                >
-                  Explore Our Initiatives
-                </a>
-              </div>
-            </div>
-
-          </div>
+            <Icon d={chip.icon} className="h-5 w-5" />
+          </span>
+          <span className="text-xs font-semibold leading-4 text-white xl:text-sm">
+            {chip.label}
+          </span>
         </div>
-      </header>
+      ))}
+    </div>
+  </div>
+</header>
 
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
 

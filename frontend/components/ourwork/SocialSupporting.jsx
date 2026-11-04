@@ -251,67 +251,72 @@ export default function SocialSupportLearning() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative">
-        {/* size unchanged — only rounded corners + overflow-hidden added */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-3xl lg:w-[55%]">
-          {/* darker, richer image so it is clearly visible */}
-          <img
-            src="/images/Our Work/social.png"
-            alt="Facilitator leading a community learning session beside a Learning, People, Stronger Communities board"
-            className="h-full w-full rounded-3xl object-cover brightness-[0.8] contrast-110 saturate-110"
-          />
-          {/* Mobile overlay only (keeps text readable over the photo); no white shade on desktop */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:hidden" />
-        </div>
+     <header className="relative min-h-[420px] overflow-hidden border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/Our Work/social.png"
+      alt="Facilitator leading a community learning session beside a Learning, People, Stronger Communities board"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: dark overlay over the whole photo */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: dark on the left for text, photo clear on the right */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
 
-        <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
-          <nav
-            aria-label="Breadcrumb"
-            className="flex flex-wrap items-center gap-2 text-xs text-slate-600"
-          >
-            <Link href="/" className="hover:text-emerald-800">Home</Link>
-            <span>/</span>
-            <Link href="/our-work" className="hover:text-emerald-800">Our Work</Link>
-            <span>/</span>
-            <span className="font-semibold text-slate-800">
-              Social Support &amp; Learning
-            </span>
-          </nav>
+  <div className="relative mx-auto max-w-[100rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-20">
+    <nav
+      aria-label="Breadcrumb"
+      className="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur-md"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span className="text-white/50">/</span>
+      <Link href="/our-work" className="transition hover:text-lime-300">
+        Our Work
+      </Link>
+      <span className="text-white/50">/</span>
+      <span className="font-semibold text-white">
+        Social Support &amp; Learning
+      </span>
+    </nav>
 
-          <div className="mt-6 max-w-2xl">
-            <h1 className="font-serif text-5xl font-black leading-[1.05] tracking-tight text-[#1f4a2a] sm:text-6xl">
-              Social Support &amp; Learning
-            </h1>
+    <div className="mt-9 max-w-2xl">
+      <h1 className="font-serif text-5xl font-black leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl">
+        Social Support &amp; Learning
+      </h1>
 
-            <p className="mt-4 text-xl text-slate-700">
-              Supporting People. Unlocking Potential.
-            </p>
+      <p className="mt-5 text-xl text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+        Supporting People. Unlocking Potential.
+      </p>
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
-              At <span className="font-semibold">Hopefelt Foundation</span>, we
-              believe that every individual deserves the opportunity to learn,
-              grow and reach their potential. Through social support, education
-              and skills development, we help underserved communities build
-              brighter, more inclusive futures.
-            </p>
+      <p className="mt-6 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        At <span className="font-semibold text-lime-300">Hopefelt Foundation</span>, we
+        believe that every individual deserves the opportunity to learn,
+        grow and reach their potential. Through social support, education
+        and skills development, we help underserved communities build
+        brighter, more inclusive futures.
+      </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link
-                href="/get-involved"
-                className="inline-flex items-center gap-2 rounded-full bg-[#1f4a2a] px-7 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-900"
-              >
-                Get Involved <span>→</span>
-              </Link>
-              <a
-                href="#focus-areas"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/40 bg-white/80 px-7 py-3 text-sm font-bold text-emerald-950 transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
-              >
-                Explore Our Initiatives <span>→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <Link
+          href="/get-involved"
+          className="inline-flex items-center gap-2 rounded-full bg-lime-300 px-7 py-3 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl"
+        >
+          Get Involved <span>→</span>
+        </Link>
+        <a
+          href="#focus-areas"
+          className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3 text-sm font-bold text-white backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-md"
+        >
+          Explore Our Initiatives <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
 
       <div className="mx-auto max-w-[100rem] px-5 pb-12 sm:px-8 lg:px-12">
         {/* ============ OUR FOCUS AREAS ============ */}

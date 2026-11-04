@@ -223,76 +223,76 @@ export default function CommunityDevelopmentOutreach() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative min-h-[480px] bg-[#f4faf6]">
-        {/* Image sits on the right side; no white shade on desktop */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-[1.5rem] lg:w-[48%] lg:rounded-[2rem]">
-          <img
-            src="/images/Our Work/community.png"
-            alt="Hopefelt volunteer speaking with community members at an outreach session"
-            className="h-full w-full object-cover object-center"
+      <header className="relative min-h-[480px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/Our Work/community.png"
+      alt="Hopefelt volunteer speaking with community members at an outreach session"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: poori photo par dark overlay */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: left par dark (text ke liye), right par photo clear */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
+
+  <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+    <nav
+      aria-label="Breadcrumb"
+      className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span className="text-white/50">/</span>
+      <Link href="/our-work" className="transition hover:text-lime-300">
+        Our Work
+      </Link>
+      <span className="text-white/50">/</span>
+      <span className="font-semibold text-white">
+        Community Development &amp; Outreach
+      </span>
+    </nav>
+
+    <div className="mt-8 max-w-2xl">
+      <h1 className="hero-rise hero-d2 mt-5 font-serif text-5xl font-black leading-[1.04] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-[4.5rem]">
+        Community Development &amp; Outreach
+      </h1>
+
+      <p className="hero-rise hero-d3 mt-6 font-serif text-xl text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl">
+        Stronger Communities. Shared Progress.
+      </p>
+
+      <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        At Hopefelt Foundation, we work with communities to identify
+        local needs, strengthen participation, build capacity and support
+        inclusive, community-led solutions for a healthier and more
+        resilient society.
+      </p>
+
+      <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
+        <Link
+          href="/get-involved"
+          className="group inline-flex items-center gap-2.5 rounded-full bg-lime-300 px-7 py-3.5 text-sm font-bold text-[#0f3d2a] shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+        >
+          Get Involved
+          <Icon
+            d={ARROW}
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            stroke={2.2}
           />
-          {/* Mobile only: keeps text readable when the photo is behind it */}
-          <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent lg:hidden" />
-        </div>
-
-        <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
-          <nav
-            aria-label="Breadcrumb"
-            className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs text-slate-600 shadow-sm ring-1 ring-emerald-900/10 backdrop-blur"
-          >
-            <Link href="/" className="transition hover:text-emerald-800">
-              Home
-            </Link>
-            <span className="text-slate-400">/</span>
-            <Link href="/our-work" className="transition hover:text-emerald-800">
-              Our Work
-            </Link>
-            <span className="text-slate-400">/</span>
-            <span className="font-semibold text-slate-800">
-              Community Development &amp; Outreach
-            </span>
-          </nav>
-
-          <div className="mt-8 max-w-2xl">
-              <h1 className="hero-rise hero-d2 mt-5 bg-gradient-to-br from-[#12301a] via-[#1f4a2a] to-emerald-600 bg-clip-text font-serif text-5xl font-black leading-[1.04] tracking-tight text-transparent sm:text-6xl lg:text-[4.5rem]">
-              Community Development &amp; Outreach
-            </h1>
-
-            <p className="hero-rise hero-d3 mt-6 font-serif text-xl text-slate-800 sm:text-2xl">
-              Stronger Communities. Shared Progress.
-            </p>
-
-            <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-slate-700">
-              At Hopefelt Foundation, we work with communities to identify
-              local needs, strengthen participation, build capacity and support
-              inclusive, community-led solutions for a healthier and more
-              resilient society.
-            </p>
-
-            <div className="hero-rise hero-d4 mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/get-involved"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#1f4a2a] to-emerald-800 px-7 py-3.5 text-sm font-bold text-white shadow-[0_12px_30px_-10px_rgba(31,74,42,0.7)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-10px_rgba(31,74,42,0.8)] focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300"
-              >
-                Get Involved
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.2}
-                />
-              </Link>
-              <a
-                href="#focus-areas"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-900/30 bg-white/80 px-7 py-3.5 text-sm font-bold text-emerald-950 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300"
-              >
-                Explore Our Initiatives
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
+        </Link>
+        <a
+          href="#focus-areas"
+          className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+        >
+          Explore Our Initiatives
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR FOCUS AREAS ============ */}
         <section id="focus-areas" className="scroll-mt-6 pt-14">

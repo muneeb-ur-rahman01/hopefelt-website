@@ -241,57 +241,58 @@ export default function HealthMedicalSupport() {
       </div>
 
       {/* ============ HERO ============ */}
-      <header className="relative">
-        <div className="mx-auto grid max-w-[100rem] items-center gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:py-16">
-          <div className="relative z-10">
-            <nav
-              aria-label="Breadcrumb"
-              className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-xs text-slate-600 shadow-sm ring-1 ring-emerald-900/10 backdrop-blur"
-            >
-              <Link href="/" className="transition hover:text-emerald-800">
-                Home
-              </Link>
-              <span className="text-slate-400">/</span>
-              <Link href="/our-work" className="transition hover:text-emerald-800">
-                Our Work
-              </Link>
-              <span className="text-slate-400">/</span>
-              <span className="font-semibold text-slate-800">
-                Health &amp; Medical Support
-              </span>
-            </nav>
+      <header className="relative min-h-[460px] border-b border-emerald-900/5 bg-[#0f3d2a]">
+  {/* Full-width photo */}
+  <div className="pointer-events-none absolute inset-0">
+    <img
+      src="/images/Our Work/medicalsupport.png"
+      alt="Healthcare worker checking a patient's blood pressure at a community medical camp"
+      className="h-full w-full object-cover object-center text-transparent"
+    />
+    {/* Mobile: poori photo par dark overlay */}
+    <div className="absolute inset-0 bg-[#0f3d2a]/70 lg:hidden" />
+    {/* Desktop: left par dark (text ke liye), right par photo clear */}
+    <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(10,40,28,0.88)_0%,rgba(10,40,28,0.7)_30%,rgba(10,40,28,0.35)_55%,rgba(10,40,28,0)_78%)] lg:block" />
+  </div>
 
-            <h1 className="hero-rise hero-d2 mt-7 bg-gradient-to-br from-[#1f3a1c] via-[#2f4a2b] to-emerald-600 bg-clip-text font-serif text-5xl font-black leading-[1.04] tracking-tight text-transparent sm:text-6xl lg:text-[4.75rem]">
-              Health &amp; <br />
-              Medical Support
-            </h1>
+  <div className="relative mx-auto max-w-[100rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+    <nav
+      aria-label="Breadcrumb"
+      className="hero-rise hero-d1 inline-flex flex-wrap items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white/80 shadow-sm backdrop-blur"
+    >
+      <Link href="/" className="transition hover:text-lime-300">
+        Home
+      </Link>
+      <span className="text-white/50">/</span>
+      <Link href="/our-work" className="transition hover:text-lime-300">
+        Our Work
+      </Link>
+      <span className="text-white/50">/</span>
+      <span className="font-semibold text-white">
+        Health &amp; Medical Support
+      </span>
+    </nav>
 
-            <p className="hero-rise hero-d3 mt-6 max-w-xl font-serif text-xl leading-8 text-slate-800 sm:text-2xl sm:leading-9">
-              Connecting communities with essential care, early screening and
-              practical health support.
-            </p>
+    <div className="mt-7 max-w-2xl">
+      <h1 className="hero-rise hero-d2 font-serif text-5xl font-black leading-[1.04] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl lg:text-[4.75rem]">
+        Health &amp; <br />
+        Medical Support
+      </h1>
 
-            <p className="hero-rise hero-d3 mt-5 max-w-xl text-base leading-7 text-slate-700">
-              At Hopefelt Foundation, we work to improve access to basic
-              healthcare services through outreach, medical camps, screening,
-              preventive care and community health support, with a focus on
-              underserved and vulnerable communities.
-            </p>
-          </div>
+      <p className="hero-rise hero-d3 mt-6 max-w-xl font-serif text-xl leading-8 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-2xl sm:leading-9">
+        Connecting communities with essential care, early screening and
+        practical health support.
+      </p>
 
-          {/* Hero image */}
-          <div className="hero-rise hero-d4 relative">
-            {/* offset frame + glow */}
-            <div className="pointer-events-none absolute -bottom-4 -left-4 h-full w-full rounded-[2.25rem] bg-gradient-to-br from-emerald-200/70 to-lime-100/40" />
-            <div className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-emerald-300/30 blur-3xl" />
-            <img
-              src="/images/Our Work/medicalsupport.png"
-              alt="Healthcare worker checking a patient's blood pressure at a community medical camp"
-              className="relative h-72 w-full rounded-[2rem] object-cover shadow-[0_30px_70px_-25px_rgba(15,70,45,0.55)] ring-4 ring-white sm:h-96 lg:h-[27rem]"
-            />
-          </div>
-        </div>
-      </header>
+      <p className="hero-rise hero-d4 mt-5 max-w-xl text-base leading-7 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+        At Hopefelt Foundation, we work to improve access to basic
+        healthcare services through outreach, medical camps, screening,
+        preventive care and community health support, with a focus on
+        underserved and vulnerable communities.
+      </p>
+    </div>
+  </div>
+</header>
 
       <div className="mx-auto max-w-[100rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR SERVICES ============ */}
