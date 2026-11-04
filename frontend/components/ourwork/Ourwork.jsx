@@ -287,11 +287,6 @@ export default function OurWork() {
               <span className="font-semibold text-slate-800">Our Work</span>
             </nav>
 
-            <p className="mt-7 inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-white/80 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-[#4a6741] shadow-sm backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-lime-500" />
-              Our Work
-            </p>
-
             <h1 className="mt-5 font-serif text-4xl font-black leading-[1.1] tracking-tight text-[#1f3d1f] sm:text-5xl lg:text-6xl">
               Turning Commitment into Community Impact
             </h1>

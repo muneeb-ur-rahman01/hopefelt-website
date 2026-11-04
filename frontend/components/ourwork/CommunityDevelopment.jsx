@@ -493,7 +493,7 @@ export default function CommunityDevelopmentOutreach() {
         </section>
 
         {/* ============ TEAM + IMPACT ============ */}
-        <section className="mt-24 grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="mt-24 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           {/* Program Team & Coordination */}
           <div className="flex flex-col">
             <SectionTitle eyebrow="Who leads it">
@@ -504,7 +504,7 @@ export default function CommunityDevelopmentOutreach() {
               supported by a dedicated team.
             </p>
 
-            <div className={`${card} mt-6 flex-1 overflow-hidden`}>
+            <div className={`${card} mt-6 overflow-hidden`}>
               <div className="grid divide-y divide-emerald-900/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
                 {team.map((p) => (
                   <div key={p.role} className="flex items-start gap-3 p-5">
@@ -524,11 +524,7 @@ export default function CommunityDevelopmentOutreach() {
                   </div>
                 ))}
               </div>
-              <p className="flex items-center gap-2 border-t border-emerald-900/10 bg-slate-50 px-5 py-3 text-[11px] text-slate-600">
-                <Icon d={INFO} className="h-4 w-4 shrink-0" />
-                Names and reporting lines will be published after internal
-                confirmation.
-              </p>
+             
             </div>
           </div>
 
@@ -673,14 +669,10 @@ export default function CommunityDevelopmentOutreach() {
 
   <div className="relative flex flex-col items-start justify-between gap-6 px-6 py-8 sm:px-10 lg:flex-row lg:items-center">
     <div className="max-w-2xl">
-      <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-emerald-50 backdrop-blur-md">
-        <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
-        Get in touch
-      </span>
+     
       <h3 className="mt-3 font-serif text-2xl font-black leading-tight text-white sm:text-3xl">
         Let&apos;s Build Stronger Communities Together
       </h3>
-      <div className="mt-3 h-1 w-14 rounded-full bg-lime-300" />
       <p className="mt-3 max-w-xl text-sm leading-6 text-emerald-50/90">
         Have questions or want to collaborate on our Community Development
         &amp; Outreach program? We&apos;d love to hear from you.

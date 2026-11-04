@@ -84,86 +84,6 @@ const pillars = [
 /* dashed-path points for the staircase (lg only) */
 const stairPoints = [170, 145, 120, 95, 70, 40];
 
-const sdgs = [
-  {
-    num: 3,
-    title: "Good Health and Well-being",
-    desc: "Community health initiatives, awareness and preventive care.",
-    color: "bg-[#4c9f38]",
-    icon: ICONS.heartPulse,
-  },
-  {
-    num: 4,
-    title: "Quality Education",
-    desc: "Knowledge sharing, training and youth development programs.",
-    color: "bg-[#c5192d]",
-    icon: ICONS.book,
-  },
-  {
-    num: 5,
-    title: "Gender Equality",
-    desc: "Empowering women and girls through inclusive opportunities and participation.",
-    color: "bg-[#ff3a21]",
-    icon: "M6 11a4 4 0 108 0 4 4 0 10-8 0zM13 8l6-6m0 0h-4m4 0v4M10 15v6m-3-3h6",
-  },
-  {
-    num: 8,
-    title: "Decent Work and Economic Growth",
-    desc: "Entrepreneurship, skills and pathways to sustainable livelihoods.",
-    color: "bg-[#a21942]",
-    icon: ICONS.trend,
-  },
-  {
-    num: 9,
-    title: "Industry, Innovation and Infrastructure",
-    desc: "Technology-based solutions and innovative approaches for social impact.",
-    color: "bg-[#f36d25]",
-    icon: "M2 21h20M4 21V11l6 4v-4l6 4V4h4v17M8 18h.01M12 18h.01M16 18h.01",
-  },
-  {
-    num: 10,
-    title: "Reduced Inequalities",
-    desc: "Inclusive programs for underserved communities.",
-    color: "bg-[#e5176f]",
-    icon: "M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4",
-  },
-  {
-    num: 11,
-    title: "Sustainable Cities and Communities",
-    desc: "Building cleaner, safer and more resilient communities.",
-    color: "bg-[#fd9d24]",
-    icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
-  },
-  {
-    num: 13,
-    title: "Climate Action",
-    desc: "Climate awareness, adaptation and local community action.",
-    color: "bg-[#3f7e44]",
-    icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-  },
-  {
-    num: 15,
-    title: "Life on Land",
-    desc: "Environmental awareness and community-led plantation initiatives.",
-    color: "bg-[#56a02f]",
-    icon: "M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z",
-  },
-  {
-    num: 16,
-    title: "Peace, Justice and Strong Institutions",
-    desc: "Promoting inclusive, accountable and transparent institutions.",
-    color: "bg-[#00689d]",
-    icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3",
-  },
-  {
-    num: 17,
-    title: "Partnerships for the Goals",
-    desc: "Building strong collaborations with institutions, NGOs and communities.",
-    color: "bg-[#19486a]",
-    icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
-  },
-];
-
 const impactSteps = [
   { label: "Research & Analysis", icon: ICONS.search },
   { label: "Community Engagement", icon: ICONS.people },
@@ -220,6 +140,21 @@ const ambitionSteps = [
   },
 ];
 
+/* SDG goals scattered around the wheel (x/y/w are % of the stage on desktop) */
+const sdgs = [
+  { num: "3", label: "Good Health and Well-being", x: "5.5%", y: "15%", w: "8.8%", dur: "5s", delay: "0s" },
+  { num: "4", label: "Quality Education", x: "18.5%", y: "40%", w: "8.8%", dur: "6s", delay: "-1.5s" },
+  { num: "5", label: "Gender Equality", x: "30%", y: "72%", w: "8.4%", dur: "5.8s", delay: "-2.6s" },
+  { num: "8", label: "Decent Work and Economic Growth", x: "28%", y: "8%", w: "8.4%", dur: "6.2s", delay: "-3.4s" },
+  { num: "9", label: "Industry, Innovation and Infrastructure", x: "44%", y: "2%", w: "8.4%", dur: "5.4s", delay: "-0.4s" },
+  { num: "10", label: "Reduced Inequalities", x: "6.5%", y: "70%", w: "8.2%", dur: "5.5s", delay: "-3s" },
+  { num: "11", label: "Sustainable Cities and Communities", x: "62.5%", y: "7%", w: "8.6%", dur: "6.5s", delay: "-0.8s" },
+  { num: "13", label: "Climate Action", x: "83%", y: "20%", w: "9%", dur: "5s", delay: "-2.2s" },
+  { num: "15", label: "Life on Land", x: "71%", y: "51%", w: "8.4%", dur: "6s", delay: "-4s" },
+  { num: "16", label: "Peace, Justice and Strong Institutions", x: "54%", y: "82%", w: "8.4%", dur: "6.3s", delay: "-1.8s" },
+  { num: "17", label: "Partnerships for the Goals", x: "82%", y: "78%", w: "7%", dur: "5.5s", delay: "-1s" },
+];
+
 /* ---------- Small helpers ---------- */
 
 function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
@@ -235,6 +170,21 @@ function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
     >
       <path d={d} />
     </svg>
+  );
+}
+
+function SectionTitle({ eyebrow, children }) {
+  return (
+    <div>
+      {eyebrow && (
+        <p className="mb-2 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-emerald-700">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="text-3xl font-black tracking-tight text-[#0d3749] sm:text-4xl">
+        {children}
+      </h2>
+    </div>
   );
 }
 
@@ -256,6 +206,27 @@ const card =
 export default function AboutFull() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#f4faf6] via-white to-[#f4faf6] text-slate-800">
+      <style>{`
+        .dot-grid {
+          background-image: radial-gradient(rgba(31,74,42,.14) 1px, transparent 1px);
+          background-size: 22px 22px;
+        }
+
+        @keyframes sdg-float {
+          0%, 100% { transform: translateY(0); }
+          50%      { transform: translateY(-12px); }
+        }
+        .sdg-float {
+          animation-name: sdg-float;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .sdg-float { animation: none; }
+        }
+      `}</style>
+
       {/* soft background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -right-40 -top-32 h-[480px] w-[480px] rounded-full bg-emerald-200/30 blur-[120px]" />
@@ -417,7 +388,6 @@ export default function AboutFull() {
                       <p className="text-[15px] italic leading-7 text-slate-700">
                         {leader.quote}
                       </p>
-                    
                     </div>
                   </div>
                 </article>
@@ -576,11 +546,32 @@ export default function AboutFull() {
               viewBox="0 0 40 56"
               className="pointer-events-none absolute hidden h-14 w-10 -translate-x-1/2 text-[#0d3749] lg:block"
               style={{ left: `${(3.5 / 6) * 100}%`, top: "58px" }}
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <circle cx="22" cy="6" r="5" />
-              <path d="M16 14l10 2 6 12-5 2-4-8-3 8 8 8-4 12-5-1 3-9-8-6-6 8-5-3 8-14 3-10z" />
-              <rect x="10" y="14" width="9" height="14" rx="3" />
+              {/* head */}
+              <circle cx="22" cy="7" r="5" fill="currentColor" stroke="none" />
+
+              {/* torso (slightly leaning forward) */}
+              <path d="M21 14 L18 31" strokeWidth="6" />
+
+              {/* back arm (swinging back) */}
+              <path d="M21 16 L14 24 L9 30" strokeWidth="3.2" />
+              <circle cx="8" cy="31.5" r="2" fill="currentColor" stroke="none" />
+
+              {/* front arm (swinging forward) */}
+              <path d="M22 16 L29 22 L34 20" strokeWidth="3.2" />
+              <circle cx="35.5" cy="19.5" r="2" fill="currentColor" stroke="none" />
+
+              {/* back leg: thigh -> shin -> foot */}
+              <path d="M18 31 L13 42 L8 51" strokeWidth="3.8" />
+              <path d="M8 51 L3 53" strokeWidth="3.8" />
+
+              {/* front leg: thigh -> shin -> foot */}
+              <path d="M18 31 L26 40 L27 50" strokeWidth="3.8" />
+              <path d="M27 50 L33 52" strokeWidth="3.8" />
             </svg>
 
             {/* flag above step 06 */}
@@ -733,6 +724,54 @@ export default function AboutFull() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ============ STRATEGIC ALIGNMENT ============ */}
+        <section className="mt-24">
+          {/* left aligned: heading, then text below it */}
+          <div className="flex flex-col gap-4">
+            <SectionTitle eyebrow="Global goals">Strategic Alignment</SectionTitle>
+            <p className="max-w-xl text-base leading-7 text-slate-600 italic">
+              Our projects contribute to the following Sustainable Development Goals (SDGs).
+            </p>
+          </div>
+
+          <div className="relative mt-10 overflow-hidden rounded-[2rem] bg-gradient-to-br from-white via-[#f4faf6] to-emerald-50 p-6 shadow-[0_20px_60px_-24px_rgba(15,70,45,0.25)] ring-1 ring-emerald-900/10 sm:p-8">
+            <div className="dot-grid pointer-events-none absolute inset-0 opacity-50" />
+
+            {/* stage: wheel in the center, goals scattered + floating (desktop) */}
+            <div className="relative flex flex-col items-center gap-8 lg:block lg:aspect-[1168/668] lg:gap-0">
+              {/* orbit rings (desktop) */}
+              <div className="pointer-events-none absolute left-1/2 top-1/2 hidden aspect-square w-[34%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-emerald-900/20 lg:block" />
+              <div className="pointer-events-none absolute left-1/2 top-1/2 hidden aspect-square w-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-900/10 lg:block" />
+              <div className="pointer-events-none absolute left-1/2 top-1/2 hidden aspect-square w-[30%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-300/20 blur-3xl lg:block" />
+
+              <img
+                src="/images/sdg/sdg-wheel.png"
+                alt="Sustainable Development Goals"
+                className="relative h-72 w-72 object-contain drop-shadow-xl sm:h-80 sm:w-80 lg:absolute lg:left-1/2 lg:top-1/2 lg:h-auto lg:w-[24%] lg:-translate-x-1/2 lg:-translate-y-1/2"
+              />
+
+              <div className="relative flex flex-wrap justify-center gap-4 lg:contents">
+                {sdgs.map((g) => (
+                  <img
+                    key={g.num}
+                    src={`/images/sdg/sdg-${g.num}.png`}
+                    alt={`SDG ${g.num}: ${g.label}`}
+                    loading="lazy"
+                    style={{
+                      "--x": g.x,
+                      "--y": g.y,
+                      "--w": g.w,
+                      animationDuration: g.dur,
+                      animationDelay: g.delay,
+                    }}
+                    className="sdg-float h-28 w-28 rounded-xl object-contain shadow-[0_12px_28px_-8px_rgba(15,70,45,0.45)] ring-2 ring-white transition-shadow duration-300 hover:shadow-[0_20px_40px_-8px_rgba(15,70,45,0.55)] sm:h-32 sm:w-32 lg:absolute lg:left-[var(--x)] lg:top-[var(--y)] lg:h-auto lg:w-[var(--w)]"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
