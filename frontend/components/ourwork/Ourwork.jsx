@@ -241,7 +241,6 @@ function SectionTitle({ eyebrow, children }) {
     <div>
       {eyebrow && (
         <p className="mb-2 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-emerald-700">
-          <span className="h-px w-6 bg-lime-500" />
           {eyebrow}
         </p>
       )}
@@ -398,17 +397,16 @@ export default function OurWork() {
 
       <div className="mx-auto max-w-[90rem] px-5 pb-16 pt-16 sm:px-8 lg:px-12">
         {/* ============ EXPLORE OUR WORK ============ */}
-        <div
-          id="work"
-          className="flex scroll-mt-6 flex-col justify-between gap-4 md:flex-row md:items-end"
-        >
-          <SectionTitle eyebrow="Focus areas">Explore Our Work</SectionTitle>
-          <p className="max-w-xl text-base leading-7 text-slate-600">
-            Discover how we create change through our focused areas, each
-            contributing to healthier, more inclusive and sustainable
-            communities.
-          </p>
-        </div>
+       <div
+  id="work"
+  className="flex scroll-mt-6 flex-col gap-2"
+>
+  <SectionTitle eyebrow="Focus areas">Explore Our Work</SectionTitle>
+
+  <p className="text-base leading-7 text-slate-600 italic">
+    Discover how we create change through our focused areas, each contributing to healthier, more inclusive and sustainable communities.
+  </p>
+</div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {workAreas.map((area) => (
@@ -500,7 +498,6 @@ export default function OurWork() {
           <div className="relative grid items-center lg:grid-cols-[1fr_1fr]">
             <div className="px-6 py-12 sm:px-12">
               <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-lime-300">
-                <span className="h-px w-6 bg-lime-300" />
                 Together for a healthier tomorrow
               </span>
               <h3 className="mt-4 font-serif text-2xl font-extrabold leading-9 text-white sm:text-3xl sm:leading-10">
@@ -509,12 +506,6 @@ export default function OurWork() {
             </div>
 
             <div className="relative h-52 lg:h-full lg:min-h-[13rem]">
-              <img
-                src="/images/our-work/cta-landscape.jpg"
-                alt="Tree on a hill at sunrise beside a winding road"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
               <div className="absolute inset-0 bg-gradient-to-r from-[#2b5c33] via-[#2b5c33]/30 to-transparent" />
 
               <Link

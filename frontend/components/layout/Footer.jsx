@@ -5,10 +5,10 @@ const linkColumns = [
     heading: "Get to Know Us",
     links: [
       { label: "About", href: "/about" },
-      { label: "Our Team", href: "/about/our-team" },
-      { label: "Partners", href: "/about/partners" },
-      { label: "Achievements", href: "/achievements" },
-      { label: "Impact", href: "/impact" },
+      // { label: "Our Team", href: "/about/our-team" },
+      // { label: "Partners", href: "/about/partners" },
+      // { label: "Achievements", href: "/achievements" },
+      // { label: "Impact", href: "/impact" },
     ],
   },
   {
@@ -16,19 +16,19 @@ const linkColumns = [
     links: [
       { label: "Projects", href: "/projects" },
       { label: "Campaigns & Initiatives", href: "/campaigns-initiatives" },
-      { label: "Research & Knowledge", href: "/research" },
-      { label: "Technology & Digital Health", href: "/technology" },
-      { label: "Communications & Media", href: "/communications" },
-      { label: "SDGs & Global Alignment", href: "/sdgs" },
+      // { label: "Research & Knowledge", href: "/research" },
+      // { label: "Technology & Digital Health", href: "/technology" },
+      // { label: "Communications & Media", href: "/communications" },
+      // { label: "SDGs & Global Alignment", href: "/sdgs" },
     ],
   },
   {
     heading: "Get Involved",
     links: [
-      { label: "Training & Experience", href: "/training" },
+      // { label: "Training & Experience", href: "/training" },
       { label: "Events", href: "/events" },
       { label: "Get Involved", href: "/get-involved" },
-      { label: "Donate", href: "/donate" },
+      // { label: "Donate", href: "/donate" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -156,8 +156,6 @@ export default function Footer() {
               <br />
               With Us
             </h2>
-
-            <div className="mx-auto mt-3 h-1 w-10 rounded-full bg-gradient-to-r from-emerald-700 to-lime-400 lg:mx-0" />
           </div>
 
           {/* SOCIAL LINKS */}
