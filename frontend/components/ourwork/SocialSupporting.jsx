@@ -119,8 +119,8 @@ const workSteps = [
 ];
 
 const team = [
-  { role: "Program Director", sub: "[Assigned Lead]", wrap: "bg-emerald-100 text-emerald-800", icon: USER },
-  { role: "Social Support Coordinator", sub: "[Assigned Coordinator]", wrap: "bg-sky-100 text-sky-600", icon: BOOK },
+  { role: "Program Director", sub: "Alishba Noor", wrap: "bg-emerald-100 text-emerald-800", icon: USER },
+  { role: "Social Support Coordinator", sub: "Alishba Noor", wrap: "bg-sky-100 text-sky-600", icon: BOOK },
   { role: "Learning & Skills Team", sub: "Educators and trained facilitators", wrap: "bg-rose-100 text-rose-500", icon: USERS },
   { role: "Community Volunteers", sub: "Local volunteers and youth mentors", wrap: "bg-amber-100 text-amber-700", icon: USERS },
 ];
@@ -313,9 +313,9 @@ export default function SocialSupportLearning() {
       <div className="mx-auto max-w-[100rem] px-5 pb-12 sm:px-8 lg:px-12">
         {/* ============ OUR FOCUS AREAS ============ */}
         <section id="focus-areas" className="pt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+         <div className="flex flex-col items-start gap-3">
             <SectionTitle>Our Focus Areas</SectionTitle>
-            <p className="text-xs text-slate-600">
+            <p className="text-sm leading-6 text-slate-600 italic">
               Key areas through which we provide support and create inclusive
               learning opportunities.
             </p>
@@ -423,9 +423,9 @@ export default function SocialSupportLearning() {
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
         <section className="mt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+          <div className="flex flex-col items-start gap-3">
             <SectionTitle>Strategic Alignment</SectionTitle>
-            <p className="text-xs text-slate-600">
+            <p className="text-sm leading-6 text-slate-600 italic">
               Our work contributes to the following Sustainable Development
               Goals (SDGs).
             </p>
@@ -466,9 +466,9 @@ export default function SocialSupportLearning() {
 
         {/* ============ HOW WE WORK ============ */}
         <section className="mt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+          <div className="flex flex-col items-start gap-3">
             <SectionTitle>How We Work</SectionTitle>
-            <p className="text-xs text-slate-600">
+            <p className="text-sm leading-6 text-slate-600 italic">
               A community-focused approach from support to long-term impact.
             </p>
           </div>
@@ -508,7 +508,7 @@ export default function SocialSupportLearning() {
         {/* ============ PROGRAM TEAM ============ */}
         <section className="mt-10">
           <SectionTitle>Program Team &amp; Coordination</SectionTitle>
-          <p className="mt-2 text-xs text-slate-600">
+          <p className="mt-2 text-xs text-slate-600 italic">
             Our Social Support &amp; Learning program is led and supported by a
             dedicated team.
           </p>
@@ -533,13 +533,13 @@ export default function SocialSupportLearning() {
                 </div>
               ))}
             </div>
-            <p className="flex items-center gap-2 border-t border-emerald-900/5 bg-slate-50 px-4 py-2.5 text-[11px] text-slate-600">
+            {/* <p className="flex items-center gap-2 border-t border-emerald-900/5 bg-slate-50 px-4 py-2.5 text-[11px] text-slate-600">
               <Icon
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 className="h-4 w-4"
               />
               Names and contacts are published after internal confirmation.
-            </p>
+            </p> */}
           </div>
         </section>
 
@@ -568,7 +568,7 @@ export default function SocialSupportLearning() {
                   {c.title}
                 </h3>
                 <p className={`mt-3 text-sm leading-5 ${c.descText}`}>{c.desc}</p>
-                <span
+                {/* <span
                   className={`mt-2 inline-block rounded-full px-3 py-1 text-sm font-bold ${
                     c.reported
                       ? "bg-emerald-200/70 text-emerald-600"
@@ -576,7 +576,7 @@ export default function SocialSupportLearning() {
                   }`}
                 >
                   {c.reported ? "Reported achievement" : "Count needed"}
-                </span>
+                </span> */}
               </article>
             ))}
           </div>
@@ -584,13 +584,13 @@ export default function SocialSupportLearning() {
 
         {/* ============ BE PART OF THE CHANGE ============ */}
         <section className="mt-10">
-          <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <SectionTitle>Be Part of the Change</SectionTitle>
-            <p className="text-xs text-slate-600">
-              There are many ways to support and contribute to our Social
-              Support &amp; Learning program.
-            </p>
-          </div>
+          <div className="flex flex-col items-start gap-3">
+          <SectionTitle>Be Part of the Change</SectionTitle>
+          <p className="text-sm leading-6 text-slate-600 italic">
+            There are many ways to support and contribute to our Social
+            Support &amp; Learning program.
+          </p>
+        </div>
 
           <div className="mt-6 grid gap-4 lg:grid-cols-3">
             {/* Volunteer */}
@@ -663,12 +663,6 @@ export default function SocialSupportLearning() {
 
         {/* ============ GET IN TOUCH ============ */}
         <section className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40]">
-          <img
-            src="/images/social-support/cta-books.jpg"
-            alt=""
-            loading="lazy"
-            className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover lg:block"
-          />
           <div className="absolute inset-0 bg-gradient-to-r from-[#12382a] via-[#12382a]/85 to-transparent" />
 
           <div className="relative grid items-center gap-6 px-6 py-10 sm:px-10 lg:grid-cols-[1.2fr_0.8fr]">

@@ -231,12 +231,13 @@ function Icon({ d, className = "h-6 w-6", stroke = 1.6 }) {
 /* Title + description on a hairline, with a short deep-green marker on the line */
 function SectionHeader({ title, desc }) {
   return (
-    <div className="relative flex flex-col justify-between gap-3 border-b border-emerald-950/10 pb-6 sm:flex-row sm:items-end sm:gap-10">
+    <div className="relative flex flex-col items-start gap-3 border-b border-emerald-950/10 pb-6">
       <h2 className="font-serif text-3xl font-black tracking-[-0.02em] text-[#1f4a2a] sm:text-4xl">
         {title}
       </h2>
+
       {desc && (
-        <p className="max-w-md text-sm leading-6 text-slate-600 sm:text-right">
+        <p className="max-w-none whitespace-nowrap text-sm italic leading-6 text-slate-600">
           {desc}
         </p>
       )}
@@ -250,7 +251,6 @@ function SubTitle({ children }) {
       <h2 className="font-serif text-3xl font-black tracking-[-0.02em] text-[#1f4a2a] sm:text-4xl">
         {children}
       </h2>
-      <span className="absolute -bottom-px left-0 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#1f4a2a] via-emerald-600 to-lime-400" />
     </div>
   );
 }
@@ -685,45 +685,36 @@ export default function ClimateEnvironmentResilience() {
         </section>
 
         {/* ============ GET IN TOUCH ============ */}
-        <section className="relative mt-24 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40] shadow-[0_30px_80px_-30px_rgba(18,56,42,0.8)]">
-          <img
-            src="/images/climate-resilience/cta-sapling.jpg"
-            alt=""
-            loading="lazy"
-            className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover lg:block"
-          />
+       <section className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40] shadow-[0_30px_80px_-30px_rgba(18,56,42,0.8)]">
           <div className="absolute inset-0 bg-gradient-to-r from-[#12382a] via-[#12382a]/85 to-transparent" />
           <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
 
-          <div className="relative grid items-center gap-8 px-6 py-14 sm:px-12 lg:grid-cols-2 lg:py-16">
-            <div>
+          <div className="relative flex flex-col items-start justify-between gap-6 px-6 py-8 sm:px-10 lg:flex-row lg:items-center">
+            <div className="max-w-3xl">
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-emerald-50 backdrop-blur-md">
                 Get in touch
               </span>
-              <h3 className="mt-5 font-serif text-3xl font-black leading-tight tracking-[-0.02em] text-white sm:text-4xl">
+              <h3 className="mt-3 font-serif text-2xl font-black leading-tight tracking-[-0.02em] text-white sm:text-3xl">
                 Let&apos;s Build Resilient Communities Together
               </h3>
-              <p className="mt-4 max-w-md text-sm leading-6 text-emerald-50/90">
-                Have questions or want to collaborate on our Climate,
-                Environment &amp; Community Resilience program? We&apos;d love
-                to hear from you.
+              <p className="mt-3 max-w-xl text-sm leading-6 text-emerald-50/90">
+                Have questions or want to collaborate on our Climate, Environment
+                &amp; Community Resilience program? We&apos;d love to hear from you.
               </p>
             </div>
 
-            <div className="flex lg:justify-center">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
-              >
-                Contact the Program Team
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.4}
-                />
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+            >
+              Contact the Program Team
+              <Icon
+                d={ARROW}
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                stroke={2.4}
+              />
+            </Link>
           </div>
         </section>
       </div>

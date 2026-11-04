@@ -468,7 +468,7 @@ export default function BusinessHub() {
               <h2 className="font-serif text-2xl font-extrabold text-[#1f3a8a]">
                 Our Vision
               </h2>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600 italic">
                 A thriving ecosystem of innovative entrepreneurs and
                 enterprises creating meaningful and lasting impact for
                 communities across Pakistan and beyond.
@@ -485,7 +485,7 @@ export default function BusinessHub() {
               <h2 className="font-serif text-2xl font-extrabold text-[#1f3a8a]">
                 Our Mission
               </h2>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
+              <p className="mt-2 text-sm leading-6 text-slate-600 italic">
                 To support and empower individuals, startups and businesses
                 with resources, mentorship, partnerships and market
                 opportunities to turn ideas into sustainable ventures.
@@ -520,7 +520,7 @@ export default function BusinessHub() {
         {/* ============ STRATEGIC ALIGNMENT ============ */}
         <section className="mt-16">
           <SectionTitle eyebrow="Impact">Strategic Alignment</SectionTitle>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 italic">
             The Business Hub contributes to national and global goals,
             including:
           </p>
@@ -580,7 +580,7 @@ export default function BusinessHub() {
         {/* ============ OUR PROGRAM AREAS ============ */}
         <section className="mt-20 scroll-mt-8" id="programs">
           <SectionTitle eyebrow="Programs">Our Program Areas</SectionTitle>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 italic">
             Explore the key focus areas of the Business Hub. Click on each area
             to learn more or get involved.
           </p>
@@ -601,7 +601,7 @@ export default function BusinessHub() {
         {/* ============ GET INVOLVED ============ */}
         <section className="mt-20 scroll-mt-8" id="get-involved">
           <SectionTitle eyebrow="Join Us">Get Involved</SectionTitle>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 italic">
             There are many ways you can be part of the Business Hub. Choose the
             option that best fits you.
           </p>

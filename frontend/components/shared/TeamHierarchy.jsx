@@ -19,21 +19,21 @@ const hierarchyData = {
   departments: [
     {
       name: "USAMA BIN ZAHID",
-      role: "Sales | Marketing",
+      role: "Executive Director",
       image: "/images/Team/usama.jpg",
      color: "bg-cyan-600 text-white",
       ringColor: "border-lime-500",
     },
     {
       name: "MUHAMMAD RIZWAN",
-      role: "Operational Team",
+      role: "Executive Operations",
       image: "/images/Team/Rizwan.jpg",
       color: "bg-cyan-600 text-white",
       ringColor: "border-teal-500",
     },
     {
       name: "SHARJEEL",
-      role: "Social Media Manager",
+      role: "Media Advisor",
       image: "/images/Team/Sharjeel.jpg",
     color: "bg-cyan-600 text-white",
       ringColor: "border-emerald-500",
@@ -141,13 +141,13 @@ export default function TeamHierarchy() {
             </span>
           </div>
 
-          {/* DEPARTMENT CARDS */}
-          <div className="grid grid-cols-1 gap-x-6 gap-y-16 sm:grid-cols-2 sm:gap-x-5 lg:grid-cols-4 lg:gap-x-6">
+          {/* DEPARTMENT CARDS (centered) */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-16 sm:gap-x-5 lg:gap-x-6">
 
             {hierarchyData.departments.map((dept, idx) => (
               <div
                 key={dept.name}
-                className="relative flex min-w-0 flex-col items-center pt-12"
+                className="relative flex w-full min-w-0 flex-col items-center pt-12 sm:w-[calc(50%-0.625rem)] lg:w-[calc(25%-1.125rem)]"
               >
                 {/* Desktop connector */}
                 <div className="absolute -top-8 left-1/2 hidden h-8 w-0.5 -translate-x-1/2 bg-forest/30 lg:block" />

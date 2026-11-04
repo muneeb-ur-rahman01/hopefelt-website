@@ -6,40 +6,83 @@ import {
   coFounderVision,
 } from "@/data/about";
 
-/* ---------- Static content (matches the new design) ---------- */
+/* ---------- Static content ---------- */
+
+const ICONS = {
+  heart:
+    "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+  heartPulse:
+    "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0zM7 12h2.5l1.5-2.5 2 5 1.5-2.5H17",
+  book: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+  cap: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z",
+  monitor:
+    "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  trend: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+  people:
+    "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+  bulb: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+  chart:
+    "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+  flask: "M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M8 15h8",
+  leaf: "M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l8-8",
+  search: "M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z",
+  gear: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z",
+  check: "M5 13l4 4L19 7",
+};
 
 const pillars = [
   {
     title: "Public Health & Community Well-being",
     desc: "Promoting healthier and more resilient communities.",
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    icon: ICONS.heart,
+    color: "#6cc04a",
+    iconBg: "bg-[#6cc04a]",
+    height: "lg:min-h-[190px]",
   },
   {
     title: "Research & Evidence-based Action",
     desc: "Generating knowledge to drive real-world solutions.",
-    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+    icon: ICONS.book,
+    color: "#2bb394",
+    iconBg: "bg-[#0f6b73]",
+    height: "lg:min-h-[215px]",
   },
   {
     title: "Education & Youth Empowerment",
     desc: "Building skills, awareness and opportunities for the future.",
-    icon: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z",
+    icon: ICONS.cap,
+    color: "#58b947",
+    iconBg: "bg-[#3aa35a]",
+    height: "lg:min-h-[240px]",
   },
   {
     title: "Technology & Digital Innovation",
     desc: "Leveraging technology and AI for greater social impact.",
-    icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    icon: ICONS.monitor,
+    color: "#1f9e8a",
+    iconBg: "bg-[#0f6b73]",
+    height: "lg:min-h-[265px]",
   },
   {
     title: "Entrepreneurship & Economic Opportunity",
     desc: "Creating pathways for sustainable growth and self-reliance.",
-    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+    icon: ICONS.trend,
+    color: "#7cc22d",
+    iconBg: "bg-[#4aa83a]",
+    height: "lg:min-h-[290px]",
   },
   {
     title: "Partnerships & Sustainable Development",
     desc: "Collaborating for broader, long-lasting change.",
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+    icon: ICONS.people,
+    color: "#0f5f73",
+    iconBg: "bg-[#0f5f73]",
+    height: "lg:min-h-[320px]",
   },
 ];
+
+/* dashed-path points for the staircase (lg only) */
+const stairPoints = [170, 145, 120, 95, 70, 40];
 
 const sdgs = [
   {
@@ -47,23 +90,20 @@ const sdgs = [
     title: "Good Health and Well-being",
     desc: "Community health initiatives, awareness and preventive care.",
     color: "bg-[#4c9f38]",
-    // heart + pulse
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0zM7 12h2.5l1.5-2.5 2 5 1.5-2.5H17",
+    icon: ICONS.heartPulse,
   },
   {
     num: 4,
     title: "Quality Education",
     desc: "Knowledge sharing, training and youth development programs.",
     color: "bg-[#c5192d]",
-    // open book
-    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+    icon: ICONS.book,
   },
   {
     num: 5,
     title: "Gender Equality",
     desc: "Empowering women and girls through inclusive opportunities and participation.",
     color: "bg-[#ff3a21]",
-    // gender symbol (venus + mars)
     icon: "M6 11a4 4 0 108 0 4 4 0 10-8 0zM13 8l6-6m0 0h-4m4 0v4M10 15v6m-3-3h6",
   },
   {
@@ -71,15 +111,13 @@ const sdgs = [
     title: "Decent Work and Economic Growth",
     desc: "Entrepreneurship, skills and pathways to sustainable livelihoods.",
     color: "bg-[#a21942]",
-    // trending up
-    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+    icon: ICONS.trend,
   },
   {
     num: 9,
     title: "Industry, Innovation and Infrastructure",
     desc: "Technology-based solutions and innovative approaches for social impact.",
     color: "bg-[#f36d25]",
-    // factory
     icon: "M2 21h20M4 21V11l6 4v-4l6 4V4h4v17M8 18h.01M12 18h.01M16 18h.01",
   },
   {
@@ -87,7 +125,6 @@ const sdgs = [
     title: "Reduced Inequalities",
     desc: "Inclusive programs for underserved communities.",
     color: "bg-[#e5176f]",
-    // opposing arrows
     icon: "M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4",
   },
   {
@@ -95,7 +132,6 @@ const sdgs = [
     title: "Sustainable Cities and Communities",
     desc: "Building cleaner, safer and more resilient communities.",
     color: "bg-[#fd9d24]",
-    // buildings
     icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
   },
   {
@@ -103,7 +139,6 @@ const sdgs = [
     title: "Climate Action",
     desc: "Climate awareness, adaptation and local community action.",
     color: "bg-[#3f7e44]",
-    // globe
     icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
@@ -111,7 +146,6 @@ const sdgs = [
     title: "Life on Land",
     desc: "Environmental awareness and community-led plantation initiatives.",
     color: "bg-[#56a02f]",
-    // tree
     icon: "M12 3l5 7h-3l4 6h-5v5h-2v-5H6l4-6H7l5-7z",
   },
   {
@@ -119,7 +153,6 @@ const sdgs = [
     title: "Peace, Justice and Strong Institutions",
     desc: "Promoting inclusive, accountable and transparent institutions.",
     color: "bg-[#00689d]",
-    // scales of justice
     icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3",
   },
   {
@@ -127,47 +160,19 @@ const sdgs = [
     title: "Partnerships for the Goals",
     desc: "Building strong collaborations with institutions, NGOs and communities.",
     color: "bg-[#19486a]",
-    // link
     icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1",
   },
 ];
 
-const socials = [
-  {
-    label: "Instagram",
-    href: "#",
-    bg: "bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5]",
-    path: "M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4zm5 5a4 4 0 100 8 4 4 0 000-8zm5.5-1.5h.01",
-  },
-  {
-    label: "Facebook",
-    href: "#",
-    bg: "bg-[#1877f2]",
-    path: "M14 8h2V5h-2.5C11.3 5 10 6.4 10 8.5V10H8v3h2v6h3v-6h2.2l.5-3H13V8.7c0-.4.2-.7 1-.7z",
-  },
-  {
-    label: "WhatsApp",
-    href: "#",
-    bg: "bg-[#25d366]",
-    path: "M3 21l1.6-4.7A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4.1-1.1L3 21zm6-12c0 3 3 6 6 6l1.2-1.5-2-1-1 .7c-.8-.3-1.9-1.4-2.2-2.2l.7-1-1-2L9 9z",
-  },
-  {
-    label: "Email",
-    href: "#",
-    bg: "bg-[#e5453b]",
-    path: "M3 6h18v12H3V6zm0 0l9 7 9-7",
-  },
-];
-
 const impactSteps = [
-  { label: "Research & Analysis", icon: "M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" },
-  { label: "Community Engagement", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" },
-  { label: "Education & Training", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
-  { label: "Digital Innovation", icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" },
-  { label: "Implementation & Collaboration", icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z" },
-  { label: "Monitoring & Evaluation", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
-  { label: "Sustainable Impact", icon: "M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l8-8" },
-];
+  { label: "Research & Analysis", icon: ICONS.search },
+  { label: "Community Engagement", icon: ICONS.people },
+  { label: "Education & Training", icon: ICONS.book },
+  { label: "Digital Innovation", icon: ICONS.bulb },
+  { label: "Implementation & Collaboration", icon: ICONS.gear },
+  { label: "Monitoring & Evaluation", icon: ICONS.chart },
+  { label: "Sustainable Impact", icon: ICONS.leaf },
+].slice(0, 6);
 
 const collabPoints = [
   "Academic Collaborations",
@@ -175,27 +180,43 @@ const collabPoints = [
   "Institutional Support",
 ];
 
+/* "At Hopefelt, We Work for" bar */
+const workFor = [
+  { label: "Better\nHealth", icon: ICONS.heartPulse },
+  { label: "Inclusive\nEducation", icon: ICONS.book },
+  { label: "Innovation &\nResearch", icon: ICONS.flask },
+  { label: "Empowered\nCommunities", icon: ICONS.people },
+  { label: "Sustainable\nImpact", icon: ICONS.leaf },
+];
+
+/* Ambition curve: left/top are % positions of the dot on the curve */
 const ambitionSteps = [
   {
     title: "Today",
     sub: "Stronger Communities",
-    pos: "left-0 top-[34%]",
-    circle: "bg-[#0d3749]",
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+    left: 20,
+    top: 60,
+    circle: "bg-[#0d4a5e]",
+    pill: "bg-[#0d4a5e] text-white",
+    icon: ICONS.people,
   },
   {
     title: "Innovation",
     sub: "Sustainable Solutions",
-    pos: "left-[34%] top-[16%]",
-    circle: "bg-lime-500",
-    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+    left: 50,
+    top: 54,
+    circle: "bg-[#5cb82a]",
+    pill: "bg-[#5cb82a] text-white",
+    icon: ICONS.bulb,
   },
   {
     title: "Tomorrow",
     sub: "Brighter, Healthier Futures",
-    pos: "left-[66%] top-0",
-    circle: "bg-emerald-700",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2",
+    left: 80,
+    top: 30,
+    circle: "bg-[#0d4a5e]",
+    pill: "bg-[#0d4a5e] text-white",
+    icon: ICONS.chart,
   },
 ];
 
@@ -243,219 +264,242 @@ export default function AboutFull() {
 
       <div className="mx-auto max-w-[100rem] px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
         {/* ============ 01 — HERO ============ */}
-        <header className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <header className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-900/10 bg-forest px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white shadow-sm">
-              <span className="h-2 w-2 rounded-full bg-emerald-600" />
-              Better Communities.
-              <span className="font-extrabold text-white">
-                Brighter Futures.
-              </span>
+            <span className="inline-block rounded-full bg-[#2e7d1e] px-5 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
+              Better Communities. Brighter Futures.
             </span>
 
-            <h1 className="mt-6 text-5xl font-black tracking-tight text-[#0d3749] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 text-5xl font-black tracking-tight text-[#0d2b45] sm:text-6xl lg:text-7xl">
               ABOUT US
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
+            <p className="mt-6 max-w-xl text-[15px] leading-7 text-slate-700">
               {aboutHeaderData.description}
             </p>
+
+            {/* badges */}
+            <div className="mt-8 flex flex-wrap items-center gap-y-4 text-sm font-bold text-[#0d2b45]">
+              <div className="flex items-center gap-2 pr-5">
+                <Icon d={ICONS.people} className="h-7 w-7 text-[#4aa83a]" />
+                Youth Led
+              </div>
+              <div className="flex items-center gap-2 border-l border-slate-300 px-5">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-7 w-7 text-[#4aa83a]"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M2 12l4-4 4 1 3-2 4 3 5-1M2 12l5 6 3-1 2 2 3-2 3 1 4-6M9 14l2 2M12 12l2 2" />
+                </svg>
+                Community Driven
+              </div>
+              <div className="flex items-center gap-2 border-l border-slate-300 pl-5">
+                <Icon d={ICONS.leaf} className="h-7 w-7 text-[#4aa83a]" />
+                Impact Focused
+              </div>
+            </div>
           </div>
 
-          {/* Illustration */}
-          <div className="relative mx-auto flex w-full max-w-xl items-center justify-center">
-            <div className="relative h-72 w-72 shrink-0 sm:h-80 sm:w-80">
-              <div className="absolute inset-0 rounded-full border border-emerald-200/70" />
-              <div className="absolute inset-6 rounded-full bg-gradient-to-br from-emerald-50 to-white" />
-
-              {/* plant */}
-              <svg
-                viewBox="0 0 200 200"
-                className="absolute inset-0 h-full w-full"
-                fill="none"
-              >
-                <ellipse cx="100" cy="168" rx="46" ry="9" fill="#d9ecdf" />
-                <path
-                  d="M100 168V92"
-                  stroke="#1f6b3a"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M100 120c-26 0-40-16-42-38 24-2 42 12 42 38z"
-                  fill="#2f8f4e"
-                />
-                <path
-                  d="M100 100c22-2 38-18 40-42-24 0-42 16-40 42z"
-                  fill="#1f6b3a"
-                />
-                <path
-                  d="M100 92c-6-20 0-38 16-50 6 20 0 40-16 50z"
-                  fill="#44b36a"
-                />
-              </svg>
-
-              {/* floating icons */}
-              <span className="absolute -left-2 top-4 flex h-14 w-14 items-center justify-center rounded-full bg-white text-emerald-700 shadow-lg ring-1 ring-emerald-900/5">
-                <Icon d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-              </span>
-              <span className="absolute -right-2 top-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-emerald-700 shadow-lg ring-1 ring-emerald-900/5">
-                <Icon d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </span>
-              <span className="absolute -left-6 bottom-16 flex h-12 w-12 items-center justify-center rounded-full bg-white text-emerald-700 shadow-lg ring-1 ring-emerald-900/5">
-                <Icon d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </span>
-            </div>
-
-            <div className="ml-4 hidden text-2xl font-medium leading-snug text-[#0d6749] sm:block">
-              <p>People</p>
-              <p>Innovation</p>
-              <p>Communities</p>
-              <p className="font-extrabold text-emerald-700">Lasting Impact.</p>
+          {/* Team photo with curved frame */}
+          <div className="relative">
+            <div className="absolute -left-3 -top-3 bottom-3 right-0 rounded-l-[9rem] rounded-r-3xl border-l-[6px] border-t-[6px] border-[#6cc04a]/80" />
+            <div className="relative overflow-hidden rounded-l-[9rem] rounded-r-3xl shadow-xl">
+              <img
+                src={aboutHeaderData.image || "/images/hero/about.png"}
+                alt="Hopefelt Foundation team"
+                className="h-[260px] w-full object-cover sm:h-[330px] lg:h-[355px]"
+              />
             </div>
           </div>
         </header>
 
         {/* ============ 02 — VISION & MISSION ============ */}
-        <section className="mt-14 grid gap-6 md:grid-cols-2">
+        <section className="mt-12 grid gap-6 md:grid-cols-2">
           {/* Vision */}
-          <article
-            className={`${card} group flex items-center gap-6 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9`}
-          >
-            <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-sky-50 text-emerald-700 sm:h-36 sm:w-36">
+          <article className="relative flex items-center gap-6 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#e3f3d8] via-[#f1f9ec] to-white p-7 sm:p-9 md:rounded-tr-[4rem] md:rounded-bl-[4rem]">
+            <div className="pointer-events-none absolute -bottom-10 -right-10 h-32 w-72 rounded-full bg-[#b9e08f]/50 blur-xl" />
+            <div className="relative flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-white shadow-lg ring-8 ring-white/70 sm:h-36 sm:w-36">
               <svg viewBox="0 0 64 64" className="h-20 w-20 sm:h-24 sm:w-24" fill="none">
-                <path d="M6 54L26 20l10 16 8-12 14 30H6z" fill="#cfe6d8" stroke="#1f6b3a" strokeWidth="2" strokeLinejoin="round" />
-                <path d="M26 20V6l12 4-12 4" fill="#1f6b3a" stroke="#1f6b3a" strokeWidth="2" strokeLinejoin="round" />
+                <path d="M4 56L26 20l10 16 8-12 16 32H4z" fill="#3f9a3f" />
+                <path d="M26 20l-9 15 9 6 10-5-10-16z" fill="#6cc04a" />
+                <path d="M26 20V4" stroke="#2e7d1e" strokeWidth="3" strokeLinecap="round" />
+                <path d="M26 4l14 4-14 5z" fill="#2e7d1e" />
               </svg>
             </div>
-            <div>
-              <h2 className="text-3xl font-extrabold text-[#4a6741]">
-                OUR <span className="text-[#4a6741]">VISION</span>
+            <div className="relative">
+              <h2 className="text-3xl font-black text-[#0d2b45] sm:text-4xl">
+                OUR <span className="text-[#2e7d1e]">VISION</span>
               </h2>
-              <p className="mt-4 text-sm leading-7 text-slate-600 italic">
+              <p className="mt-3 text-lg font-medium leading-7 text-[#0d2b45]">
                 A healthier, more informed and empowered society where every
-                individual has the opportunity to thrive.
+                individual and community has the opportunity to thrive.
               </p>
             </div>
           </article>
 
           {/* Mission */}
-          <article
-            className={`${card} group flex items-center gap-6 p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9`}
-          >
-            <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-lime-50 sm:h-36 sm:w-36">
+          <article className="relative flex items-center gap-6 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#e6e1fa] via-[#f2effd] to-white p-7 sm:p-9 md:rounded-tl-[4rem] md:rounded-br-[4rem]">
+            <div className="pointer-events-none absolute -bottom-10 -right-10 h-32 w-72 rounded-full bg-[#cbbff2]/50 blur-xl" />
+            <div className="relative flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-white shadow-lg ring-8 ring-white/70 sm:h-36 sm:w-36">
               <svg viewBox="0 0 64 64" className="h-20 w-20 sm:h-24 sm:w-24" fill="none">
-                <circle cx="32" cy="34" r="22" stroke="#0d3749" strokeWidth="3" />
-                <circle cx="32" cy="34" r="14" stroke="#0d3749" strokeWidth="3" />
-                <circle cx="32" cy="34" r="5" fill="#0d3749" />
-                <path d="M32 34L54 10M54 10v10M54 10H44" stroke="#1f6b3a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="30" cy="36" r="22" stroke="#7a5fc4" strokeWidth="5" />
+                <circle cx="30" cy="36" r="13" stroke="#5b3fa0" strokeWidth="5" />
+                <circle cx="30" cy="36" r="4.5" fill="#5b3fa0" />
+                <path d="M30 36L54 12" stroke="#3e2a80" strokeWidth="3.5" strokeLinecap="round" />
+                <path d="M54 12l1-8-6 5 5 3zM54 12l8-1-5 6-3-5z" fill="#3e2a80" />
               </svg>
             </div>
-            <div>
-              <h2 className="text-3xl font-extrabold text-[#4a6741]">
-                OUR <span className="text-[#4a6741]">MISSION</span>
+            <div className="relative">
+              <h2 className="text-3xl font-black text-[#0d2b45] sm:text-4xl">
+                OUR <span className="text-[#5b3fa0]">MISSION</span>
               </h2>
-              <p className="mt-4 text-sm leading-7 text-slate-600 italic">
+              <p className="mt-3 text-lg font-medium leading-7 text-[#0d2b45]">
                 To drive positive change through research, innovation,
-                collaboration and community-led initiatives that improve health,
-                education and social well-being.
+                collaboration and community-led initiatives that improve
+                health, education and social well-being.
               </p>
             </div>
           </article>
         </section>
 
         {/* ============ FOUNDER & CO-FOUNDER VISION ============ */}
-        <section className="mt-16">
+        <section className="mt-8">
           <div className="grid gap-6 lg:grid-cols-2">
-            {[founderVision, coFounderVision].map((leader, idx) => (
-              <article
-                key={leader.name}
-                className={`${card} group relative overflow-hidden p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9`}
-              >
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="rounded-full border border-emerald-900/10 bg-forest  px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.2em] text-white">
-                      {idx === 0 ? "Founder's Vision" : "Co-Founder's Vision"}
-                    </span>
-                    <span className="text-4xl font-black text-emerald-900/10">
-                      0{idx + 1}
-                    </span>
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-5">
-                    <div className="relative shrink-0">
-                      <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-lime-300 to-emerald-500 opacity-80" />
-                      <img
-                        src={leader.image}
-                        alt={leader.name}
-                        loading="lazy"
-                        className="relative h-20 w-20 rounded-full border-2 border-white object-cover sm:h-24 sm:w-24"
-                      />
-                    </div>
-
+            {[founderVision, coFounderVision].map((leader, idx) => {
+              const isFounder = idx === 0;
+              return (
+                <article
+                  key={leader.name}
+                  className={`rounded-3xl border p-5 shadow-[0_10px_40px_rgba(15,70,45,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-6 ${
+                    isFounder
+                      ? "border-emerald-900/5 bg-gradient-to-br from-[#eef7e8] to-white"
+                      : "border-violet-900/5 bg-gradient-to-br from-[#efebfb] to-white"
+                  }`}
+                >
+                  <div className="flex items-start gap-5">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      loading="lazy"
+                      className="h-28 w-28 shrink-0 rounded-2xl object-cover sm:h-32 sm:w-36"
+                    />
                     <div className="min-w-0">
-                      <h3 className="text-xl font-extrabold text-emerald-950 sm:text-2xl ">
+                      <span
+                        className={`inline-block rounded-full px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-white ${
+                          isFounder ? "bg-[#2e7d1e]" : "bg-[#5b3fa0]"
+                        }`}
+                      >
+                        {isFounder ? "Founder's Vision" : "Co-Founder's Vision"}
+                      </span>
+                      <h3 className="mt-2 text-2xl font-black uppercase text-[#0d2b45] sm:text-3xl">
                         {leader.name}
                       </h3>
-                      <p className="mt-1 text-sm font-medium text-slate-500 italic">
+                      <p className="mt-1 text-sm text-slate-600">
                         {leader.title}
                       </p>
                     </div>
                   </div>
 
-                  <blockquote className="mt-6 rounded-2xl border border-emerald-900/10 bg-gradient-to-br from-emerald-50 to-white p-6 text-sm leading-7 text-slate-700">
-                    <span className="mb-1 block font-serif text-5xl leading-none text-emerald-300">
+                  <div className="mt-4 flex items-start gap-4">
+                    <span
+                      className={`font-serif text-6xl font-black leading-none ${
+                        isFounder ? "text-[#4aa83a]" : "text-[#5b3fa0]"
+                      }`}
+                    >
                       “
                     </span>
-                    <span className="italic">{leader.quote}</span>
-                  </blockquote>
+                    <div>
+                      <p className="text-[15px] italic leading-7 text-slate-700">
+                        {leader.quote}
+                      </p>
+                    
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
 
-                  <p className="mt-5 text-right text-sm font-bold text-emerald-800">
-                    — {leader.name}
-                  </p>
-                </div>
-              </article>
+        {/* ============ AT HOPEFELT WE WORK FOR ============ */}
+        <section className="mt-8 flex flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-r from-white to-[#eef4fb] shadow-sm lg:flex-row lg:items-stretch">
+          <div
+            className="flex shrink-0 items-center bg-[#0d2b45] px-8 py-6 text-white lg:w-[22rem] lg:pr-20"
+            style={{ clipPath: "polygon(0 0, 100% 0, 82% 100%, 0 100%)" }}
+          >
+            <div>
+              <p className="text-2xl font-extrabold leading-8">
+                At Hopefelt,
+                <br />
+                We Work for:
+              </p>
+            </div>
+          </div>
+
+          <div className="grid flex-1 grid-cols-2 items-center gap-y-6 px-4 py-6 sm:grid-cols-3 lg:grid-cols-5 lg:py-4">
+            {workFor.map((w, i) => (
+              <div
+                key={w.label}
+                className={`flex flex-col items-center px-2 text-center ${
+                  i > 0 ? "lg:border-l lg:border-slate-300" : ""
+                }`}
+              >
+                <Icon d={w.icon} className="h-10 w-10 text-[#3f9a3f]" stroke={1.8} />
+                <p className="mt-2 whitespace-pre-line text-sm font-extrabold leading-5 text-[#0d2b45]">
+                  {w.label}
+                </p>
+              </div>
             ))}
           </div>
         </section>
 
         {/* ============ OUR AMBITION ============ */}
-        <section className="mt-16 grid items-center gap-10 rounded-[32px] border border-emerald-900/5 bg-white p-6 shadow-[0_10px_40px_rgba(15,70,45,0.06)] sm:p-10 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <h2 className="text-3xl font-extrabold text-[#4a6741] sm:text-4xl">
-              OUR <span className="text-[#4a6741]">AMBITION</span>
+        <section className="mt-16 grid items-center gap-8 rounded-[32px] border border-emerald-900/5 bg-white p-6 shadow-[0_10px_40px_rgba(15,70,45,0.06)] sm:p-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="lg:border-r lg:border-slate-200 lg:pr-8">
+            <h2 className="text-4xl font-black text-[#0d3749] sm:text-5xl">
+              OUR <span className="text-[#5cb82a]">AMBITION</span>
             </h2>
 
-            <h3 className="mt-6 text-base font-extrabold text-emerald-950 italic">
+            <h3 className="mt-6 text-lg font-extrabold italic text-[#0d3749]">
               Building a Healthier, Smarter and More Inclusive Future
             </h3>
-            <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600">
-              We aim to create long-term, measurable impact by empowering
-              communities through innovation, digital solutions, research and
-              collaborative action while building opportunities for the next
-              generation.
+            <p className="mt-3 max-w-xl text-[15px] leading-7 text-slate-700">
+              To drive lasting, measurable change by empowering communities
+              through innovation, digital solutions, research and collaborative
+              action, while creating opportunities for the next generation.
             </p>
           </div>
 
           {/* Today -> Innovation -> Tomorrow */}
-          <div className="relative mx-auto h-64 w-full max-w-lg">
+          <div className="relative mx-auto h-72 w-full max-w-xl">
             <svg
               viewBox="0 0 400 200"
               preserveAspectRatio="none"
               className="absolute inset-0 h-full w-full"
               fill="none"
             >
+              <defs>
+                <linearGradient id="ambFade" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0" stopColor="#1f9d55" stopOpacity="0.15" />
+                  <stop offset="1" stopColor="#1f9d55" stopOpacity="1" />
+                </linearGradient>
+              </defs>
               <path
-                d="M10 170 C 120 165, 220 130, 380 28"
-                stroke="#1f9d55"
-                strokeWidth="2"
+                d="M0 160 C 40 135, 60 122, 80 120 C 130 114, 160 110, 200 108 C 250 105, 290 80, 320 60 C 340 47, 360 35, 385 22"
+                stroke="url(#ambFade)"
+                strokeWidth="3"
                 strokeLinecap="round"
                 vectorEffect="non-scaling-stroke"
               />
               <path
-                d="M370 26 L384 22 L380 38"
+                d="M372 20 L387 20 L384 35"
                 stroke="#1f9d55"
-                strokeWidth="2"
+                strokeWidth="3"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 vectorEffect="non-scaling-stroke"
@@ -465,116 +509,140 @@ export default function AboutFull() {
             {ambitionSteps.map((step) => (
               <div
                 key={step.title}
-                className={`absolute ${step.pos} flex w-[34%] flex-col items-start`}
+                className="absolute flex w-36 -translate-x-1/2 flex-col items-center text-center"
+                style={{
+                  left: `${step.left}%`,
+                  top: `calc(${step.top}% - 5.375rem)`,
+                }}
               >
                 <span
-                  className={`${step.circle} flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg ring-4 ring-white sm:h-16 sm:w-16`}
+                  className={`${step.circle} flex h-16 w-16 items-center justify-center rounded-full text-white shadow-lg ring-4 ring-white`}
                 >
-                  <Icon d={step.icon} className="h-6 w-6 sm:h-7 sm:w-7" />
+                  <Icon d={step.icon} className="h-7 w-7" />
                 </span>
-                <p className="mt-2 text-sm font-extrabold text-emerald-950">
+                <span className="mt-4 block h-3 w-3 rounded-full border-2 border-[#1f9d55] bg-white" />
+                <span
+                  className={`${step.pill} mt-3 rounded-full px-4 py-1 text-sm font-extrabold`}
+                >
                   {step.title}
+                </span>
+                <p className="mt-1 text-sm leading-5 text-slate-700">
+                  {step.sub}
                 </p>
-                <p className="text-xs leading-5 text-slate-500">{step.sub}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ============ 03 — STRATEGIC PILLARS ============ */}
+        {/* ============ 03 — STRATEGIC PILLARS (staircase) ============ */}
         <section className="mt-16">
-          <h2 className="text-3xl font-extrabold text-[#4a6741] sm:text-4xl">
-            OUR STRATEGIC <span className="text-[#4a6741]">PILLARS</span>
+          <h2 className="text-3xl font-black text-[#0d3749] sm:text-4xl">
+            OUR STRATEGIC <span className="text-[#5cb82a]">PILLARS</span>
           </h2>
-          <p className="mt-2 text-sm text-slate-600 italic">
+          <p className="mt-2 text-sm text-slate-700 italic">
             We work across interconnected areas to create holistic and
             sustainable impact.
           </p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-            {pillars.map((p) => (
-              <article
-                key={p.title}
-                className={`${card} group flex flex-col items-center p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl`}
-              >
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-800 transition duration-300 group-hover:bg-emerald-800 group-hover:text-white">
-                  <Icon d={p.icon} className="h-7 w-7" />
-                </span>
-                <h3 className="mt-4 text-sm font-extrabold leading-5 text-emerald-950">
-                  {p.title}
-                </h3>
-                <p className="mt-3 text-xs leading-6 text-slate-500">{p.desc}</p>
-                {/* <span className="mt-auto h-0.5 w-8 rounded-full bg-emerald-600 pt-0 transition-all duration-300 group-hover:w-14" /> */}
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* ============ 04 — SDGs ============ */}
-        <section className="mt-16 rounded-[32px] border border-emerald-900/5 bg-emerald-50/50 p-6 sm:p-8">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
-            <div>
-              <h2 className="text-2xl font-extrabold text-[#4a6741] sm:text-3xl">
-                OUR COMMITMENT TO THE{" "}
-                <span className="text-[#4a6741]">
-                  SUSTAINABLE DEVELOPMENT GOALS(SDGs)
-                </span>
-              </h2>
-              <p className="mt-2 text-sm text-slate-600 italic">
-                Our work contributes to the following United Nations Sustainable
-                Development Goals (SDGs)
-              </p>
-            </div>
-
-            <a
-              href="https://sdgs.un.org/goals"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-emerald-800/30 bg-white px-5 py-2.5 text-xs font-bold text-emerald-900 transition hover:bg-emerald-900 hover:text-white"
+          <div className="relative mt-8 lg:h-[440px]">
+            {/* dashed path + markers (desktop only) */}
+            <svg
+              viewBox="0 0 600 440"
+              preserveAspectRatio="none"
+              className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+              fill="none"
             >
-              Learn More About SDGs <span>→</span>
-            </a>
-          </div>
-
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {sdgs.map((g) => (
-              <article
-                key={g.num}
-                className={`${card} group w-full overflow-hidden p-3 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%_-_0.5rem)] lg:w-[calc(33.333%_-_0.667rem)] xl:w-[calc(16.666%_-_0.834rem)]`}
-              >
-                <div
-                  className={`${g.color} relative flex aspect-[4/3] items-center justify-center rounded-xl text-white`}
-                >
-                  <span className="absolute left-3 top-2 text-2xl font-black">
-                    {g.num}
-                  </span>
-                  <Icon
-                    d={g.icon}
-                    className="h-10 w-10 transition-transform duration-300 group-hover:scale-110"
-                    stroke={1.7}
-                  />
-                </div>
-                <h3 className="mt-3 text-xs font-extrabold leading-5 text-slate-900">
-                  {g.title}
-                </h3>
-                <p className="mt-1 text-[11px] leading-5 text-slate-500">
-                  {g.desc}
-                </p>
-              </article>
+              <path
+                d={`M50 ${stairPoints[0]} ${stairPoints
+                  .map((y, i) => `L${50 + i * 100} ${y}`)
+                  .join(" ")} L560 ${stairPoints[5] - 6}`}
+                stroke="#4aa83a"
+                strokeWidth="2"
+                strokeDasharray="6 6"
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+              />
+            </svg>
+            {stairPoints.map((y, i) => (
+              <span
+                key={i}
+                className="pointer-events-none absolute hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#4aa83a] bg-white lg:block"
+                style={{ left: `${((i + 0.5) / 6) * 100}%`, top: `${y}px` }}
+              />
             ))}
+
+            {/* walking person above step 04 */}
+            <svg
+              viewBox="0 0 40 56"
+              className="pointer-events-none absolute hidden h-14 w-10 -translate-x-1/2 text-[#0d3749] lg:block"
+              style={{ left: `${(3.5 / 6) * 100}%`, top: "58px" }}
+              fill="currentColor"
+            >
+              <circle cx="22" cy="6" r="5" />
+              <path d="M16 14l10 2 6 12-5 2-4-8-3 8 8 8-4 12-5-1 3-9-8-6-6 8-5-3 8-14 3-10z" />
+              <rect x="10" y="14" width="9" height="14" rx="3" />
+            </svg>
+
+            {/* flag above step 06 */}
+            <svg
+              viewBox="0 0 56 56"
+              className="pointer-events-none absolute hidden h-14 w-14 -translate-x-1/2 lg:block"
+              style={{ left: `${(5.5 / 6) * 100}%`, top: "14px" }}
+              fill="none"
+            >
+              <path d="M16 54V6" stroke="#4aa83a" strokeWidth="3" strokeLinecap="round" />
+              <path d="M16 6h26l-7 9 7 9H16z" fill="#6cc04a" />
+              <path d="M44 4l4-3M48 12h5M44 20l4 3" stroke="#4aa83a" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+
+            {/* podiums */}
+            <div className="grid gap-4 sm:grid-cols-2 lg:absolute lg:inset-x-0 lg:bottom-0 lg:grid-cols-6 lg:items-end lg:gap-3">
+              {pillars.map((p, idx) => (
+                <article key={p.title} className="flex flex-col">
+                  {/* cap */}
+                  <div
+                    className="h-3 rounded-t-xl"
+                    style={{ backgroundColor: p.color }}
+                  />
+                  {/* body */}
+                  <div
+                    className={`flex flex-1 flex-col items-center bg-white px-3 pb-4 pt-4 text-center shadow-[0_10px_30px_rgba(15,70,45,0.10)] ${p.height}`}
+                  >
+                    <span
+                      className={`${p.iconBg} flex h-11 w-11 items-center justify-center rounded-full text-white`}
+                    >
+                      <Icon d={p.icon} className="h-5 w-5" />
+                    </span>
+                    <h3 className="mt-3 text-[13px] font-extrabold leading-4 text-[#0d3749]">
+                      {p.title}
+                    </h3>
+                    <p className="mt-2 text-[11px] leading-4 text-slate-600">
+                      {p.desc}
+                    </p>
+                  </div>
+                  {/* number */}
+                  <div
+                    className="flex h-10 items-center justify-center rounded-b-md text-xl font-black text-white"
+                    style={{ backgroundColor: p.color }}
+                  >
+                    0{idx + 1}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* ============ 05 — FUTURE VISION ============ */}
         <section className="mt-16 rounded-[32px] border border-emerald-900/5 bg-white p-6 shadow-[0_20px_60px_rgba(15,70,45,0.06)] sm:p-10">
           <div className="text-center">
-           <span className="inline-block rounded-full bg-[#4a6741] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-white">
-            Our journey ahead
-          </span>
+            <span className="inline-block rounded-full bg-[#4a6741] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-white">
+              Our journey ahead
+            </span>
             <h2 className="mt-3 text-3xl font-extrabold text-emerald-950 sm:text-4xl">
               {roadmapTimeline.title}
             </h2>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-slate-600 italic">
               {roadmapTimeline.subtitle}
             </p>
           </div>
@@ -653,7 +721,7 @@ export default function AboutFull() {
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 lg:flex lg:items-start lg:justify-between lg:gap-2">
-            {impactSteps.map((step, idx) => (
+            {impactSteps.map((step) => (
               <div key={step.label} className="flex items-start lg:flex-1">
                 <div className="group flex w-full flex-col items-center text-center">
                   <span className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-emerald-800 shadow-[0_8px_24px_rgba(15,70,45,0.10)] ring-8 ring-white transition duration-300 group-hover:-translate-y-1 group-hover:bg-emerald-800 group-hover:text-white">
@@ -663,12 +731,6 @@ export default function AboutFull() {
                     {step.label}
                   </p>
                 </div>
-{/* 
-                {idx < impactSteps.length - 1 && (
-                  <span className="mt-8 hidden text-sm font-bold text-emerald-600 lg:block">
-                    
-                  </span>
-                )} */}
               </div>
             ))}
           </div>
@@ -685,7 +747,6 @@ export default function AboutFull() {
               COLLABORATIONS &amp;{" "}
               <span className="text-[#4a6741]">PARTNERSHIPS</span>
             </h2>
-            <Underline />
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
               We believe in the power of collaboration. Hopefelt Foundation
               works with universities, research institutions, NGOs, community
@@ -702,7 +763,7 @@ export default function AboutFull() {
                 className="flex items-center gap-3 text-sm font-semibold text-slate-700"
               >
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-white">
-                  <Icon d="M5 13l4 4L19 7" className="h-3.5 w-3.5" stroke={3} />
+                  <Icon d={ICONS.check} className="h-3.5 w-3.5" stroke={3} />
                 </span>
                 {point}
               </li>

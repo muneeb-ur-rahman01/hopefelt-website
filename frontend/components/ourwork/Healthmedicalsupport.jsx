@@ -296,9 +296,9 @@ export default function HealthMedicalSupport() {
       <div className="mx-auto max-w-[100rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR SERVICES ============ */}
         <section className="pt-4">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+         <div className="flex flex-col items-start gap-3">
             <SectionTitle>Our Services</SectionTitle>
-            <p className="max-w-md text-sm leading-6 text-slate-600">
+            <p className="max-w-md text-sm italic leading-6 text-slate-600">
               Focused services that bring essential healthcare closer to
               communities.
             </p>
@@ -371,12 +371,12 @@ export default function HealthMedicalSupport() {
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
         <section className="mt-20">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-            <SectionTitle note="(Proposed)">Strategic Alignment</SectionTitle>
-            <p className="max-w-md text-sm leading-6 text-slate-600">
-              Our work contributes to global and organizational goals.
-            </p>
-          </div>
+          <div className="flex flex-col items-start gap-3">
+          <SectionTitle note="(Proposed)">Strategic Alignment</SectionTitle>
+          <p className="max-w-md text-sm italic leading-6 text-slate-600">
+            Our work contributes to global and organizational goals.
+          </p>
+        </div>
 
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {/* SDG 3 */}
@@ -442,12 +442,12 @@ export default function HealthMedicalSupport() {
 
         {/* ============ HOW WE DELIVER CARE ============ */}
         <section className="mt-20">
-          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-            <SectionTitle>How We Deliver Care</SectionTitle>
-            <p className="max-w-md text-sm leading-6 text-slate-600">
-              A simple, community-focused approach from need to impact.
-            </p>
-          </div>
+          <div className="flex flex-col items-start gap-3">
+          <SectionTitle>How We Deliver Care</SectionTitle>
+          <p className="max-w-md text-sm italic leading-6 text-slate-600">
+            A simple, community-focused approach from need to impact.
+          </p>
+        </div>
 
           <div className="mt-8 rounded-[2rem] bg-white/80 p-6 shadow-[0_20px_60px_-24px_rgba(15,70,45,0.25)] ring-1 ring-emerald-900/10 backdrop-blur-xl sm:p-10">
             <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">

@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 /* ---------- Icon paths ---------- */
@@ -275,16 +276,13 @@ export default function HealthEducationAwareness() {
 
       {/* ============ HERO ============ */}
       <header className="relative min-h-[480px] bg-[#f4faf6]">
-        {/* Full-width photo with a soft fade on the left for readable text */}
         <div className="pointer-events-none absolute inset-0">
           <img
             src="/images/Our Work/healtheducation.png"
             alt="Health educator presenting to a community group beside a whiteboard reading A Healthier Community Starts with Awareness"
             className="h-full w-full object-cover object-center"
           />
-          {/* Mobile overlay */}
           <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          {/* Desktop fade */}
           <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
           <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent" />
         </div>
@@ -309,7 +307,7 @@ export default function HealthEducationAwareness() {
 
           <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-             <h1 className="hero-rise hero-d2 mt-5 font-serif text-5xl font-black leading-[1.04] tracking-tight text-[#1f4a2a] sm:text-6xl lg:text-[4.5rem]">
+              <h1 className="hero-rise hero-d2 mt-5 font-serif text-5xl font-black leading-[1.04] tracking-tight text-[#1f4a2a] sm:text-6xl lg:text-[4.5rem]">
                 Health Education &amp;{" "}
                 <span className="bg-gradient-to-r from-rose-600 via-rose-500 to-orange-400 bg-clip-text text-transparent">
                   Awareness
@@ -347,7 +345,6 @@ export default function HealthEducationAwareness() {
               </div>
             </div>
 
-            {/* floating chips */}
             <aside className="hero-rise hero-d4 ml-auto hidden w-64 space-y-4 rounded-3xl border border-white/60 bg-white/75 p-6 shadow-[0_24px_60px_-20px_rgba(15,70,45,0.45)] backdrop-blur-xl lg:block">
               {heroChips.map((chip) => (
                 <div key={chip.label} className="flex items-center gap-3">
@@ -368,11 +365,15 @@ export default function HealthEducationAwareness() {
       </header>
 
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
+
         {/* ============ OUR FOCUS AREAS ============ */}
         <section id="focus-areas" className="scroll-mt-6 pt-14">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <SectionTitle eyebrow="What we do">Our Focus Areas</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <SectionTitle eyebrow="What we do">
+              Our Focus Areas
+            </SectionTitle>
+
+            <p className="max-w-2xl text-base italic leading-7 text-slate-600">
               Creating awareness, building knowledge and promoting healthy
               behaviours across communities.
             </p>
@@ -384,7 +385,6 @@ export default function HealthEducationAwareness() {
                 key={f.title}
                 className={`${card} group relative flex flex-col overflow-hidden transition duration-500 hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-18px_rgba(15,70,45,0.35)]`}
               >
-                {/* whole card is clickable */}
                 <Link
                   href={f.href}
                   aria-hidden="true"
@@ -427,7 +427,6 @@ export default function HealthEducationAwareness() {
 
         {/* ============ VISION / MISSION / GOALS ============ */}
         <section className="mt-16 grid gap-6 lg:grid-cols-3">
-          {/* Vision */}
           <article className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-emerald-50 to-white p-8 ring-1 ring-emerald-900/10 shadow-[0_16px_40px_-20px_rgba(15,70,45,0.2)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_50px_-20px_rgba(15,70,45,0.3)]">
             <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-600 to-emerald-300" />
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-900 shadow-sm ring-4 ring-white">
@@ -442,7 +441,6 @@ export default function HealthEducationAwareness() {
             </p>
           </article>
 
-          {/* Mission */}
           <article className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-sky-50 to-white p-8 ring-1 ring-emerald-900/10 shadow-[0_16px_40px_-20px_rgba(15,70,45,0.2)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_50px_-20px_rgba(15,70,45,0.3)]">
             <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sky-600 to-sky-300" />
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-900 shadow-sm ring-4 ring-white">
@@ -457,7 +455,6 @@ export default function HealthEducationAwareness() {
             </p>
           </article>
 
-          {/* Strategic goals */}
           <article className="relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-orange-50 to-white p-8 ring-1 ring-emerald-900/10 shadow-[0_16px_40px_-20px_rgba(15,70,45,0.2)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_50px_-20px_rgba(15,70,45,0.3)]">
             <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-500 to-amber-300" />
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-orange-100 text-orange-700 shadow-sm ring-4 ring-white">
@@ -486,11 +483,12 @@ export default function HealthEducationAwareness() {
 
         {/* ============ ALIGNMENT WITH GLOBAL GOALS ============ */}
         <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div className="flex flex-col items-start gap-4">
             <SectionTitle eyebrow="Global goals">
               Alignment with Global Goals
             </SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
+
+            <p className="max-w-2xl text-base italic leading-7 text-slate-600">
               Our Health Education &amp; Awareness initiatives contribute to the
               following Sustainable Development Goals (SDGs).
             </p>
@@ -526,9 +524,12 @@ export default function HealthEducationAwareness() {
 
         {/* ============ OUR APPROACH ============ */}
         <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <SectionTitle eyebrow="How we work">Our Approach</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
+          <div className="flex flex-col items-start gap-4">
+            <SectionTitle eyebrow="How we work">
+              Our Approach
+            </SectionTitle>
+
+            <p className="max-w-2xl text-base italic leading-7 text-slate-600">
               A step-by-step approach to building informed and healthier
               communities.
             </p>
@@ -536,7 +537,6 @@ export default function HealthEducationAwareness() {
 
           <div className="mt-10 rounded-[2rem] bg-white/80 p-6 shadow-[0_20px_60px_-24px_rgba(15,70,45,0.25)] ring-1 ring-emerald-900/10 backdrop-blur-xl sm:p-10">
             <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-              {/* connecting line */}
               <div className="pointer-events-none absolute left-[12%] right-[12%] top-8 hidden border-t-2 border-dashed border-emerald-900/20 lg:block" />
 
               {approachSteps.map((step) => (
@@ -566,8 +566,7 @@ export default function HealthEducationAwareness() {
         </section>
 
         {/* ============ PROGRAM TEAM + IMPACT ============ */}
-        <section className="mt-24 grid gap-12 lg:grid-cols-2">
-          {/* Program Team */}
+        {/* <section className="mt-24 grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col">
             <SectionTitle eyebrow="Who leads it">Program Team</SectionTitle>
             <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
@@ -602,7 +601,6 @@ export default function HealthEducationAwareness() {
             </div>
           </div>
 
-          {/* Our Impact */}
           <div className="flex flex-col">
             <SectionTitle eyebrow="Results" note="(To be updated)">
               Our Impact
@@ -642,20 +640,22 @@ export default function HealthEducationAwareness() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ============ BE A PART OF THE CHANGE ============ */}
         <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <SectionTitle eyebrow="Join us">Be a Part of the Change</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
+          <div className="flex flex-col items-start gap-4">
+            <SectionTitle eyebrow="Join us">
+              Be a Part of the Change
+            </SectionTitle>
+
+            <p className="max-w-2xl text-base italic leading-7 text-slate-600">
               You can support our Health Education &amp; Awareness initiatives
               in different ways.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {/* Volunteer */}
             <article className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-rose-50 via-rose-50/60 to-white p-8 ring-1 ring-rose-900/10 shadow-[0_20px_50px_-26px_rgba(190,40,80,0.35)] transition duration-500 hover:-translate-y-1.5">
               <div className="pointer-events-none absolute -bottom-12 -right-12 h-44 w-44 rounded-full bg-rose-200/60 blur-3xl" />
               <div className="relative flex flex-1 flex-col">
@@ -683,7 +683,6 @@ export default function HealthEducationAwareness() {
               </div>
             </article>
 
-            {/* Sponsor */}
             <article className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-sky-50 via-sky-50/60 to-white p-8 ring-1 ring-sky-900/10 shadow-[0_20px_50px_-26px_rgba(13,55,73,0.35)] transition duration-500 hover:-translate-y-1.5">
               <div className="pointer-events-none absolute -bottom-12 -right-12 h-44 w-44 rounded-full bg-sky-200/60 blur-3xl" />
               <div className="relative flex flex-1 flex-col">
@@ -711,7 +710,6 @@ export default function HealthEducationAwareness() {
               </div>
             </article>
 
-            {/* Partner */}
             <article className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-emerald-50 via-emerald-50/60 to-white p-8 ring-1 ring-emerald-900/10 shadow-[0_20px_50px_-26px_rgba(15,70,45,0.35)] transition duration-500 hover:-translate-y-1.5">
               <div className="pointer-events-none absolute -bottom-12 -right-12 h-44 w-44 rounded-full bg-emerald-200/50 blur-3xl" />
               <div className="relative flex flex-1 flex-col">

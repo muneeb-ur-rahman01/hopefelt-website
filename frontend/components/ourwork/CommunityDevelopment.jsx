@@ -298,13 +298,15 @@ export default function CommunityDevelopmentOutreach() {
       <div className="mx-auto max-w-[90rem] px-5 pb-16 sm:px-8 lg:px-12">
         {/* ============ OUR FOCUS AREAS ============ */}
         <section id="focus-areas" className="scroll-mt-6 pt-14">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <SectionTitle eyebrow="What we do">Our Focus Areas</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
-              Key areas through which we work with communities to create
-              inclusive and sustainable change.
-            </p>
-          </div>
+          <div className="flex flex-col items-start gap-3">
+          <SectionTitle eyebrow="What we do">
+            Our Focus Areas
+          </SectionTitle>
+
+          <p className="max-w-none whitespace-nowrap text-base italic leading-7 text-slate-600">
+            Key areas through which we work with communities to create inclusive and sustainable change.
+          </p>
+        </div>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {focusAreas.map((f) => (
@@ -408,12 +410,14 @@ export default function CommunityDevelopmentOutreach() {
         </section>
 
         {/* ============ STRATEGIC ALIGNMENT ============ */}
-        <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <SectionTitle eyebrow="Global goals">Strategic Alignment</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
-              Our work contributes to the following Sustainable Development
-              Goals (SDGs).
+        <section className="mt-16">
+          <div className="flex flex-col items-start gap-3">
+            <SectionTitle eyebrow="Global goals">
+              Strategic Alignment
+            </SectionTitle>
+
+            <p className="max-w-none whitespace-nowrap text-base italic leading-7 text-slate-600">
+              Our work contributes to the following Sustainable Development Goals (SDGs).
             </p>
           </div>
 
@@ -442,22 +446,24 @@ export default function CommunityDevelopmentOutreach() {
             ))}
           </div>
 
-          <p className="mt-4 flex items-start justify-end gap-2 text-right text-[11px] leading-4 text-slate-500">
+          {/* <p className="mt-4 flex items-start justify-end gap-2 text-right text-[11px] leading-4 text-slate-500">
             <Icon d={INFO} className="mt-px h-3.5 w-3.5 shrink-0" />
             These alignments show how our work supports global goals. They do
             not imply official certification by the United Nations.
-          </p>
+          </p> */}
         </section>
 
         {/* ============ HOW WE WORK ============ */}
-        <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <SectionTitle eyebrow="Our approach">How We Work</SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
-              A community-centered approach from understanding needs to creating
-              lasting impact.
-            </p>
-          </div>
+        <section className="mt-12">
+            <div className="flex flex-col items-start gap-3">
+              <SectionTitle eyebrow="Our approach">
+                How We Work
+              </SectionTitle>
+
+              <p className="max-w-none whitespace-nowrap text-base italic leading-7 text-slate-600">
+                A community-centered approach from understanding needs to creating lasting impact.
+              </p>
+            </div>
 
           <div className="mt-10 rounded-[2rem] bg-white/80 p-6 shadow-[0_20px_60px_-24px_rgba(15,70,45,0.25)] ring-1 ring-emerald-900/10 backdrop-blur-xl sm:p-10">
             <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -493,7 +499,7 @@ export default function CommunityDevelopmentOutreach() {
             <SectionTitle eyebrow="Who leads it">
               Program Team &amp; Coordination
             </SectionTitle>
-            <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
+            <p className="mt-4 max-w-xl text-base leading-7 text-slate-600 italic">
               Our Community Development &amp; Outreach program is led and
               supported by a dedicated team.
             </p>
@@ -529,8 +535,8 @@ export default function CommunityDevelopmentOutreach() {
           {/* Community Impact */}
           <div className="flex flex-col">
             <SectionTitle eyebrow="Results">Community Impact</SectionTitle>
-            <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
-              Our reach and impact in communities. (To be updated)
+            <p className="mt-4 max-w-xl text-base leading-7 text-slate-600 italic">
+              Our reach and impact in communities
             </p>
 
             <div className="relative mt-6 flex-1 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-[#14503f] via-[#1c5a3a] to-[#2f4a2b] shadow-[0_24px_60px_-24px_rgba(20,80,63,0.7)]">
@@ -563,13 +569,12 @@ export default function CommunityDevelopmentOutreach() {
 
         {/* ============ BE PART OF COMMUNITY PROGRESS ============ */}
         <section className="mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div className="flex flex-col items-start gap-3">
             <SectionTitle eyebrow="Join us">
               Be Part of Community Progress
             </SectionTitle>
-            <p className="max-w-md text-base leading-7 text-slate-600">
-              There are many ways to support and contribute to our Community
-              Development &amp; Outreach program.
+            <p className="max-w-none whitespace-nowrap text-base leading-7 text-slate-600 italic">
+              There are many ways to support and contribute to our Community Development &amp; Outreach program.
             </p>
           </div>
 
@@ -661,49 +666,40 @@ export default function CommunityDevelopmentOutreach() {
         </section>
 
         {/* ============ GET IN TOUCH ============ */}
-        <section className="relative mt-24 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#1f3d2a] via-[#2b4f35] to-[#3a5c40] shadow-[0_30px_80px_-30px_rgba(31,61,42,0.8)]">
-          <img
-            src="/images/community-development/cta-hands.jpg"
-            alt=""
-            loading="lazy"
-            className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover lg:block"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1f3d2a] via-[#1f3d2a]/85 to-transparent" />
-          <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
-          <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
+     <section className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#1f3d2a] via-[#2b4f35] to-[#3a5c40] shadow-[0_30px_80px_-30px_rgba(31,61,42,0.8)]">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#1f3d2a] via-[#1f3d2a]/85 to-transparent" />
+  <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
+  <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
 
-          <div className="relative grid items-center gap-8 px-6 py-14 sm:px-12 lg:grid-cols-2">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-emerald-50 backdrop-blur-md">
-                <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
-                Get in touch
-              </span>
-              <h3 className="mt-4 font-serif text-3xl font-black leading-tight text-white sm:text-4xl">
-                Let&apos;s Build Stronger Communities Together
-              </h3>
-              <div className="mt-4 h-1 w-14 rounded-full bg-lime-300" />
-              <p className="mt-4 max-w-md text-sm leading-6 text-emerald-50/90">
-                Have questions or want to collaborate on our Community
-                Development &amp; Outreach program? We&apos;d love to hear from
-                you.
-              </p>
-            </div>
+  <div className="relative flex flex-col items-start justify-between gap-6 px-6 py-8 sm:px-10 lg:flex-row lg:items-center">
+    <div className="max-w-2xl">
+      <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-emerald-50 backdrop-blur-md">
+        <span className="h-1.5 w-1.5 rounded-full bg-lime-300" />
+        Get in touch
+      </span>
+      <h3 className="mt-3 font-serif text-2xl font-black leading-tight text-white sm:text-3xl">
+        Let&apos;s Build Stronger Communities Together
+      </h3>
+      <div className="mt-3 h-1 w-14 rounded-full bg-lime-300" />
+      <p className="mt-3 max-w-xl text-sm leading-6 text-emerald-50/90">
+        Have questions or want to collaborate on our Community Development
+        &amp; Outreach program? We&apos;d love to hear from you.
+      </p>
+    </div>
 
-            <div className="flex lg:justify-end">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
-              >
-                Contact the Community Development Team
-                <Icon
-                  d={ARROW}
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  stroke={2.4}
-                />
-              </Link>
-            </div>
-          </div>
-        </section>
+    <Link
+      href="/contact"
+      className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+    >
+      Contact the Community Development Team
+      <Icon
+        d={ARROW}
+        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+        stroke={2.4}
+      />
+    </Link>
+  </div>
+</section>
       </div>
     </section>
   );

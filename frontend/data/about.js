@@ -99,7 +99,7 @@ export const coFounderVision = {
 
 export const roadmapTimeline = {
   title: "Future Vision | 2025 – 2030",
-  subtitle: "Six years. One goal — a stronger, more connected ecosystem for lasting impact.",
+  subtitle: "Six years. One goal a stronger, more connected ecosystem for lasting impact.",
   stages: [
     {
       year: "2025",
