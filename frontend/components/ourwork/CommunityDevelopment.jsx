@@ -224,18 +224,16 @@ export default function CommunityDevelopmentOutreach() {
 
       {/* ============ HERO ============ */}
       <header className="relative min-h-[480px] bg-[#f4faf6]">
-        {/* Full-width photo with a soft fade on the left for readable text */}
-        <div className="pointer-events-none absolute inset-0">
+        {/* Image sits on the right side; no white shade on desktop */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-[1.5rem] lg:w-[48%] lg:rounded-[2rem]">
           <img
             src="/images/Our Work/community.png"
             alt="Hopefelt volunteer speaking with community members at an outreach session"
             className="h-full w-full object-cover object-center"
           />
-          {/* Mobile overlay */}
+          {/* Mobile only: keeps text readable when the photo is behind it */}
           <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          {/* Desktop fade */}
-          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent lg:hidden" />
         </div>
 
         <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
@@ -524,7 +522,6 @@ export default function CommunityDevelopmentOutreach() {
                   </div>
                 ))}
               </div>
-             
             </div>
           </div>
 
@@ -662,36 +659,35 @@ export default function CommunityDevelopmentOutreach() {
         </section>
 
         {/* ============ GET IN TOUCH ============ */}
-     <section className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#1f3d2a] via-[#2b4f35] to-[#3a5c40] shadow-[0_30px_80px_-30px_rgba(31,61,42,0.8)]">
-  <div className="absolute inset-0 bg-gradient-to-r from-[#1f3d2a] via-[#1f3d2a]/85 to-transparent" />
-  <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
-  <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
+        <section className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#1f3d2a] via-[#2b4f35] to-[#3a5c40] shadow-[0_30px_80px_-30px_rgba(31,61,42,0.8)]">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1f3d2a] via-[#1f3d2a]/85 to-transparent" />
+          <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />
 
-  <div className="relative flex flex-col items-start justify-between gap-6 px-6 py-8 sm:px-10 lg:flex-row lg:items-center">
-    <div className="max-w-2xl">
-     
-      <h3 className="mt-3 font-serif text-2xl font-black leading-tight text-white sm:text-3xl">
-        Let&apos;s Build Stronger Communities Together
-      </h3>
-      <p className="mt-3 max-w-xl text-sm leading-6 text-emerald-50/90">
-        Have questions or want to collaborate on our Community Development
-        &amp; Outreach program? We&apos;d love to hear from you.
-      </p>
-    </div>
+          <div className="relative flex flex-col items-start justify-between gap-6 px-6 py-8 sm:px-10 lg:flex-row lg:items-center">
+            <div className="max-w-2xl">
+              <h3 className="mt-3 font-serif text-2xl font-black leading-tight text-white sm:text-3xl">
+                Let&apos;s Build Stronger Communities Together
+              </h3>
+              <p className="mt-3 max-w-xl text-sm leading-6 text-emerald-50/90">
+                Have questions or want to collaborate on our Community Development
+                &amp; Outreach program? We&apos;d love to hear from you.
+              </p>
+            </div>
 
-    <Link
-      href="/contact"
-      className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
-    >
-      Contact the Community Development Team
-      <Icon
-        d={ARROW}
-        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-        stroke={2.4}
-      />
-    </Link>
-  </div>
-</section>
+            <Link
+              href="/contact"
+              className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-lime-300 px-8 py-4 text-xs font-extrabold text-emerald-950 shadow-[0_14px_34px_-10px_rgba(190,242,100,0.6)] transition duration-300 hover:-translate-y-0.5 hover:bg-lime-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-lime-200/60"
+            >
+              Contact the Community Development Team
+              <Icon
+                d={ARROW}
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                stroke={2.4}
+              />
+            </Link>
+          </div>
+        </section>
       </div>
     </section>
   );

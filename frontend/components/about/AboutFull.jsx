@@ -623,111 +623,7 @@ export default function AboutFull() {
             </div>
           </div>
         </section>
-
-        {/* ============ 05 — FUTURE VISION ============ */}
-        <section className="mt-16 rounded-[32px] border border-emerald-900/5 bg-white p-6 shadow-[0_20px_60px_rgba(15,70,45,0.06)] sm:p-10">
-          <div className="text-center">
-            <span className="inline-block rounded-full bg-[#4a6741] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-white">
-              Our journey ahead
-            </span>
-            <h2 className="mt-3 text-3xl font-extrabold text-emerald-950 sm:text-4xl">
-              {roadmapTimeline.title}
-            </h2>
-            <p className="mt-2 text-sm text-slate-600 italic">
-              {roadmapTimeline.subtitle}
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-            {roadmapTimeline.stages.map((stage, idx) => (
-              <article
-                key={stage.year}
-                className="group relative rounded-2xl border border-emerald-900/10 bg-gradient-to-b from-emerald-50/40 to-white p-5 transition duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="rounded-lg bg-emerald-800 px-2.5 py-1 text-[11px] font-extrabold text-white">
-                    {stage.year}
-                  </span>
-                  <span className="text-2xl font-black text-emerald-900/10">
-                    0{idx + 1}
-                  </span>
-                </div>
-
-                <h3 className="mt-5 text-sm font-extrabold text-emerald-950">
-                  {stage.title}
-                </h3>
-
-                <ul className="mt-3 space-y-2">
-                  {stage.points.map((pt) => (
-                    <li
-                      key={pt}
-                      className="flex items-start gap-2 text-[11px] leading-5 text-slate-600"
-                    >
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-emerald-600" />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-
-          {/* CTA banner */}
-          <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-700 px-6 py-10 text-center text-white">
-            <div className="pointer-events-none absolute -right-10 -top-20 h-52 w-52 rounded-full border border-white/10" />
-            <div className="pointer-events-none absolute -bottom-20 -left-10 h-52 w-52 rounded-full border border-white/10" />
-
-            <div className="relative">
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.3em] text-emerald-300">
-                Discover our purpose
-              </span>
-              <h3 className="mx-auto mt-3 max-w-2xl text-xl font-extrabold sm:text-2xl">
-                Every step forward creates an opportunity for lasting impact.
-              </h3>
-              <p className="mx-auto mt-3 max-w-xl text-xs leading-6 text-emerald-100/75 italic">
-                Learn more about our story, our people and the mission that
-                brings our community together.
-              </p>
-
-              <Link
-                href="/about/who-we-are"
-                className="group/cta mt-6 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 text-sm font-extrabold text-emerald-950 shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-forest hover:text-white"
-              >
-                Explore Full About Details
-                <span className="transition-transform duration-300 group-hover/cta:translate-x-1">
-                  →
-                </span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ============ HOW WE CREATE IMPACT ============ */}
-        <section className="mt-16">
-          <h2 className="text-3xl font-extrabold text-[#4a6741] sm:text-4xl">
-            HOW WE CREATE <span className="text-[#4a6741]">IMPACT</span>
-          </h2>
-          <p className="mt-2 text-sm text-slate-600 italic">
-            Turning ideas into meaningful and measurable change.
-          </p>
-
-          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 lg:flex lg:items-start lg:justify-between lg:gap-2">
-            {impactSteps.map((step) => (
-              <div key={step.label} className="flex items-start lg:flex-1">
-                <div className="group flex w-full flex-col items-center text-center">
-                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-emerald-800 shadow-[0_8px_24px_rgba(15,70,45,0.10)] ring-8 ring-white transition duration-300 group-hover:-translate-y-1 group-hover:bg-emerald-800 group-hover:text-white">
-                    <Icon d={step.icon} className="h-8 w-8" />
-                  </span>
-                  <p className="mt-4 max-w-[8rem] text-xs font-extrabold leading-5 text-emerald-950">
-                    {step.label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ============ STRATEGIC ALIGNMENT ============ */}
+    {/* ============ STRATEGIC ALIGNMENT ============ */}
         <section className="mt-24">
           {/* left aligned: heading, then text below it */}
           <div className="flex flex-col gap-4">
@@ -775,6 +671,110 @@ export default function AboutFull() {
           </div>
         </section>
 
+        {/* ============ 05 — FUTURE VISION ============ */}
+        <section className="mt-16 rounded-[32px] border border-emerald-900/5 bg-white p-6 shadow-[0_20px_60px_rgba(15,70,45,0.06)] sm:p-10">
+          <div className="text-center">
+            <span className="inline-block rounded-full bg-[#4a6741] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-white">
+              Our journey ahead
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-emerald-950 sm:text-4xl">
+              {roadmapTimeline.title}
+            </h2>
+            <p className="mt-2 text-sm text-slate-600 italic">
+              {roadmapTimeline.subtitle}
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            {roadmapTimeline.stages.map((stage, idx) => (
+              <article
+                key={stage.year}
+                className="group relative rounded-2xl border border-emerald-900/10 bg-gradient-to-b from-emerald-50/40 to-white p-5 transition duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="rounded-lg bg-emerald-800 px-2.5 py-1 text-[11px] font-extrabold text-white">
+                    {stage.year}
+                  </span>
+                  <span className="text-2xl font-black text-emerald-900">
+                    0{idx + 1}
+                  </span>
+                </div>
+
+                <h3 className="mt-5 text-sm font-extrabold text-emerald-950">
+                  {stage.title}
+                </h3>
+
+                <ul className="mt-3 space-y-2">
+                  {stage.points.map((pt) => (
+                    <li
+                      key={pt}
+                      className="flex items-start gap-2 text-[11px] leading-5 text-slate-600"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-emerald-600" />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          {/* CTA banner */}
+          <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-700 px-6 py-10 text-center text-white">
+            <div className="pointer-events-none absolute -right-10 -top-20 h-52 w-52 rounded-full border border-white/10" />
+            <div className="pointer-events-none absolute -bottom-20 -left-10 h-52 w-52 rounded-full border border-white/10" />
+
+            <div className="relative">
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.3em] text-emerald-300">
+                Discover our purpose
+              </span>
+              <h3 className="mx-auto mt-3 max-w-2xl text-xl font-extrabold sm:text-2xl">
+                Every step forward creates an opportunity for lasting impact.
+              </h3>
+              <p className="mx-auto mt-3 max-w-xl text-xs leading-6 text-emerald-100/75 italic">
+                Learn more about our story, our people and the mission that
+                brings our community together.
+              </p>
+
+              {/* <Link
+                href="/about/who-we-are"
+                className="group/cta mt-6 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 text-sm font-extrabold text-emerald-950 shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-forest hover:text-white"
+              >
+                Explore Full About Details
+                <span className="transition-transform duration-300 group-hover/cta:translate-x-1">
+                  →
+                </span>
+              </Link> */}
+            </div>
+          </div>
+        </section>
+
+        {/* ============ HOW WE CREATE IMPACT ============ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-extrabold text-[#4a6741] sm:text-4xl">
+            HOW WE CREATE <span className="text-[#4a6741]">IMPACT</span>
+          </h2>
+          <p className="mt-2 text-sm text-slate-600 italic">
+            Turning ideas into meaningful and measurable change.
+          </p>
+
+          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 lg:flex lg:items-start lg:justify-between lg:gap-2">
+            {impactSteps.map((step) => (
+              <div key={step.label} className="flex items-start lg:flex-1">
+                <div className="group flex w-full flex-col items-center text-center">
+                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-emerald-800 shadow-[0_8px_24px_rgba(15,70,45,0.10)] ring-8 ring-white transition duration-300 group-hover:-translate-y-1 group-hover:bg-emerald-800 group-hover:text-white">
+                    <Icon d={step.icon} className="h-8 w-8" />
+                  </span>
+                  <p className="mt-4 max-w-[8rem] text-xs font-extrabold leading-5 text-emerald-950">
+                    {step.label}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+    
         {/* ============ COLLABORATION & PARTNERSHIPS ============ */}
         <section className="mt-16 grid items-center gap-8 rounded-[32px] border border-emerald-900/5 bg-white p-6 shadow-[0_10px_40px_rgba(15,70,45,0.06)] sm:p-10 lg:grid-cols-[auto_1fr_auto]">
           <div className="mx-auto flex h-36 w-36 items-center justify-center rounded-3xl bg-gradient-to-br from-emerald-100 via-emerald-50 to-lime-50 text-7xl shadow-inner">

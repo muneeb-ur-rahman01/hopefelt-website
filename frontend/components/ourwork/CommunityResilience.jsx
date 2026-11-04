@@ -304,15 +304,16 @@ export default function ClimateEnvironmentResilience() {
 
       {/* ============ HERO ============ */}
       <header className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden lg:w-[58%]">
+        {/* Image sits on the right; no white shade on desktop */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-2xl lg:w-[52%] lg:rounded-3xl">
           <img
             src="/images/Our Work/climate.png"
             alt="Volunteers planting a tree together at a community plantation drive"
             className="hero-settle h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#f4faf6]/40 via-transparent to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f4faf6] to-transparent" />
+          {/* Mobile only: keeps text readable when the photo is behind it */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:hidden" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f4faf6] to-transparent lg:hidden" />
         </div>
 
         <div className="relative mx-auto max-w-[100rem] px-5 py-14 sm:px-8 lg:px-12 lg:py-24">
@@ -685,7 +686,7 @@ export default function ClimateEnvironmentResilience() {
         </section>
 
         {/* ============ GET IN TOUCH ============ */}
-       <section className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40] shadow-[0_30px_80px_-30px_rgba(18,56,42,0.8)]">
+        <section className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#12382a] via-[#1a4a35] to-[#2b5c40] shadow-[0_30px_80px_-30px_rgba(18,56,42,0.8)]">
           <div className="absolute inset-0 bg-gradient-to-r from-[#12382a] via-[#12382a]/85 to-transparent" />
           <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-lime-300/15 blur-3xl" />
           <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(white_1px,transparent_1px)] [background-size:22px_22px]" />

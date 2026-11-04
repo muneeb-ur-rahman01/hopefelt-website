@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 /* ---------- Icon paths ---------- */
@@ -276,15 +275,35 @@ export default function HealthEducationAwareness() {
 
       {/* ============ HERO ============ */}
       <header className="relative min-h-[480px] bg-[#f4faf6]">
-        <div className="pointer-events-none absolute inset-0">
+        {/* Image sits on the right side; no white shade on desktop */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-3xl lg:w-[48%]">
           <img
             src="/images/Our Work/healtheducation.png"
             alt="Health educator presenting to a community group beside a whiteboard reading A Healthier Community Starts with Awareness"
             className="h-full w-full object-cover object-center"
           />
+          {/* Mobile only: keeps text readable when the photo is behind it */}
           <div className="absolute inset-0 bg-white/80 lg:hidden" />
-          <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_30%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_72%)] lg:block" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#f4faf6] to-transparent lg:hidden" />
+
+          {/* Horizontal highlights bar at the bottom of the image */}
+          <div className="hero-rise hero-d4 absolute inset-x-5 bottom-5 hidden grid-cols-4 divide-x divide-slate-200 rounded-2xl border border-white/60 bg-white/85 px-2 py-3 shadow-[0_18px_40px_-16px_rgba(15,70,45,0.5)] backdrop-blur-xl lg:grid">
+            {heroChips.map((chip) => (
+              <div
+                key={chip.label}
+                className="flex flex-col items-center gap-2 px-2 text-center xl:flex-row xl:gap-3 xl:text-left"
+              >
+                <span
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ring-4 ring-white ${chip.wrap}`}
+                >
+                  <Icon d={chip.icon} className="h-5 w-5" />
+                </span>
+                <span className="text-xs font-semibold leading-4 text-slate-800 xl:text-sm">
+                  {chip.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="relative mx-auto max-w-[90rem] px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
@@ -305,7 +324,7 @@ export default function HealthEducationAwareness() {
             </span>
           </nav>
 
-          <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="mt-8 max-w-2xl">
             <div>
               <h1 className="hero-rise hero-d2 mt-5 font-serif text-5xl font-black leading-[1.04] tracking-tight text-[#1f4a2a] sm:text-6xl lg:text-[4.5rem]">
                 Health Education &amp;{" "}
@@ -345,21 +364,6 @@ export default function HealthEducationAwareness() {
               </div>
             </div>
 
-            <aside className="hero-rise hero-d4 ml-auto hidden w-64 space-y-4 rounded-3xl border border-white/60 bg-white/75 p-6 shadow-[0_24px_60px_-20px_rgba(15,70,45,0.45)] backdrop-blur-xl lg:block">
-              {heroChips.map((chip) => (
-                <div key={chip.label} className="flex items-center gap-3">
-                  <span
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-4 ring-white ${chip.wrap}`}
-                  >
-                    <Icon d={chip.icon} className="h-5 w-5" />
-                  </span>
-                  <span className="text-sm font-semibold leading-4 text-slate-800">
-                    {chip.label}
-                  </span>
-                </div>
-              ))}
-              <div className="h-0.5 w-12 rounded-full bg-lime-400" />
-            </aside>
           </div>
         </div>
       </header>

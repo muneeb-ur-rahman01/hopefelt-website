@@ -252,13 +252,16 @@ export default function SocialSupportLearning() {
 
       {/* ============ HERO ============ */}
       <header className="relative">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[62%]">
+        {/* size unchanged — only rounded corners + overflow-hidden added */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-full overflow-hidden rounded-3xl lg:w-[55%]">
+          {/* darker, richer image so it is clearly visible */}
           <img
             src="/images/Our Work/social.png"
             alt="Facilitator leading a community learning session beside a Learning, People, Stronger Communities board"
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-3xl object-cover brightness-[0.8] contrast-110 saturate-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:via-white/30" />
+          {/* Mobile overlay only (keeps text readable over the photo); no white shade on desktop */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:hidden" />
         </div>
 
         <div className="relative mx-auto max-w-[100rem] px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
